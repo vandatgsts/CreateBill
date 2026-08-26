@@ -20,12 +20,14 @@
   - [CustomerSummary.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt): Aggregated financial overview per customer (Invoices, Total spent, Total paid, Total debt).
   - [StorePartner.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt): Store / Dealer partner profile (Store name, Phone, Address, Contact person, Default template type).
   - [StorePartnerSummary.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt): Multi-period invoice summary and rolling debt balance for a store.
+  - [AppBackupData.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt): Model for JSON backup data and `ImportMode` (Merge vs Replace All).
 - **Repositories** (`data/repository/`):
   - [CompanyProfileRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt): Persistent store for default company settings using `SharedPreferences` + `Gson`.
   - [InvoiceRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt): Persistent CRUD storage for invoice list with sample data matching user's templates.
   - [ProductRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt): Persistent catalog storage for reusable product/service templates.
   - [CustomerRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt): Persistent storage and directory for customer profiles.
   - [StorePartnerRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt): Persistent storage for Store/Dealer partner profiles with rolling debt tracking.
+  - [BackupRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt): Full data export, SHA-256 hash calculation, duplicate prevention, and JSON restore engine.
 
 ### 2. Generator & Export Engine (`com.vandatgsts.thuyetnguyen.generator`)
 - [FormatHelper.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt): Currency, number, and date formatters.

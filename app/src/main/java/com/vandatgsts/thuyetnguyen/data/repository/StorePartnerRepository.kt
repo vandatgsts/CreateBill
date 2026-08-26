@@ -74,6 +74,27 @@ class StorePartnerRepository(context: Context) {
         saveToPrefs(current)
     }
 
+    suspend fun replaceAll(newList: List<StorePartner>) = withContext(Dispatchers.IO) {
+        val sorted = newList.sortedBy { it.name }
+        _stores.value = sorted
+        saveToPrefs(sorted)
+    }
+
+    suspend fun mergeAll(incomingList: List<StorePartner>) = withContext(Dispatchers.IO) {
+        val current = _stores.value.toMutableList()
+        for (incoming in incomingList) {
+            val index = current.indexOfFirst { it.id == incoming.id || it.name.equals(incoming.name.trim(), ignoreCase = true) }
+            if (index >= 0) {
+                current[index] = incoming
+            } else {
+                current.add(incoming)
+            }
+        }
+        val sorted = current.sortedBy { it.name }
+        _stores.value = sorted
+        saveToPrefs(sorted)
+    }
+
     private fun createDefaultStores(): List<StorePartner> {
         return listOf(
             StorePartner(

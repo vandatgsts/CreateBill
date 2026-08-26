@@ -70,6 +70,27 @@ class CustomerRepository(context: Context) {
         saveToPrefs(current)
     }
 
+    suspend fun replaceAll(newList: List<CustomerProfile>) = withContext(Dispatchers.IO) {
+        val sorted = newList.sortedBy { it.name }
+        _customers.value = sorted
+        saveToPrefs(sorted)
+    }
+
+    suspend fun mergeAll(incomingList: List<CustomerProfile>) = withContext(Dispatchers.IO) {
+        val current = _customers.value.toMutableList()
+        for (incoming in incomingList) {
+            val index = current.indexOfFirst { it.id == incoming.id || (it.name.equals(incoming.name.trim(), ignoreCase = true) && it.phone == incoming.phone) }
+            if (index >= 0) {
+                current[index] = incoming
+            } else {
+                current.add(incoming)
+            }
+        }
+        val sorted = current.sortedBy { it.name }
+        _customers.value = sorted
+        saveToPrefs(sorted)
+    }
+
     private fun createDefaultCustomers(): List<CustomerProfile> {
         return listOf(
             CustomerProfile(

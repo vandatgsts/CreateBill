@@ -66,6 +66,27 @@ class ProductRepository(context: Context) {
         saveToPrefs(current)
     }
 
+    suspend fun replaceAll(newList: List<ProductTemplate>) = withContext(Dispatchers.IO) {
+        val sorted = newList.sortedBy { it.name }
+        _products.value = sorted
+        saveToPrefs(sorted)
+    }
+
+    suspend fun mergeAll(incomingList: List<ProductTemplate>) = withContext(Dispatchers.IO) {
+        val current = _products.value.toMutableList()
+        for (incoming in incomingList) {
+            val index = current.indexOfFirst { it.id == incoming.id || it.name.equals(incoming.name.trim(), ignoreCase = true) }
+            if (index >= 0) {
+                current[index] = incoming
+            } else {
+                current.add(incoming)
+            }
+        }
+        val sorted = current.sortedBy { it.name }
+        _products.value = sorted
+        saveToPrefs(sorted)
+    }
+
     private fun createDefaultProducts(): List<ProductTemplate> {
         return listOf(
             ProductTemplate(

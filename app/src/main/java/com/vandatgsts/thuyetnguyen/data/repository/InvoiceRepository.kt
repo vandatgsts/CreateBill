@@ -101,6 +101,25 @@ class InvoiceRepository(private val context: Context) {
         duplicated
     }
 
+    suspend fun replaceAll(newList: List<InvoiceDocument>) = withContext(Dispatchers.IO) {
+        val sorted = newList.sortedByDescending { it.updatedAt }
+        _invoices.value = sorted
+        saveToFile(sorted)
+    }
+
+    suspend fun mergeAll(incomingList: List<InvoiceDocument>) = withContext(Dispatchers.IO) {
+        val currentMap = _invoices.value.associateBy { it.id }.toMutableMap()
+        for (incoming in incomingList) {
+            val existing = currentMap[incoming.id]
+            if (existing == null || incoming.updatedAt >= existing.updatedAt) {
+                currentMap[incoming.id] = incoming
+            }
+        }
+        val mergedList = currentMap.values.sortedByDescending { it.updatedAt }
+        _invoices.value = mergedList
+        saveToFile(mergedList)
+    }
+
     private fun createSampleInvoices(): List<InvoiceDocument> {
         // 1. Cửa Hàng Thắng Lợi (img.png) - Đã đóng dấu ĐÃ THANH TOÁN
         val thangLoi = InvoiceDocument(

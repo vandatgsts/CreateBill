@@ -3,6 +3,22 @@
   "version": "1.0.0",
   "files": [
     {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 18,
+      "main_symbols": [
+        "AppBackupData",
+        "ImportMode"
+      ],
+      "imports": [],
+      "exports": [
+        "AppBackupData",
+        "ImportMode"
+      ]
+    },
+    {
       "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
       "language": "kotlin",
       "layer": "model",
@@ -169,6 +185,39 @@
       ]
     },
     {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 181,
+      "main_symbols": [
+        "BackupRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.Intent",
+        "android.content.SharedPreferences",
+        "android.net.Uri",
+        "androidx.core.content.FileProvider",
+        "com.google.gson.Gson",
+        "com.google.gson.GsonBuilder",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.InputStreamReader",
+        "java.security.MessageDigest",
+        "java.text.SimpleDateFormat",
+        "java.util.Date",
+        "java.util.Locale"
+      ],
+      "exports": [
+        "BackupRepository"
+      ]
+    },
+    {
       "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
       "language": "kotlin",
       "layer": "repository",
@@ -192,7 +241,7 @@
       "language": "kotlin",
       "layer": "repository",
       "feature": "data",
-      "line_count": 112,
+      "line_count": 133,
       "main_symbols": [
         "CustomerRepository"
       ],
@@ -218,7 +267,7 @@
       "language": "kotlin",
       "layer": "repository",
       "feature": "data",
-      "line_count": 389,
+      "line_count": 408,
       "main_symbols": [
         "InvoiceRepository"
       ],
@@ -247,7 +296,7 @@
       "language": "kotlin",
       "layer": "repository",
       "feature": "data",
-      "line_count": 178,
+      "line_count": 199,
       "main_symbols": [
         "ProductRepository"
       ],
@@ -272,7 +321,7 @@
       "language": "kotlin",
       "layer": "repository",
       "feature": "data",
-      "line_count": 149,
+      "line_count": 170,
       "main_symbols": [
         "StorePartnerRepository"
       ],
@@ -1006,49 +1055,83 @@
       "language": "kotlin",
       "layer": "ui_screen",
       "feature": "feature-settings",
-      "line_count": 199,
+      "line_count": 536,
       "main_symbols": [
         "CompanyProfileScreen"
       ],
       "imports": [
+        "android.content.Intent",
         "android.widget.Toast",
+        "androidx.activity.compose.rememberLauncherForActivityResult",
+        "androidx.activity.result.contract.ActivityResultContracts",
         "androidx.compose.foundation.background",
+        "androidx.compose.foundation.border",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
         "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
         "androidx.compose.foundation.layout.Spacer",
         "androidx.compose.foundation.layout.fillMaxSize",
         "androidx.compose.foundation.layout.fillMaxWidth",
         "androidx.compose.foundation.layout.height",
         "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
         "androidx.compose.foundation.rememberScrollState",
         "androidx.compose.foundation.shape.RoundedCornerShape",
         "androidx.compose.foundation.verticalScroll",
         "androidx.compose.material.icons.Icons",
         "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.CloudDownload",
+        "androidx.compose.material.icons.filled.CloudUpload",
+        "androidx.compose.material.icons.filled.Fingerprint",
         "androidx.compose.material.icons.filled.Save",
+        "androidx.compose.material.icons.filled.Share",
+        "androidx.compose.material.icons.filled.Warning",
+        "androidx.compose.material3.AlertDialog",
         "androidx.compose.material3.Button",
         "androidx.compose.material3.ButtonDefaults",
         "androidx.compose.material3.Card",
         "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.CircularProgressIndicator",
         "androidx.compose.material3.ExperimentalMaterial3Api",
         "androidx.compose.material3.Icon",
         "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.RadioButton",
+        "androidx.compose.material3.RadioButtonDefaults",
         "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
         "androidx.compose.material3.Text",
+        "androidx.compose.material3.TextButton",
         "androidx.compose.material3.TopAppBar",
         "androidx.compose.material3.TopAppBarDefaults",
         "androidx.compose.runtime.Composable",
         "androidx.compose.runtime.collectAsState",
         "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Alignment",
         "androidx.compose.ui.Modifier",
         "androidx.compose.ui.graphics.Color",
         "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontFamily",
         "androidx.compose.ui.text.font.FontWeight",
         "androidx.compose.ui.unit.dp",
         "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
         "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
         "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
         "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
-        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue"
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary"
       ],
       "exports": [
         "CompanyProfileScreen"
@@ -1059,7 +1142,7 @@
       "language": "kotlin",
       "layer": "ui_screen",
       "feature": "feature-settings",
-      "line_count": 28,
+      "line_count": 98,
       "main_symbols": [
         "CompanyProfileViewModel"
       ],
@@ -1067,8 +1150,11 @@
         "android.app.Application",
         "androidx.lifecycle.AndroidViewModel",
         "androidx.lifecycle.viewModelScope",
-        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile",
-        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "android.content.Intent",
+        "android.net.Uri",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
         "kotlinx.coroutines.flow.MutableStateFlow",
         "kotlinx.coroutines.flow.StateFlow",
         "kotlinx.coroutines.flow.asStateFlow",
