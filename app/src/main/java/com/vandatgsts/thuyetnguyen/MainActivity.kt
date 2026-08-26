@@ -6,6 +6,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -24,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -47,13 +49,29 @@ import com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme
 import com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary
 
 sealed class AppScreen {
-    data object Home : AppScreen()
-    data object Settings : AppScreen()
-    data object ProductCatalog : AppScreen()
-    data object StorePartnerList : AppScreen()
-    data class StorePartnerDetail(val storeId: String) : AppScreen()
-    data class Editor(val invoiceId: String?, val initialType: InvoiceType = InvoiceType.QUOTATION_A4) : AppScreen()
-    data class Preview(val invoiceId: String) : AppScreen()
+    abstract val screenKey: String
+
+    data object Home : AppScreen() {
+        override val screenKey: String = "screen_home"
+    }
+    data object Settings : AppScreen() {
+        override val screenKey: String = "screen_settings"
+    }
+    data object ProductCatalog : AppScreen() {
+        override val screenKey: String = "screen_products"
+    }
+    data object StorePartnerList : AppScreen() {
+        override val screenKey: String = "screen_stores"
+    }
+    data class StorePartnerDetail(val storeId: String) : AppScreen() {
+        override val screenKey: String = "screen_store_detail_$storeId"
+    }
+    data class Editor(val invoiceId: String?, val initialType: InvoiceType = InvoiceType.QUOTATION_A4) : AppScreen() {
+        override val screenKey: String = "screen_editor_${invoiceId ?: "new"}"
+    }
+    data class Preview(val invoiceId: String) : AppScreen() {
+        override val screenKey: String = "screen_preview_$invoiceId"
+    }
 }
 
 class MainActivity : ComponentActivity() {
@@ -73,9 +91,17 @@ class MainActivity : ComponentActivity() {
             TaoHoaDonTheme {
                 val backStack = remember { mutableStateListOf<AppScreen>(AppScreen.Home) }
                 val currentScreen = backStack.lastOrNull() ?: AppScreen.Home
+                val saveableStateHolder = rememberSaveableStateHolder()
+
+                fun popBackStack() {
+                    val popped = backStack.removeLastOrNull()
+                    if (popped != null) {
+                        saveableStateHolder.removeState(popped.screenKey)
+                    }
+                }
 
                 BackHandler(enabled = backStack.size > 1) {
-                    backStack.removeLastOrNull()
+                    popBackStack()
                 }
 
                 // Check if current screen is one of the 4 main tab screens
@@ -85,6 +111,7 @@ class MainActivity : ComponentActivity() {
                         currentScreen is AppScreen.Settings
 
                 Scaffold(
+                    contentWindowInsets = WindowInsets(0, 0, 0, 0),
                     bottomBar = {
                         if (isMainTabScreen) {
                             NavigationBar(
@@ -170,122 +197,131 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 ) { innerPadding ->
-                    Surface(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
-                        when (val screen = currentScreen) {
-                            is AppScreen.Home -> {
-                                HomeScreen(
-                                    viewModel = homeViewModel,
-                                    onNavigateToCreate = { type ->
-                                        editorViewModel.initInvoice(null, type)
-                                        backStack.add(AppScreen.Editor(null, type))
-                                    },
-                                    onNavigateToEdit = { id ->
-                                        editorViewModel.initInvoice(id)
-                                        backStack.add(AppScreen.Editor(id))
-                                    },
-                                    onNavigateToPreview = { id ->
-                                        backStack.add(AppScreen.Preview(id))
-                                    },
-                                    onNavigateToStores = {
-                                        backStack.add(AppScreen.StorePartnerList)
-                                    },
-                                    onNavigateToStoreDetail = { storeId ->
-                                        backStack.add(AppScreen.StorePartnerDetail(storeId))
-                                    }
-                                )
-                            }
-
-                            is AppScreen.Settings -> {
-                                CompanyProfileScreen(
-                                    viewModel = profileViewModel,
-                                    onBack = {
-                                        if (backStack.size > 1) backStack.removeLastOrNull()
-                                        else {
-                                            backStack.clear()
-                                            backStack.add(AppScreen.Home)
+                    Surface(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(bottom = innerPadding.calculateBottomPadding())
+                    ) {
+                        saveableStateHolder.SaveableStateProvider(currentScreen.screenKey) {
+                            when (val screen = currentScreen) {
+                                is AppScreen.Home -> {
+                                    HomeScreen(
+                                        viewModel = homeViewModel,
+                                        onNavigateToCreate = { type ->
+                                            editorViewModel.initInvoice(null, type)
+                                            backStack.add(AppScreen.Editor(null, type))
+                                        },
+                                        onNavigateToEdit = { id ->
+                                            editorViewModel.initInvoice(id)
+                                            backStack.add(AppScreen.Editor(id))
+                                        },
+                                        onNavigateToPreview = { id ->
+                                            backStack.add(AppScreen.Preview(id))
+                                        },
+                                        onNavigateToStores = {
+                                            backStack.add(AppScreen.StorePartnerList)
+                                        },
+                                        onNavigateToStoreDetail = { storeId ->
+                                            backStack.add(AppScreen.StorePartnerDetail(storeId))
                                         }
-                                    }
-                                )
-                            }
+                                    )
+                                }
 
-                            is AppScreen.ProductCatalog -> {
-                                ProductListScreen(
-                                    viewModel = productViewModel,
-                                    onBack = {
-                                        if (backStack.size > 1) backStack.removeLastOrNull()
-                                        else {
-                                            backStack.clear()
-                                            backStack.add(AppScreen.Home)
+                                is AppScreen.Settings -> {
+                                    CompanyProfileScreen(
+                                        viewModel = profileViewModel,
+                                        onBack = {
+                                            if (backStack.size > 1) popBackStack()
+                                            else {
+                                                backStack.clear()
+                                                backStack.add(AppScreen.Home)
+                                            }
                                         }
-                                    }
-                                )
-                            }
+                                    )
+                                }
 
-                            is AppScreen.StorePartnerList -> {
-                                StorePartnerListScreen(
-                                    viewModel = storePartnerViewModel,
-                                    onBack = {
-                                        if (backStack.size > 1) backStack.removeLastOrNull()
-                                        else {
-                                            backStack.clear()
-                                            backStack.add(AppScreen.Home)
+                                is AppScreen.ProductCatalog -> {
+                                    ProductListScreen(
+                                        viewModel = productViewModel,
+                                        onBack = {
+                                            if (backStack.size > 1) popBackStack()
+                                            else {
+                                                backStack.clear()
+                                                backStack.add(AppScreen.Home)
+                                            }
                                         }
-                                    },
-                                    onNavigateToDetail = { storeId ->
-                                        backStack.add(AppScreen.StorePartnerDetail(storeId))
-                                    }
-                                )
-                            }
+                                    )
+                                }
 
-                            is AppScreen.StorePartnerDetail -> {
-                                StorePartnerDetailScreen(
-                                    storeId = screen.storeId,
-                                    viewModel = storePartnerViewModel,
-                                    onBack = { backStack.removeLastOrNull() },
-                                    onCreateInvoiceForStore = { store, rollingDebt ->
-                                        editorViewModel.initInvoiceForStorePartner(
-                                            store = store,
-                                            rollingDebt = rollingDebt
-                                        )
-                                        backStack.add(AppScreen.Editor(null, store.defaultType))
-                                    },
-                                    onNavigateToInvoicePreview = { id ->
-                                        backStack.add(AppScreen.Preview(id))
-                                    },
-                                    onNavigateToInvoiceEdit = { id ->
-                                        editorViewModel.initInvoice(id)
-                                        backStack.add(AppScreen.Editor(id))
-                                    }
-                                )
-                            }
+                                is AppScreen.StorePartnerList -> {
+                                    StorePartnerListScreen(
+                                        viewModel = storePartnerViewModel,
+                                        onBack = {
+                                            if (backStack.size > 1) popBackStack()
+                                            else {
+                                                backStack.clear()
+                                                backStack.add(AppScreen.Home)
+                                            }
+                                        },
+                                        onNavigateToDetail = { storeId ->
+                                            backStack.add(AppScreen.StorePartnerDetail(storeId))
+                                        }
+                                    )
+                                }
 
-                            is AppScreen.Editor -> {
-                                InvoiceEditorScreen(
-                                    viewModel = editorViewModel,
-                                    onBack = { backStack.removeLastOrNull() },
-                                    onNavigateToPreview = { id ->
-                                        backStack.removeLastOrNull()
-                                        backStack.add(AppScreen.Preview(id))
-                                    },
-                                    onNavigateToProducts = {
-                                        backStack.add(AppScreen.ProductCatalog)
-                                    },
-                                    onNavigateToStores = {
-                                        backStack.add(AppScreen.StorePartnerList)
-                                    }
-                                )
-                            }
+                                is AppScreen.StorePartnerDetail -> {
+                                    StorePartnerDetailScreen(
+                                        storeId = screen.storeId,
+                                        viewModel = storePartnerViewModel,
+                                        onBack = { popBackStack() },
+                                        onCreateInvoiceForStore = { store, rollingDebt ->
+                                            editorViewModel.initInvoiceForStorePartner(
+                                                store = store,
+                                                rollingDebt = rollingDebt
+                                            )
+                                            backStack.add(AppScreen.Editor(null, store.defaultType))
+                                        },
+                                        onNavigateToInvoicePreview = { id ->
+                                            backStack.add(AppScreen.Preview(id))
+                                        },
+                                        onNavigateToInvoiceEdit = { id ->
+                                            editorViewModel.initInvoice(id)
+                                            backStack.add(AppScreen.Editor(id))
+                                        }
+                                    )
+                                }
 
-                            is AppScreen.Preview -> {
-                                InvoicePreviewScreen(
-                                    invoiceId = screen.invoiceId,
-                                    viewModel = previewViewModel,
-                                    onBack = { backStack.removeLastOrNull() },
-                                    onEdit = { id ->
-                                        editorViewModel.initInvoice(id)
-                                        backStack.add(AppScreen.Editor(id))
-                                    }
-                                )
+                                is AppScreen.Editor -> {
+                                    InvoiceEditorScreen(
+                                        viewModel = editorViewModel,
+                                        onBack = { popBackStack() },
+                                        onNavigateToPreview = { id ->
+                                            val currentEditor = backStack.removeLastOrNull()
+                                            if (currentEditor != null) {
+                                                saveableStateHolder.removeState(currentEditor.screenKey)
+                                            }
+                                            backStack.add(AppScreen.Preview(id))
+                                        },
+                                        onNavigateToProducts = {
+                                            backStack.add(AppScreen.ProductCatalog)
+                                        },
+                                        onNavigateToStores = {
+                                            backStack.add(AppScreen.StorePartnerList)
+                                        }
+                                    )
+                                }
+
+                                is AppScreen.Preview -> {
+                                    InvoicePreviewScreen(
+                                        invoiceId = screen.invoiceId,
+                                        viewModel = previewViewModel,
+                                        onBack = { popBackStack() },
+                                        onEdit = { id ->
+                                            editorViewModel.initInvoice(id)
+                                            backStack.add(AppScreen.Editor(id))
+                                        }
+                                    )
+                                }
                             }
                         }
                     }

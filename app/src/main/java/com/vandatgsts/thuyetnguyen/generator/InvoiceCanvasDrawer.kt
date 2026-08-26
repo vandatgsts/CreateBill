@@ -206,7 +206,8 @@ object InvoiceCanvasDrawer {
 
         paint.typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
         paint.textAlign = Paint.Align.CENTER
-        canvas.drawText("Nợ cũ", marginLeft + mergedColsWidth / 2f, footer1Top + 24f, paint)
+        val oldDebtLabel = if (invoice.effectiveOldDebt < 0) "Tiền thừa kỳ trước" else "Nợ cũ"
+        canvas.drawText(oldDebtLabel, marginLeft + mergedColsWidth / 2f, footer1Top + 24f, paint)
 
         paint.textAlign = Paint.Align.RIGHT
         canvas.drawText(FormatHelper.formatMoney(invoice.effectiveOldDebt), marginRight - 8f, footer1Top + 24f, paint)
@@ -222,7 +223,8 @@ object InvoiceCanvasDrawer {
         paint.color = Color.parseColor("#008000") // Màu xanh lá như trong ảnh mẫu
         paint.typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
         paint.textAlign = Paint.Align.CENTER
-        canvas.drawText("Thành tiền", marginLeft + mergedColsWidth / 2f, footer2Top + 24f, paint)
+        val totalLabel = if (invoice.totalAmount < 0) "Khách trả dư" else "Thành tiền"
+        canvas.drawText(totalLabel, marginLeft + mergedColsWidth / 2f, footer2Top + 24f, paint)
 
         paint.textAlign = Paint.Align.RIGHT
         canvas.drawText(FormatHelper.formatMoney(invoice.totalAmount), marginRight - 8f, footer2Top + 24f, paint)
@@ -230,14 +232,14 @@ object InvoiceCanvasDrawer {
         currentY += 60f
 
         // Bảng phụ chi tiết các đợt Chuyển khoản / Trừ nợ cũ (Khớp mẫu img_4.png)
-        if (invoice.debtPayments.isNotEmpty() || (invoice.initialOldDebt > 0 && invoice.initialOldDebt != invoice.effectiveOldDebt)) {
+        if (invoice.debtPayments.isNotEmpty() || (invoice.initialOldDebt != 0.0 && invoice.initialOldDebt != invoice.effectiveOldDebt)) {
             val subTableLeft = marginLeft
             val subCol1Width = 190f
             val subCol2Width = 160f
             val subRowHeight = 34f
             var subY = currentY
 
-            val baseDebt = if (invoice.initialOldDebt > 0) invoice.initialOldDebt else invoice.oldDebt
+            val baseDebt = if (invoice.initialOldDebt != 0.0) invoice.initialOldDebt else invoice.oldDebt
 
             // Dòng 1: Nợ cũ
             canvas.drawRect(subTableLeft, subY, subTableLeft + subCol1Width, subY + subRowHeight, strokePaint)
@@ -245,7 +247,8 @@ object InvoiceCanvasDrawer {
             paint.color = Color.BLACK
             paint.typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
             paint.textAlign = Paint.Align.CENTER
-            canvas.drawText("Nợ cũ", subTableLeft + subCol1Width / 2f, subY + 22f, paint)
+            val subBaseLabel = if (baseDebt < 0) "Tiền thừa" else "Nợ cũ"
+            canvas.drawText(subBaseLabel, subTableLeft + subCol1Width / 2f, subY + 22f, paint)
             paint.textAlign = Paint.Align.RIGHT
             canvas.drawText(FormatHelper.formatMoney(baseDebt), subTableLeft + subCol1Width + subCol2Width - 10f, subY + 22f, paint)
             subY += subRowHeight
@@ -263,19 +266,20 @@ object InvoiceCanvasDrawer {
                 subY += subRowHeight
             }
 
-            // Dòng cuối: Nợ cũ còn lại
+            // Dòng cuối: Nợ cũ còn lại / Khách trả dư
             canvas.drawRect(subTableLeft, subY, subTableLeft + subCol1Width, subY + subRowHeight, strokePaint)
             canvas.drawRect(subTableLeft + subCol1Width, subY, subTableLeft + subCol1Width + subCol2Width, subY + subRowHeight, strokePaint)
-            paint.color = Color.parseColor("#CC0000") // Màu đỏ như trong ảnh mẫu img_4
+            paint.color = if (invoice.effectiveOldDebt < 0) Color.parseColor("#008000") else Color.parseColor("#CC0000")
             paint.typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
             paint.textAlign = Paint.Align.CENTER
-            canvas.drawText("Nợ cũ còn lại", subTableLeft + subCol1Width / 2f, subY + 22f, paint)
+            val remainingLabel = if (invoice.effectiveOldDebt < 0) "Khách trả dư" else "Nợ cũ còn lại"
+            canvas.drawText(remainingLabel, subTableLeft + subCol1Width / 2f, subY + 22f, paint)
             paint.textAlign = Paint.Align.RIGHT
             canvas.drawText(FormatHelper.formatMoney(invoice.effectiveOldDebt), subTableLeft + subCol1Width + subCol2Width - 10f, subY + 22f, paint)
         }
 
-        // Đóng dấu ĐÃ THANH TOÁN nổi bật nếu hóa đơn đã được thu tiền
-        if (invoice.isPaid) {
+        // Đóng dấu ĐÃ THANH TOÁN nổi bật nếu hóa đơn đã được thu tiền hoặc thanh toán dư
+        if (invoice.isFullyPaid) {
             val dateLabel = if (invoice.paidDate.isNotBlank()) "NGÀY: ${invoice.paidDate}" else "NGÀY: ${FormatHelper.formatDate(invoice.updatedAt)}"
             drawPaidStamp(canvas, marginRight - 160f, footer2Top + 19f, dateLabel, -7f)
         }

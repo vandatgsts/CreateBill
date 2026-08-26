@@ -528,14 +528,18 @@ fun InvoiceEditorScreen(
                     if (invoice.type == InvoiceType.DELIVERY_DEBT) {
                         FormSectionHeader(title = "3. CÔNG NỢ & THANH TOÁN")
 
+                        val currentOldDebt = if (invoice.initialOldDebt != 0.0) invoice.initialOldDebt else invoice.oldDebt
+                        val oldDebtLabel = if (currentOldDebt < 0) "Tiền khách trả thừa kỳ trước (Khấu trừ) (đ)" else "Nợ cũ kỳ trước chuyển sang (đ)"
+
                         CurrencyField(
-                            value = if (invoice.initialOldDebt > 0) invoice.initialOldDebt else invoice.oldDebt,
+                            value = currentOldDebt,
                             onValueChange = {
                                 viewModel.updateInvoice { doc ->
                                     doc.copy(oldDebt = it, initialOldDebt = it)
                                 }
                             },
-                            label = "Nợ cũ kỳ trước chuyển sang (đ)"
+                            label = oldDebtLabel,
+                            allowNegative = true
                         )
 
                         Spacer(modifier = Modifier.height(10.dp))
@@ -601,9 +605,13 @@ fun InvoiceEditorScreen(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween
                             ) {
-                                Text("Nợ cũ còn lại sau khi trừ CK:", fontSize = 12.sp, color = TextSecondary)
                                 Text(
-                                    "${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ",
+                                    if (invoice.effectiveOldDebt < 0) "Khách trả dư sau khi trừ CK:" else "Nợ cũ còn lại sau khi trừ CK:",
+                                    fontSize = 12.sp,
+                                    color = TextSecondary
+                                )
+                                Text(
+                                    if (invoice.effectiveOldDebt < 0) "+${FormatHelper.formatMoney(-invoice.effectiveOldDebt)} đ" else "${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 13.sp,
                                     color = if (invoice.effectiveOldDebt > 0) DeleteRed else AccentGreen
@@ -936,7 +944,7 @@ fun InvoiceEditorScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(64.dp))
         }
     }
 

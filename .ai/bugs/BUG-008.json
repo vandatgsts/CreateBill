@@ -1,0 +1,16 @@
+{
+  "id": "BUG-008",
+  "title": "Tạo đơn mới chọn cửa hàng bị tự động kế thừa dư nợ dù kỳ trước đã đánh dấu ĐÃ THU",
+  "feature": "feature-debt-tracking",
+  "status": "FIXED",
+  "symptoms": "Khi kỳ đơn trước đó của Cửa Hàng / Đại Lý đã được đánh dấu 'ĐÃ THANH TOÁN / ĐÃ THU', tạo hóa đơn mới và chọn Cửa Hàng đó từ danh sách thì hệ thống vẫn tự động gán tổng tiền cũ vào ô 'Nợ cũ kỳ trước mang sang'.",
+  "root_cause": "Trong InvoiceEditorViewModel.applyStorePartner(), hàm tìm kỳ hóa đơn gần nhất và lấy trường '.totalAmount' (tổng giá trị hóa đơn) thay vì '.remainingDebt' (dư nợ thực tế còn lại sau khi xét trạng thái isPaid). Do đó, ngay cả khi isPaid = true thì totalAmount vẫn > 0 và bị gán nhầm vào oldDebt.",
+  "fix_solution": "Cập nhật InvoiceEditorViewModel.applyStorePartner() để lấy đúng 'latestInvoice?.remainingDebt ?: 0.0'. Nếu kỳ trước đã đánh dấu isPaid = true thì dư nợ kế thừa chính xác là 0 đ; gán đồng thời oldDebt và initialOldDebt.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+  ],
+  "affected_symbols": [
+    "InvoiceEditorViewModel.applyStorePartner",
+    "InvoiceEditorViewModel.initInvoiceForStorePartner"
+  ]
+}

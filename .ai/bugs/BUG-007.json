@@ -1,0 +1,23 @@
+{
+  "id": "BUG-007",
+  "title": "Mất vị trí cuộn (tự động nhảy về đầu trang) khi vào xem/sửa rồi quay lại",
+  "feature": "infrastructure-navigation",
+  "status": "FIXED",
+  "symptoms": "Khi đang cuộn ở giữa hoặc cuối danh sách (HomeScreen, StorePartnerList, ProductList, StorePartnerDetail), bấm vào xem trước hoặc sửa hóa đơn rồi quay ra ngoài thì màn hình bị reset vị trí cuộn về đầu trang (vị trí 0).",
+  "root_cause": "Điều hướng backstack trong MainActivity dùng when(currentScreen) khiến màn hình trước đó bị unmount/dispose hoàn toàn khỏi Composition tree mà không có SaveableStateHolder lưu giữ trạng thái, đồng thời các LazyColumn chưa gán LazyListState liên kết.",
+  "fix_solution": "Tích hợp rememberSaveableStateHolder() và SaveableStateProvider(currentScreen) trong MainActivity, gán rememberLazyListState() cho tất cả LazyColumn trong HomeScreen, StorePartnerListScreen, ProductListScreen, StorePartnerDetailScreen để khôi phục chính xác 100% vị trí cuộn khi back.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt"
+  ],
+  "affected_symbols": [
+    "MainActivity.onCreate",
+    "HomeScreen",
+    "StorePartnerListScreen",
+    "ProductListScreen",
+    "StorePartnerDetailScreen"
+  ]
+}

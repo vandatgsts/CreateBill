@@ -37,6 +37,65 @@
       "affected_files": ["app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"],
       "root_cause": "drawCenteredWrappedText used a fixed top Y offset (rowTop + 40f) instead of calculating baseline startY centered vertically around the cell's center line",
       "fix_summary": "Implemented getWrappedLines and drawVerticallyCenteredWrappedText to dynamically balance multi-line text vertically around rowTop + rowHeight / 2"
+    },
+    {
+      "id": "BUG-005",
+      "title": "Double window insets avoidance caused extra top status bar gap and redundant bottom bar spacing",
+      "feature": "infrastructure-navigation",
+      "status": "FIXED",
+      "affected_files": ["app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt", "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt"],
+      "root_cause": "Root Scaffold in MainActivity consumed top and bottom insets, which were then consumed a second time by child screen Scaffolds and TopAppBars",
+      "fix_summary": "Set contentWindowInsets = WindowInsets(0, 0, 0, 0) on root Scaffold and only padded bottom bar height where appropriate"
+    },
+    {
+      "id": "BUG-006",
+      "title": "Store partner ID was overwritten with new UUID on invoice save causing store not found on detail screen return",
+      "feature": "feature-stores",
+      "status": "FIXED",
+      "affected_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt"
+      ],
+      "root_cause": "saveStore replaced entire StorePartner object with new random UUID when matched by name, changing its primary ID",
+      "fix_summary": "Preserved existing.id and existing metadata during store updates and preserved existing StorePartner entity in invoice saving"
+    },
+    {
+      "id": "BUG-007",
+      "title": "Scroll position lost when navigating to preview/edit and back",
+      "feature": "infrastructure-navigation",
+      "status": "FIXED",
+      "affected_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt"
+      ],
+      "root_cause": "Screens were unmounted on navigation without SaveableStateHolder and LazyColumns lacked preserved list state",
+      "fix_summary": "Integrated SaveableStateHolder in MainActivity and bound rememberLazyListState to all screen LazyColumns"
+    },
+    {
+      "id": "BUG-008",
+      "title": "Selecting store in editor inherited old debt even when marked as paid",
+      "feature": "feature-debt-tracking",
+      "status": "FIXED",
+      "affected_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "root_cause": "applyStorePartner took .totalAmount instead of .remainingDebt (which respects isPaid flag)",
+      "fix_summary": "Changed applyStorePartner to take latestInvoice?.remainingDebt ?: 0.0 and sync both oldDebt and initialOldDebt"
+    },
+    {
+      "id": "BUG-009",
+      "title": "Crash with IllegalArgumentException in SaveableStateHolder when passing AppScreen object as key",
+      "feature": "infrastructure-navigation",
+      "status": "FIXED",
+      "affected_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt"
+      ],
+      "root_cause": "AppScreen sealed class does not implement Parcelable and cannot be stored directly in an Android Bundle",
+      "fix_summary": "Added String property screenKey to AppScreen and passed String keys into SaveableStateProvider"
     }
   ]
 }

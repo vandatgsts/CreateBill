@@ -3,10 +3,12 @@ package com.vandatgsts.thuyetnguyen.ui.preview
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,14 +17,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.PictureAsPdf
+import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -42,10 +43,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -73,8 +82,8 @@ fun InvoicePreviewScreen(
         viewModel.loadInvoice(invoiceId)
     }
 
-    val vertScroll = rememberScrollState()
-    val horizScroll = rememberScrollState()
+    var scale by remember { mutableFloatStateOf(1f) }
+    var offset by remember { mutableStateOf(Offset.Zero) }
 
     Scaffold(
         topBar = {
@@ -114,22 +123,24 @@ fun InvoicePreviewScreen(
                             onClick = { viewModel.viewPdf() },
                             colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue),
                             shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp),
                             modifier = Modifier.weight(1f).height(46.dp)
                         ) {
                             Icon(Icons.Default.PictureAsPdf, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("Mở File PDF", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Xem PDF", fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 1)
                         }
 
                         Button(
                             onClick = { viewModel.sharePdf() },
                             colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue),
                             shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp),
                             modifier = Modifier.weight(1f).height(46.dp)
                         ) {
                             Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("Chia sẻ PDF", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Gửi PDF", fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 1)
                         }
                     }
 
@@ -143,11 +154,12 @@ fun InvoicePreviewScreen(
                         OutlinedButton(
                             onClick = { viewModel.shareImage() },
                             shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp),
                             modifier = Modifier.weight(1f).height(46.dp)
                         ) {
                             Icon(Icons.Default.Share, contentDescription = null, tint = PrimaryBlue, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("Gửi Ảnh Zalo", fontWeight = FontWeight.Bold, color = PrimaryBlue, fontSize = 13.sp)
+                            Text("Gửi Ảnh", fontWeight = FontWeight.Bold, color = PrimaryBlue, fontSize = 13.sp, maxLines = 1)
                         }
 
                         Button(
@@ -162,11 +174,12 @@ fun InvoicePreviewScreen(
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = AccentGreen),
                             shape = RoundedCornerShape(8.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp),
                             modifier = Modifier.weight(1f).height(46.dp)
                         ) {
                             Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("Lưu Ảnh Vào Máy", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Lưu Vào Máy", fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 1)
                         }
                     }
                 }
@@ -177,7 +190,8 @@ fun InvoicePreviewScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(BackgroundLight)
-                .padding(padding),
+                .padding(padding)
+                .clipToBounds(),
             contentAlignment = Alignment.Center
         ) {
             if (isLoading) {
@@ -190,15 +204,43 @@ fun InvoicePreviewScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .verticalScroll(vertScroll)
-                        .horizontalScroll(horizScroll)
-                        .padding(16.dp),
+                        .pointerInput(Unit) {
+                            detectTapGestures(
+                                onDoubleTap = {
+                                    if (scale > 1.05f) {
+                                        scale = 1f
+                                        offset = Offset.Zero
+                                    } else {
+                                        scale = 2.5f
+                                        offset = Offset.Zero
+                                    }
+                                }
+                            )
+                        }
+                        .pointerInput(Unit) {
+                            detectTransformGestures { _, pan, zoom, _ ->
+                                scale = (scale * zoom).coerceIn(1f, 6f)
+                                if (scale <= 1.05f) {
+                                    offset = Offset.Zero
+                                } else {
+                                    offset += pan
+                                }
+                            }
+                        },
                     contentAlignment = Alignment.Center
                 ) {
                     Card(
                         shape = RoundedCornerShape(8.dp),
                         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
-                        colors = CardDefaults.cardColors(containerColor = Color.White)
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        modifier = Modifier
+                            .graphicsLayer {
+                                scaleX = scale
+                                scaleY = scale
+                                translationX = offset.x
+                                translationY = offset.y
+                            }
+                            .padding(16.dp)
                     ) {
                         Image(
                             bitmap = previewBitmap!!.asImageBitmap(),
@@ -206,6 +248,45 @@ fun InvoicePreviewScreen(
                             contentScale = ContentScale.Fit,
                             modifier = Modifier.padding(4.dp)
                         )
+                    }
+                }
+
+                // Badge thông tin Zoom & Nút Reset
+                Surface(
+                    color = Color.Black.copy(alpha = 0.65f),
+                    shape = RoundedCornerShape(20.dp),
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(14.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = "${(scale * 100).toInt()}%",
+                            color = Color.White,
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+
+                        if (scale > 1.05f) {
+                            IconButton(
+                                onClick = {
+                                    scale = 1f
+                                    offset = Offset.Zero
+                                },
+                                modifier = Modifier.size(20.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.RestartAlt,
+                                    contentDescription = "Thu nhỏ 100%",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+                        }
                     }
                 }
             } else {

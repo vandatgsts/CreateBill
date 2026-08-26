@@ -26,6 +26,7 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
     private val profileRepo = CompanyProfileRepository.getInstance(application)
     private val productRepo = ProductRepository.getInstance(application)
     private val storePartnerRepo = StorePartnerRepository.getInstance(application)
+    private val customerRepo = com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.getInstance(application)
 
     val availableProducts: StateFlow<List<ProductTemplate>> = productRepo.products
     val availableStores: StateFlow<List<StorePartner>> = storePartnerRepo.stores
@@ -106,6 +107,7 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
                 )
             ),
             oldDebt = rollingDebt,
+            initialOldDebt = rollingDebt,
             notes = if (store.defaultType == InvoiceType.QUOTATION_A4) profile.defaultNotes else "",
             paymentTerms = if (store.defaultType == InvoiceType.QUOTATION_A4) profile.defaultPaymentTerms else "",
             bankAccountNumber = profile.bankAccountNumber,
@@ -116,16 +118,26 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
 
     fun applyStorePartner(store: StorePartner) {
         val current = _invoiceState.value
-        val latestDebt = invoiceRepo.invoices.value
-            .filter { it.storeOrCompanyName.contains(store.name, ignoreCase = true) || it.title.contains(store.name, ignoreCase = true) }
-            .maxByOrNull { it.updatedAt }?.totalAmount ?: current.oldDebt
+        val latestInvoice = invoiceRepo.invoices.value
+            .filter { doc ->
+                val matchesStoreName = doc.storeOrCompanyName.isNotBlank() &&
+                        (doc.storeOrCompanyName.contains(store.name, ignoreCase = true) || store.name.contains(doc.storeOrCompanyName, ignoreCase = true))
+                val matchesTitle = doc.title.isNotBlank() &&
+                        (doc.title.contains(store.name, ignoreCase = true) || store.name.contains(doc.title, ignoreCase = true))
+                matchesStoreName || matchesTitle
+            }
+            .maxByOrNull { it.updatedAt }
+
+        // Dư nợ kế thừa thực tế: Nếu kỳ trước đã đánh dấu ĐÃ THU (isPaid = true) hoặc đã thanh toán hết thì dư nợ = 0 đ
+        val rollingDebt = latestInvoice?.remainingDebt ?: 0.0
 
         _invoiceState.value = current.copy(
             storeOrCompanyName = store.name,
             title = if (current.type == InvoiceType.DELIVERY_DEBT) store.name else current.title,
             companyAddress = if (store.address.isNotBlank()) store.address else current.companyAddress,
             companyPhone = if (store.phone.isNotBlank()) store.phone else current.companyPhone,
-            oldDebt = if (current.oldDebt == 0.0 && latestDebt > 0.0) latestDebt else current.oldDebt
+            oldDebt = rollingDebt,
+            initialOldDebt = rollingDebt
         )
     }
 
@@ -248,16 +260,39 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
             val invoice = _invoiceState.value
             invoiceRepo.saveInvoice(invoice)
 
-            // Tự động lưu/cập nhật Cửa Hàng / Đại Lý vào danh mục
+            // Tự động lưu/cập nhật Cửa Hàng / Đại Lý vào danh mục mà bảo toàn ID hiện tại
             if (invoice.storeOrCompanyName.isNotBlank()) {
-                storePartnerRepo.saveStore(
-                    StorePartner(
-                        name = invoice.storeOrCompanyName,
-                        phone = invoice.companyPhone,
-                        address = invoice.companyAddress,
-                        defaultType = invoice.type
-                    )
+                val existingStore = storePartnerRepo.getStoreByName(invoice.storeOrCompanyName)
+                val storeToSave = existingStore?.copy(
+                    phone = if (invoice.companyPhone.isNotBlank()) invoice.companyPhone else existingStore.phone,
+                    address = if (invoice.companyAddress.isNotBlank()) invoice.companyAddress else existingStore.address,
+                    defaultType = invoice.type
+                ) ?: StorePartner(
+                    name = invoice.storeOrCompanyName,
+                    phone = invoice.companyPhone,
+                    address = invoice.companyAddress,
+                    defaultType = invoice.type
                 )
+                storePartnerRepo.saveStore(storeToSave)
+            }
+
+            // Tự động lưu/cập nhật Khách Hàng nếu có thông tin
+            if (invoice.customer.name.isNotBlank()) {
+                val existingCust = customerRepo.customers.value.find { 
+                    it.name.equals(invoice.customer.name.trim(), ignoreCase = true) && 
+                    (it.phone.isBlank() || invoice.customer.phone.isBlank() || it.phone == invoice.customer.phone.trim())
+                }
+                val custToSave = existingCust?.copy(
+                    phone = if (invoice.customer.phone.isNotBlank()) invoice.customer.phone.trim() else existingCust.phone,
+                    address = if (invoice.customer.address.isNotBlank()) invoice.customer.address.trim() else existingCust.address,
+                    taxCode = if (invoice.customer.taxCode.isNotBlank()) invoice.customer.taxCode.trim() else existingCust.taxCode
+                ) ?: com.vandatgsts.thuyetnguyen.data.model.CustomerProfile(
+                    name = invoice.customer.name.trim(),
+                    phone = invoice.customer.phone.trim(),
+                    address = invoice.customer.address.trim(),
+                    taxCode = invoice.customer.taxCode.trim()
+                )
+                customerRepo.saveCustomer(custToSave)
             }
 
             onSuccess(invoice)

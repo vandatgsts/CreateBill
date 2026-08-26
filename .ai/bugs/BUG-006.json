@@ -1,0 +1,20 @@
+{
+  "id": "BUG-006",
+  "title": "Lỗi không tìm thấy thông tin cửa hàng, đại lý khi lưu hóa đơn và quay lại màn hình chi tiết",
+  "feature": "feature-stores",
+  "status": "FIXED",
+  "symptoms": "Khi đang ở màn hình chi tiết Cửa Hàng / Đại Lý, bấm chỉnh sửa hóa đơn rồi lưu lại và quay ra thì màn hình báo 'Không tìm thấy thông tin Cửa Hàng / Đại Lý' và mất nút điều hướng quay lại.",
+  "root_cause": "Trong InvoiceEditorViewModel.saveInvoice(), khi tự động cập nhật cửa hàng, một đối tượng StorePartner mới với UUID ngẫu nhiên được truyền vào StorePartnerRepository.saveStore(). Tại đây, khi tìm thấy cửa hàng theo tên trùng khớp, phương thức đã ghi đè toàn bộ đối tượng khiến ID ban đầu của cửa hàng bị đổi sang UUID mới, làm StorePartnerDetailScreen không tìm thấy store theo storeId ban đầu.",
+  "fix_solution": "Cập nhật StorePartnerRepository.saveStore() và CustomerRepository.saveCustomer() để bảo toàn existing.id và các trường thông tin hiện có khi cập nhật theo tên; cập nhật InvoiceEditorViewModel.saveInvoice() tái sử dụng ID hiện tại; bổ sung Scaffold và nút quay lại cho StorePartnerDetailScreen khi không tìm thấy storeId.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+  ],
+  "affected_symbols": [
+    "StorePartnerRepository.saveStore",
+    "InvoiceEditorViewModel.saveInvoice",
+    "StorePartnerDetailScreen"
+  ]
+}

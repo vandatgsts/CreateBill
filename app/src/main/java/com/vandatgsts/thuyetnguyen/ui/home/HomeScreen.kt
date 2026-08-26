@@ -17,12 +17,14 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Edit
@@ -30,6 +32,8 @@ import androidx.compose.material.icons.filled.Preview
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Store
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -38,6 +42,7 @@ import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -56,7 +61,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import java.util.Calendar
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument
@@ -85,11 +92,16 @@ fun HomeScreen(
     val invoices by viewModel.filteredInvoices.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
     val filterType by viewModel.filterType.collectAsState()
+    val datePeriod by viewModel.datePeriod.collectAsState()
+    val customDateRange by viewModel.customDateRange.collectAsState()
     val dashboardStats by viewModel.dashboardStats.collectAsState()
     val storeSummaries by viewModel.storeSummaries.collectAsState()
+    val context = LocalContext.current
 
     var showCreateDialog by remember { mutableStateOf(false) }
+    var showDateRangeDialog by remember { mutableStateOf(false) }
     var invoiceToDelete by remember { mutableStateOf<InvoiceDocument?>(null) }
+    val listState = rememberLazyListState()
 
     Scaffold(
         topBar = {
@@ -125,11 +137,12 @@ fun HomeScreen(
         }
     ) { padding ->
         LazyColumn(
+            state = listState,
             modifier = Modifier
                 .fillMaxSize()
                 .background(BackgroundLight)
                 .padding(padding),
-            contentPadding = PaddingValues(bottom = 80.dp),
+            contentPadding = PaddingValues(bottom = 96.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             // 1. DASHBOARD BANNER TỔNG QUAN TÀI CHÍNH
@@ -212,8 +225,44 @@ fun HomeScreen(
                             modifier = Modifier.fillMaxWidth()
                         )
 
-                        Spacer(modifier = Modifier.height(8.dp))
+                        // 1. Bộ lọc Thời Gian (Kỳ báo cáo)
+                        Text("Kỳ Báo Cáo & Thống Kê:", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = TextSecondary)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .horizontalScroll(rememberScrollState())
+                        ) {
+                            DateFilterPeriod.entries.forEach { period ->
+                                val isSelected = datePeriod == period
+                                val chipLabel = if (period == DateFilterPeriod.CUSTOM) {
+                                    if (customDateRange != null) {
+                                        "📅 ${FormatHelper.formatDate(customDateRange!!.first)} - ${FormatHelper.formatDate(customDateRange!!.second)}"
+                                    } else "📅 Chọn ngày..."
+                                } else period.label
 
+                                FilterChip(
+                                    selected = isSelected,
+                                    onClick = {
+                                        if (period == DateFilterPeriod.CUSTOM) {
+                                            showDateRangeDialog = true
+                                        } else {
+                                            viewModel.setDatePeriod(period)
+                                        }
+                                    },
+                                    label = { Text(chipLabel, fontSize = 11.sp) },
+                                    colors = FilterChipDefaults.filterChipColors(
+                                        selectedContainerColor = PrimaryBlueDark,
+                                        selectedLabelColor = Color.White
+                                    )
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(6.dp))
+
+                        // 2. Bộ lọc Mẫu Hóa Đơn
                         Row(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                             modifier = Modifier.fillMaxWidth()
@@ -221,7 +270,7 @@ fun HomeScreen(
                             FilterChip(
                                 selected = filterType == null,
                                 onClick = { viewModel.setFilterType(null) },
-                                label = { Text("Tất cả (${invoices.size})", fontSize = 12.sp) },
+                                label = { Text("Tất cả mẫu (${invoices.size})", fontSize = 11.sp) },
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = PrimaryBlue,
                                     selectedLabelColor = Color.White
@@ -230,7 +279,7 @@ fun HomeScreen(
                             FilterChip(
                                 selected = filterType == InvoiceType.DELIVERY_DEBT,
                                 onClick = { viewModel.setFilterType(if (filterType == InvoiceType.DELIVERY_DEBT) null else InvoiceType.DELIVERY_DEBT) },
-                                label = { Text("Mẫu 1: Giao hàng", fontSize = 12.sp) },
+                                label = { Text("Mẫu 1: Giao hàng", fontSize = 11.sp) },
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = PrimaryBlue,
                                     selectedLabelColor = Color.White
@@ -239,7 +288,7 @@ fun HomeScreen(
                             FilterChip(
                                 selected = filterType == InvoiceType.QUOTATION_A4,
                                 onClick = { viewModel.setFilterType(if (filterType == InvoiceType.QUOTATION_A4) null else InvoiceType.QUOTATION_A4) },
-                                label = { Text("Mẫu 2: Báo giá A4", fontSize = 12.sp) },
+                                label = { Text("Mẫu 2: Báo giá", fontSize = 11.sp) },
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = PrimaryBlue,
                                     selectedLabelColor = Color.White
@@ -336,6 +385,121 @@ fun HomeScreen(
         )
     }
 
+    // Modal chọn khoảng ngày tùy chọn
+    if (showDateRangeDialog) {
+        var startDateMillis by remember {
+            mutableStateOf(customDateRange?.first ?: System.currentTimeMillis())
+        }
+        var endDateMillis by remember {
+            mutableStateOf(customDateRange?.second ?: System.currentTimeMillis())
+        }
+
+        AlertDialog(
+            onDismissRequest = { showDateRangeDialog = false },
+            title = { Text("Lọc theo khoảng ngày", fontWeight = FontWeight.Bold, fontSize = 17.sp) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                    Text(
+                        "Chọn khoảng thời gian phát sinh hóa đơn để xem báo cáo doanh số & thu nợ:",
+                        fontSize = 13.sp,
+                        color = TextSecondary
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        OutlinedButton(
+                            onClick = {
+                                val cal = Calendar.getInstance().apply { timeInMillis = startDateMillis }
+                                android.app.DatePickerDialog(
+                                    context,
+                                    { _, y, m, d ->
+                                        val newCal = Calendar.getInstance().apply {
+                                            set(y, m, d, 0, 0, 0)
+                                            set(Calendar.MILLISECOND, 0)
+                                        }
+                                        startDateMillis = newCal.timeInMillis
+                                    },
+                                    cal.get(Calendar.YEAR),
+                                    cal.get(Calendar.MONTH),
+                                    cal.get(Calendar.DAY_OF_MONTH)
+                                ).show()
+                            },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text("Từ ngày", fontSize = 11.sp, color = TextSecondary)
+                                Text(
+                                    FormatHelper.formatDate(startDateMillis),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 13.sp,
+                                    color = PrimaryBlue
+                                )
+                            }
+                        }
+
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowForwardIos,
+                            contentDescription = null,
+                            modifier = Modifier.size(12.dp),
+                            tint = TextSecondary
+                        )
+
+                        OutlinedButton(
+                            onClick = {
+                                val cal = Calendar.getInstance().apply { timeInMillis = endDateMillis }
+                                android.app.DatePickerDialog(
+                                    context,
+                                    { _, y, m, d ->
+                                        val newCal = Calendar.getInstance().apply {
+                                            set(y, m, d, 23, 59, 59)
+                                            set(Calendar.MILLISECOND, 999)
+                                        }
+                                        endDateMillis = newCal.timeInMillis
+                                    },
+                                    cal.get(Calendar.YEAR),
+                                    cal.get(Calendar.MONTH),
+                                    cal.get(Calendar.DAY_OF_MONTH)
+                                ).show()
+                            },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text("Đến ngày", fontSize = 11.sp, color = TextSecondary)
+                                Text(
+                                    FormatHelper.formatDate(endDateMillis),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 13.sp,
+                                    color = PrimaryBlue
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        val start = minOf(startDateMillis, endDateMillis)
+                        val end = maxOf(startDateMillis, endDateMillis)
+                        viewModel.setCustomDateRange(start, end)
+                        showDateRangeDialog = false
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
+                ) {
+                    Text("Áp dụng lọc")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDateRangeDialog = false }) {
+                    Text("Hủy")
+                }
+            }
+        )
+    }
+
     // Modal xác nhận xóa
     if (invoiceToDelete != null) {
         AlertDialog(
@@ -386,13 +550,18 @@ private fun DashboardOverviewBanner(stats: HomeDashboardStats) {
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("TỔNG QUAN TÀI CHÍNH & ĐƠN HÀNG", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.White.copy(alpha = 0.9f))
+                    Text(
+                        stats.periodLabel,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White.copy(alpha = 0.95f)
+                    )
                     Surface(
                         color = Color.White.copy(alpha = 0.2f),
                         shape = RoundedCornerShape(12.dp)
                     ) {
                         Text(
-                            "${stats.totalStores} Cửa Hàng",
+                            "${stats.totalInvoices} Hóa Đơn",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color.White,
@@ -401,54 +570,75 @@ private fun DashboardOverviewBanner(stats: HomeDashboardStats) {
                     }
                 }
 
-                Spacer(modifier = Modifier.height(14.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    // Doanh số
                     Surface(
                         color = Color.White.copy(alpha = 0.15f),
                         shape = RoundedCornerShape(10.dp),
                         modifier = Modifier.weight(1f)
                     ) {
                         Column(modifier = Modifier.padding(10.dp)) {
-                            Text("Dư nợ cần thu", fontSize = 11.sp, color = Color.White.copy(alpha = 0.85f))
-                            Spacer(modifier = Modifier.height(2.dp))
-                            Text(
-                                "${FormatHelper.formatMoney(stats.totalOutstandingDebt)} đ",
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFFFFD166),
-                                maxLines = 1
-                            )
-                        }
-                    }
-
-                    Surface(
-                        color = Color.White.copy(alpha = 0.15f),
-                        shape = RoundedCornerShape(10.dp),
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Column(modifier = Modifier.padding(10.dp)) {
-                            Text("Tổng doanh số", fontSize = 11.sp, color = Color.White.copy(alpha = 0.85f))
+                            Text("Tổng doanh số", fontSize = 10.sp, color = Color.White.copy(alpha = 0.85f))
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
                                 "${FormatHelper.formatMoney(stats.totalRevenue)} đ",
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
                                 maxLines = 1
                             )
                         }
                     }
+
+                    // Đã thu
+                    Surface(
+                        color = Color.White.copy(alpha = 0.15f),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Column(modifier = Modifier.padding(10.dp)) {
+                            Text("Đã thu / CK", fontSize = 10.sp, color = Color.White.copy(alpha = 0.85f))
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                "${FormatHelper.formatMoney(stats.totalPaid)} đ",
+                                fontSize = 14.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF86EFAC),
+                                maxLines = 1
+                            )
+                        }
+                    }
+
+                    // Dư nợ còn lại
+                    Surface(
+                        color = Color.White.copy(alpha = 0.15f),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Column(modifier = Modifier.padding(10.dp)) {
+                            Text("Dư nợ còn lại", fontSize = 10.sp, color = Color.White.copy(alpha = 0.85f))
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                "${FormatHelper.formatMoney(stats.totalOutstandingDebt)} đ",
+                                fontSize = 14.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFFFD166),
+                                maxLines = 1
+                            )
+                        }
+                    }
                 }
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text("Tổng số hóa đơn đã tạo: ${stats.totalInvoices}", fontSize = 12.sp, color = Color.White.copy(alpha = 0.85f))
-                    Text("Kho hàng: ${stats.totalProducts} mặt hàng", fontSize = 12.sp, color = Color.White.copy(alpha = 0.85f))
+                    Text("Cửa hàng đối tác: ${stats.totalStores}", fontSize = 11.sp, color = Color.White.copy(alpha = 0.85f))
+                    Text("Kho hàng: ${stats.totalProducts} mặt hàng", fontSize = 11.sp, color = Color.White.copy(alpha = 0.85f))
                 }
             }
         }
@@ -499,9 +689,13 @@ private fun StoreQuickCard(
             )
 
             Spacer(modifier = Modifier.height(6.dp))
-            Text("Dư nợ kỳ gần nhất:", fontSize = 10.sp, color = TextSecondary)
             Text(
-                "${FormatHelper.formatMoney(summary.currentDebt)} đ",
+                if (summary.currentDebt < 0) "Khách trả dư:" else "Dư nợ kỳ gần nhất:",
+                fontSize = 10.sp,
+                color = TextSecondary
+            )
+            Text(
+                if (summary.currentDebt < 0) "+${FormatHelper.formatMoney(-summary.currentDebt)} đ" else "${FormatHelper.formatMoney(summary.currentDebt)} đ",
                 fontWeight = FontWeight.Bold,
                 fontSize = 13.sp,
                 color = if (summary.currentDebt > 0) DeleteRed else AccentGreen,
@@ -546,7 +740,11 @@ private fun InvoiceItemCard(
                         shape = RoundedCornerShape(6.dp)
                     ) {
                         Text(
-                            text = if (invoice.isFullyPaid) "✓ Đã thu đủ" else "Còn nợ: ${FormatHelper.formatMoney(invoice.totalAmount)} đ",
+                            text = when {
+                                invoice.totalAmount < 0 -> "✓ Trả dư: ${FormatHelper.formatMoney(-invoice.totalAmount)} đ"
+                                invoice.isFullyPaid -> "✓ Đã thu đủ"
+                                else -> "Còn nợ: ${FormatHelper.formatMoney(invoice.totalAmount)} đ"
+                            },
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
                             color = if (invoice.isFullyPaid) AccentGreen else DeleteRed,
@@ -574,8 +772,12 @@ private fun InvoiceItemCard(
             val subtitle = buildString {
                 append("Ngày lập: ${FormatHelper.formatDate(invoice.updatedAt)}")
                 append(" • ${invoice.items.size} chuyến giao")
-                if (invoice.type == InvoiceType.DELIVERY_DEBT && invoice.effectiveOldDebt > 0) {
-                    append(" • Nợ cũ: ${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ")
+                if (invoice.type == InvoiceType.DELIVERY_DEBT) {
+                    if (invoice.effectiveOldDebt > 0) {
+                        append(" • Nợ cũ: ${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ")
+                    } else if (invoice.effectiveOldDebt < 0) {
+                        append(" • Trả dư: ${FormatHelper.formatMoney(-invoice.effectiveOldDebt)} đ")
+                    }
                 }
             }
             Text(subtitle, fontSize = 12.sp, color = TextSecondary)
@@ -588,11 +790,15 @@ private fun InvoiceItemCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column {
-                    Text("Tổng dư nợ kỳ này:", fontSize = 11.sp, color = TextSecondary)
                     Text(
-                        "${FormatHelper.formatMoney(invoice.totalAmount)} đ",
+                        if (invoice.totalAmount < 0) "Khách trả dư kỳ này:" else "Tổng dư nợ kỳ này:",
+                        fontSize = 11.sp,
+                        color = TextSecondary
+                    )
+                    Text(
+                        if (invoice.totalAmount < 0) "+${FormatHelper.formatMoney(-invoice.totalAmount)} đ" else "${FormatHelper.formatMoney(invoice.totalAmount)} đ",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
+                        fontSize = 15.sp,
                         color = if (invoice.isFullyPaid) AccentGreen else DeleteRed
                     )
                 }

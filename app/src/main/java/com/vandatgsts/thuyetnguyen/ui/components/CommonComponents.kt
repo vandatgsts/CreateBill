@@ -89,29 +89,36 @@ fun CurrencyField(
     value: Double,
     onValueChange: (Double) -> Unit,
     label: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    allowNegative: Boolean = false
 ) {
     var rawText by remember(value) {
-        mutableStateOf(if (value == 0.0) "" else FormatHelper.formatMoney(value))
+        mutableStateOf(
+            if (value == 0.0) ""
+            else if (value < 0) "-${FormatHelper.formatMoney(-value)}"
+            else FormatHelper.formatMoney(value)
+        )
     }
 
     OutlinedTextField(
         value = rawText,
         onValueChange = { input ->
-            val clean = input.replace(".", "").replace(",", "").filter { it.isDigit() }
+            val isNegative = allowNegative && input.startsWith("-")
+            val clean = input.replace(".", "").replace(",", "").replace("-", "").filter { it.isDigit() }
             if (clean.isEmpty()) {
-                rawText = ""
+                rawText = if (isNegative) "-" else ""
                 onValueChange(0.0)
             } else {
-                val num = clean.toDoubleOrNull() ?: 0.0
-                rawText = FormatHelper.formatMoney(num)
-                onValueChange(num)
+                val absNum = clean.toDoubleOrNull() ?: 0.0
+                val finalNum = if (isNegative) -absNum else absNum
+                rawText = if (isNegative) "-${FormatHelper.formatMoney(absNum)}" else FormatHelper.formatMoney(absNum)
+                onValueChange(finalNum)
             }
         },
         label = { Text(label, fontSize = 13.sp) },
         suffix = { Text("đ", fontSize = 13.sp, color = TextSecondary) },
         singleLine = true,
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        keyboardOptions = KeyboardOptions(keyboardType = if (allowNegative) KeyboardType.Text else KeyboardType.Number),
         shape = RoundedCornerShape(8.dp),
         colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = PrimaryBlue,

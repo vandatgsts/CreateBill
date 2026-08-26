@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -88,6 +89,7 @@ fun StorePartnerListScreen(
     var editingStore by remember { mutableStateOf<StorePartner?>(null) }
     var showDialog by remember { mutableStateOf(false) }
     var storeToDelete by remember { mutableStateOf<StorePartner?>(null) }
+    val listState = rememberLazyListState()
 
     Scaffold(
         topBar = {
@@ -173,8 +175,9 @@ fun StorePartnerListScreen(
                 }
             } else {
                 LazyColumn(
+                    state = listState,
                     modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(16.dp),
+                    contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 96.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     items(summaries, key = { it.store.id }) { summary ->

@@ -1,0 +1,16 @@
+{
+  "id": "BUG-009",
+  "title": "Crash IllegalArgumentException: Type of the key Home is not supported in SaveableStateHolder",
+  "feature": "infrastructure-navigation",
+  "status": "FIXED",
+  "symptoms": "App bị crash ngay khi khởi động hoặc chuyển màn hình với lỗi java.lang.IllegalArgumentException: Type of the key Home is not supported. On Android you can only use types which can be stored inside the Bundle tại SaveableStateHolder.SaveableStateProvider().",
+  "root_cause": "Trong MainActivity, SaveableStateProvider(currentScreen) nhận trực tiếp đối tượng sealed class AppScreen làm key. Do AppScreen không phải kiểu dữ liệu có thể lưu vào Android Bundle (như String, Primitive, Parcelable), SaveableStateHolderImpl ném ngoại lệ.",
+  "fix_solution": "Khai báo thuộc tính 'screenKey: String' cho sealed class AppScreen và tất cả subclass (Home -> 'screen_home', StorePartnerDetail -> 'screen_store_detail_$storeId', v.v.); truyền currentScreen.screenKey (kiểu String) vào SaveableStateProvider và removeState.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt"
+  ],
+  "affected_symbols": [
+    "AppScreen",
+    "MainActivity.onCreate"
+  ]
+}

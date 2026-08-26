@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -86,8 +87,51 @@ fun StorePartnerDetailScreen(
     val summary = summaries.find { it.store.id == storeId }
 
     if (summary == null) {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text("Không tìm thấy thông tin Cửa Hàng / Đại Lý")
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text("Chi Tiết Cửa Hàng", fontWeight = FontWeight.Bold, fontSize = 17.sp) },
+                    navigationIcon = {
+                        IconButton(onClick = onBack) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Quay lại", tint = Color.White)
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = PrimaryBlue,
+                        titleContentColor = Color.White
+                    )
+                )
+            }
+        ) { padding ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(padding)
+                    .background(BackgroundLight),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(20.dp)) {
+                    Text(
+                        "Không tìm thấy thông tin Cửa Hàng / Đại Lý",
+                        fontSize = 15.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        "Cửa hàng này có thể đã được đổi tên hoặc cập nhật ID.",
+                        fontSize = 13.sp,
+                        color = TextSecondary
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(
+                        onClick = onBack,
+                        colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
+                    ) {
+                        Text("Quay lại danh sách")
+                    }
+                }
+            }
         }
         return
     }
@@ -96,6 +140,7 @@ fun StorePartnerDetailScreen(
     var showPaymentDialog by remember { mutableStateOf(false) }
     var paymentAmount by remember { mutableStateOf(0.0) }
     var paymentTitle by remember { mutableStateOf("Ck thanh toán") }
+    val listState = rememberLazyListState()
 
     Scaffold(
         topBar = {
@@ -137,7 +182,7 @@ fun StorePartnerDetailScreen(
                         ) {
                             Icon(Icons.Default.AttachMoney, contentDescription = null, tint = AccentGreen)
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("GHI NHẬN CHUYỂN KHOẢN / THU NỢ", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Ghi Nhận Chuyển Khoản", fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 1)
                         }
                     }
 
@@ -150,19 +195,20 @@ fun StorePartnerDetailScreen(
                             .height(48.dp)
                     ) {
                         Icon(Icons.Default.Add, contentDescription = null)
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text("TẠO KỲ HÓA ĐƠN MỚI (KẾ THỪA NỢ CŨ)", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text("Tạo Kỳ Hóa Đơn Mới", fontWeight = FontWeight.Bold, fontSize = 14.sp, maxLines = 1)
                     }
                 }
             }
         }
     ) { padding ->
         LazyColumn(
+            state = listState,
             modifier = Modifier
                 .fillMaxSize()
                 .background(BackgroundLight)
                 .padding(padding),
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 96.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             // 1. Thông tin Cửa Hàng
@@ -253,8 +299,8 @@ fun StorePartnerDetailScreen(
                                 modifier = Modifier.weight(1f)
                             )
                             MetricBox(
-                                title = "Dư Nợ Kỳ Gần Nhất",
-                                value = FormatHelper.formatMoney(summary.currentDebt),
+                                title = if (summary.currentDebt < 0) "Khách Trả Dư" else "Dư Nợ Kỳ Gần Nhất",
+                                value = if (summary.currentDebt < 0) "+${FormatHelper.formatMoney(-summary.currentDebt)}" else FormatHelper.formatMoney(summary.currentDebt),
                                 color = if (summary.currentDebt > 0) DeleteRed else AccentGreen,
                                 modifier = Modifier.weight(1f)
                             )
@@ -443,8 +489,17 @@ private fun InvoicePeriodCard(
             }
 
             Spacer(modifier = Modifier.height(4.dp))
+            val subtitle = buildString {
+                append("Ngày lập: ${FormatHelper.formatDate(invoice.updatedAt)}")
+                append(" • ${invoice.items.size} chuyến giao")
+                if (invoice.effectiveOldDebt > 0) {
+                    append(" • Nợ cũ: ${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ")
+                } else if (invoice.effectiveOldDebt < 0) {
+                    append(" • Trả dư: ${FormatHelper.formatMoney(-invoice.effectiveOldDebt)} đ")
+                }
+            }
             Text(
-                "Ngày lập: ${FormatHelper.formatDate(invoice.updatedAt)} | ${invoice.items.size} chuyến giao | Nợ cũ: ${FormatHelper.formatMoney(invoice.effectiveOldDebt)} đ",
+                subtitle,
                 fontSize = 12.sp,
                 color = TextSecondary
             )
@@ -457,9 +512,13 @@ private fun InvoicePeriodCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column {
-                    Text("Tổng dư nợ kỳ này:", fontSize = 11.sp, color = TextSecondary)
                     Text(
-                        "${FormatHelper.formatMoney(invoice.totalAmount)} đ",
+                        if (invoice.totalAmount < 0) "Khách trả dư kỳ này:" else "Tổng dư nợ kỳ này:",
+                        fontSize = 11.sp,
+                        color = TextSecondary
+                    )
+                    Text(
+                        if (invoice.totalAmount < 0) "+${FormatHelper.formatMoney(-invoice.totalAmount)} đ" else "${FormatHelper.formatMoney(invoice.totalAmount)} đ",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
                         color = if (invoice.isFullyPaid) AccentGreen else DeleteRed

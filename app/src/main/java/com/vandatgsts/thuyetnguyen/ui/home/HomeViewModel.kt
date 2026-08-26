@@ -9,19 +9,32 @@ import com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary
 import com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository
 import com.vandatgsts.thuyetnguyen.data.repository.ProductRepository
 import com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository
+import com.vandatgsts.thuyetnguyen.generator.FormatHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import java.util.Calendar
+
+enum class DateFilterPeriod(val label: String) {
+    ALL("Tất cả"),
+    TODAY("Hôm nay"),
+    THIS_WEEK("Tuần này"),
+    THIS_MONTH("Tháng này"),
+    LAST_MONTH("Tháng trước"),
+    CUSTOM("Tùy chọn ngày")
+}
 
 data class HomeDashboardStats(
     val totalStores: Int = 0,
     val totalInvoices: Int = 0,
     val totalProducts: Int = 0,
     val totalOutstandingDebt: Double = 0.0,
-    val totalRevenue: Double = 0.0
+    val totalRevenue: Double = 0.0,
+    val totalPaid: Double = 0.0,
+    val periodLabel: String = "TỔNG QUAN TÀI CHÍNH"
 )
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
@@ -34,6 +47,12 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _filterType = MutableStateFlow<InvoiceType?>(null)
     val filterType: StateFlow<InvoiceType?> = _filterType
+
+    private val _datePeriod = MutableStateFlow(DateFilterPeriod.ALL)
+    val datePeriod: StateFlow<DateFilterPeriod> = _datePeriod
+
+    private val _customDateRange = MutableStateFlow<Pair<Long, Long>?>(null)
+    val customDateRange: StateFlow<Pair<Long, Long>?> = _customDateRange
 
     val storeSummaries: StateFlow<List<StorePartnerSummary>> = combine(
         storeRepo.stores,
@@ -68,40 +87,62 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     val dashboardStats: StateFlow<HomeDashboardStats> = combine(
         storeRepo.stores,
         invoiceRepo.invoices,
-        productRepo.products
-    ) { stores, invoices, products ->
-        val totalRevenue = invoices.sumOf { it.totalAmount }
-        val totalDebt = stores.sumOf { store ->
-            val matching = invoices.filter { doc ->
-                doc.storeOrCompanyName.contains(store.name, ignoreCase = true) ||
-                        doc.title.contains(store.name, ignoreCase = true)
-            }.sortedByDescending { it.updatedAt }
-            matching.firstOrNull()?.remainingDebt ?: 0.0
+        productRepo.products,
+        _datePeriod,
+        _customDateRange
+    ) { stores, invoices, products, period, customRange ->
+        val range = getPeriodTimestampRange(period, customRange)
+        val periodInvoices = if (range == null) {
+            invoices
+        } else {
+            invoices.filter { it.updatedAt in range.first..range.second || it.createdAt in range.first..range.second }
         }
 
+        val totalRevenue = periodInvoices.sumOf { it.totalAmount }
+        val totalPaid = periodInvoices.sumOf { it.totalPaid }
+        val totalDebt = periodInvoices.sumOf { it.remainingDebt }
+
+        val periodLabel = when (period) {
+            DateFilterPeriod.ALL -> "TỔNG QUAN TÀI CHÍNH"
+            DateFilterPeriod.TODAY -> "TỔNG QUAN HÔM NAY"
+            DateFilterPeriod.THIS_WEEK -> "TỔNG QUAN TUẦN NÀY"
+            DateFilterPeriod.THIS_MONTH -> "TỔNG QUAN THÁNG ${Calendar.getInstance().get(Calendar.MONTH) + 1}"
+            DateFilterPeriod.LAST_MONTH -> "TỔNG QUAN THÁNG TRƯỚC"
+            DateFilterPeriod.CUSTOM -> {
+                if (customRange != null) {
+                    "TỔNG QUAN (${FormatHelper.formatDate(customRange.first)} - ${FormatHelper.formatDate(customRange.second)})"
+                } else "TỔNG QUAN TÙY CHỌN NGÀY"
+            }
+        }
 
         HomeDashboardStats(
             totalStores = stores.size,
-            totalInvoices = invoices.size,
+            totalInvoices = periodInvoices.size,
             totalProducts = products.size,
             totalOutstandingDebt = totalDebt,
-            totalRevenue = totalRevenue
+            totalRevenue = totalRevenue,
+            totalPaid = totalPaid,
+            periodLabel = periodLabel
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), HomeDashboardStats())
 
     val filteredInvoices: StateFlow<List<InvoiceDocument>> = combine(
         invoiceRepo.invoices,
         _searchQuery,
-        _filterType
-    ) { list, query, filter ->
+        _filterType,
+        _datePeriod,
+        _customDateRange
+    ) { list, query, filter, period, customRange ->
+        val range = getPeriodTimestampRange(period, customRange)
         list.filter { doc ->
             val matchesFilter = (filter == null || doc.type == filter)
+            val matchesPeriod = if (range == null) true else (doc.updatedAt in range.first..range.second || doc.createdAt in range.first..range.second)
             val matchesQuery = query.isBlank() ||
                     doc.title.contains(query, ignoreCase = true) ||
                     doc.storeOrCompanyName.contains(query, ignoreCase = true) ||
                     doc.customer.name.contains(query, ignoreCase = true) ||
                     doc.items.any { it.productName.contains(query, ignoreCase = true) || it.receiver.contains(query, ignoreCase = true) }
-            matchesFilter && matchesQuery
+            matchesFilter && matchesPeriod && matchesQuery
         }
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
@@ -113,6 +154,18 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         _filterType.value = type
     }
 
+    fun setDatePeriod(period: DateFilterPeriod) {
+        _datePeriod.value = period
+        if (period != DateFilterPeriod.CUSTOM) {
+            _customDateRange.value = null
+        }
+    }
+
+    fun setCustomDateRange(start: Long, end: Long) {
+        _customDateRange.value = Pair(start, end)
+        _datePeriod.value = DateFilterPeriod.CUSTOM
+    }
+
     fun deleteInvoice(id: String) {
         viewModelScope.launch {
             invoiceRepo.deleteInvoice(id)
@@ -122,6 +175,81 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     fun duplicateInvoice(id: String) {
         viewModelScope.launch {
             invoiceRepo.duplicateInvoice(id)
+        }
+    }
+
+    private fun getPeriodTimestampRange(period: DateFilterPeriod, customRange: Pair<Long, Long>?): Pair<Long, Long>? {
+        return when (period) {
+            DateFilterPeriod.ALL -> null
+            DateFilterPeriod.TODAY -> {
+                val cal = Calendar.getInstance()
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
+                val start = cal.timeInMillis
+
+                cal.set(Calendar.HOUR_OF_DAY, 23)
+                cal.set(Calendar.MINUTE, 59)
+                cal.set(Calendar.SECOND, 59)
+                cal.set(Calendar.MILLISECOND, 999)
+                val end = cal.timeInMillis
+                Pair(start, end)
+            }
+            DateFilterPeriod.THIS_WEEK -> {
+                val cal = Calendar.getInstance()
+                cal.firstDayOfWeek = Calendar.MONDAY
+                cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
+                val start = cal.timeInMillis
+
+                cal.add(Calendar.DAY_OF_WEEK, 6)
+                cal.set(Calendar.HOUR_OF_DAY, 23)
+                cal.set(Calendar.MINUTE, 59)
+                cal.set(Calendar.SECOND, 59)
+                cal.set(Calendar.MILLISECOND, 999)
+                val end = cal.timeInMillis
+                Pair(start, end)
+            }
+            DateFilterPeriod.THIS_MONTH -> {
+                val cal = Calendar.getInstance()
+                cal.set(Calendar.DAY_OF_MONTH, 1)
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
+                val start = cal.timeInMillis
+
+                cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH))
+                cal.set(Calendar.HOUR_OF_DAY, 23)
+                cal.set(Calendar.MINUTE, 59)
+                cal.set(Calendar.SECOND, 59)
+                cal.set(Calendar.MILLISECOND, 999)
+                val end = cal.timeInMillis
+                Pair(start, end)
+            }
+            DateFilterPeriod.LAST_MONTH -> {
+                val cal = Calendar.getInstance()
+                cal.add(Calendar.MONTH, -1)
+                cal.set(Calendar.DAY_OF_MONTH, 1)
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
+                val start = cal.timeInMillis
+
+                cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH))
+                cal.set(Calendar.HOUR_OF_DAY, 23)
+                cal.set(Calendar.MINUTE, 59)
+                cal.set(Calendar.SECOND, 59)
+                cal.set(Calendar.MILLISECOND, 999)
+                val end = cal.timeInMillis
+                Pair(start, end)
+            }
+            DateFilterPeriod.CUSTOM -> customRange
         }
     }
 }

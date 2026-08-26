@@ -250,7 +250,7 @@ fun CompanyProfileScreen(
             ) {
                 Icon(Icons.Default.Save, contentDescription = null)
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("LƯU THÔNG TIN BÊN BÁN", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Text("Lưu Thông Tin Bên Bán", fontWeight = FontWeight.Bold, fontSize = 14.sp, maxLines = 1)
             }
 
             Spacer(modifier = Modifier.height(20.dp))
@@ -294,11 +294,11 @@ fun CompanyProfileScreen(
                         if (isExporting) {
                             CircularProgressIndicator(color = Color.White, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("Đang tạo file sao lưu...", fontSize = 13.sp)
+                            Text("Đang tạo file sao lưu...", fontSize = 13.sp, maxLines = 1)
                         } else {
                             Icon(Icons.Default.CloudUpload, contentDescription = null)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("Xuất Toàn Bộ Dữ Liệu (File JSON)", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Text("Xuất Dữ Liệu Ra File (JSON)", fontWeight = FontWeight.Bold, fontSize = 13.sp, maxLines = 1)
                         }
                     }
 
@@ -316,17 +316,17 @@ fun CompanyProfileScreen(
                         if (isImporting) {
                             CircularProgressIndicator(color = PrimaryBlue, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("Đang nhập dữ liệu...", fontSize = 13.sp, color = PrimaryBlue)
+                            Text("Đang nhập dữ liệu...", fontSize = 13.sp, color = PrimaryBlue, maxLines = 1)
                         } else {
                             Icon(Icons.Default.CloudDownload, contentDescription = null, tint = PrimaryBlue)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("Nhập Dữ Liệu Từ File (Khôi Phục)", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = PrimaryBlue)
+                            Text("Nhập Dữ Liệu Từ File", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = PrimaryBlue, maxLines = 1)
                         }
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(64.dp))
         }
     }
 

@@ -45,8 +45,8 @@ data class InvoiceDocument(
 
     val effectiveOldDebt: Double
         get() {
-            val baseOldDebt = if (initialOldDebt > 0.0) initialOldDebt else oldDebt
-            return maxOf(0.0, baseOldDebt - totalDebtPayments)
+            val baseOldDebt = if (initialOldDebt != 0.0) initialOldDebt else oldDebt
+            return baseOldDebt - totalDebtPayments
         }
 
     val vatAmount: Double
@@ -67,9 +67,12 @@ data class InvoiceDocument(
     val totalPaid: Double
         get() = items.sumOf { it.paidAmount } + totalDebtPayments
 
-    // Dư nợ thực tế cần thu (Nếu đã đánh dấu isPaid = true thì dư nợ = 0 đ, nhưng totalAmount vẫn giữ nguyên số tiền)
+    // Dư nợ thực tế cần thu / Số tiền trả thừa mang sang kỳ sau:
+    // - Nếu totalAmount < 0: Khách trả thừa -> giữ nguyên số âm (dư có) để tự động mang sang kỳ tiếp theo khấu trừ
+    // - Nếu totalAmount >= 0 và isPaid = true: Đã thu tiền xong -> Dư nợ = 0 đ
+    // - Nếu totalAmount > 0 và isPaid = false: Dư nợ = totalAmount
     val remainingDebt: Double
-        get() = if (isPaid) 0.0 else totalAmount
+        get() = if (totalAmount < 0.0) totalAmount else if (isPaid) 0.0 else totalAmount
 
     val isFullyPaid: Boolean
         get() = isPaid || totalAmount <= 0.0

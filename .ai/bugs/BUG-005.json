@@ -1,0 +1,16 @@
+{
+  "id": "BUG-005",
+  "title": "Bị tránh status bar và bottombar 2 lần gây khoảng trống thừa ở mép trên và mép dưới màn hình",
+  "feature": "infrastructure-navigation",
+  "status": "FIXED",
+  "symptoms": "Màn hình ứng dụng xuất hiện khoảng trắng thừa ở phía trên TopAppBar (tránh status bar 2 lần) và khoảng trống lớn vô lý ở đáy màn hình trên thanh NavigationBar.",
+  "root_cause": "Scaffold gốc ở MainActivity tự động tính toán và áp dụng toàn bộ window insets (cả statusBars và navigationBars) vào innerPadding của Surface con, trong khi các màn hình con (HomeScreen, Settings,...) lại có Scaffold và TopAppBar riêng cũng tự động áp dụng statusBars insets và NavigationBar insets lần thứ hai.",
+  "fix_solution": "Cấu hình contentWindowInsets = WindowInsets(0, 0, 0, 0) cho Scaffold gốc trong MainActivity và chỉ áp dụng padding(bottom = innerPadding.calculateBottomPadding()) cho các màn hình chính; các màn hình con tự quản lý TopAppBar và insets chuẩn Material 3.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt"
+  ],
+  "affected_symbols": [
+    "MainActivity.onCreate"
+  ]
+}

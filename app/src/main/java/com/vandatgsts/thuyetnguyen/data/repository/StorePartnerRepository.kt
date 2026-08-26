@@ -59,7 +59,15 @@ class StorePartnerRepository(context: Context) {
         val current = _stores.value.toMutableList()
         val index = current.indexOfFirst { it.id == store.id || it.name.equals(store.name.trim(), ignoreCase = true) }
         if (index >= 0) {
-            current[index] = store.copy(name = store.name.trim())
+            val existing = current[index]
+            current[index] = existing.copy(
+                name = store.name.trim(),
+                phone = if (store.phone.isNotBlank()) store.phone else existing.phone,
+                address = if (store.address.isNotBlank()) store.address else existing.address,
+                contactPerson = if (store.contactPerson.isNotBlank()) store.contactPerson else existing.contactPerson,
+                defaultType = store.defaultType,
+                note = if (store.note.isNotBlank()) store.note else existing.note
+            )
         } else {
             current.add(store.copy(name = store.name.trim()))
         }

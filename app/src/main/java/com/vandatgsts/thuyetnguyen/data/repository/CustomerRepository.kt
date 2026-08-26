@@ -53,11 +53,18 @@ class CustomerRepository(context: Context) {
 
     suspend fun saveCustomer(customer: CustomerProfile) = withContext(Dispatchers.IO) {
         val current = _customers.value.toMutableList()
-        val index = current.indexOfFirst { it.id == customer.id || (it.name.equals(customer.name, ignoreCase = true) && it.phone == customer.phone) }
+        val index = current.indexOfFirst { it.id == customer.id || (it.name.equals(customer.name.trim(), ignoreCase = true) && it.phone == customer.phone.trim()) }
         if (index >= 0) {
-            current[index] = customer
+            val existing = current[index]
+            current[index] = existing.copy(
+                name = customer.name.trim(),
+                phone = if (customer.phone.isNotBlank()) customer.phone.trim() else existing.phone,
+                address = if (customer.address.isNotBlank()) customer.address.trim() else existing.address,
+                taxCode = if (customer.taxCode.isNotBlank()) customer.taxCode.trim() else existing.taxCode,
+                note = if (customer.note.isNotBlank()) customer.note.trim() else existing.note
+            )
         } else {
-            current.add(customer)
+            current.add(customer.copy(name = customer.name.trim(), phone = customer.phone.trim()))
         }
         val sorted = current.sortedBy { it.name }
         _customers.value = sorted
