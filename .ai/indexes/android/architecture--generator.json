@@ -1,0 +1,132 @@
+{
+  "schema": "android-architecture-shard-v3",
+  "id": "architecture--generator",
+  "feature": "generator",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 31,
+      "main_symbols": [
+        "FormatHelper"
+      ],
+      "imports": [
+        "java.text.DecimalFormat",
+        "java.text.DecimalFormatSymbols",
+        "java.text.SimpleDateFormat",
+        "java.util.Date",
+        "java.util.Locale"
+      ],
+      "exports": [
+        "FormatHelper"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 35,
+      "main_symbols": [
+        "ImageInvoiceRenderer"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.graphics.Bitmap",
+        "android.graphics.Canvas",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "ImageInvoiceRenderer"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 765,
+      "main_symbols": [
+        "InvoiceCanvasDrawer"
+      ],
+      "imports": [
+        "android.graphics.Canvas",
+        "android.graphics.Color",
+        "android.graphics.DashPathEffect",
+        "android.graphics.Paint",
+        "android.graphics.Rect",
+        "android.graphics.RectF",
+        "android.graphics.Typeface",
+        "android.text.Layout",
+        "android.text.StaticLayout",
+        "android.text.TextPaint",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlin.math.max"
+      ],
+      "exports": [
+        "InvoiceCanvasDrawer"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 180,
+      "main_symbols": [
+        "InvoiceExportManager"
+      ],
+      "imports": [
+        "android.content.ClipData",
+        "android.content.ContentValues",
+        "android.content.Context",
+        "android.content.Intent",
+        "android.content.pm.PackageManager",
+        "android.net.Uri",
+        "android.os.Build",
+        "android.os.Environment",
+        "android.provider.MediaStore",
+        "android.widget.Toast",
+        "androidx.core.content.FileProvider",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileInputStream",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "InvoiceExportManager"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 35,
+      "main_symbols": [
+        "PdfInvoiceRenderer"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.graphics.pdf.PdfDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "PdfInvoiceRenderer"
+      ]
+    }
+  ]
+}

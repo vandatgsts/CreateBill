@@ -1,0 +1,46 @@
+{
+  "schema": "android-feature-shard-v3",
+  "id": "features",
+  "features": [
+    {
+      "id": "data",
+      "name": "Data Models & Persistence"
+    },
+    {
+      "id": "generator",
+      "name": "Invoice PDF & Image Render Engine"
+    },
+    {
+      "id": "feature-editor",
+      "name": "Invoice Editor & Calculation Engine"
+    },
+    {
+      "id": "feature-preview",
+      "name": "Invoice Preview & Export Coordinator"
+    },
+    {
+      "id": "feature-products",
+      "name": "Product Catalog & Price Management"
+    },
+    {
+      "id": "feature-stores",
+      "name": "Store Partners & Multi-Period Debt Tracking"
+    },
+    {
+      "id": "feature-home",
+      "name": "Home & Invoice Management"
+    },
+    {
+      "id": "feature-settings",
+      "name": "Company Profile & Bank Settings"
+    },
+    {
+      "id": "ui-common",
+      "name": "Common UI Components & Theme"
+    },
+    {
+      "id": "infrastructure-navigation",
+      "name": "Navigation & Activity Routing"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "schema": "android-architecture-shard-v3",
+  "id": "architecture--data",
+  "feature": "data",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 14,
+      "main_symbols": [
+        "CompanyProfile"
+      ],
+      "imports": [],
+      "exports": [
+        "CompanyProfile"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 8,
+      "main_symbols": [
+        "CustomerInfo"
+      ],
+      "imports": [],
+      "exports": [
+        "CustomerInfo"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 13,
+      "main_symbols": [
+        "CustomerProfile"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "CustomerProfile"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 10,
+      "main_symbols": [
+        "CustomerSummary"
+      ],
+      "imports": [],
+      "exports": [
+        "CustomerSummary"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 10,
+      "main_symbols": [
+        "DebtPayment"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "DebtPayment"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 64,
+      "main_symbols": [
+        "InvoiceDocument"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceDocument"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 29,
+      "main_symbols": [
+        "InvoiceItem"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceItem"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 12,
+      "main_symbols": [
+        "InvoiceType"
+      ],
+      "imports": [],
+      "exports": [
+        "InvoiceType"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 12,
+      "main_symbols": [
+        "ProductTemplate"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "ProductTemplate"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 14,
+      "main_symbols": [
+        "StorePartner"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "StorePartner"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 11,
+      "main_symbols": [
+        "StorePartnerSummary"
+      ],
+      "imports": [],
+      "exports": [
+        "StorePartnerSummary"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 42,
+      "main_symbols": [
+        "CompanyProfileRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile"
+      ],
+      "exports": [
+        "CompanyProfileRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 112,
+      "main_symbols": [
+        "CustomerRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "CustomerRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 389,
+      "main_symbols": [
+        "InvoiceRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 178,
+      "main_symbols": [
+        "ProductRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "exports": [
+        "ProductRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 149,
+      "main_symbols": [
+        "StorePartnerRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "exports": [
+        "StorePartnerRepository"
+      ]
+    }
+  ]
+}

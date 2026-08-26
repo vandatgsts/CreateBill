@@ -1,0 +1,42 @@
+{
+  "schema": "android-bug-index-manifest-v3",
+  "version": "1.0.0",
+  "bugs": [
+    {
+      "id": "BUG-001",
+      "title": "AAR Metadata check compileSdk mismatch",
+      "feature": "build",
+      "status": "FIXED",
+      "affected_files": ["app/build.gradle.kts", "gradle/libs.versions.toml"],
+      "root_cause": "compileSdk was configured lower than required by AndroidX transitive libraries",
+      "fix_summary": "Configured compileSdk to 36 and used stable library versions in libs.versions.toml"
+    },
+    {
+      "id": "BUG-002",
+      "title": "Missing Compose imports in InvoiceEditorScreen",
+      "feature": "ui-editor",
+      "status": "FIXED",
+      "affected_files": ["app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt"],
+      "root_cause": "Missing Compose imports for AlertDialog, TextButton, size, and delegated property smart cast",
+      "fix_summary": "Added missing imports and resolved delegated property casting"
+    },
+    {
+      "id": "BUG-003",
+      "title": "Tax code line overlaps with wrapped company address",
+      "feature": "generator",
+      "status": "FIXED",
+      "affected_files": ["app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"],
+      "root_cause": "Y-coordinate calculation in drawWrappedText didn't account for multi-line address height when drawing subsequent tax code label",
+      "fix_summary": "Implemented drawInfoRow to dynamically calculate height per field and advance Y-coordinate accurately"
+    },
+    {
+      "id": "BUG-004",
+      "title": "Service content text is drawn top-aligned instead of vertically centered in Quotation table row",
+      "feature": "generator",
+      "status": "FIXED",
+      "affected_files": ["app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"],
+      "root_cause": "drawCenteredWrappedText used a fixed top Y offset (rowTop + 40f) instead of calculating baseline startY centered vertically around the cell's center line",
+      "fix_summary": "Implemented getWrappedLines and drawVerticallyCenteredWrappedText to dynamically balance multi-line text vertically around rowTop + rowHeight / 2"
+    }
+  ]
+}

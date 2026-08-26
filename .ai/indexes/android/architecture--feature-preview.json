@@ -1,0 +1,104 @@
+{
+  "schema": "android-architecture-shard-v3",
+  "id": "architecture--feature-preview",
+  "feature": "feature-preview",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-preview",
+      "line_count": 216,
+      "main_symbols": [
+        "InvoicePreviewScreen"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.foundation.Image",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.horizontalScroll",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.verticalScroll",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.Download",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.PictureAsPdf",
+        "androidx.compose.material.icons.filled.Share",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.CircularProgressIndicator",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.LaunchedEffect",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.graphics.asImageBitmap",
+        "androidx.compose.ui.layout.ContentScale",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue"
+      ],
+      "exports": [
+        "InvoicePreviewScreen"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-preview",
+      "line_count": 74,
+      "main_symbols": [
+        "InvoicePreviewViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "android.graphics.Bitmap",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "InvoicePreviewViewModel"
+      ]
+    }
+  ]
+}

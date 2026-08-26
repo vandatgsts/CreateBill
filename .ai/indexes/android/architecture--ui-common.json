@@ -1,0 +1,110 @@
+{
+  "schema": "android-architecture-shard-v3",
+  "id": "architecture--ui-common",
+  "feature": "ui-common",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "language": "kotlin",
+      "layer": "ui_component",
+      "feature": "ui-common",
+      "line_count": 219,
+      "main_symbols": [
+        "FormSectionHeader",
+        "AppTextField",
+        "CurrencyField",
+        "NumberField",
+        "DatePickerField"
+      ],
+      "imports": [
+        "android.app.DatePickerDialog",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.filled.CalendarToday",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.text.input.KeyboardType",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "java.util.Calendar"
+      ],
+      "exports": [
+        "FormSectionHeader",
+        "AppTextField",
+        "CurrencyField",
+        "NumberField",
+        "DatePickerField"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 15,
+      "main_symbols": [],
+      "imports": [
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "exports": []
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 30,
+      "main_symbols": [
+        "TaoHoaDonTheme"
+      ],
+      "imports": [
+        "androidx.compose.material3.MaterialTheme",
+        "androidx.compose.material3.lightColorScheme",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "exports": [
+        "TaoHoaDonTheme"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 39,
+      "main_symbols": [],
+      "imports": [
+        "androidx.compose.material3.Typography",
+        "androidx.compose.ui.text.TextStyle",
+        "androidx.compose.ui.text.font.FontFamily",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.sp"
+      ],
+      "exports": []
+    }
+  ]
+}

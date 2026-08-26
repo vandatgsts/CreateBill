@@ -1,0 +1,153 @@
+{
+  "schema": "android-symbol-shard-v3",
+  "id": "ui-common--general",
+  "feature": "ui-common",
+  "concern": "general",
+  "depends_on": [],
+  "symbols": [
+    {
+      "name": "FormSectionHeader",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "CommonComponents",
+      "signature": "@Composable",
+      "start_line": 37,
+      "end_line": 77,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "ui_component",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+      "shard_ref": "ui-common--general"
+    },
+    {
+      "name": "AppTextField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "CommonComponents",
+      "signature": "@Composable",
+      "start_line": 51,
+      "end_line": 91,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "ui_component",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+      "shard_ref": "ui-common--general"
+    },
+    {
+      "name": "CurrencyField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "CommonComponents",
+      "signature": "@Composable",
+      "start_line": 87,
+      "end_line": 127,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "ui_component",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "shard_ref": "ui-common--general"
+    },
+    {
+      "name": "NumberField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "CommonComponents",
+      "signature": "@Composable",
+      "start_line": 126,
+      "end_line": 166,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "ui_component",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+      "shard_ref": "ui-common--general"
+    },
+    {
+      "name": "DatePickerField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "CommonComponents",
+      "signature": "@Composable",
+      "start_line": 158,
+      "end_line": 198,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "ui_component",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+      "shard_ref": "ui-common--general"
+    },
+    {
+      "name": "TaoHoaDonTheme",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+      "type": "function",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "owner": "Theme",
+      "signature": "@Composable",
+      "start_line": 21,
+      "end_line": 30,
+      "feature": "ui-common",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "ui-common",
+        "theme",
+        "function"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+      "shard_ref": "ui-common--general"
+    }
+  ]
+}

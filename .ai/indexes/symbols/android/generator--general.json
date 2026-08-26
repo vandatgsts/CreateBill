@@ -1,0 +1,129 @@
+{
+  "schema": "android-symbol-shard-v3",
+  "id": "generator--general",
+  "feature": "generator",
+  "concern": "general",
+  "depends_on": [],
+  "symbols": [
+    {
+      "name": "FormatHelper",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "type": "object",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "owner": "FormatHelper",
+      "signature": "object FormatHelper {",
+      "start_line": 9,
+      "end_line": 31,
+      "feature": "generator",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "generator",
+        "generator",
+        "object"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "shard_ref": "generator--general"
+    },
+    {
+      "name": "ImageInvoiceRenderer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+      "type": "object",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "owner": "ImageInvoiceRenderer",
+      "signature": "object ImageInvoiceRenderer {",
+      "start_line": 12,
+      "end_line": 35,
+      "feature": "generator",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "generator",
+        "generator",
+        "object"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+      "shard_ref": "generator--general"
+    },
+    {
+      "name": "InvoiceCanvasDrawer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "type": "object",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "owner": "InvoiceCanvasDrawer",
+      "signature": "object InvoiceCanvasDrawer {",
+      "start_line": 18,
+      "end_line": 765,
+      "feature": "generator",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "generator",
+        "generator",
+        "object"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "shard_ref": "generator--general"
+    },
+    {
+      "name": "InvoiceExportManager",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "type": "object",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "owner": "InvoiceExportManager",
+      "signature": "object InvoiceExportManager {",
+      "start_line": 21,
+      "end_line": 180,
+      "feature": "generator",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "generator",
+        "generator",
+        "object"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "shard_ref": "generator--general"
+    },
+    {
+      "name": "PdfInvoiceRenderer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer",
+      "type": "object",
+      "platform": "android",
+      "language": "kotlin",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "owner": "PdfInvoiceRenderer",
+      "signature": "object PdfInvoiceRenderer {",
+      "start_line": 11,
+      "end_line": 35,
+      "feature": "generator",
+      "concern": "general",
+      "calls": [],
+      "called_by": [],
+      "related_symbols": [],
+      "tags": [
+        "generator",
+        "generator",
+        "object"
+      ],
+      "symbol_id": "android::com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer",
+      "shard_ref": "generator--general"
+    }
+  ]
+}

@@ -1,0 +1,1398 @@
+{
+  "schema": "",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 14,
+      "main_symbols": [
+        "CompanyProfile"
+      ],
+      "imports": [],
+      "exports": [
+        "CompanyProfile"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 8,
+      "main_symbols": [
+        "CustomerInfo"
+      ],
+      "imports": [],
+      "exports": [
+        "CustomerInfo"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 13,
+      "main_symbols": [
+        "CustomerProfile"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "CustomerProfile"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 10,
+      "main_symbols": [
+        "CustomerSummary"
+      ],
+      "imports": [],
+      "exports": [
+        "CustomerSummary"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 10,
+      "main_symbols": [
+        "DebtPayment"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "DebtPayment"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 76,
+      "main_symbols": [
+        "InvoiceDocument"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceDocument"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 29,
+      "main_symbols": [
+        "InvoiceItem"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceItem"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 12,
+      "main_symbols": [
+        "InvoiceType"
+      ],
+      "imports": [],
+      "exports": [
+        "InvoiceType"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 12,
+      "main_symbols": [
+        "ProductTemplate"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "ProductTemplate"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 14,
+      "main_symbols": [
+        "StorePartner"
+      ],
+      "imports": [
+        "java.util.UUID"
+      ],
+      "exports": [
+        "StorePartner"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "language": "kotlin",
+      "layer": "model",
+      "feature": "data",
+      "line_count": 11,
+      "main_symbols": [
+        "StorePartnerSummary"
+      ],
+      "imports": [],
+      "exports": [
+        "StorePartnerSummary"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 42,
+      "main_symbols": [
+        "CompanyProfileRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile"
+      ],
+      "exports": [
+        "CompanyProfileRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 112,
+      "main_symbols": [
+        "CustomerRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "CustomerRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 389,
+      "main_symbols": [
+        "InvoiceRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 178,
+      "main_symbols": [
+        "ProductRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "exports": [
+        "ProductRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+      "language": "kotlin",
+      "layer": "repository",
+      "feature": "data",
+      "line_count": 149,
+      "main_symbols": [
+        "StorePartnerRepository"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "exports": [
+        "StorePartnerRepository"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 31,
+      "main_symbols": [
+        "FormatHelper"
+      ],
+      "imports": [
+        "java.text.DecimalFormat",
+        "java.text.DecimalFormatSymbols",
+        "java.text.SimpleDateFormat",
+        "java.util.Date",
+        "java.util.Locale"
+      ],
+      "exports": [
+        "FormatHelper"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 35,
+      "main_symbols": [
+        "ImageInvoiceRenderer"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.graphics.Bitmap",
+        "android.graphics.Canvas",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "ImageInvoiceRenderer"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 852,
+      "main_symbols": [
+        "InvoiceCanvasDrawer"
+      ],
+      "imports": [
+        "android.graphics.Canvas",
+        "android.graphics.Color",
+        "android.graphics.DashPathEffect",
+        "android.graphics.Paint",
+        "android.graphics.Rect",
+        "android.graphics.RectF",
+        "android.graphics.Typeface",
+        "android.text.Layout",
+        "android.text.StaticLayout",
+        "android.text.TextPaint",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlin.math.max"
+      ],
+      "exports": [
+        "InvoiceCanvasDrawer"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 180,
+      "main_symbols": [
+        "InvoiceExportManager"
+      ],
+      "imports": [
+        "android.content.ClipData",
+        "android.content.ContentValues",
+        "android.content.Context",
+        "android.content.Intent",
+        "android.content.pm.PackageManager",
+        "android.net.Uri",
+        "android.os.Build",
+        "android.os.Environment",
+        "android.provider.MediaStore",
+        "android.widget.Toast",
+        "androidx.core.content.FileProvider",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileInputStream",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "InvoiceExportManager"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "language": "kotlin",
+      "layer": "generator",
+      "feature": "generator",
+      "line_count": 35,
+      "main_symbols": [
+        "PdfInvoiceRenderer"
+      ],
+      "imports": [
+        "android.content.Context",
+        "android.graphics.pdf.PdfDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileOutputStream"
+      ],
+      "exports": [
+        "PdfInvoiceRenderer"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "language": "kotlin",
+      "layer": "activity",
+      "feature": "infrastructure-navigation",
+      "line_count": 296,
+      "main_symbols": [
+        "AppScreen",
+        "MainActivity"
+      ],
+      "imports": [
+        "android.os.Bundle",
+        "androidx.activity.ComponentActivity",
+        "androidx.activity.compose.BackHandler",
+        "androidx.activity.compose.setContent",
+        "androidx.activity.enableEdgeToEdge",
+        "androidx.activity.viewModels",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.filled.Home",
+        "androidx.compose.material.icons.filled.Inventory2",
+        "androidx.compose.material.icons.filled.Settings",
+        "androidx.compose.material.icons.filled.Store",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.NavigationBar",
+        "androidx.compose.material3.NavigationBarItem",
+        "androidx.compose.material3.NavigationBarItemDefaults",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateListOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary"
+      ],
+      "exports": [
+        "AppScreen",
+        "MainActivity"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "language": "kotlin",
+      "layer": "ui_component",
+      "feature": "ui-common",
+      "line_count": 219,
+      "main_symbols": [
+        "FormSectionHeader",
+        "AppTextField",
+        "CurrencyField",
+        "NumberField",
+        "DatePickerField"
+      ],
+      "imports": [
+        "android.app.DatePickerDialog",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.filled.CalendarToday",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.text.input.KeyboardType",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "java.util.Calendar"
+      ],
+      "exports": [
+        "FormSectionHeader",
+        "AppTextField",
+        "CurrencyField",
+        "NumberField",
+        "DatePickerField"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-editor",
+      "line_count": 1323,
+      "main_symbols": [
+        "InvoiceEditorScreen",
+        "ItemCard"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.animation.AnimatedVisibility",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.border",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.verticalScroll",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.automirrored.filled.List",
+        "androidx.compose.material.icons.filled.Add",
+        "androidx.compose.material.icons.filled.ContentCopy",
+        "androidx.compose.material.icons.filled.Delete",
+        "androidx.compose.material.icons.filled.Preview",
+        "androidx.compose.material.icons.filled.Save",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.FilterChip",
+        "androidx.compose.material3.FilterChipDefaults",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+        "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "androidx.compose.material3.Switch",
+        "androidx.compose.material3.SwitchDefaults",
+        "androidx.compose.material.icons.filled.Check",
+        "androidx.compose.material.icons.filled.Inventory2",
+        "androidx.compose.material.icons.filled.Store",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner"
+      ],
+      "exports": [
+        "InvoiceEditorScreen",
+        "ItemCard"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-editor",
+      "line_count": 266,
+      "main_symbols": [
+        "InvoiceEditorViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "InvoiceEditorViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-home",
+      "line_count": 640,
+      "main_symbols": [
+        "HomeScreen",
+        "DashboardOverviewBanner",
+        "StoreQuickCard",
+        "InvoiceItemCard",
+        "TemplateSelectionCard"
+      ],
+      "imports": [
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.horizontalScroll",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.PaddingValues",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.lazy.LazyColumn",
+        "androidx.compose.foundation.lazy.items",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowForwardIos",
+        "androidx.compose.material.icons.filled.Add",
+        "androidx.compose.material.icons.filled.ContentCopy",
+        "androidx.compose.material.icons.filled.Delete",
+        "androidx.compose.material.icons.filled.Description",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.Preview",
+        "androidx.compose.material.icons.filled.Search",
+        "androidx.compose.material.icons.filled.Store",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.FilterChip",
+        "androidx.compose.material3.FilterChipDefaults",
+        "androidx.compose.material3.FloatingActionButton",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Brush",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary"
+      ],
+      "exports": [
+        "HomeScreen",
+        "DashboardOverviewBanner",
+        "StoreQuickCard",
+        "InvoiceItemCard",
+        "TemplateSelectionCard"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-home",
+      "line_count": 127,
+      "main_symbols": [
+        "HomeDashboardStats",
+        "HomeViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.SharingStarted",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.combine",
+        "kotlinx.coroutines.flow.stateIn",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "HomeDashboardStats",
+        "HomeViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-preview",
+      "line_count": 216,
+      "main_symbols": [
+        "InvoicePreviewScreen"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.foundation.Image",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.horizontalScroll",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.verticalScroll",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.Download",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.PictureAsPdf",
+        "androidx.compose.material.icons.filled.Share",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.CircularProgressIndicator",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.LaunchedEffect",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.graphics.asImageBitmap",
+        "androidx.compose.ui.layout.ContentScale",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue"
+      ],
+      "exports": [
+        "InvoicePreviewScreen"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-preview",
+      "line_count": 74,
+      "main_symbols": [
+        "InvoicePreviewViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "android.graphics.Bitmap",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "InvoicePreviewViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-products",
+      "line_count": 378,
+      "main_symbols": [
+        "ProductListScreen",
+        "ProductItemCard"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.PaddingValues",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.lazy.LazyColumn",
+        "androidx.compose.foundation.lazy.items",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.Add",
+        "androidx.compose.material.icons.filled.Delete",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.Inventory2",
+        "androidx.compose.material.icons.filled.Search",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.FloatingActionButton",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "ProductListScreen",
+        "ProductItemCard"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-products",
+      "line_count": 51,
+      "main_symbols": [
+        "ProductListViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.SharingStarted",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.combine",
+        "kotlinx.coroutines.flow.stateIn",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "ProductListViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-settings",
+      "line_count": 199,
+      "main_symbols": [
+        "CompanyProfileScreen"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.verticalScroll",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.Save",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue"
+      ],
+      "exports": [
+        "CompanyProfileScreen"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-settings",
+      "line_count": 28,
+      "main_symbols": [
+        "CompanyProfileViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "CompanyProfileViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-stores",
+      "line_count": 480,
+      "main_symbols": [
+        "StorePartnerDetailScreen",
+        "MetricBox",
+        "InvoicePeriodCard"
+      ],
+      "imports": [
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.PaddingValues",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.lazy.LazyColumn",
+        "androidx.compose.foundation.lazy.items",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.filled.Add",
+        "androidx.compose.material.icons.filled.Description",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.LocationOn",
+        "androidx.compose.material.icons.filled.Person",
+        "androidx.compose.material.icons.filled.Phone",
+        "androidx.compose.material.icons.filled.Preview",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "androidx.compose.foundation.BorderStroke",
+        "androidx.compose.material.icons.filled.AttachMoney",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary"
+      ],
+      "exports": [
+        "StorePartnerDetailScreen",
+        "MetricBox",
+        "InvoicePeriodCard"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-stores",
+      "line_count": 439,
+      "main_symbols": [
+        "StorePartnerListScreen",
+        "StoreCard"
+      ],
+      "imports": [
+        "android.widget.Toast",
+        "androidx.compose.foundation.background",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Arrangement",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.PaddingValues",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.height",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.layout.width",
+        "androidx.compose.foundation.lazy.LazyColumn",
+        "androidx.compose.foundation.lazy.items",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+        "androidx.compose.material.icons.automirrored.filled.ArrowForwardIos",
+        "androidx.compose.material.icons.filled.Add",
+        "androidx.compose.material.icons.filled.Delete",
+        "androidx.compose.material.icons.filled.Edit",
+        "androidx.compose.material.icons.filled.Search",
+        "androidx.compose.material.icons.filled.Store",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults",
+        "androidx.compose.material3.ExperimentalMaterial3Api",
+        "androidx.compose.material3.FilterChip",
+        "androidx.compose.material3.FilterChipDefaults",
+        "androidx.compose.material3.FloatingActionButton",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.collectAsState",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Alignment",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "java.util.UUID"
+      ],
+      "exports": [
+        "StorePartnerListScreen",
+        "StoreCard"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "language": "kotlin",
+      "layer": "ui_screen",
+      "feature": "feature-stores",
+      "line_count": 120,
+      "main_symbols": [
+        "StorePartnerViewModel"
+      ],
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.SharingStarted",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.combine",
+        "kotlinx.coroutines.flow.stateIn",
+        "kotlinx.coroutines.launch"
+      ],
+      "exports": [
+        "StorePartnerViewModel"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 15,
+      "main_symbols": [],
+      "imports": [
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "exports": []
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 30,
+      "main_symbols": [
+        "TaoHoaDonTheme"
+      ],
+      "imports": [
+        "androidx.compose.material3.MaterialTheme",
+        "androidx.compose.material3.lightColorScheme",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "exports": [
+        "TaoHoaDonTheme"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+      "language": "kotlin",
+      "layer": "theme",
+      "feature": "ui-common",
+      "line_count": 39,
+      "main_symbols": [],
+      "imports": [
+        "androidx.compose.material3.Typography",
+        "androidx.compose.ui.text.TextStyle",
+        "androidx.compose.ui.text.font.FontFamily",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.sp"
+      ],
+      "exports": []
+    }
+  ],
+  "flows": [
+    {
+      "name": "Invoice Creation and PDF/Image Export Flow",
+      "description": "User opens HomeScreen, selects Template 1 or 2, edits invoice details, live recalculates totals, previews high-res document, and exports to PDF or PNG image.",
+      "steps": [
+        "HomeScreen -> FAB click -> Select InvoiceType",
+        "InvoiceEditorScreen -> Edit items, rates, taxes, payments -> Save to InvoiceRepository",
+        "InvoicePreviewScreen -> InvoiceCanvasDrawer renders document -> Export PDF / Save PNG / Share via Intent"
+      ]
+    },
+    {
+      "name": "Store Partner Period and Rolling Debt Flow",
+      "description": "User tracks delivery & debt periods by store/dealer (e.g. Cửa Hàng Kiều Phát), inherits ending debt to next period oldDebt, and manages multi-period histories.",
+      "steps": [
+        "StorePartnerListScreen -> View stores and latest outstanding balances -> Select Store",
+        "StorePartnerDetailScreen -> View all period invoices -> Click 'Tạo Kỳ Hóa Đơn Mới (Kế Thừa Nợ Cũ)'",
+        "InvoiceEditorScreen -> Prefilled store title and previous period ending balance as oldDebt -> Save and sync back"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "id": "data",
+      "name": "Data Models & Persistence"
+    },
+    {
+      "id": "generator",
+      "name": "Invoice PDF & Image Render Engine"
+    },
+    {
+      "id": "feature-editor",
+      "name": "Invoice Editor & Calculation Engine"
+    },
+    {
+      "id": "feature-preview",
+      "name": "Invoice Preview & Export Coordinator"
+    },
+    {
+      "id": "feature-products",
+      "name": "Product Catalog & Price Management"
+    },
+    {
+      "id": "feature-stores",
+      "name": "Store Partners & Multi-Period Debt Tracking"
+    },
+    {
+      "id": "feature-home",
+      "name": "Home & Invoice Management"
+    },
+    {
+      "id": "feature-settings",
+      "name": "Company Profile & Bank Settings"
+    },
+    {
+      "id": "ui-common",
+      "name": "Common UI Components & Theme"
+    },
+    {
+      "id": "infrastructure-navigation",
+      "name": "Navigation & Activity Routing"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "BUG-004",
+  "title": "Nội dung dịch vụ trong bảng báo giá bị lệch lên trên thay vì căn giữa theo chiều dọc",
+  "feature": "generator",
+  "status": "FIXED",
+  "symptoms": "Khi xuất PDF/Ảnh bảng báo giá A4, cột Nội dung dịch vụ bị vẽ lệch sát mép trên của ô dòng thay vì căn chính giữa theo chiều dọc.",
+  "root_cause": "drawCenteredWrappedText sử dụng fixed Y offset (rowTop + 40f) cho dòng đầu tiên thay vì tính toán baseline startY dựa trên tổng số dòng để căn giữa khối văn bản so với chiều cao ô (rowHeight / 2).",
+  "fix_solution": "Thêm hàm getWrappedLines và drawVerticallyCenteredWrappedText để phân tách các dòng trước, tính toán startY đối xứng quanh tâm ô (rowTop + rowHeight / 2f + 6f) - ((numLines - 1) * lineHeight / 2f), đồng thời mở rộng rowHeight linh hoạt khi văn bản dài.",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+  ],
+  "affected_symbols": [
+    "InvoiceCanvasDrawer.drawQuotationA4Template",
+    "InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+    "InvoiceCanvasDrawer.getWrappedLines"
+  ]
+}

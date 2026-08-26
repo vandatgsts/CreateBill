@@ -1,0 +1,69 @@
+{
+  "schema": "android-architecture-shard-v3",
+  "id": "architecture--infrastructure-navigation",
+  "feature": "infrastructure-navigation",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "language": "kotlin",
+      "layer": "activity",
+      "feature": "infrastructure-navigation",
+      "line_count": 296,
+      "main_symbols": [
+        "AppScreen",
+        "MainActivity"
+      ],
+      "imports": [
+        "android.os.Bundle",
+        "androidx.activity.ComponentActivity",
+        "androidx.activity.compose.BackHandler",
+        "androidx.activity.compose.setContent",
+        "androidx.activity.enableEdgeToEdge",
+        "androidx.activity.viewModels",
+        "androidx.compose.foundation.layout.fillMaxSize",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.filled.Home",
+        "androidx.compose.material.icons.filled.Inventory2",
+        "androidx.compose.material.icons.filled.Settings",
+        "androidx.compose.material.icons.filled.Store",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.NavigationBar",
+        "androidx.compose.material3.NavigationBarItem",
+        "androidx.compose.material3.NavigationBarItemDefaults",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateListOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary"
+      ],
+      "exports": [
+        "AppScreen",
+        "MainActivity"
+      ]
+    }
+  ]
+}
