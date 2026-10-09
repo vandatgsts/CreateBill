@@ -1,6 +1,7 @@
 package com.vandatgsts.thuyetnguyen.data.repository
 
 import android.content.Context
+import android.util.AtomicFile
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.vandatgsts.thuyetnguyen.data.model.CustomerInfo
@@ -12,6 +13,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import java.io.File
 import java.util.UUID
 
@@ -20,6 +23,8 @@ class InvoiceRepository(private val context: Context) {
     private val storageFile: File by lazy {
         File(context.filesDir, "invoices_store_v5.json")
     }
+    private val atomicStorage by lazy { AtomicFile(storageFile) }
+    private val writeMutex = Mutex()
 
 
 
@@ -31,24 +36,22 @@ class InvoiceRepository(private val context: Context) {
     }
 
     private fun loadInvoices() {
-        if (!storageFile.exists()) {
+        if (!storageFile.exists() && !File(storageFile.path + ".bak").exists()) {
             val samples = createSampleInvoices()
             _invoices.value = samples
-            saveToFile(samples)
+            try {
+                saveToFile(samples)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
             return
         }
 
         try {
-            val json = storageFile.readText()
+            val json = atomicStorage.openRead().bufferedReader(Charsets.UTF_8).use { it.readText() }
             val type = object : TypeToken<List<InvoiceDocument>>() {}.type
             val list: List<InvoiceDocument> = gson.fromJson(json, type) ?: emptyList()
-            if (list.isEmpty()) {
-                val samples = createSampleInvoices()
-                _invoices.value = samples
-                saveToFile(samples)
-            } else {
-                _invoices.value = list.sortedByDescending { it.updatedAt }
-            }
+            _invoices.value = list.sortedByDescending { it.updatedAt }
         } catch (e: Exception) {
             e.printStackTrace()
             _invoices.value = createSampleInvoices()
@@ -56,15 +59,25 @@ class InvoiceRepository(private val context: Context) {
     }
 
     private fun saveToFile(list: List<InvoiceDocument>) {
+        val bytes = gson.toJson(list).toByteArray(Charsets.UTF_8)
+        val output = atomicStorage.startWrite()
         try {
-            val json = gson.toJson(list)
-            storageFile.writeText(json)
-        } catch (e: Exception) {
-            e.printStackTrace()
+            output.write(bytes)
+            output.fd.sync()
+            atomicStorage.finishWrite(output)
+        } catch (e: Throwable) {
+            atomicStorage.failWrite(output)
+            throw e
         }
     }
 
-    suspend fun saveInvoice(invoice: InvoiceDocument) = withContext(Dispatchers.IO) {
+    private fun commitInvoices(list: List<InvoiceDocument>) {
+        val sorted = list.sortedByDescending { it.updatedAt }
+        saveToFile(sorted)
+        _invoices.value = sorted
+    }
+
+    private fun saveInvoiceLocked(invoice: InvoiceDocument) {
         val current = _invoices.value.toMutableList()
         val index = current.indexOfFirst { it.id == invoice.id }
         val updatedInvoice = invoice.copy(updatedAt = System.currentTimeMillis())
@@ -73,15 +86,17 @@ class InvoiceRepository(private val context: Context) {
         } else {
             current.add(0, updatedInvoice)
         }
-        val sorted = current.sortedByDescending { it.updatedAt }
-        _invoices.value = sorted
-        saveToFile(sorted)
+        commitInvoices(current)
+    }
+
+    suspend fun saveInvoice(invoice: InvoiceDocument) = withContext(Dispatchers.IO) {
+        writeMutex.withLock { saveInvoiceLocked(invoice) }
     }
 
     suspend fun deleteInvoice(id: String) = withContext(Dispatchers.IO) {
-        val current = _invoices.value.filterNot { it.id == id }
-        _invoices.value = current
-        saveToFile(current)
+        writeMutex.withLock {
+            commitInvoices(_invoices.value.filterNot { it.id == id })
+        }
     }
 
     fun getInvoiceById(id: String): InvoiceDocument? {
@@ -89,35 +104,35 @@ class InvoiceRepository(private val context: Context) {
     }
 
     suspend fun duplicateInvoice(id: String): InvoiceDocument? = withContext(Dispatchers.IO) {
-        val existing = getInvoiceById(id) ?: return@withContext null
-        val duplicated = existing.copy(
-            id = UUID.randomUUID().toString(),
-            title = "${existing.title} (Bản sao)",
-            createdAt = System.currentTimeMillis(),
-            updatedAt = System.currentTimeMillis(),
-            items = existing.items.map { it.copy(id = UUID.randomUUID().toString()) }
-        )
-        saveInvoice(duplicated)
-        duplicated
+        writeMutex.withLock {
+            val existing = getInvoiceById(id) ?: return@withLock null
+            val duplicated = existing.copy(
+                id = UUID.randomUUID().toString(),
+                title = "${existing.title} (Bản sao)",
+                createdAt = System.currentTimeMillis(),
+                updatedAt = System.currentTimeMillis(),
+                items = existing.items.map { it.copy(id = UUID.randomUUID().toString()) }
+            )
+            saveInvoiceLocked(duplicated)
+            duplicated
+        }
     }
 
     suspend fun replaceAll(newList: List<InvoiceDocument>) = withContext(Dispatchers.IO) {
-        val sorted = newList.sortedByDescending { it.updatedAt }
-        _invoices.value = sorted
-        saveToFile(sorted)
+        writeMutex.withLock { commitInvoices(newList) }
     }
 
     suspend fun mergeAll(incomingList: List<InvoiceDocument>) = withContext(Dispatchers.IO) {
-        val currentMap = _invoices.value.associateBy { it.id }.toMutableMap()
-        for (incoming in incomingList) {
-            val existing = currentMap[incoming.id]
-            if (existing == null || incoming.updatedAt >= existing.updatedAt) {
-                currentMap[incoming.id] = incoming
+        writeMutex.withLock {
+            val currentMap = _invoices.value.associateBy { it.id }.toMutableMap()
+            for (incoming in incomingList) {
+                val existing = currentMap[incoming.id]
+                if (existing == null || incoming.updatedAt >= existing.updatedAt) {
+                    currentMap[incoming.id] = incoming
+                }
             }
+            commitInvoices(currentMap.values.toList())
         }
-        val mergedList = currentMap.values.sortedByDescending { it.updatedAt }
-        _invoices.value = mergedList
-        saveToFile(mergedList)
     }
 
     private fun createSampleInvoices(): List<InvoiceDocument> {

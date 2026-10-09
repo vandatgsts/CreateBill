@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-63",
+  "platform": "android_native",
+  "bucket": "63",
+  "symbols": [
+    {
+      "symbol_id": "android-545dc41ad7d4d9a69c552365",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.date",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "shard_ref": "android:d996e7e3236c961a:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+    },
+    {
+      "symbol_id": "android-623e4b3aef314b5ed2a4b5cc",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:57091435d6ed7e06:state:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "state",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+  "symbols": [
+    {
+      "name": "invoiceToDelete",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.invoiceToDelete",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+      "signature": "var invoiceToDelete by remember { mutableStateOf<InvoiceDocument?>(null) }",
+      "start_line": 103,
+      "end_line": 103,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-a3f1fd57fa4605ae93b7f200",
+      "shard_ref": "android:57091435d6ed7e06:state:01"
+    },
+    {
+      "name": "startDateMillis",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.startDateMillis",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+      "signature": "var startDateMillis by remember {",
+      "start_line": 390,
+      "end_line": 392,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.customDateRange"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.customDateRange"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-16080fb47e6474c4584babfe",
+      "shard_ref": "android:57091435d6ed7e06:state:01"
+    },
+    {
+      "name": "endDateMillis",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.endDateMillis",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+      "signature": "var endDateMillis by remember {",
+      "start_line": 393,
+      "end_line": 395,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.customDateRange"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.customDateRange"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-e9dcbe0c8962bf729ddbfddf",
+      "shard_ref": "android:57091435d6ed7e06:state:01"
+    }
+  ]
+}

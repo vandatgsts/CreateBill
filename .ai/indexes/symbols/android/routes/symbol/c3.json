@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-c3",
+  "platform": "android_native",
+  "bucket": "c3",
+  "symbols": [
+    {
+      "symbol_id": "android-9f7e6e52eb06e7be06cb36d9",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+    },
+    {
+      "symbol_id": "android-bd2917d1d1160f16f9802ad2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveCustomer",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+    }
+  ]
+}

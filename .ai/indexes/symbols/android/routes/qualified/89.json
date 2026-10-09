@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-89",
+  "platform": "android_native",
+  "bucket": "89",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.id",
+      "targets": [
+        {
+          "symbol_id": "android-14b34a19164373dd852d3b0c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+          "shard_ref": "android:450695f6e09561ff:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+      "targets": [
+        {
+          "symbol_id": "android-c04168e1a21d30538cd84a60",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.THIS_MONTH",
+      "targets": [
+        {
+          "symbol_id": "android-d83a1b8f41baa5b4a0f7b0ef",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+        }
+      ]
+    }
+  ]
+}

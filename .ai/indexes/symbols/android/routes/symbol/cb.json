@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-cb",
+  "platform": "android_native",
+  "bucket": "cb",
+  "symbols": [
+    {
+      "symbol_id": "android-34851bf9be47de5f351f95b7",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.atomicStorage",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+    }
+  ]
+}

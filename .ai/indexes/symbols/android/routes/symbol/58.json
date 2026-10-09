@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-58",
+  "platform": "android_native",
+  "bucket": "58",
+  "symbols": [
+    {
+      "symbol_id": "android-bde66a1afad3644415bc1adb",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-dcdf65b82ea68d2107279e1a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.STT",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype/7c82187787db3c56-01.json"
+    }
+  ]
+}

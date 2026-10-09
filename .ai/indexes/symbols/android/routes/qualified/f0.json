@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-f0",
+  "platform": "android_native",
+  "bucket": "f0",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-2984276417f86af8a381223e",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+      "targets": [
+        {
+          "symbol_id": "android-9f7e6e52eb06e7be06cb36d9",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.productToDelete",
+      "targets": [
+        {
+          "symbol_id": "android-de5bf6eef02a2574ec171c5e",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+          "shard_ref": "android:c2cdd5f7dc2cb648:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-23",
+  "platform": "android_native",
+  "bucket": "23",
+  "symbols": [
+    {
+      "symbol_id": "android-07382654c41203b2f4c8896e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/339a54a301375cca-01.json"
+    },
+    {
+      "symbol_id": "android-4ca7267e49f2fb4f1c2c8273",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+    },
+    {
+      "symbol_id": "android-930560453f37923f7ac094fa",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempNote",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-98fb1b9ca2aa3fc4f90a3a44",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

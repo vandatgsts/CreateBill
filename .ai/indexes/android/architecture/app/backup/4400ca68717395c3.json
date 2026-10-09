@@ -1,0 +1,100 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:4400ca68717395c3:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "backup",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "backup",
+      "layer": "data/repository",
+      "purpose": "Export cache JSON backup with SHA256 identifier, share FileProvider URI, parse and import by merge/replace",
+      "imports": [
+        "android.content.Context",
+        "android.content.Intent",
+        "android.content.SharedPreferences",
+        "android.net.Uri",
+        "androidx.core.content.FileProvider",
+        "com.google.gson.Gson",
+        "com.google.gson.GsonBuilder",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.InputStreamReader",
+        "java.security.MessageDigest",
+        "java.text.SimpleDateFormat",
+        "java.util.Date",
+        "java.util.Locale"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.KEY_IMPORTED_HASHES",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "keywords": [
+        "backup",
+        "persistence"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getImportedHashes",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.isHashAlreadyImported",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.recordImportedHash",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.calculateSha256",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getShareIntent",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.KEY_IMPORTED_HASHES",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ]
+    }
+  ]
+}

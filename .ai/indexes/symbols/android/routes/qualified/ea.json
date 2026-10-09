@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-ea",
+  "platform": "android_native",
+  "bucket": "ea",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalDebt",
+      "targets": [
+        {
+          "symbol_id": "android-f646a58dfe013c7e4c6764ee",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+          "shard_ref": "android:66fbe5de8ec338ab:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-summary/state/66fbe5de8ec338ab-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "targets": [
+        {
+          "symbol_id": "android-9807baf396c1d8d595651cba",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+          "shard_ref": "android:da8486af658a1eea:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+      "targets": [
+        {
+          "symbol_id": "android-abbf58e9e20ed1a853aace18",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+          "shard_ref": "android:4fa2fdfb46023a04:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product/storage-data/4fa2fdfb46023a04-01.json"
+        }
+      ]
+    }
+  ]
+}

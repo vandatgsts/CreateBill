@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-82",
+  "platform": "android_native",
+  "bucket": "82",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "targets": [
+        {
+          "symbol_id": "android-49ae28aebc3f9854921967b0",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:com-vandatgsts-thuyetnguyen-data-model:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/com-vandatgsts-thuyetnguyen-data-model/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "targets": [
+        {
+          "symbol_id": "android-24cf38a7a13880580f175362",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+          "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isImporting",
+      "targets": [
+        {
+          "symbol_id": "android-a2ecf398353455befa597483",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+          "shard_ref": "android:83972a9cf8e2fb80:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/83972a9cf8e2fb80-01.json"
+        }
+      ]
+    }
+  ]
+}

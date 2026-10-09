@@ -1,0 +1,38 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-14",
+  "platform": "android_native",
+  "bucket": "14",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "source_hash": "10ef6844a05f894d20c3ef4de6ce0beb835a6a56e5717b5a91306707fe7c77d2",
+      "architecture_shard": {
+        "id": "android:14e2a4e969d82077:architecture",
+        "path": ".ai/indexes/android/architecture/app/debt-payment/14e2a4e969d82077.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:14e2a4e969d82077:com-vandatgsts-thuyetnguyen-data-model:01",
+          "path": ".ai/indexes/symbols/android/shards/app/debt-payment/com-vandatgsts-thuyetnguyen-data-model/14e2a4e969d82077-01.json"
+        },
+        {
+          "id": "android:14e2a4e969d82077:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/debt-payment/lifecycle-ui/14e2a4e969d82077-01.json"
+        },
+        {
+          "id": "android:14e2a4e969d82077:state:01",
+          "path": ".ai/indexes/symbols/android/shards/app/debt-payment/state/14e2a4e969d82077-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-7ecb278ac141606c5066023f",
+        "android-29b8543056cc360f56b8a688",
+        "android-d4bc4caa0407025938c08aa4",
+        "android-abaae46ed9f620ea55fb7b87",
+        "android-56781ad6468944bc95f4863b",
+        "android-e06b3dbce5da993f6b039599"
+      ]
+    }
+  ]
+}

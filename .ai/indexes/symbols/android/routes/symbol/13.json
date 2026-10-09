@@ -1,0 +1,57 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-13",
+  "platform": "android_native",
+  "bucket": "13",
+  "symbols": [
+    {
+      "symbol_id": "android-3399cac9259d9a8601115ce8",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ItemCard",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "shard_ref": "android:012b2bd755845e7d:duplicate-review:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/duplicate-review/012b2bd755845e7d-01.json"
+    },
+    {
+      "symbol_id": "android-45fed6dbaa7216d67ae66626",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-4a8105fbcf4b0945c79649bf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+    },
+    {
+      "symbol_id": "android-8378f52dbe34aa751205af3e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.totalPaid",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:03",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-03.json"
+    },
+    {
+      "symbol_id": "android-920571562f3955d935501a5a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.editingProduct",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-b42637ab251ed34495d17fe5",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.exportResultData",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "shard_ref": "android:83972a9cf8e2fb80:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/83972a9cf8e2fb80-01.json"
+    },
+    {
+      "symbol_id": "android-d2b7353f670cb181ba677c34",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/preview/storage-data/20e584c65d837de0-01.json"
+    }
+  ]
+}

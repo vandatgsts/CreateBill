@@ -1,0 +1,26 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-1a",
+  "platform": "android_native",
+  "bucket": "1a",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "source_hash": "ee699fe1cb65523749fe587851652dffaa2e660a6874093dc5d0fdecbdd2c94a",
+      "architecture_shard": {
+        "id": "android:1aa370538b6687c8:architecture",
+        "path": ".ai/indexes/android/architecture/app/generator/1aa370538b6687c8.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:1aa370538b6687c8:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/1aa370538b6687c8-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-2c0bcea5df5ec78af221d133",
+        "android-d994c2521a7e1248f48b7494"
+      ]
+    }
+  ]
+}

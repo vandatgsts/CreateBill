@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-5c",
+  "platform": "android_native",
+  "bucket": "5c",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+      "targets": [
+        {
+          "symbol_id": "android-2f5b354fa2108a1790d110aa",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+          "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ]
+    }
+  ]
+}

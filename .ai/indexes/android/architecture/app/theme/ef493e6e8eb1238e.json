@@ -1,0 +1,46 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:ef493e6e8eb1238e:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+  "files": [
+    {
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "module": "app",
+      "feature": "theme",
+      "layer": "presentation/theme",
+      "purpose": "Định nghĩa typography Material3.",
+      "imports": [
+        "androidx.compose.material3.Typography",
+        "androidx.compose.ui.text.TextStyle",
+        "androidx.compose.ui.text.font.FontFamily",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.unit.sp"
+      ],
+      "classes": [],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [],
+      "keywords": [
+        "theme",
+        "Compose",
+        "Android",
+        "UI"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.Typography"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.Typography"
+      ]
+    }
+  ]
+}

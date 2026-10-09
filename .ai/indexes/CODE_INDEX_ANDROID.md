@@ -1,52 +1,107 @@
-# Code Index - Android Native (TaoHoaDon)
+# Chỉ mục Android — TaoHoaDon
 
-## Project Overview
-- **Package**: `com.vandatgsts.thuyetnguyen`
-- **UI Framework**: Jetpack Compose + Material 3
-- **Architecture**: MVVM + StateFlow + Kotlin Coroutines
-- **Export Engine**: Android Native `PdfDocument` & Canvas `Bitmap` / PNG Renderer
+## Kiến trúc và phạm vi
 
-## Architecture Tree
+- Android Kotlin thuần, module `app`, package `com.vandatgsts.thuyetnguyen`.
+- Jetpack Compose / Material 3; ViewModel + StateFlow + coroutine.
+- Danh mục và cấu hình dùng SharedPreferences + Gson; hóa đơn dùng JSON trong bộ nhớ riêng của ứng dụng, ghi bằng AtomicFile; không dùng Room.
+- Chỉ mục bao phủ mã sản phẩm Kotlin/Java trong `app/src/main`; loại trừ test, build và mã sinh tự động.
+- Không có Flutter hoặc MethodChannel trong mã sản phẩm hiện tại.
+- Mỗi file có shard kiến trúc và các shard symbol riêng. Manifest V4 chỉ giữ cấu hình, layout và thống kê.
 
-### 1. Data Layer (`com.vandatgsts.thuyetnguyen.data`)
-- **Models** (`data/model/`):
-  - [InvoiceType.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt): Enum representing `DELIVERY_DEBT` (Mẫu 1) and `QUOTATION_A4` (Mẫu 2).
-  - [CompanyProfile.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt): Model for default store/company profile & bank account settings.
-  - [CustomerInfo.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt): Customer details (Name, Address, Phone, Tax code).
-  - [InvoiceItem.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt): Line items with reactive line total calculations (`lineTotalM1`, `lineTotalM2`).
-  - [InvoiceDocument.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt): Aggregated invoice entity with grand total, items, debt, and terms.
-  - [ProductTemplate.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt): Product catalog item with default name, unit, and unit price.
-  - [CustomerProfile.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt): Customer profile entity (Name, Phone, Address, Tax code, Notes).
-  - [CustomerSummary.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt): Aggregated financial overview per customer (Invoices, Total spent, Total paid, Total debt).
-  - [StorePartner.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt): Store / Dealer partner profile (Store name, Phone, Address, Contact person, Default template type).
-  - [StorePartnerSummary.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt): Multi-period invoice summary and rolling debt balance for a store.
-  - [AppBackupData.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt): Model for JSON backup data and `ImportMode` (Merge vs Replace All).
-- **Repositories** (`data/repository/`):
-  - [CompanyProfileRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt): Persistent store for default company settings using `SharedPreferences` + `Gson`.
-  - [InvoiceRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt): Persistent CRUD storage for invoice list with sample data matching user's templates.
-  - [ProductRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt): Persistent catalog storage for reusable product/service templates.
-  - [CustomerRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt): Persistent storage and directory for customer profiles.
-  - [StorePartnerRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt): Persistent storage for Store/Dealer partner profiles with rolling debt tracking.
-  - [BackupRepository.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt): Full data export, SHA-256 hash calculation, duplicate prevention, and JSON restore engine.
+## Tra cứu
 
-### 2. Generator & Export Engine (`com.vandatgsts.thuyetnguyen.generator`)
-- [FormatHelper.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt): Currency, number, and date formatters.
-- [InvoiceCanvasDrawer.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt): Core canvas drawing engine for both Landscape (Mẫu 1) and Portrait A4 (Mẫu 2).
-- [PdfInvoiceRenderer.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt): Android `PdfDocument` page renderer.
-- [ImageInvoiceRenderer.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt): High-resolution `Bitmap` & PNG exporter.
-- [InvoiceExportManager.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt): Intent sharing (Zalo, Facebook, Email), PDF viewer, and Gallery storage.
+Entry points: `.ai/indexes/codeindex_android.json` và `.ai/indexes/symbols/android_symbols.json`.
 
-### 3. UI Layer (`com.vandatgsts.thuyetnguyen.ui`)
-- **Theme** (`ui/theme/`): [Color.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt), [Type.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt), [Theme.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt).
-- **Components** (`ui/components/`): [CommonComponents.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt) (`AppTextField`, `CurrencyField`, `NumberField`, `FormSectionHeader`).
-- **Home Screen** (`ui/home/`): [HomeScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt), [HomeViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt).
-- **Product Catalog Screen** (`ui/products/`): [ProductListScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt), [ProductListViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt).
-- **Store / Dealer Partners Screen** (`ui/stores/`): [StorePartnerListScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt), [StorePartnerDetailScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt), [StorePartnerViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt).
-- **Invoice Editor** (`ui/editor/`): [InvoiceEditorScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt), [InvoiceEditorViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt).
-- **Invoice Preview & Export** (`ui/preview/`): [InvoicePreviewScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt), [InvoicePreviewViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt).
-- **Settings Screen** (`ui/settings/`): [CompanyProfileScreen.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt), [CompanyProfileViewModel.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt).
-- **Entry Point**: [MainActivity.kt](file:///E:/test/TaoHoaDon/app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt).
+```powershell
+python C:/Users/Chand/.codex/skills/android-kotlin-code-index/scripts/index_android_v4.py . lookup --qualified-name com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice --record
+python C:/Users/Chand/.codex/skills/android-kotlin-code-index/scripts/index_android_v4.py . lookup --source app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt --record
+python C:/Users/Chand/.codex/skills/android-kotlin-code-index/scripts/index_android_v4.py . validate
+```
 
+Đọc route qualified-name → shard symbol → shard kiến trúc/flow/feature → mã nguồn khi cần.
+Quan hệ là tham chiếu qualified name; framework bên ngoài không có shard nguồn trong dự án.
+Liên kết được đối chiếu tĩnh; callback/lambda và dispatch động không phải call graph từ compiler.
 
+## Các nhóm nguồn
 
+| Nhóm | Đường dẫn | Vai trò |
+| --- | --- | --- |
+| Điều hướng | `MainActivity.kt` | `AppScreen`, back stack Compose, mở editor/preview/settings và các tab |
+| Model | `data/model/` | Hóa đơn, dòng hàng, thanh toán nợ, cửa hàng, khách hàng, sản phẩm, cấu hình và backup |
+| Repository | `data/repository/` | CRUD SharedPreferences, StateFlow, backup JSON, merge/replace và lịch sử hash import |
+| Trang chủ | `ui/home/` | Danh sách hóa đơn, tìm kiếm/lọc, tạo/xóa/sao chép và tổng quan công nợ |
+| Editor | `ui/editor/` | Chỉnh hai mẫu hóa đơn, dòng hàng, VAT, nợ, cờ hiển thị và lưu dữ liệu |
+| Preview | `ui/preview/` | Bitmap xem trước, zoom/pan, loading và callback xuất/chia sẻ |
+| Cửa hàng | `ui/stores/` | Danh sách/tổng hợp, lịch sử kỳ, công nợ mới nhất và ghi nhận thanh toán |
+| Sản phẩm | `ui/products/` | 30 sản phẩm theo bảng giá Đông Á/Bình Minh, tìm kiếm, thêm/sửa/xóa và giá mặc định |
+| Cấu hình | `ui/settings/` | Thông tin công ty, ngân hàng mặc định, sao lưu và nhập dữ liệu |
+| UI chung | `ui/components/`, `ui/theme/` | Trường nhập, header, màu sắc, typography, theme |
+| Xuất hóa đơn | `generator/` | Canvas hai mẫu, format, Bitmap/PNG, PdfDocument, FileProvider, MediaStore và Intent |
 
+## Luồng chính
+
+### Tạo và lưu hóa đơn
+
+`MainActivity.onCreate` mở `InvoiceEditorScreen`; `InvoiceEditorViewModel` nạp hóa đơn hoặc khởi tạo mẫu.
+Danh sách dòng hàng dùng `ReorderableInvoiceItems`: nhấn giữ nút kéo 48dp, kéo lên/xuống và thả;
+tự cuộn sát mép viewport, chỉ báo vị trí chèn và thao tác lên/xuống cho trình đọc màn hình.
+`InvoiceEditorViewModel.moveItem` tìm dòng theo ID, kiểm tra chỉ số và đánh lại STT 1..n;
+giữ nguyên ID, nội dung và dữ liệu tài chính. Hủy kéo không đổi danh sách.
+Các thao tác chỉnh dữ liệu cập nhật StateFlow; `InvoiceDocument` / `InvoiceItem` tính tổng, VAT và nợ.
+`InvoiceItem.note` lưu ghi chú riêng từng dòng, nhập nhiều dòng qua `ItemCard`.
+Ghi chú đi cùng dòng hàng khi kéo thả hoặc nhân bản; dữ liệu cũ dùng giá trị rỗng mặc định.
+Lưu qua `InvoiceRepository` trên IO, dùng Mutex để tuần tự hóa toàn bộ thao tác đọc–sửa–ghi.
+AtomicFile ghi UTF-8 và rollback khi ghi lỗi; chỉ cập nhật StateFlow sau commit. Danh sách rỗng được giữ sau khi xóa hết.
+Editor dùng `isSaving` chặn lưu lặp, khóa nút lưu/preview và báo lỗi qua callback; chỉ điều hướng khi lưu thành công.
+Trang chủ và màn hình thanh toán bắt lỗi lưu và hiển thị thông báo; cancellation được ném lại.
+
+### Xem trước và xuất
+
+`InvoicePreviewViewModel.loadInvoice` lấy hóa đơn từ repository và dựng bitmap qua
+`ImageInvoiceRenderer.renderBitmap` trên Default. `InvoiceCanvasDrawer` chọn mẫu theo `InvoiceType`.
+Mẫu A4 đo toàn bộ bố cục trên Canvas rỗng bằng cùng hàm vẽ: header, dòng hàng, VAT, ghi chú chung,
+bảo hành, điều khoản, ngân hàng và phần con dấu đã xoay; cộng lề cuối trang.
+Địa chỉ/ghi chú/điều khoản hỗ trợ xuống dòng thủ công và chuỗi dài liền nhau.
+Cả hai mẫu có cột ghi chú từng dòng: mẫu giao hàng rộng 1400px; A4 giữ 1000px và chia lại
+chiều rộng cột. Ghi chú xuống dòng theo chiều rộng ô, dùng chung phép đo chiều cao dòng
+cho vẽ và tính kích thước PDF/PNG; hỗ trợ xuống dòng thủ công và chuỗi không có khoảng trắng.
+Các lệnh xuất qua `InvoiceExportManager`: PDF/PNG vào cache exports trên IO;
+chia sẻ/mở bằng FileProvider + URI read grant + chooser; lưu ảnh bằng MediaStore từ API 29,
+hoặc Pictures trên API cũ. Thông báo lỗi Toast chuyển về Main.
+
+### Công nợ cửa hàng
+
+`StorePartnerViewModel.storeSummaries` kết hợp cửa hàng và hóa đơn, khớp tên cửa hàng/title,
+sắp theo thời gian và lấy số dư kỳ mới nhất. Chi tiết cửa hàng mở kỳ mới với nợ kế thừa.
+Ghi nhận thanh toán cập nhật `debtPayments` của hóa đơn mới nhất và lưu vào repository.
+
+### Sao lưu và nhập
+
+Màn hình cấu hình gọi `CompanyProfileViewModel.exportBackup` → `BackupRepository.createBackupData`
+trên IO, đóng gói dữ liệu và xuất JSON.
+Chia sẻ qua FileProvider. Nhập URI → parse JSON → chọn merge hoặc replace → cập nhật repository
+và ghi hash đã nhập. Luồng dùng callback Activity Result trong Compose.
+
+### Thay danh mục sản phẩm theo bảng giá
+
+`ProductRepository.loadProducts` kiểm tra phiên bản danh mục trong SharedPreferences.
+Lần mở đầu tiên với phiên bản 1 thay toàn bộ danh mục cũ bằng 30 sản phẩm: 14 bồn nước Đông Á
+đứng/nằm từ `.ai/img_4.png`, 16 máy NLMT Đông Á/Bình Minh từ `.ai/img_5.png`.
+JSON và marker phiên bản được ghi chung một editor. Những lần sau giữ dữ liệu đã chỉnh sửa,
+kể cả danh sách rỗng sau khi xóa hết sản phẩm. Bảo hành và ghi chú lắp đặt được lưu trong `note`.
+
+## Hợp đồng state và threading
+
+- UI Compose thu thập StateFlow; ViewModel dùng `viewModelScope` cho tác vụ bất đồng bộ.
+- Repository nạp dữ liệu đồng bộ khi khởi tạo; các mutator suspend dùng IO khi nguồn khai báo.
+- CompanyProfileRepository lưu đồng bộ qua SharedPreferences.apply.
+- Renderer bitmap dùng Default; PDF/PNG và thao tác thư viện ảnh dùng IO.
+- Canvas/Paint thuộc lời gọi hiện tại; bên gọi quản lý vòng đời Bitmap/coroutine.
+
+## Bảo trì
+
+Upsert từng nguồn là thay thế toàn bộ record thuộc nguồn đó, bao gồm hash, range và routes.
+Sau đổi mã: cập nhật nguồn bị ảnh hưởng và liên kết liên quan, rồi chạy validate đầy đủ.
+Không dùng script V3 để ghi đè manifest V4. Chỉ mục cũ được giữ ở `.ai/indexes-legacy-before-v4/`
+để tham khảo lịch sử; dữ liệu cũ không được dùng làm đầu vào xây dựng V4.

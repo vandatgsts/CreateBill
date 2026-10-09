@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-bb",
+  "platform": "android_native",
+  "bucket": "bb",
+  "symbols": [
+    {
+      "symbol_id": "android-1e2e11216535dec890ff44ed",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "shard_ref": "android:2017be09f335083e:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/storage-data/2017be09f335083e-01.json"
+    },
+    {
+      "symbol_id": "android-5e0757bb1dbec4367bd70ddc",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.StoreQuickCard",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "shard_ref": "android:57091435d6ed7e06:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/detection/57091435d6ed7e06-01.json"
+    },
+    {
+      "symbol_id": "android-c23f74b7e749cf7831dcf575",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.maxScrollSpeed",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems/8240678ac3dafa80-01.json"
+    }
+  ]
+}

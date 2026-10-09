@@ -1,0 +1,56 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:cace1d04570bab7e:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "components",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+  "symbols": [
+    {
+      "name": "datePickerDialog",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+      "signature": "val datePickerDialog = remember(context, value) {",
+      "start_line": 183,
+      "end_line": 194,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "android.app.DatePickerDialog",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Activity result, sharing intent or platform date picker interaction"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "components",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [
+        "onValueChange"
+      ],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-5779203cd416d9d8fcd1555e",
+      "shard_ref": "android:cace1d04570bab7e:lifecycle-ui:01"
+    }
+  ]
+}

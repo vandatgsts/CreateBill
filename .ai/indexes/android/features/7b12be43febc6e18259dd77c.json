@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:7b12be43febc6e18259dd77c",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "components",
+      "name": "components",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt"
+      ]
+    }
+  ]
+}

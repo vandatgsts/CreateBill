@@ -1,0 +1,56 @@
+{
+  "id": "BUG-010",
+  "title": "Lưu hóa đơn báo thành công khi ghi file thất bại hoặc ghi chồng nhau",
+  "feature": "invoice-storage",
+  "severity": "high",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+  ],
+  "affected_symbols": [
+    "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile",
+    "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+    "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+  ],
+  "symptoms": [
+    "Repository nuốt lỗi ghi JSON nhưng vẫn publish StateFlow và editor vẫn gọi onSuccess.",
+    "Các coroutine lưu có thể đọc/sửa/ghi đồng thời, làm mất cập nhật hoặc làm hỏng JSON.",
+    "Danh sách hóa đơn [] bị thay bằng hóa đơn mẫu khi mở lại app."
+  ],
+  "reproduction_steps": [
+    "Lưu hóa đơn có thay đổi note/thứ tự khi storage.writeText gặp lỗi I/O: trước sửa vẫn gọi thành công.",
+    "Khởi chạy nhiều mutator repository đồng thời; đối chiếu file với toàn bộ yêu cầu đã hoàn tất.",
+    "Xóa hết hóa đơn, đóng và mở lại ứng dụng."
+  ],
+  "root_cause": "saveToFile catch Exception chỉ printStackTrace; mutators publish trước khi ghi và thiếu khóa toàn bộ transaction. loadInvoices xem list rỗng như chưa khởi tạo.",
+  "fix": "AtomicFile ghi UTF-8 với rollback; Mutex bao toàn bộ read-modify-write; commit trước publish, truyền lỗi lên callers; editor isSaving khóa nút và báo lỗi; giữ list rỗng. Khởi tạo mẫu vẫn chịu được lỗi ghi mà không crash.",
+  "verification_steps": [
+    "Review mọi mutator nằm trong writeMutex.withLock; duplicate dùng helper không khóa lồng.",
+    "Review commitInvoices gọi saveToFile trước _invoices.value; write failure propagates, editor catches và finally reset guard.",
+    "Review callers home/payment catch Exception và rethrow CancellationException.",
+    "Validate V4 full source coverage, hashes, ranges và git diff --check.",
+    "Cần chạy app: restart sau lưu note/thứ tự, xóa hết, giả lập I/O failure và concurrent writes."
+  ],
+  "verification_result": "Kiểm tra nguồn và chỉ mục; chưa build hoặc xác minh I/O failure/restart/concurrency trên thiết bị.",
+  "regression_risk": "AtomicFile backup recovery cần kiểm tra trên thiết bị; không thay đổi tên file JSON hoặc model serialization.",
+  "status": "FIXED",
+  "global_pattern": null,
+  "logs": [],
+  "fixed_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+  ],
+  "related_bugs": [],
+  "notes": [
+    {
+      "date": "2026-10-09",
+      "text": "Phát hiện trong rà soát tĩnh tối ưu sau tính năng ghi chú/kéo thả. FIXED theo review nguồn; chưa VERIFIED trên thiết bị."
+    }
+  ]
+}

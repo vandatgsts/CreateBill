@@ -1,0 +1,105 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:7c82187787db3c56:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.generator",
+      "module": "app",
+      "feature": "generator",
+      "layer": "generator/export",
+      "purpose": "Shared PDF/PNG Canvas layout for delivery/debt and A4 quotation; mandatory per-item note columns, wrapped text and shared variable row-height measurement. Full A4 height is measured with the same layout pass as rendering rather than fixed header/footer estimates.",
+      "imports": [
+        "android.graphics.Canvas",
+        "android.graphics.Color",
+        "android.graphics.DashPathEffect",
+        "android.graphics.Paint",
+        "android.graphics.Rect",
+        "android.graphics.RectF",
+        "android.graphics.Typeface",
+        "android.text.Layout",
+        "android.text.StaticLayout",
+        "android.text.TextPaint",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlin.math.ceil",
+        "kotlin.math.max"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef"
+      ],
+      "objects": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer"
+      ],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.title",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.type",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.width"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "keywords": [
+        "canvas",
+        "delivery-1400px",
+        "export",
+        "invoice",
+        "item-notes",
+        "pdf",
+        "png",
+        "row-height",
+        "wrapped-text"
+      ],
+      "risks": [
+        "Very long documents still allocate a full-size bitmap; bank account fields remain single-line."
+      ],
+      "todos": [],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.createQuotationColumns",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawPaidStamp",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.truncateText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInfoRow",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.<init>",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.type",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.title",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.width",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.LINE_TOTAL",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.NOTE",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.PRODUCT_NAME",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.QUANTITY",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.STT",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.UNIT",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.UNIT_PRICE"
+      ]
+    }
+  ]
+}

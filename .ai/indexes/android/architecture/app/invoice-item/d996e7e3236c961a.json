@@ -1,0 +1,70 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:d996e7e3236c961a:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice-item",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "invoice-item",
+      "layer": "data/model",
+      "purpose": "Typed InvoiceItem domain model and derived invoice/debt values; optional per-row notes preserved by copies and Gson persistence",
+      "imports": [
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.id",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.stt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.date",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.productName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unit",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.quantity",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unitPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.address",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.receiver",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.paidAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.lineTotalM1",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.lineTotalM2",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note"
+      ],
+      "related_files": [],
+      "keywords": [
+        "invoice_item",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.id",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.stt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.date",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.productName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unit",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.quantity",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unitPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.address",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.receiver",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.paidAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.lineTotalM1",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.lineTotalM2",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note"
+      ]
+    }
+  ]
+}

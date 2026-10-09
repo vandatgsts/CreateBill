@@ -1,0 +1,69 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:664b212ca5bf4124:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "settings",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+  "symbols": [
+    {
+      "name": "inspectBackupFile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "fun inspectBackupFile(\n        uri: Uri,\n        onResult: (backup: AppBackupData?, isDuplicate: Boolean, errorMsg: String?) -> Unit\n    )",
+      "start_line": 57,
+      "end_line": 75,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [
+        "uri: Uri,\n        onResult: (backup: AppBackupData?, isDuplicate: Boolean, errorMsg: String?) -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.isHashAlreadyImported",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.isHashAlreadyImported",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [
+        "onResult"
+      ],
+      "symbol_id": "android-a1e2b025446b1a7c89f03d4d",
+      "shard_ref": "android:664b212ca5bf4124:duplicate-review:01"
+    }
+  ]
+}

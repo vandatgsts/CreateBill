@@ -1,0 +1,108 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8240678ac3dafa80:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+  "symbols": [
+    {
+      "name": "currentViewport",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentViewport",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val currentViewport by rememberUpdatedState(viewportBounds)",
+      "start_line": 51,
+      "end_line": 51,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Rect",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-7db20834dfda37b42c0bc3d2",
+      "shard_ref": "android:8240678ac3dafa80:lifecycle-ui:01"
+    },
+    {
+      "name": "finishDrag",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.finishDrag",
+      "type": "local_function",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "fun finishDrag(commit: Boolean)",
+      "start_line": 76,
+      "end_line": 82,
+      "visibility": "local",
+      "parameters": [
+        {
+          "name": "commit",
+          "type": "Boolean"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropIndex",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.itemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialPointerY",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.listCoordinates"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance"
+      ],
+      "side_effects": [
+        "Clear drag tracking and optionally synchronously reorder ViewModel items through callback"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "editor",
+        "reorder",
+        "local_function"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "purpose": "Stop drag state; successful release invokes onMove, cancellation never commits.",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-1e9d43262ab2cddb43122ef7",
+      "shard_ref": "android:8240678ac3dafa80:lifecycle-ui:01"
+    }
+  ]
+}

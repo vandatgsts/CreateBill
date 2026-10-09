@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-fb",
+  "platform": "android_native",
+  "bucket": "fb",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.address",
+      "targets": [
+        {
+          "symbol_id": "android-5bdf304eda1b03df44972592",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+          "shard_ref": "android:450695f6e09561ff:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.createdAt",
+      "targets": [
+        {
+          "symbol_id": "android-67311c7d6d975503ab6b29b7",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+          "shard_ref": "android:0e64ac2612a757ae:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/state/0e64ac2612a757ae-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.isLoading",
+      "targets": [
+        {
+          "symbol_id": "android-9441d86ab62f29da4d91eb05",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+          "shard_ref": "android:98115644100c7e48:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/98115644100c7e48-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.listState",
+      "targets": [
+        {
+          "symbol_id": "android-a2b942d7bbd0c47eca5b36a2",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+          "shard_ref": "android:c2cdd5f7dc2cb648:com-vandatgsts-thuyetnguyen-ui-products-productlistscreen:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/products/com-vandatgsts-thuyetnguyen-ui-products-productlistscreen/c2cdd5f7dc2cb648-01.json"
+        }
+      ]
+    }
+  ]
+}

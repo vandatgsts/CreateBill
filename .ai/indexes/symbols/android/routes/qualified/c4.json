@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-c4",
+  "platform": "android_native",
+  "bucket": "c4",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance",
+      "targets": [
+        {
+          "symbol_id": "android-7de50ae7039902a726408e85",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+          "shard_ref": "android:da8486af658a1eea:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+        }
+      ]
+    }
+  ]
+}

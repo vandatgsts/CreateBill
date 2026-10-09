@@ -1,0 +1,68 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-83",
+  "platform": "android_native",
+  "bucket": "83",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "source_hash": "0406c2b92542acefad2902538d5a05b92307f80d617d4f8892b0d93171adf5b0",
+      "architecture_shard": {
+        "id": "android:8378a21371d1fd70:architecture",
+        "path": ".ai/indexes/android/architecture/app/generator/8378a21371d1fd70.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator/8378a21371d1fd70-01.json"
+        },
+        {
+          "id": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-formathelper/8378a21371d1fd70-01.json"
+        },
+        {
+          "id": "android:8378a21371d1fd70:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/lifecycle-ui/8378a21371d1fd70-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-1911e2a3431951859d23c9ef",
+        "android-22ec6647f6da0fdcf1e859c9",
+        "android-403d304868eb3032a6a3ff11",
+        "android-6529750a6ccc62148c591633",
+        "android-d8c58ba5d023bd3a9dd4d0ba"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "source_hash": "bdfc4a71df7cd3d525ee5e846235797cc502ad3c7205e5bb897a6c6e1442d0af",
+      "architecture_shard": {
+        "id": "android:83972a9cf8e2fb80:architecture",
+        "path": ".ai/indexes/android/architecture/app/settings/83972a9cf8e2fb80.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:83972a9cf8e2fb80:duplicate-review:01",
+          "path": ".ai/indexes/symbols/android/shards/app/settings/duplicate-review/83972a9cf8e2fb80-01.json"
+        },
+        {
+          "id": "android:83972a9cf8e2fb80:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/83972a9cf8e2fb80-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-e25e87ef07b83bbdfd5c2d12",
+        "android-6dc32bc65188dbbaffac53f7",
+        "android-01a5b3405f0cb18fe1d45821",
+        "android-a2ecf398353455befa597483",
+        "android-353cd14f507d8032ccba8afa",
+        "android-b42637ab251ed34495d17fe5",
+        "android-b298b52235839f4e2f38faf3",
+        "android-1c4e6af62feb5fa4b532ee3c",
+        "android-6176199411d357f4cdc86a9d",
+        "android-26a9d5fb8ac96a3e393ccb37",
+        "android-d9cb8382299846da1be9a820"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1024 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:4fa2fdfb46023a04:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "product",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+  "symbols": [
+    {
+      "name": "ProductRepository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository",
+      "signature": "class ProductRepository(context: Context)",
+      "start_line": 14,
+      "end_line": 328,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-93b130a8e3a0f64e4741801a",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "ProductRepository(context: Context)",
+      "start_line": 14,
+      "end_line": 14,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.products"
+      ],
+      "side_effects": [
+        "Obtain application-backed persistence and initialize repository state on caller thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-2fb9f9e895935fbe485b11b7",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "prefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private val prefs: SharedPreferences = context.getSharedPreferences(\"products_catalog_prefs_v2\", Context.MODE_PRIVATE)",
+      "start_line": 15,
+      "end_line": 15,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "SharedPreferences",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-9b7aa117359d83222d98f4ca",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "gson",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private val gson = Gson()",
+      "start_line": 16,
+      "end_line": 16,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Gson",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-7c053bf1d01e66ed3fabbb4f",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "_products",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private val _products = MutableStateFlow<List<ProductTemplate>>(emptyList())",
+      "start_line": 18,
+      "end_line": 18,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "MutableStateFlow<List<ProductTemplate>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "MutableStateFlow",
+        "mutable": true,
+        "exposure": "private backing state"
+      },
+      "symbol_id": "android-2dcec805af6e7c34051a8a45",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "products",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.products",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "val products: StateFlow<List<ProductTemplate>> = _products.asStateFlow()",
+      "start_line": 19,
+      "end_line": 19,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<List<ProductTemplate>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "StateFlow",
+        "mutable": false,
+        "exposure": "public read-only observable list"
+      },
+      "symbol_id": "android-e5d75fbd13b7a6c425305cc4",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "<init-block>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init-block>",
+      "type": "initializer",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "init",
+      "start_line": 21,
+      "end_line": 23,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init>"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Initialize observable data by synchronously loading persistent data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": "repository initialization",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-9bc7ad8602cdbc95eb69e56d",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "loadProducts",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private fun loadProducts()",
+      "start_line": 25,
+      "end_line": 51,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.Editor.apply",
+        "android.content.SharedPreferences.Editor.putInt",
+        "android.content.SharedPreferences.Editor.putString",
+        "android.content.SharedPreferences.getInt",
+        "android.content.SharedPreferences.getString",
+        "com.google.gson.Gson.fromJson",
+        "com.google.gson.Gson.toJson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.createDefaultProducts",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init>"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.CURRENT_CATALOG_VERSION",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_CATALOG_VERSION",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs"
+      ],
+      "side_effects": [
+        "On first catalog-v1 launch overwrite all stored products; store JSON and version marker in the same SharedPreferences editor",
+        "Publish catalog StateFlow; read saved catalog on later launches",
+        "Reseed defaults only for missing or unreadable data; preserve valid empty list"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "binh-minh",
+        "catalog-migration",
+        "dong-a",
+        "price-list",
+        "product",
+        "repository"
+      ],
+      "risks": [
+        "First catalog-v1 launch deliberately removes custom and legacy product records",
+        "SharedPreferences.apply persists asynchronously on disk"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "description": "Replace legacy catalog with the 30 image-backed products once for catalog version 1; preserve subsequent saved edits and intentionally empty lists.",
+      "purpose": "Replace legacy catalog with the 30 image-backed products once for catalog version 1; preserve subsequent saved edits and intentionally empty lists.",
+      "symbol_id": "android-ea38c54576713d1850827753",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "saveToPrefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private fun saveToPrefs(list: List<ProductTemplate>)",
+      "start_line": 53,
+      "end_line": 56,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "list",
+          "type": "List<ProductTemplate>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.Editor.apply",
+        "android.content.SharedPreferences.Editor.putString",
+        "android.content.SharedPreferences.edit",
+        "com.google.gson.Gson.toJson"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.deleteProduct",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveProduct"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist serialized JSON with asynchronous SharedPreferences.apply"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-aa98a7f1ae277b640987c403",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "saveProduct",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveProduct",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "suspend fun saveProduct(product: ProductTemplate)",
+      "start_line": 58,
+      "end_line": 69,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "product",
+          "type": "ProductTemplate"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.saveProduct"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-5c05180cab66a5320ff550cd",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "deleteProduct",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.deleteProduct",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "suspend fun deleteProduct(id: String)",
+      "start_line": 71,
+      "end_line": 75,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.deleteProduct"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-4d54f067ddfdc2823122f675",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "replaceAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.replaceAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "suspend fun replaceAll(newList: List<ProductTemplate>)",
+      "start_line": 77,
+      "end_line": 81,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "newList",
+          "type": "List<ProductTemplate>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-2e46b3afd6f3ec849bc52d48",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "mergeAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.mergeAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "suspend fun mergeAll(incomingList: List<ProductTemplate>)",
+      "start_line": 83,
+      "end_line": 96,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "incomingList",
+          "type": "List<ProductTemplate>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Merge by id or case-insensitive trimmed name; incoming overwrites match; sort by name",
+      "symbol_id": "android-14ec3ed248cf6a7a377e44f9",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "createDefaultProducts",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.createDefaultProducts",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "private fun createDefaultProducts(): List<ProductTemplate>",
+      "start_line": 98,
+      "end_line": 312,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "List<ProductTemplate>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        ".ai/img_4.png",
+        ".ai/img_5.png",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt"
+      ],
+      "tags": [
+        "binh-minh",
+        "dong-a",
+        "price-list",
+        "product",
+        "repository",
+        "warranty"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "purpose": "Create 14 Dong A water tanks and 16 Dong A/Binh Minh solar hot-water heaters from img_4.png and img_5.png, using deterministic IDs and exact VND prices.",
+      "description": "Create 14 Dong A water tanks and 16 Dong A/Binh Minh solar hot-water heaters from img_4.png and img_5.png, using deterministic IDs and exact VND prices.",
+      "catalog_metadata": {
+        "product_count": 30,
+        "water_tanks": 14,
+        "solar_heaters": 16,
+        "tank_warranty_years": 12,
+        "solar_warranty_years": 5,
+        "installation_note": "Solar prices include roof installation with hot/cold fittings connected on the roof"
+      },
+      "symbol_id": "android-17e2690f3dd2f5130824b6aa",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "Companion",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "type": "companion_object",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+      "signature": "companion object",
+      "start_line": 314,
+      "end_line": 327,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-88f0fc53c30ec15ed5b9cf4c",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "KEY_PRODUCTS",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "signature": "private const val KEY_PRODUCTS = \"key_products_default_v2\"",
+      "start_line": 315,
+      "end_line": 315,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-abbf58e9e20ed1a853aace18",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "KEY_CATALOG_VERSION",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_CATALOG_VERSION",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "signature": "private const val KEY_CATALOG_VERSION = \"key_products_catalog_version\"",
+      "start_line": 316,
+      "end_line": 316,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "String",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "catalog-migration",
+        "constant"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-dc702decf30a06c5dd0e6f68",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "CURRENT_CATALOG_VERSION",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.CURRENT_CATALOG_VERSION",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "signature": "private const val CURRENT_CATALOG_VERSION = 1",
+      "start_line": 317,
+      "end_line": 317,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Int",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "catalog-migration",
+        "constant"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-e18bcdbf9a877a4f787ae697",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "instance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.instance",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "signature": "private var instance: ProductRepository? = null",
+      "start_line": 320,
+      "end_line": 320,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "ProductRepository?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "product",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "mutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-35e7725a678990c5afb9113e",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    },
+    {
+      "name": "getInstance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+      "signature": "fun getInstance(context: Context): ProductRepository",
+      "start_line": 322,
+      "end_line": 326,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "ProductRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.instance"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.instance"
+      ],
+      "side_effects": [
+        "Initialize singleton with applicationContext under synchronized double-checked locking"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "product"
+      ],
+      "risks": [
+        "Construction can perform synchronous disk read on calling thread"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-df075afba487443665b66f78",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01"
+    }
+  ]
+}

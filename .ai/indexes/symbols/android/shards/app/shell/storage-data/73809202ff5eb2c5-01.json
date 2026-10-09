@@ -1,0 +1,48 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:73809202ff5eb2c5:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "shell",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+  "symbols": [
+    {
+      "name": "profileViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.profileViewModel",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity",
+      "signature": "private val profileViewModel: CompanyProfileViewModel by viewModels()",
+      "start_line": 82,
+      "end_line": 82,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CompanyProfileViewModel by viewModels()",
+      "calls": [
+        "androidx.activity.viewModels"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-ed9c252dbe610c5dde33db84",
+      "shard_ref": "android:73809202ff5eb2c5:storage-data:01"
+    }
+  ]
+}

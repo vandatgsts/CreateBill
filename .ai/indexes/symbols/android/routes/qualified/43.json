@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-43",
+  "platform": "android_native",
+  "bucket": "43",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitCol",
+      "targets": [
+        {
+          "symbol_id": "android-55d83ae37c3ef935f0d44c50",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText",
+      "targets": [
+        {
+          "symbol_id": "android-4c798eefbd8dab3355e6beb5",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+          "shard_ref": "android:cace1d04570bab7e:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/components/state/cace1d04570bab7e-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+      "targets": [
+        {
+          "symbol_id": "android-c22889320a186419e5d14a9c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-f7",
+  "platform": "android_native",
+  "bucket": "f7",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "source_hash": "4db44635622435bd7978cae3cac3d48a93552ccba23a300f0e9ea91f8644fa1f",
+      "architecture_shard": {
+        "id": "android:f7194a71b8aa2c6b:architecture",
+        "path": ".ai/indexes/android/architecture/app/customer/f7194a71b8aa2c6b.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:f7194a71b8aa2c6b:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-24cf38a7a13880580f175362",
+        "android-cfc59e0bdd65a360b7663186",
+        "android-3697fe03839dc000fe604adf",
+        "android-38be3038cb464dd3fb1c8abf",
+        "android-0454807720daeb6f898c948e",
+        "android-bd2917d1d1160f16f9802ad2",
+        "android-a8b3249301def65d7fbfcdd2",
+        "android-0d12ed3e80f81e472a150a4c",
+        "android-e1f9bf7427926add3d829cf7",
+        "android-42f42679cae89f66cd5a169a",
+        "android-cd234d0ee03d1ecb4f64c074",
+        "android-df2da6fbb29977fcf79bf8ed",
+        "android-1a73f695c3fa6353e64bea2c",
+        "android-05a0f912fa0d64ae525da421",
+        "android-f8b6480ec301c904a03cff5b",
+        "android-09ff7a1f1e97ceeadb23a18a",
+        "android-ec9e2ba8b259ec45a91f7a5a",
+        "android-917119b38f7aa1a28c059020",
+        "android-f8916ad03a37d9766e08e6df"
+      ]
+    }
+  ]
+}

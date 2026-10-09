@@ -1,0 +1,270 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:73809202ff5eb2c5:lifecycle-ui:02",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "shell",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+  "symbols": [
+    {
+      "name": "previewViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.previewViewModel",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity",
+      "signature": "private val previewViewModel: InvoicePreviewViewModel by viewModels()",
+      "start_line": 81,
+      "end_line": 81,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "InvoicePreviewViewModel by viewModels()",
+      "calls": [
+        "androidx.activity.viewModels"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-7b2a6e23013b2bb6601f9328",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    },
+    {
+      "name": "productViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.productViewModel",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity",
+      "signature": "private val productViewModel: ProductListViewModel by viewModels()",
+      "start_line": 83,
+      "end_line": 83,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "ProductListViewModel by viewModels()",
+      "calls": [
+        "androidx.activity.viewModels"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-4981245eea5f229f5551b8e1",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    },
+    {
+      "name": "storePartnerViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.storePartnerViewModel",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity",
+      "signature": "private val storePartnerViewModel: StorePartnerViewModel by viewModels()",
+      "start_line": 84,
+      "end_line": 84,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StorePartnerViewModel by viewModels()",
+      "calls": [
+        "androidx.activity.viewModels"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-4ff5341191c6350028de5f2b",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    },
+    {
+      "name": "backStack",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.backStack",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate",
+      "signature": "val backStack = remember { mutableStateListOf<AppScreen>(AppScreen.Home) }",
+      "start_line": 92,
+      "end_line": 92,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateListOf",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-ac0c5bb709c145370e61c034",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    },
+    {
+      "name": "saveableStateHolder",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.saveableStateHolder",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate",
+      "signature": "val saveableStateHolder = rememberSaveableStateHolder()",
+      "start_line": 94,
+      "end_line": 94,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.saveable.rememberSaveableStateHolder"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "shell",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-c36d5a15b2aa149b8dfdeb5b",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    },
+    {
+      "name": "popBackStack",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.popBackStack",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate",
+      "signature": "fun popBackStack()",
+      "start_line": 96,
+      "end_line": 101,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.runtime.saveable.SaveableStateHolder.removeState",
+        "kotlin.collections.removeLastOrNull"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.Editor.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Home.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Preview.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.ProductCatalog.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Settings.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerList.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.screenKey",
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.backStack",
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.saveableStateHolder"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "androidx.compose.runtime.saveable.SaveableStateHolder.removeState",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Editor.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Home.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Preview.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.ProductCatalog.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.Settings.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerList.screenKey",
+        "com.vandatgsts.thuyetnguyen.AppScreen.screenKey",
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.backStack",
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.saveableStateHolder",
+        "kotlin.collections.removeLastOrNull"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt"
+      ],
+      "tags": [
+        "shell",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-e97cd88c0fa4c7cce0707224",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02"
+    }
+  ]
+}

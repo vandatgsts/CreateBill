@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-4e",
+  "platform": "android_native",
+  "bucket": "4e",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+      "targets": [
+        {
+          "symbol_id": "android-ca3fb5cc2bf2be0835056974",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText",
+      "targets": [
+        {
+          "symbol_id": "android-77adbb9440e28d948b14c128",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-abee155adcb37a062153496b",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.endDateMillis",
+      "targets": [
+        {
+          "symbol_id": "android-e9dcbe0c8962bf729ddbfddf",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+          "shard_ref": "android:57091435d6ed7e06:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/state/57091435d6ed7e06-01.json"
+        }
+      ]
+    }
+  ]
+}

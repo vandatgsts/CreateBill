@@ -1,0 +1,155 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:589ffd5d05cf9590:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+  "symbols": [
+    {
+      "name": "InvoiceExportManager",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "type": "object",
+      "owner": "com.vandatgsts.thuyetnguyen.generator",
+      "signature": "object InvoiceExportManager",
+      "start_line": 21,
+      "end_line": 180,
+      "parameters": [],
+      "return_type": "InvoiceExportManager",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Dispatchers.IO; error toast switches to Dispatchers.Main when applicable",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-30279dcade49ff8c408f2c5c",
+      "shard_ref": "android:589ffd5d05cf9590:storage-data:01"
+    },
+    {
+      "name": "saveImageToGallery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "suspend fun saveImageToGallery(context: Context, invoice: InvoiceDocument): Boolean",
+      "start_line": 108,
+      "end_line": 148,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Boolean",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.content.ContentResolver.insert",
+        "android.content.ContentResolver.openOutputStream",
+        "android.content.ContentResolver.update",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.saveImage"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Renders PNG cache file",
+        "Writes MediaStore pending image on API 29+ or legacy Pictures file",
+        "Returns false on exception"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [
+        "Null output stream can still report true; legacy branch has no media scan; pending entry cleanup absent on failure"
+      ],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-29bb35be574a5a09b7bf6852",
+      "shard_ref": "android:589ffd5d05cf9590:storage-data:01"
+    },
+    {
+      "name": "getUriForFile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.getUriForFile",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "private fun getUriForFile(context: Context, file: File): Uri",
+      "start_line": 173,
+      "end_line": 179,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "file",
+          "type": "File"
+        }
+      ],
+      "return_type": "Uri",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "androidx.core.content.FileProvider.getUriForFile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-d830ce533218b3fa052e7b20",
+      "shard_ref": "android:589ffd5d05cf9590:storage-data:01"
+    }
+  ]
+}

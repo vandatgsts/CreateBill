@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-a0",
+  "platform": "android_native",
+  "bucket": "a0",
+  "symbols": [
+    {
+      "symbol_id": "android-23be1a1ff6c8b223d04813a2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:com-vandatgsts-thuyetnguyen-data-model:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/com-vandatgsts-thuyetnguyen-data-model/a07c2eccb9e3f3df-01.json"
+    },
+    {
+      "symbol_id": "android-4995c067e23eeca4126cc7fd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.taxCode",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "shard_ref": "android:450695f6e09561ff:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+    },
+    {
+      "symbol_id": "android-54baaa9a8c0cfaa0316ada3f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.address",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+      "shard_ref": "android:3241716fac561814:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer-info/state/3241716fac561814-01.json"
+    },
+    {
+      "symbol_id": "android-5b4f2dde7e8d4a34d28cd1af",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+    },
+    {
+      "symbol_id": "android-ab8f3fbbad0ae2ff12f4579e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "shard_ref": "android:98115644100c7e48:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/preview/storage-data/98115644100c7e48-01.json"
+    },
+    {
+      "symbol_id": "android-d0b491fa1f2300cc611d3353",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

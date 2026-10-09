@@ -1,0 +1,63 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-36",
+  "platform": "android_native",
+  "bucket": "36",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ImportMode.REPLACE_ALL",
+      "targets": [
+        {
+          "symbol_id": "android-d61c4f46ebf63cce8f18ce5b",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:com-vandatgsts-thuyetnguyen-data-model-importmode:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/com-vandatgsts-thuyetnguyen-data-model-importmode/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.paidAmount",
+      "targets": [
+        {
+          "symbol_id": "android-008425c4446ee67632970989",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+          "shard_ref": "android:d996e7e3236c961a:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.deleteProduct",
+      "targets": [
+        {
+          "symbol_id": "android-d113f15dbcce43baa76e3d18",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+          "shard_ref": "android:a01c9aee95d297fe:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/products/storage-data/a01c9aee95d297fe-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed",
+      "targets": [
+        {
+          "symbol_id": "android-74af3fb03edfbe0f5f3bf6eb",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+          "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.SurfaceLight",
+      "targets": [
+        {
+          "symbol_id": "android-f2bdf85da13bef8d974eae98",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+          "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ]
+    }
+  ]
+}

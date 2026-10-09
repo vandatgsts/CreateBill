@@ -1,0 +1,51 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:57091435d6ed7e06:com-vandatgsts-thuyetnguyen-ui-home-homescreen:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-home-homescreen",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+  "symbols": [
+    {
+      "name": "listState",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.listState",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+      "signature": "val listState = rememberLazyListState()",
+      "start_line": 104,
+      "end_line": 104,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.foundation.lazy.rememberLazyListState"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-93bf7330d667418df2c85808",
+      "shard_ref": "android:57091435d6ed7e06:com-vandatgsts-thuyetnguyen-ui-home-homescreen:01"
+    }
+  ]
+}

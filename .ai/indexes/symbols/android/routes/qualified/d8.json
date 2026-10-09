@@ -1,0 +1,30 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-d8",
+  "platform": "android_native",
+  "bucket": "d8",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment.id",
+      "targets": [
+        {
+          "symbol_id": "android-d4bc4caa0407025938c08aa4",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+          "shard_ref": "android:14e2a4e969d82077:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/debt-payment/state/14e2a4e969d82077-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paymentTerms",
+      "targets": [
+        {
+          "symbol_id": "android-c1516f3708ce5cdbadcd73c7",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+        }
+      ]
+    }
+  ]
+}

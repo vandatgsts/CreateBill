@@ -1,0 +1,48 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:c1f799437ae8d6b8:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+  "files": [
+    {
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "module": "app",
+      "feature": "theme",
+      "layer": "presentation/theme",
+      "purpose": "Áp dụng Material3 lightColorScheme và Typography cho cây Compose.",
+      "imports": [
+        "androidx.compose.material3.MaterialTheme",
+        "androidx.compose.material3.lightColorScheme",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "classes": [],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt"
+      ],
+      "keywords": [
+        "theme",
+        "Compose",
+        "Android",
+        "UI"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.LightColorScheme"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+        "com.vandatgsts.thuyetnguyen.ui.theme.LightColorScheme"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-0f",
+  "platform": "android_native",
+  "bucket": "0f",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.deleteCustomer",
+      "targets": [
+        {
+          "symbol_id": "android-a8b3249301def65d7fbfcdd2",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+          "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+      "targets": [
+        {
+          "symbol_id": "android-b9d18fc02b2c70aa478f346f",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+          "shard_ref": "android:cace1d04570bab7e:detection:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.setCustomDateRange",
+      "targets": [
+        {
+          "symbol_id": "android-0bb6d6203504dd7e01c5c21b",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempAddress",
+      "targets": [
+        {
+          "symbol_id": "android-b8a7dbfc21104c5526363b34",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+          "shard_ref": "android:6e611c90bcfb4d92:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/state/6e611c90bcfb4d92-01.json"
+        }
+      ]
+    }
+  ]
+}

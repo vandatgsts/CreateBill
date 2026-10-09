@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-8f",
+  "platform": "android_native",
+  "bucket": "8f",
+  "symbols": [
+    {
+      "symbol_id": "android-403d304868eb3032a6a3ff11",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-formathelper/8378a21371d1fd70-01.json"
+    },
+    {
+      "symbol_id": "android-4ddd3dc8dc60a0c1ef887b77",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    },
+    {
+      "symbol_id": "android-5bdf304eda1b03df44972592",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.address",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "shard_ref": "android:450695f6e09561ff:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+    }
+  ]
+}

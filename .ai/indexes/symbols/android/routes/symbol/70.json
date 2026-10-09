@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-70",
+  "platform": "android_native",
+  "bucket": "70",
+  "symbols": [
+    {
+      "symbol_id": "android-1a0712674534468de2520737",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.screenKey",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-bb61ee2cc89e9b5622e16877",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-d440cee964b1cb3371decfae",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-e6cabf66f3ec4b93f141aa07",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+      "shard_ref": "android:1bd57f722e859b89:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner/storage-data/1bd57f722e859b89-01.json"
+    }
+  ]
+}

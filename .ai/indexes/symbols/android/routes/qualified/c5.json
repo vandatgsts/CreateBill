@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-c5",
+  "platform": "android_native",
+  "bucket": "c5",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.storeName",
+      "targets": [
+        {
+          "symbol_id": "android-73d3e9b4606c99a51e683763",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+          "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-29b8543056cc360f56b8a688",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+          "shard_ref": "android:14e2a4e969d82077:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/debt-payment/lifecycle-ui/14e2a4e969d82077-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+      "targets": [
+        {
+          "symbol_id": "android-d89c40f20ad9b865aa08f8c0",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+          "shard_ref": "android:2017be09f335083e:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher",
+      "targets": [
+        {
+          "symbol_id": "android-d9cb8382299846da1be9a820",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+          "shard_ref": "android:83972a9cf8e2fb80:duplicate-review:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/settings/duplicate-review/83972a9cf8e2fb80-01.json"
+        }
+      ]
+    }
+  ]
+}

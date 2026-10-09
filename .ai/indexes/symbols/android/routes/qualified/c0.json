@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-c0",
+  "platform": "android_native",
+  "bucket": "c0",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+      "targets": [
+        {
+          "symbol_id": "android-4a6915e5d8cebce2c468a01a",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+          "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ]
+    }
+  ]
+}

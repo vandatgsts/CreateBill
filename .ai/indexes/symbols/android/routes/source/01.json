@@ -1,0 +1,51 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-01",
+  "platform": "android_native",
+  "bucket": "01",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "source_hash": "978a0d63e2158631ebb83661885edbe8f66b9052d31a8f5e646dafb79a22708e",
+      "architecture_shard": {
+        "id": "android:012b2bd755845e7d:architecture",
+        "path": ".ai/indexes/android/architecture/app/editor/012b2bd755845e7d.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:012b2bd755845e7d:com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen/012b2bd755845e7d-01.json"
+        },
+        {
+          "id": "android:012b2bd755845e7d:duplicate-review:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/duplicate-review/012b2bd755845e7d-01.json"
+        },
+        {
+          "id": "android:012b2bd755845e7d:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/012b2bd755845e7d-01.json"
+        },
+        {
+          "id": "android:012b2bd755845e7d:state:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/state/012b2bd755845e7d-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-bcee87d27dc4103f4360f3b8",
+        "android-ce2ad4a56a1cc943eace4da5",
+        "android-7abf1a7f7d5c27bae3ef09a0",
+        "android-e79a1c446cf4121ea8b778ba",
+        "android-d019faaf3b1c06c3ab607123",
+        "android-3399cac9259d9a8601115ce8",
+        "android-c08b8885666b3e71c401a3db",
+        "android-0d385d5c1ffab443be00da03",
+        "android-d24932c472f8b2c65d0a4fa5",
+        "android-6a4269d890765265ca9144b9",
+        "android-92c6c59192dc989ad9ab9810",
+        "android-5fd76fe4b4192f46d54104fd",
+        "android-36c7caa3f8a2a9e04b6186e7",
+        "android-859405f43c6c76428dad69c5",
+        "android-608d0346ba44d850b4f1fad3"
+      ]
+    }
+  ]
+}

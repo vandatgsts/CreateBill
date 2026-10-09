@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-d6",
+  "platform": "android_native",
+  "bucket": "d6",
+  "symbols": [
+    {
+      "symbol_id": "android-f1014c670de8dc8387091cde",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "shard_ref": "android:20e584c65d837de0:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/20e584c65d837de0-01.json"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-37",
+  "platform": "android_native",
+  "bucket": "37",
+  "symbols": [
+    {
+      "symbol_id": "android-17e2690f3dd2f5130824b6aa",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.createDefaultProducts",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product/storage-data/4fa2fdfb46023a04-01.json"
+    },
+    {
+      "symbol_id": "android-6155ad8ed002995509406993",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.taxCode",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+    },
+    {
+      "symbol_id": "android-d11485b89f5726a8be38ab1f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

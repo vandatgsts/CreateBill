@@ -1,0 +1,35 @@
+{
+  "schema": "code-flow-shard-v4",
+  "id": "android:flow:d7967e5dae8f483d9ecea56f",
+  "platform": "android_native",
+  "flows": [
+    {
+      "id": "invoice-edit-save",
+      "name": "Invoice editing and persistence",
+      "description": "Compose events update editable StateFlow; model-derived totals; ViewModel coroutine persists invoice then associated catalogs; callback navigates to preview. Long-press row handle -> pointer-based insertion and auto-scroll -> release -> moveItem stable ID -> renumber STT -> persist/export the reordered list. Per-row InvoiceItem.note is editable, persisted and wrapped in both PDF/image templates. Editor isSaving blocks repeated saves; repository Mutex serializes all invoice mutations and AtomicFile commits before StateFlow publication. Save errors remain in editor with a friendly message; home and payment callers handle persistence failures. Saved empty lists stay empty after restart.",
+      "symbols": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving"
+      ],
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt"
+      ]
+    }
+  ]
+}

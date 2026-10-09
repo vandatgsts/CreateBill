@@ -1,0 +1,268 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:012b2bd755845e7d:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+  "symbols": [
+    {
+      "name": "InvoiceEditorScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor",
+      "signature": "fun InvoiceEditorScreen( viewModel: InvoiceEditorViewModel, onBack: () -> Unit, onNavigateToPreview: (String) -> Unit, onNavigateToProducts: () -> Unit, onNavigateToStores: () -> Unit )",
+      "start_line": 96,
+      "end_line": 1146,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "viewModel",
+          "type": "InvoiceEditorViewModel"
+        },
+        {
+          "name": "onBack",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onNavigateToPreview",
+          "type": "(String) -> Unit"
+        },
+        {
+          "name": "onNavigateToProducts",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onNavigateToStores",
+          "type": "() -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "ui",
+      "calls": [
+        "androidx.compose.ui.graphics.Color.copy",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addDebtPayment",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyProductTemplate",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyStorePartner",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.duplicateItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeDebtPayment",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setInvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setPaidDate",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.togglePaidStatus",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ItemCard",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.onSaveError"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.activeItemIndexForProductSelection",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.filteredPickerStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.selectedItemIndex",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.showStorePicker",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.storeSearchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.viewportBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.isSaving"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.activeItemIndexForProductSelection",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.filteredPickerStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.selectedItemIndex",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.showStorePicker",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.storeSearchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.viewportBounds"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state",
+        "Persist repository records through launched coroutine",
+        "Display Android Toast",
+        "Supply stable-id reorder callback and measured scroll viewport to invoice-item drag handles",
+        "Disable save/preview during pending save; display storage failure Toast"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.activeItemIndexForProductSelection",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.filteredPickerStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.selectedItemIndex",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.showStorePicker",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.storeSearchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt"
+      ],
+      "tags": [
+        "editor",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onBack",
+        "onNavigateToPreview",
+        "onNavigateToProducts",
+        "onNavigateToStores"
+      ],
+      "purpose": "Compose invoice editor with type-specific fields, item rows, product/store pickers, debt/payment controls and save/preview navigation.",
+      "compose_metadata": {
+        "state_collection": "collectAsState",
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-d019faaf3b1c06c3ab607123",
+      "shard_ref": "android:012b2bd755845e7d:duplicate-review:01"
+    },
+    {
+      "name": "ItemCard",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ItemCard",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor",
+      "signature": "private fun ItemCard( type: InvoiceType, index: Int, item: InvoiceItem, showUnitCol: Boolean = true, showQuantityCol: Boolean = true, showUnitPriceCol: Boolean = true, availableProducts: List<ProductTemplate>, dragHandleModifier: Modifier, onUpdate: (InvoiceItem) -> Unit, onDelete: () -> Unit, onDuplicate: () -> Unit, onOpenProductPicker: () -> Unit )",
+      "start_line": 1151,
+      "end_line": 1379,
+      "visibility": "private",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "InvoiceType"
+        },
+        {
+          "name": "index",
+          "type": "Int"
+        },
+        {
+          "name": "item",
+          "type": "InvoiceItem"
+        },
+        {
+          "name": "showUnitCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showQuantityCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showUnitPriceCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "availableProducts",
+          "type": "List<ProductTemplate>"
+        },
+        {
+          "name": "dragHandleModifier",
+          "type": "Modifier"
+        },
+        {
+          "name": "onUpdate",
+          "type": "(InvoiceItem) -> Unit"
+        },
+        {
+          "name": "onDelete",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onDuplicate",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onOpenProductPicker",
+          "type": "() -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "ui",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onUpdate",
+        "onDelete",
+        "onDuplicate",
+        "onOpenProductPicker"
+      ],
+      "purpose": "Editable invoice row with dedicated 48dp drag handle, product picker, duplicate/delete and type-specific fields. Common multiline row-note field emits onUpdate(item.copy(note = it)) after either template-specific section.",
+      "compose_metadata": {
+        "state_collection": null,
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-3399cac9259d9a8601115ce8",
+      "shard_ref": "android:012b2bd755845e7d:duplicate-review:01"
+    }
+  ]
+}

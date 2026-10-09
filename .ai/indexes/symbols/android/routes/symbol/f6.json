@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-f6",
+  "platform": "android_native",
+  "bucket": "f6",
+  "symbols": [
+    {
+      "symbol_id": "android-20ee8792c3be728ab60db4b0",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType.displayName",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "shard_ref": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model-invoicetype:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model-invoicetype/da5f8e171d393754-01.json"
+    },
+    {
+      "symbol_id": "android-e3d2544ac0f3132df813af07",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-dc",
+  "platform": "android_native",
+  "bucket": "dc",
+  "symbols": [
+    {
+      "symbol_id": "android-df8e76a32fccdf1e71dca3f0",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:57091435d6ed7e06:detection:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "detection",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+  "symbols": [
+    {
+      "name": "DashboardOverviewBanner",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DashboardOverviewBanner",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "private fun DashboardOverviewBanner(stats: HomeDashboardStats)",
+      "start_line": 529,
+      "end_line": 646,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "stats: HomeDashboardStats"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.layout.Arrangement.spacedBy",
+        "androidx.compose.foundation.layout.Box",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults.cardColors",
+        "androidx.compose.material3.CardDefaults.cardElevation",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.ui.Modifier.fillMaxWidth",
+        "androidx.compose.ui.Modifier.height",
+        "androidx.compose.ui.Modifier.padding",
+        "androidx.compose.ui.Modifier.weight",
+        "androidx.compose.ui.graphics.Brush.linearGradient",
+        "androidx.compose.ui.graphics.Color",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "home",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-531e1ae62a28236c318fce89",
+      "shard_ref": "android:57091435d6ed7e06:detection:01"
+    },
+    {
+      "name": "StoreQuickCard",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.StoreQuickCard",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "private fun StoreQuickCard(\n    summary: StorePartnerSummary,\n    onClick: () -> Unit\n)",
+      "start_line": 649,
+      "end_line": 706,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "summary: StorePartnerSummary,\n    onClick: () -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults.cardColors",
+        "androidx.compose.material3.CardDefaults.cardElevation",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.ui.Modifier.fillMaxWidth",
+        "androidx.compose.ui.Modifier.height",
+        "androidx.compose.ui.Modifier.padding",
+        "androidx.compose.ui.Modifier.size",
+        "androidx.compose.ui.graphics.Color.copy",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [
+        "androidx.compose.ui.graphics.Color.copy",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "home",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-5e0757bb1dbec4367bd70ddc",
+      "shard_ref": "android:57091435d6ed7e06:detection:01"
+    },
+    {
+      "name": "TemplateSelectionCard",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.TemplateSelectionCard",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "private fun TemplateSelectionCard(\n    title: String,\n    subtitle: String,\n    color: Color,\n    onClick: () -> Unit\n)",
+      "start_line": 827,
+      "end_line": 846,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "title: String,\n    subtitle: String,\n    color: Color,\n    onClick: () -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults.cardColors",
+        "androidx.compose.material3.Text",
+        "androidx.compose.ui.Modifier.height",
+        "androidx.compose.ui.Modifier.padding"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-c6e80d55e2ed234e8bbb7252",
+      "shard_ref": "android:57091435d6ed7e06:detection:01"
+    }
+  ]
+}

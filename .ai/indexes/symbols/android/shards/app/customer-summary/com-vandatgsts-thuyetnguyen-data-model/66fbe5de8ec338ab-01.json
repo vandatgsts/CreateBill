@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:66fbe5de8ec338ab:com-vandatgsts-thuyetnguyen-data-model:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer-summary",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+  "symbols": [
+    {
+      "name": "CustomerSummary",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary",
+      "type": "data_class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "data class CustomerSummary",
+      "start_line": 3,
+      "end_line": 10,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer_summary",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "customer_summary"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-0fbe49e4fc2579fd5d19b338",
+      "shard_ref": "android:66fbe5de8ec338ab:com-vandatgsts-thuyetnguyen-data-model:01"
+    }
+  ]
+}

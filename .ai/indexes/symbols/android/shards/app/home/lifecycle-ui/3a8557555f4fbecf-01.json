@@ -1,0 +1,701 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:3a8557555f4fbecf:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+  "symbols": [
+    {
+      "name": "HomeDashboardStats",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "data class HomeDashboardStats(\n    val totalStores: Int = 0,\n    val totalInvoices: Int = 0,\n    val totalProducts: Int = 0,\n    val totalOutstandingDebt: Double = 0.0,\n    val totalRevenue: Double = 0.0,\n    val totalPaid: Double = 0.0,\n    val periodLabel: String = \"TỔNG QUAN TÀI CHÍNH\"\n)",
+      "start_line": 32,
+      "end_line": 40,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "val totalStores: Int = 0",
+        "val totalInvoices: Int = 0",
+        "val totalProducts: Int = 0",
+        "val totalOutstandingDebt: Double = 0.0",
+        "val totalRevenue: Double = 0.0",
+        "val totalPaid: Double = 0.0",
+        "val periodLabel: String = \"TỔNG QUAN TÀI CHÍNH\""
+      ],
+      "return_type": "HomeDashboardStats",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.dashboardStats"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalRevenue",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalStores"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalRevenue",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalStores"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-c08d1c6573cccfb2f24ca273",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "HomeViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "class HomeViewModel(application: Application) : AndroidViewModel(application)",
+      "start_line": 42,
+      "end_line": 269,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "application: Application"
+      ],
+      "return_type": "HomeViewModel",
+      "calls": [
+        "androidx.lifecycle.AndroidViewModel"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.<init>"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-a9910ee74f8aa940130e24ba",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "constructor(application: Application)",
+      "start_line": 42,
+      "end_line": 42,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "application: Application"
+      ],
+      "return_type": "HomeViewModel",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-fdc65ec4bb055c260afd3b6c",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "_searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val _searchQuery = MutableStateFlow(\"\")",
+      "start_line": 47,
+      "end_line": 47,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-8ee7e76b218621a2cd260f5e",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.searchQuery",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val searchQuery: StateFlow<String> = _searchQuery",
+      "start_line": 48,
+      "end_line": 48,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<String>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-5f54e45acdaaab5c10ac97f0",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "_filterType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val _filterType = MutableStateFlow<InvoiceType?>(null)",
+      "start_line": 50,
+      "end_line": 50,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-4a22c0273f6a5511f6cb35e0",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "filterType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.filterType",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val filterType: StateFlow<InvoiceType?> = _filterType",
+      "start_line": 51,
+      "end_line": 51,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<InvoiceType?>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt"
+      ],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-d1d066eb32305d2ce6c2ecfb",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "_datePeriod",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val _datePeriod = MutableStateFlow(DateFilterPeriod.ALL)",
+      "start_line": 53,
+      "end_line": 53,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-f7b71aaf71d4f8d44261571d",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "datePeriod",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.datePeriod",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val datePeriod: StateFlow<DateFilterPeriod> = _datePeriod",
+      "start_line": 54,
+      "end_line": 54,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<DateFilterPeriod>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-2d54f271606106856adf5a04",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "_customDateRange",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val _customDateRange = MutableStateFlow<Pair<Long, Long>?>(null)",
+      "start_line": 56,
+      "end_line": 56,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-8ca9e549c140cd98284c029b",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "customDateRange",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.customDateRange",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val customDateRange: StateFlow<Pair<Long, Long>?> = _customDateRange",
+      "start_line": 57,
+      "end_line": 57,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<Pair<Long, Long>?>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-4401e8e28b930bc4b3dd0605",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "updateSearchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.updateSearchQuery",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun updateSearchQuery(query: String)",
+      "start_line": 151,
+      "end_line": 153,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "query: String"
+      ],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-76501d617e40b74d109cf2cf",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "setFilterType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.setFilterType",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun setFilterType(type: InvoiceType?)",
+      "start_line": 155,
+      "end_line": 157,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "type: InvoiceType?"
+      ],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt"
+      ],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-39c74c83c8c3fc4c7d2c8ba2",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "setDatePeriod",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.setDatePeriod",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun setDatePeriod(period: DateFilterPeriod)",
+      "start_line": 159,
+      "end_line": 164,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "period: DateFilterPeriod"
+      ],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-b72a5f2e88b81e31db503296",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "setCustomDateRange",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.setCustomDateRange",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun setCustomDateRange(start: Long, end: Long)",
+      "start_line": 166,
+      "end_line": 169,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "start: Long",
+        "end: Long"
+      ],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-0bb6d6203504dd7e01c5c21b",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    },
+    {
+      "name": "getPeriodTimestampRange",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private fun getPeriodTimestampRange(period: DateFilterPeriod, customRange: Pair<Long, Long>?): Pair<Long, Long>?",
+      "start_line": 195,
+      "end_line": 268,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "period: DateFilterPeriod",
+        "customRange: Pair<Long, Long>?"
+      ],
+      "return_type": "Pair<Long, Long>?",
+      "calls": [
+        "java.util.Calendar.getInstance"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.dashboardStats",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.filteredInvoices"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-bb61ee2cc89e9b5622e16877",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01"
+    }
+  ]
+}

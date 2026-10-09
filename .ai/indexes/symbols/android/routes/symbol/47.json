@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-47",
+  "platform": "android_native",
+  "bucket": "47",
+  "symbols": [
+    {
+      "symbol_id": "android-a03fef5fff0b4f04201e40d7",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.THIS_WEEK",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-c08b8885666b3e71c401a3db",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.invoice",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/012b2bd755845e7d-01.json"
+    },
+    {
+      "symbol_id": "android-e603322f6674744bddab4c74",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialItemBounds",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/state/8240678ac3dafa80-01.json"
+    }
+  ]
+}

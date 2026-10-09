@@ -1,0 +1,30 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-9c",
+  "platform": "android_native",
+  "bucket": "9c",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalAmount",
+      "targets": [
+        {
+          "symbol_id": "android-48528cf5349fbbaeefa8ebb3",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+          "shard_ref": "android:847e14201263066b:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner-summary/state/847e14201263066b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+      "targets": [
+        {
+          "symbol_id": "android-d0b491fa1f2300cc611d3353",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    }
+  ]
+}

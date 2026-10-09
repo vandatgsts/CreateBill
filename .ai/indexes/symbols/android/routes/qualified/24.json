@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-24",
+  "platform": "android_native",
+  "bucket": "24",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.dashboardStats",
+      "targets": [
+        {
+          "symbol_id": "android-76a1e29b0bf5e89ee8a3439d",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+          "shard_ref": "android:57091435d6ed7e06:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/57091435d6ed7e06-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.updateProfile",
+      "targets": [
+        {
+          "symbol_id": "android-bbbbb67357009d5541c6d39e",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+          "shard_ref": "android:664b212ca5bf4124:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/664b212ca5bf4124-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+      "targets": [
+        {
+          "symbol_id": "android-d30be72007d3b8d5a43462e6",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+          "shard_ref": "android:339a54a301375cca:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/storage-data/339a54a301375cca-01.json"
+        }
+      ]
+    }
+  ]
+}

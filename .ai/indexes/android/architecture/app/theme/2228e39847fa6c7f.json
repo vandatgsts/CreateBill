@@ -1,0 +1,62 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:2228e39847fa6c7f:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+  "files": [
+    {
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "module": "app",
+      "feature": "theme",
+      "layer": "presentation/theme",
+      "purpose": "Bảng màu dùng chung giao diện.",
+      "imports": [
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "classes": [],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [],
+      "keywords": [
+        "theme",
+        "Compose",
+        "Android",
+        "UI"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.SecondaryTeal",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.SurfaceLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.CardBackground",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+        "com.vandatgsts.thuyetnguyen.ui.theme.SecondaryTeal",
+        "com.vandatgsts.thuyetnguyen.ui.theme.AccentGreen",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.SurfaceLight",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.CardBackground",
+        "com.vandatgsts.thuyetnguyen.ui.theme.DeleteRed"
+      ]
+    }
+  ]
+}

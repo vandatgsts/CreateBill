@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-80",
+  "platform": "android_native",
+  "bucket": "80",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.QUANTITY",
+      "targets": [
+        {
+          "symbol_id": "android-656f9ff5b912728964cd6248",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawPaidStamp",
+      "targets": [
+        {
+          "symbol_id": "android-01ca96d9d858ea75eb90c5fe",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summaries",
+      "targets": [
+        {
+          "symbol_id": "android-63c8fa4961b4da7182c331ee",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+          "shard_ref": "android:2b4ed7c105b69076:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/2b4ed7c105b69076-01.json"
+        }
+      ]
+    }
+  ]
+}

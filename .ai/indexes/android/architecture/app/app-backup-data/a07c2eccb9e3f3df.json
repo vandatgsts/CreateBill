@@ -1,0 +1,64 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:a07c2eccb9e3f3df:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "app-backup-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "app-backup-data",
+      "layer": "data/model",
+      "purpose": "Typed AppBackupData, ImportMode domain model and derived invoice/debt values",
+      "imports": [],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.backupVersion",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedAt",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedDate",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.invoices",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.products",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.storePartners",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.customers",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "keywords": [
+        "app_backup_data",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.backupVersion",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedAt",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedDate",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.invoices",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.products",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.storePartners",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.customers",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode.MERGE",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode.REPLACE_ALL"
+      ]
+    }
+  ]
+}

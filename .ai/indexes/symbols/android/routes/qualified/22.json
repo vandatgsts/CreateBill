@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-22",
+  "platform": "android_native",
+  "bucket": "22",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.UNIT_PRICE",
+      "targets": [
+        {
+          "symbol_id": "android-8537845c951f0b822278b690",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype/7c82187787db3c56-01.json"
+        }
+      ]
+    }
+  ]
+}

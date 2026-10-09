@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:4ea140588150773ce3aace78",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "home",
+      "name": "home",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt"
+      ]
+    }
+  ]
+}

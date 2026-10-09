@@ -1,0 +1,63 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-eb",
+  "platform": "android_native",
+  "bucket": "eb",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-ab2d239ded2d461d2e210b7d",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+          "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.totalAmount",
+      "targets": [
+        {
+          "symbol_id": "android-cf08bf488cb0ad294546c48d",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.totalSubTotal",
+      "targets": [
+        {
+          "symbol_id": "android-586dcfa970ccf3852e130787",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:03",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-03.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.receiver",
+      "targets": [
+        {
+          "symbol_id": "android-aa4f54b379041fdb7b799378",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+          "shard_ref": "android:d996e7e3236c961a:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary",
+      "targets": [
+        {
+          "symbol_id": "android-6a06d82c98bb5b3b03d0cda9",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+          "shard_ref": "android:339a54a301375cca:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/339a54a301375cca-01.json"
+        }
+      ]
+    }
+  ]
+}

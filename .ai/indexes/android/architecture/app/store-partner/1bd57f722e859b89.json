@@ -1,0 +1,84 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:1bd57f722e859b89:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "store-partner",
+      "layer": "data/repository",
+      "purpose": "Own store partner StateFlow; case-insensitive identity/name merge and SharedPreferences persistence",
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository._stores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.stores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.KEY_STORES",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.instance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt"
+      ],
+      "keywords": [
+        "store_partner",
+        "persistence",
+        "StateFlow"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.loadStores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.saveToPrefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.getStoreById",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.getStoreByName",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.saveStore",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.deleteStore",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.createDefaultStores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository._stores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.stores",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.KEY_STORES",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.<init-block>"
+      ]
+    }
+  ]
+}

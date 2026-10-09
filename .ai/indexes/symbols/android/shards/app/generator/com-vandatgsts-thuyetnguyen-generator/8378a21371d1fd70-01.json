@@ -1,0 +1,46 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "com-vandatgsts-thuyetnguyen-generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+  "symbols": [
+    {
+      "name": "FormatHelper",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "type": "object",
+      "owner": "com.vandatgsts.thuyetnguyen.generator",
+      "signature": "object FormatHelper",
+      "start_line": 9,
+      "end_line": 31,
+      "parameters": [],
+      "return_type": "FormatHelper",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "FormatHelper",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-1911e2a3431951859d23c9ef",
+      "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator:01"
+    }
+  ]
+}

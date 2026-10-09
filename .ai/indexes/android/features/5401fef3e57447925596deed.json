@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:5401fef3e57447925596deed",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "debt_payment",
+      "name": "debt payment",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt"
+      ]
+    }
+  ]
+}

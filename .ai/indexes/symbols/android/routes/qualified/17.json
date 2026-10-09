@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-17",
+  "platform": "android_native",
+  "bucket": "17",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-56e9b65cc2e34acb11c1e349",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.unit",
+      "targets": [
+        {
+          "symbol_id": "android-f4b670f244b6553077a17678",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+          "shard_ref": "android:0e64ac2612a757ae:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/state/0e64ac2612a757ae-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "targets": [
+        {
+          "symbol_id": "android-f07eb6dc76b7e90d92510cf4",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+          "shard_ref": "android:cace1d04570bab7e:detection:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+        }
+      ]
+    }
+  ]
+}

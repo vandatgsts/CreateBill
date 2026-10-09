@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-33",
+  "platform": "android_native",
+  "bucket": "33",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment.date",
+      "targets": [
+        {
+          "symbol_id": "android-e06b3dbce5da993f6b039599",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+          "shard_ref": "android:14e2a4e969d82077:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/debt-payment/state/14e2a4e969d82077-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isVatIncluded",
+      "targets": [
+        {
+          "symbol_id": "android-57a37d104bfb9894076c9f98",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+      "targets": [
+        {
+          "symbol_id": "android-7690af2087f5e166f818725e",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+          "shard_ref": "android:4400ca68717395c3:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.summaries",
+      "targets": [
+        {
+          "symbol_id": "android-3b6ce0fefdb2d4476462ba20",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+          "shard_ref": "android:6e611c90bcfb4d92:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/6e611c90bcfb4d92-01.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-b6",
+  "platform": "android_native",
+  "bucket": "b6",
+  "symbols": [
+    {
+      "symbol_id": "android-7de50ae7039902a726408e85",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+    },
+    {
+      "symbol_id": "android-c24002e89602f4e706349941",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.items",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    },
+    {
+      "symbol_id": "android-dc18d9b9567cb34548a874da",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.customDateRange",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "shard_ref": "android:57091435d6ed7e06:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/57091435d6ed7e06-01.json"
+    }
+  ]
+}

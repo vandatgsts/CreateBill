@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice-type",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+  "symbols": [
+    {
+      "name": "InvoiceType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+      "type": "enum",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "enum class InvoiceType",
+      "start_line": 3,
+      "end_line": 12,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice_type",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "invoice_type"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-b86bd4099db91ae2092ac63c",
+      "shard_ref": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model:01"
+    }
+  ]
+}

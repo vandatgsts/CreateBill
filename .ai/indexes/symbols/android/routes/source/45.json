@@ -1,0 +1,33 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-45",
+  "platform": "android_native",
+  "bucket": "45",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "source_hash": "fd1275519767e8650630b6abaedd45b324b3e2b60ffd428a3ecd29d616c39731",
+      "architecture_shard": {
+        "id": "android:450695f6e09561ff:architecture",
+        "path": ".ai/indexes/android/architecture/app/customer-profile/450695f6e09561ff.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:450695f6e09561ff:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-a63159ccc773995783770d26",
+        "android-430b29c04447c561591f6b31",
+        "android-14b34a19164373dd852d3b0c",
+        "android-57326d2e83d1be75677c18fc",
+        "android-edba541ae36592bb28a0aa1d",
+        "android-5bdf304eda1b03df44972592",
+        "android-4995c067e23eeca4126cc7fd",
+        "android-efffde4aaa7a6b9741ddb1a3",
+        "android-b3302b53bfa1df5fb8436582"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:2017be09f335083e:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.ui.editor",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "layer": "presentation/state",
+      "purpose": "Own editable invoice StateFlow; initialize from profiles/stores, mutate and reorder items by stable ID and mutate payments, and persist invoice plus associated store/customer records.",
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch",
+        "kotlinx.coroutines.CancellationException",
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt"
+      ],
+      "keywords": [
+        "editor",
+        "invoice",
+        "StateFlow"
+      ],
+      "risks": [
+        "Save updates invoice then related catalogs sequentially without transaction",
+        "Store debt matching uses substring names/titles"
+      ],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.duplicateItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyStorePartner",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyProductTemplate",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addDebtPayment",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeDebtPayment",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.togglePaidStatus",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setPaidDate",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setInvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving"
+      ]
+    }
+  ]
+}

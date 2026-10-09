@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-02",
+  "platform": "android_native",
+  "bucket": "02",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.phone",
+      "targets": [
+        {
+          "symbol_id": "android-9f30f096b130b04251e71ecc",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+          "shard_ref": "android:d996e7e3236c961a:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "targets": [
+        {
+          "symbol_id": "android-556d714b364255b65c764f16",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+          "shard_ref": "android:0e64ac2612a757ae:com-vandatgsts-thuyetnguyen-data-model:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/com-vandatgsts-thuyetnguyen-data-model/0e64ac2612a757ae-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.defaultPrice",
+      "targets": [
+        {
+          "symbol_id": "android-496e2504ed39d23167aa09dc",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+          "shard_ref": "android:0e64ac2612a757ae:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/state/0e64ac2612a757ae-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+      "targets": [
+        {
+          "symbol_id": "android-5e3884a52f763b54d75bd782",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+          "shard_ref": "android:a01c9aee95d297fe:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/products/lifecycle-ui/a01c9aee95d297fe-01.json"
+        }
+      ]
+    }
+  ]
+}

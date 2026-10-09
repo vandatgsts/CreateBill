@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-ac",
+  "platform": "android_native",
+  "bucket": "ac",
+  "symbols": [
+    {
+      "symbol_id": "android-d106aacfd70f90f7493e8fcd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems/8240678ac3dafa80-01.json"
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+  "symbols": [
+    {
+      "name": "currentItems",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val currentItems by rememberUpdatedState(items)",
+      "start_line": 49,
+      "end_line": 49,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "List<InvoiceItem>",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-d106aacfd70f90f7493e8fcd",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "currentOnMove",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentOnMove",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val currentOnMove by rememberUpdatedState(onMove)",
+      "start_line": 50,
+      "end_line": 50,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "(String, Int) -> Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-1210bc766d7bc653c9117f78",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "edgeSize",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.edgeSize",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val edgeSize = with(LocalDensity.current) { 72.dp.toPx() }",
+      "start_line": 59,
+      "end_line": 59,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Float",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-44c7c1af1e7836350bc919e6",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "maxScrollSpeed",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.maxScrollSpeed",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val maxScrollSpeed = with(LocalDensity.current) { 640.dp.toPx() }",
+      "start_line": 60,
+      "end_line": 60,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Float",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-c23f74b7e749cf7831dcf575",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "dropPosition",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropPosition",
+      "type": "local_function",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "fun dropPosition(): Float",
+      "start_line": 62,
+      "end_line": 67,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Float",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [
+        "androidx.compose.ui.layout.positionInWindow"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.itemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialPointerY",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.listCoordinates"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "local_function"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "purpose": "Convert the current finger window position into the list coordinate space; use a scroll-compensated fallback if detached.",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-0213444e61aa2dd687e9a9b8",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "dropIndex",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropIndex",
+      "type": "local_function",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "fun dropIndex(): Int",
+      "start_line": 69,
+      "end_line": 74,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Int",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropPosition"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.itemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialPointerY",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.listCoordinates"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "local_function"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "purpose": "Count non-dragged row centers above the finger to derive the insertion index, including first/last destinations.",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-2030adcae5e8dba9b624b7e8",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "insertionBeforeId",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.insertionBeforeId",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val insertionBeforeId = if (draggedItemId != null) { currentItems.filterNot { it.id == draggedItemId }.getOrNull(dropIndex())?.id } else null",
+      "start_line": 111,
+      "end_line": 113,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "String?",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-623e157bab566e9322a5fcae",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    },
+    {
+      "name": "insertionAtEnd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.insertionAtEnd",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "signature": "val insertionAtEnd = draggedItemId != null && insertionBeforeId == null",
+      "start_line": 114,
+      "end_line": 114,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Boolean",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Composition-owned state; never persisted as invoice data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "drag-state"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-9158e4bbf6a7e64ae43a1def",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01"
+    }
+  ]
+}

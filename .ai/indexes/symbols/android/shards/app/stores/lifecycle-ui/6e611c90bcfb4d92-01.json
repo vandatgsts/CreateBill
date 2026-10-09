@@ -1,0 +1,218 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:6e611c90bcfb4d92:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+  "symbols": [
+    {
+      "name": "summaries",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.summaries",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+      "signature": "val summaries by viewModel.filteredSummaries.collectAsState()",
+      "start_line": 85,
+      "end_line": 85,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain summaries for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-3b6ce0fefdb2d4476462ba20",
+      "shard_ref": "android:6e611c90bcfb4d92:lifecycle-ui:01"
+    },
+    {
+      "name": "searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+      "signature": "val searchQuery by viewModel.searchQuery.collectAsState()",
+      "start_line": 86,
+      "end_line": 86,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain searchQuery for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-e3723aef7b56ed02f895cfa9",
+      "shard_ref": "android:6e611c90bcfb4d92:lifecycle-ui:01"
+    },
+    {
+      "name": "showDialog",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.showDialog",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+      "signature": "var showDialog by remember { mutableStateOf(false) }",
+      "start_line": 90,
+      "end_line": 90,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain showDialog for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-c32d211aafd322add9201138",
+      "shard_ref": "android:6e611c90bcfb4d92:lifecycle-ui:01"
+    },
+    {
+      "name": "StoreCard",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores",
+      "signature": "private fun StoreCard( summary: StorePartnerSummary, onCardClick: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit )",
+      "start_line": 349,
+      "end_line": 442,
+      "visibility": "private",
+      "parameters": [
+        {
+          "name": "summary",
+          "type": "StorePartnerSummary"
+        },
+        {
+          "name": "onCardClick",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onEdit",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onDelete",
+          "type": "() -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "ui",
+      "calls": [
+        "androidx.compose.ui.graphics.Color.copy"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard.store"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard.store"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard.store"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onCardClick",
+        "onEdit",
+        "onDelete"
+      ],
+      "purpose": "Render reusable Compose item/card and dispatch supplied callbacks.",
+      "compose_metadata": {
+        "state_collection": null,
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-d0fe5f5777e7086178a951b5",
+      "shard_ref": "android:6e611c90bcfb4d92:lifecycle-ui:01"
+    }
+  ]
+}

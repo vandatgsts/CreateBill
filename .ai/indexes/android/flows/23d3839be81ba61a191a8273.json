@@ -1,0 +1,34 @@
+{
+  "schema": "code-flow-shard-v4",
+  "id": "android:flow:23d3839be81ba61a191a8273",
+  "platform": "android_native",
+  "flows": [
+    {
+      "id": "invoice-preview-export",
+      "name": "Preview and PDF/PNG export",
+      "description": "Repository invoice -> Default bitmap drawing -> UI preview -> IO PDF/PNG cache output -> FileProvider chooser or MediaStore gallery. Per-row InvoiceItem.note is editable, persisted and wrapped in both PDF/image templates. A4 canvas height executes the same full layout as drawing on an empty Canvas; wraps addresses/shared notes/warranty/payment terms and includes the rotated paid stamp. Full-document bitmap allocation remains a limit for extremely long documents.",
+      "symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.loadInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt"
+      ]
+    }
+  ]
+}

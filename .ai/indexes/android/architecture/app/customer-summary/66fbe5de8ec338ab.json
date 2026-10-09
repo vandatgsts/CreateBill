@@ -1,0 +1,54 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:66fbe5de8ec338ab:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer-summary",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "customer-summary",
+      "layer": "data/model",
+      "purpose": "Typed CustomerSummary domain model and derived invoice/debt values",
+      "imports": [],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.customer",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.invoiceCount",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.invoices"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "keywords": [
+        "customer_summary",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.customer",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.invoiceCount",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.totalDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.invoices"
+      ]
+    }
+  ]
+}

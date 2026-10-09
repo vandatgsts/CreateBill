@@ -1,0 +1,124 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:2b4ed7c105b69076:navigation:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "navigation",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+  "symbols": [
+    {
+      "name": "StorePartnerDetailScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores",
+      "signature": "fun StorePartnerDetailScreen( storeId: String, viewModel: StorePartnerViewModel, onBack: () -> Unit, onCreateInvoiceForStore: (StorePartner, Double) -> Unit, onNavigateToInvoicePreview: (String) -> Unit, onNavigateToInvoiceEdit: (String) -> Unit )",
+      "start_line": 78,
+      "end_line": 414,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "storeId",
+          "type": "String"
+        },
+        {
+          "name": "viewModel",
+          "type": "StorePartnerViewModel"
+        },
+        {
+          "name": "onBack",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onCreateInvoiceForStore",
+          "type": "(StorePartner, Double) -> Unit"
+        },
+        {
+          "name": "onNavigateToInvoicePreview",
+          "type": "(String) -> Unit"
+        },
+        {
+          "name": "onNavigateToInvoiceEdit",
+          "type": "(String) -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "ui",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+        "com.vandatgsts.thuyetnguyen.ui.stores.InvoicePeriodCard",
+        "com.vandatgsts.thuyetnguyen.ui.stores.MetricBox",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentAmount",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentTitle",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.showPaymentDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.store",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentAmount",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentTitle",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.showPaymentDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.store",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summary"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentAmount",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentTitle",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.showPaymentDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.store",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ],
+      "tags": [
+        "stores",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onBack",
+        "onCreateInvoiceForStore",
+        "onNavigateToInvoicePreview",
+        "onNavigateToInvoiceEdit"
+      ],
+      "purpose": "Compose partner detail, invoice history, metrics and payment dialog with invoice creation/edit/preview callbacks.",
+      "compose_metadata": {
+        "state_collection": "collectAsState",
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-3b6530ad5c362919b2ed16e3",
+      "shard_ref": "android:2b4ed7c105b69076:navigation:01"
+    }
+  ]
+}

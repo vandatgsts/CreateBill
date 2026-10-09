@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-6d",
+  "platform": "android_native",
+  "bucket": "6d",
+  "symbols": [
+    {
+      "symbol_id": "android-208077855e62d2405f9ffd38",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedAt",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/state/a07c2eccb9e3f3df-01.json"
+    },
+    {
+      "symbol_id": "android-67ec9039ca691b5ddcad8b0e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankName",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+    },
+    {
+      "symbol_id": "android-aabf525a0cf06eb643cce3b5",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addDebtPayment",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+    },
+    {
+      "symbol_id": "android-c6e80d55e2ed234e8bbb7252",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.TemplateSelectionCard",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "shard_ref": "android:57091435d6ed7e06:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/detection/57091435d6ed7e06-01.json"
+    },
+    {
+      "symbol_id": "android-e2c114a0f9e6b6c9e0c14d0e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+    }
+  ]
+}

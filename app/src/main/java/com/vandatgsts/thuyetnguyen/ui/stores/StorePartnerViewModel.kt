@@ -1,6 +1,7 @@
 package com.vandatgsts.thuyetnguyen.ui.stores
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument
@@ -15,6 +16,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
 
 class StorePartnerViewModel(application: Application) : AndroidViewModel(application) {
     private val storeRepo = StorePartnerRepository.getInstance(application)
@@ -114,7 +116,13 @@ class StorePartnerViewModel(application: Application) : AndroidViewModel(applica
                 isPaid = isNowFullyPaid || latest.isPaid,
                 paidDate = if (isNowFullyPaid) com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate(System.currentTimeMillis()) else latest.paidDate
             )
-            invoiceRepo.saveInvoice(updated)
+            try {
+                invoiceRepo.saveInvoice(updated)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Toast.makeText(getApplication<Application>(), "Không thể lưu thanh toán. Vui lòng kiểm tra dung lượng và thử lại.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

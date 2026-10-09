@@ -1,0 +1,274 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:012b2bd755845e7d:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+  "symbols": [
+    {
+      "name": "invoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.invoice",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "signature": "val invoice by viewModel.invoiceState.collectAsState()",
+      "start_line": 103,
+      "end_line": 103,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain invoice for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-c08b8885666b3e71c401a3db",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    },
+    {
+      "name": "isSaving",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.isSaving",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "type": "state",
+      "signature": "val isSaving by viewModel.isSaving.collectAsState()",
+      "start_line": 104,
+      "end_line": 104,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Boolean",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "editor",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Disable save and preview buttons until save completes.",
+      "thread_context": "Main",
+      "coroutine_context": "Main",
+      "lifecycle": "ViewModel or composition",
+      "symbol_id": "android-859405f43c6c76428dad69c5",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    },
+    {
+      "name": "availableProducts",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableProducts",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "signature": "val availableProducts by viewModel.availableProducts.collectAsState()",
+      "start_line": 105,
+      "end_line": 105,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain availableProducts for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-0d385d5c1ffab443be00da03",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    },
+    {
+      "name": "availableStores",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableStores",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "signature": "val availableStores by viewModel.availableStores.collectAsState()",
+      "start_line": 106,
+      "end_line": 106,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain availableStores for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-d24932c472f8b2c65d0a4fa5",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    },
+    {
+      "name": "onSaveError",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.onSaveError",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "type": "property",
+      "signature": "val onSaveError: (Exception) -> Unit = {",
+      "start_line": 108,
+      "end_line": 110,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "(Exception) -> Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "android.widget.Toast.makeText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.context"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Display a friendly save failure Toast"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Display a friendly Toast when save fails.",
+      "thread_context": "Main",
+      "coroutine_context": "Main",
+      "lifecycle": "ViewModel or composition",
+      "symbol_id": "android-608d0346ba44d850b4f1fad3",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    },
+    {
+      "name": "viewportBounds",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.viewportBounds",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+      "signature": "var viewportBounds by remember { mutableStateOf(Rect.Zero) }",
+      "start_line": 112,
+      "end_line": 112,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "Rect",
+      "is_suspend": false,
+      "is_async": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.viewportBounds"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "reorder",
+        "viewport"
+      ],
+      "risks": [],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "purpose": "Finite outer Box bounds in window coordinates for automatic edge scrolling",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-6a4269d890765265ca9144b9",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01"
+    }
+  ]
+}

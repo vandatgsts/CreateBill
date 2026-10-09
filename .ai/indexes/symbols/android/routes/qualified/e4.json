@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-e4",
+  "platform": "android_native",
+  "bucket": "e4",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.id",
+      "targets": [
+        {
+          "symbol_id": "android-a7fee2e7abf7306218de4ddd",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+          "shard_ref": "android:d996e7e3236c961a:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer",
+      "targets": [
+        {
+          "symbol_id": "android-2c0bcea5df5ec78af221d133",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+          "shard_ref": "android:1aa370538b6687c8:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/1aa370538b6687c8-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.insertionAtEnd",
+      "targets": [
+        {
+          "symbol_id": "android-9158e4bbf6a7e64ae43a1def",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+          "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems/8240678ac3dafa80-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isExporting",
+      "targets": [
+        {
+          "symbol_id": "android-01a5b3405f0cb18fe1d45821",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+          "shard_ref": "android:83972a9cf8e2fb80:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/83972a9cf8e2fb80-01.json"
+        }
+      ]
+    }
+  ]
+}

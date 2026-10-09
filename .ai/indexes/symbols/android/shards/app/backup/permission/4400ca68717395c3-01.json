@@ -1,0 +1,65 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:4400ca68717395c3:permission:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "backup",
+  "concern": "permission",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+  "symbols": [
+    {
+      "name": "getShareIntent",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getShareIntent",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "fun getShareIntent(backupFile: File): Intent",
+      "start_line": 93,
+      "end_line": 106,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "backupFile",
+          "type": "File"
+        }
+      ],
+      "return_type": "Intent",
+      "calls": [
+        "androidx.core.content.FileProvider.getUriForFile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Build ACTION_SEND Intent with application/json and grant URI read permission"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-80a710bd2e918035a49647fd",
+      "shard_ref": "android:4400ca68717395c3:permission:01"
+    }
+  ]
+}

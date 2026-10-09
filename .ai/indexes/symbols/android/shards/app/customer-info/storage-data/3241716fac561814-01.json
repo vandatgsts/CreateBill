@@ -1,0 +1,87 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:3241716fac561814:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer-info",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+      "signature": "CustomerInfo(val name: String = \"\", val address: String = \"\", val phone: String = \"\", val taxCode: String = \"\")",
+      "start_line": 3,
+      "end_line": 8,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer_info",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "address",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "taxCode",
+          "type": "String",
+          "default": "\"\""
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.customer",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.address",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.name",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.taxCode"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "model",
+        "customer_info"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-70699739d9fd23932972f486",
+      "shard_ref": "android:3241716fac561814:storage-data:01"
+    }
+  ]
+}

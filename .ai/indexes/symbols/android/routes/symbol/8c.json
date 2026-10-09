@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-8c",
+  "platform": "android_native",
+  "bucket": "8c",
+  "symbols": [
+    {
+      "symbol_id": "android-430b29c04447c561591f6b31",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt",
+      "shard_ref": "android:450695f6e09561ff:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer-profile/storage-data/450695f6e09561ff-01.json"
+    },
+    {
+      "symbol_id": "android-64c9b938b65ba36591456c18",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.profile",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/664b212ca5bf4124-01.json"
+    },
+    {
+      "symbol_id": "android-749c40f2130e8fe2ed696bcd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/storage-data/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-789fb226bba28cc95d3d443a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "shard_ref": "android:c1f799437ae8d6b8:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/theme/lifecycle-ui/c1f799437ae8d6b8-01.json"
+    },
+    {
+      "symbol_id": "android-de3c79e1fd0915d919f059ab",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.lineTotalM2",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "shard_ref": "android:d996e7e3236c961a:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+    }
+  ]
+}

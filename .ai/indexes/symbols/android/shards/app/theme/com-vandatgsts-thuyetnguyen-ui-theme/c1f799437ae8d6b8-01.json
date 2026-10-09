@@ -1,0 +1,49 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:c1f799437ae8d6b8:com-vandatgsts-thuyetnguyen-ui-theme:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-theme",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+  "symbols": [
+    {
+      "name": "LightColorScheme",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.LightColorScheme",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "signature": "private val LightColorScheme = lightColorScheme(",
+      "start_line": 8,
+      "end_line": 19,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "theme",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.material3.lightColorScheme",
+        "androidx.compose.ui.graphics.Color"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "theme",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-9e3cc79b11c6a921e3d039e9",
+      "shard_ref": "android:c1f799437ae8d6b8:com-vandatgsts-thuyetnguyen-ui-theme:01"
+    }
+  ]
+}

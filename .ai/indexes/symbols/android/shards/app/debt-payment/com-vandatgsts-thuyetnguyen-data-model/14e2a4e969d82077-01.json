@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:14e2a4e969d82077:com-vandatgsts-thuyetnguyen-data-model:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "debt-payment",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+  "symbols": [
+    {
+      "name": "DebtPayment",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment",
+      "type": "data_class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "data class DebtPayment",
+      "start_line": 5,
+      "end_line": 10,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "debt_payment",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "debt_payment"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-7ecb278ac141606c5066023f",
+      "shard_ref": "android:14e2a4e969d82077:com-vandatgsts-thuyetnguyen-data-model:01"
+    }
+  ]
+}

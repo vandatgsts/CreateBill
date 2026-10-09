@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-14",
+  "platform": "android_native",
+  "bucket": "14",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.phone",
+      "targets": [
+        {
+          "symbol_id": "android-b083534998d28a85c3bdfa9c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+          "shard_ref": "android:3241716fac561814:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-info/state/3241716fac561814-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+      "targets": [
+        {
+          "symbol_id": "android-98fb1b9ca2aa3fc4f90a3a44",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.filteredPickerStores",
+      "targets": [
+        {
+          "symbol_id": "android-e79a1c446cf4121ea8b778ba",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+          "shard_ref": "android:012b2bd755845e7d:com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen/012b2bd755845e7d-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialItemBounds",
+      "targets": [
+        {
+          "symbol_id": "android-e603322f6674744bddab4c74",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+          "shard_ref": "android:8240678ac3dafa80:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/state/8240678ac3dafa80-01.json"
+        }
+      ]
+    }
+  ]
+}

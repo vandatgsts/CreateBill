@@ -1,0 +1,30 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-21",
+  "platform": "android_native",
+  "bucket": "21",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-24bebaa9330475208fd7293c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+          "shard_ref": "android:d996e7e3236c961a:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/storage-data/d996e7e3236c961a-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.StoreQuickCard",
+      "targets": [
+        {
+          "symbol_id": "android-5e0757bb1dbec4367bd70ddc",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+          "shard_ref": "android:57091435d6ed7e06:detection:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/detection/57091435d6ed7e06-01.json"
+        }
+      ]
+    }
+  ]
+}

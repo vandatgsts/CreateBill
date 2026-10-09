@@ -1,0 +1,375 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:20e584c65d837de0:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "preview",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+  "symbols": [
+    {
+      "name": "invoiceRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "private val invoiceRepo = InvoiceRepository.getInstance(application)",
+      "start_line": 17,
+      "end_line": 17,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "preview",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain invoiceRepo for preview.",
+      "thread_context": "caller context",
+      "symbol_id": "android-d2b7353f670cb181ba677c34",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    },
+    {
+      "name": "loadInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.loadInvoice",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "fun loadInvoice(invoiceId: String)",
+      "start_line": 28,
+      "end_line": 41,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "invoiceId",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.getInvoiceById",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._previewBitmap"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state",
+        "Allocate rendered invoice Bitmap"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt"
+      ],
+      "tags": [
+        "preview",
+        "method",
+        "android"
+      ],
+      "risks": [
+        "No local try/finally or exception handling around render/export; callback may not run after failure"
+      ],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Fetch document synchronously, render preview coroutine and publish loading/bitmap state.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-cda120488c4c333257ce49b9",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    },
+    {
+      "name": "sharePdf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.sharePdf",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "fun sharePdf(onComplete: () -> Unit = {})",
+      "start_line": 43,
+      "end_line": 49,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "onComplete",
+          "type": "() -> Unit",
+          "default": "{}"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Export file and invoke Android sharing/viewer/gallery operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt"
+      ],
+      "tags": [
+        "preview",
+        "method",
+        "android"
+      ],
+      "risks": [
+        "No local try/finally or exception handling around render/export; callback may not run after failure"
+      ],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "onComplete"
+      ],
+      "purpose": "Share invoice PDF then invoke completion callback.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-5f63d9f894d6c8cec1a0365d",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    },
+    {
+      "name": "shareImage",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.shareImage",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "fun shareImage(onComplete: () -> Unit = {})",
+      "start_line": 51,
+      "end_line": 57,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "onComplete",
+          "type": "() -> Unit",
+          "default": "{}"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Export file and invoke Android sharing/viewer/gallery operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt"
+      ],
+      "tags": [
+        "preview",
+        "method",
+        "android"
+      ],
+      "risks": [
+        "No local try/finally or exception handling around render/export; callback may not run after failure"
+      ],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "onComplete"
+      ],
+      "purpose": "Share invoice image then invoke completion callback.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-22c7e76e4703a73116e2ce76",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    },
+    {
+      "name": "viewPdf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.viewPdf",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "fun viewPdf(onComplete: () -> Unit = {})",
+      "start_line": 59,
+      "end_line": 65,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "onComplete",
+          "type": "() -> Unit",
+          "default": "{}"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Export file and invoke Android sharing/viewer/gallery operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt"
+      ],
+      "tags": [
+        "preview",
+        "method",
+        "android"
+      ],
+      "risks": [
+        "No local try/finally or exception handling around render/export; callback may not run after failure"
+      ],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "onComplete"
+      ],
+      "purpose": "Open invoice PDF then invoke completion callback.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-4106feca61d17ea5cd2becfa",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    },
+    {
+      "name": "saveImage",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.saveImage",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+      "signature": "fun saveImage(onResult: (Boolean) -> Unit)",
+      "start_line": 67,
+      "end_line": 73,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "onResult",
+          "type": "(Boolean) -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist repository records through launched coroutine",
+        "Export file and invoke Android sharing/viewer/gallery operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt"
+      ],
+      "tags": [
+        "preview",
+        "method",
+        "android"
+      ],
+      "risks": [
+        "No local try/finally or exception handling around render/export; callback may not run after failure"
+      ],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "onResult"
+      ],
+      "purpose": "Save invoice image to gallery then deliver Boolean result.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-5c5abfe77288afe3de5fc610",
+      "shard_ref": "android:20e584c65d837de0:storage-data:01"
+    }
+  ]
+}

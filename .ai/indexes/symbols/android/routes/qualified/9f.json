@@ -1,0 +1,63 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-9f",
+  "platform": "android_native",
+  "bucket": "9f",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-783b449e50ce6c207b58a919",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+          "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/shell/com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail/73809202ff5eb2c5-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.<init-block>",
+      "targets": [
+        {
+          "symbol_id": "android-4087c0463d163bf1970316bf",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+          "shard_ref": "android:1bd57f722e859b89:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner/storage-data/1bd57f722e859b89-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.CUSTOM",
+      "targets": [
+        {
+          "symbol_id": "android-279ecae420abc99d182b09ee",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore",
+      "targets": [
+        {
+          "symbol_id": "android-99265017de6a1b4b2dba3b1b",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+          "shard_ref": "android:339a54a301375cca:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/storage-data/339a54a301375cca-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+      "targets": [
+        {
+          "symbol_id": "android-1ba731494ddce164462f079a",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+          "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ]
+    }
+  ]
+}

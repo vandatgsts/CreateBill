@@ -1,0 +1,125 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:c2cdd5f7dc2cb648:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "products",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+  "symbols": [
+    {
+      "name": "ProductListScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products",
+      "signature": "fun ProductListScreen( viewModel: ProductListViewModel, onBack: () -> Unit, onSelectProduct: ((ProductTemplate) -> Unit)? = null )",
+      "start_line": 75,
+      "end_line": 310,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "viewModel",
+          "type": "ProductListViewModel"
+        },
+        {
+          "name": "onBack",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onSelectProduct",
+          "type": "((ProductTemplate) -> Unit)?",
+          "default": "null"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "ui",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductItemCard",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.deleteProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.saveProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.updateSearchQuery"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.editingProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.productToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.products",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempPrice",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempUnit",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.editingProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.productToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempPrice",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempUnit"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state",
+        "Persist repository records through launched coroutine",
+        "Display Android Toast"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.editingProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.productToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.products",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempPrice",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempUnit",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt"
+      ],
+      "tags": [
+        "products",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onBack",
+        "onSelectProduct"
+      ],
+      "purpose": "Compose searchable product catalog, edit/create/delete dialogs and optional product selection callback.",
+      "compose_metadata": {
+        "state_collection": "collectAsState",
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-820cd6729723f8df909b9f7d",
+      "shard_ref": "android:c2cdd5f7dc2cb648:storage-data:01"
+    }
+  ]
+}

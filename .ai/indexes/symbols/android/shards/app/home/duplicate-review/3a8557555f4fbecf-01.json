@@ -1,0 +1,67 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:3a8557555f4fbecf:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+  "symbols": [
+    {
+      "name": "duplicateInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.duplicateInvoice",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun duplicateInvoice(id: String)",
+      "start_line": 183,
+      "end_line": 193,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [
+        "id: String"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.duplicateInvoice",
+        "android.widget.Toast.makeText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine",
+        "Mutates persisted repository data through called repository operation",
+        "Show failure Toast on Main instead of uncaught storage exception; CancellationException is rethrown"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.duplicateInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "purpose": "duplicateInvoice; handle propagated invoice storage failures without crashing",
+      "symbol_id": "android-a32f44e1a6bddb624fd4751b",
+      "shard_ref": "android:3a8557555f4fbecf:duplicate-review:01"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:f7194a71b8aa2c6b:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "customer",
+      "layer": "data/repository",
+      "purpose": "Own customer profiles StateFlow; normalize identity/name/phone, SharedPreferences persistence and merge",
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.KEY_CUSTOMERS",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt"
+      ],
+      "keywords": [
+        "customer",
+        "persistence",
+        "StateFlow"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.getCustomerById",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveCustomer",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.deleteCustomer",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.createDefaultCustomers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.KEY_CUSTOMERS",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init-block>"
+      ]
+    }
+  ]
+}

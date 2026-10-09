@@ -1,0 +1,250 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:4400ca68717395c3:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "backup",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+  "symbols": [
+    {
+      "name": "getImportedHashes",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getImportedHashes",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "fun getImportedHashes(): Set<String>",
+      "start_line": 33,
+      "end_line": 41,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Set<String>",
+      "calls": [
+        "android.content.SharedPreferences.getString",
+        "com.google.gson.Gson.fromJson"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.isHashAlreadyImported",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.recordImportedHash"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.KEY_IMPORTED_HASHES",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Read JSON from SharedPreferences"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-4ad9b513d80571d14033bb64",
+      "shard_ref": "android:4400ca68717395c3:duplicate-review:01"
+    },
+    {
+      "name": "isHashAlreadyImported",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.isHashAlreadyImported",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "fun isHashAlreadyImported(hash: String): Boolean",
+      "start_line": 43,
+      "end_line": 46,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "hash",
+          "type": "String"
+        }
+      ],
+      "return_type": "Boolean",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getImportedHashes"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-bff10abc6f546422a563539d",
+      "shard_ref": "android:4400ca68717395c3:duplicate-review:01"
+    },
+    {
+      "name": "recordImportedHash",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.recordImportedHash",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "fun recordImportedHash(hash: String)",
+      "start_line": 48,
+      "end_line": 53,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "hash",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.Editor.apply",
+        "android.content.SharedPreferences.Editor.putString",
+        "android.content.SharedPreferences.edit",
+        "com.google.gson.Gson.toJson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getImportedHashes"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.KEY_IMPORTED_HASHES",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist serialized JSON with asynchronous SharedPreferences.apply"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-b95861b5c3bcea322879f321",
+      "shard_ref": "android:4400ca68717395c3:duplicate-review:01"
+    },
+    {
+      "name": "applyBackupData",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "suspend fun applyBackupData(backup: AppBackupData, mode: ImportMode): Result<String>",
+      "start_line": 135,
+      "end_line": 167,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "backup",
+          "type": "AppBackupData"
+        },
+        {
+          "name": "mode",
+          "type": "ImportMode"
+        }
+      ],
+      "return_type": "Result<String>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.recordImportedHash",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.saveProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.replaceAll",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Replace or merge all repository data then record imported hash"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [
+        "Sequential persistence is not transactional; exceptions may leave a partial import"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-d1340900b42275591bddc3d9",
+      "shard_ref": "android:4400ca68717395c3:duplicate-review:01"
+    }
+  ]
+}

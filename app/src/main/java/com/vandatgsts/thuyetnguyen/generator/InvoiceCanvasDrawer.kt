@@ -12,43 +12,38 @@ import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
 import com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument
+import com.vandatgsts.thuyetnguyen.data.model.InvoiceItem
 import com.vandatgsts.thuyetnguyen.data.model.InvoiceType
+import kotlin.math.ceil
 import kotlin.math.max
 
 object InvoiceCanvasDrawer {
 
+    private const val DELIVERY_NOTE_WIDTH = 200f
+    private const val QUOTATION_NOTE_WIDTH = 160f
+
     fun getCanvasWidth(type: InvoiceType): Int = when (type) {
-        InvoiceType.DELIVERY_DEBT -> 1200
+        InvoiceType.DELIVERY_DEBT -> 1400
         InvoiceType.QUOTATION_A4 -> 1000
     }
 
     fun getCanvasHeight(type: InvoiceType, invoice: InvoiceDocument): Int = when (type) {
         InvoiceType.DELIVERY_DEBT -> {
-            val baseHeader = 100
-            val rowHeight = 44
-            val rows = max(invoice.items.size, 3)
-            val footers = 100
-            max(700, baseHeader + (rows * rowHeight) + footers + 100)
+            val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                textSize = 14f
+                typeface = Typeface.create(Typeface.SERIF, Typeface.NORMAL)
+            }
+            val rowsHeight = invoice.items.sumOf { getDeliveryRowHeight(it, paint).toDouble() }
+            val hasDebtTable = invoice.debtPayments.isNotEmpty() ||
+                (invoice.initialOldDebt != 0.0 && invoice.initialOldDebt != invoice.effectiveOldDebt)
+            val debtTableHeight = if (hasDebtTable) (invoice.debtPayments.size + 2) * 34 else 0
+            max(700, ceil(129 + rowsHeight + 98 + debtTableHeight + 80).toInt())
         }
         InvoiceType.QUOTATION_A4 -> {
-            var estimatedHeight = 150 // base title + top/bottom padding
-            if (invoice.showCompanyInfo) {
-                estimatedHeight += 35
-                if (invoice.showCompanyAddress && invoice.companyAddress.isNotBlank()) estimatedHeight += 40
-                if (invoice.showCompanyTaxCode && invoice.companyTaxCode.isNotBlank()) estimatedHeight += 35
-            }
-            if (invoice.showCustomerInfo) {
-                if (invoice.customer.name.isNotBlank()) estimatedHeight += 35
-                if (invoice.showCustomerAddress && invoice.customer.address.isNotBlank()) estimatedHeight += 40
-            }
-            val rows = max(invoice.items.size, 1)
-            estimatedHeight += 55 + (rows * 120) + 160 // Table header + rows + totals
-            if (invoice.showNotes && invoice.notes.isNotBlank()) estimatedHeight += 60
-            if (invoice.showWarranty && invoice.warranty.isNotBlank()) estimatedHeight += 40
-            if (invoice.showPaymentTerms && invoice.paymentTerms.isNotBlank()) estimatedHeight += 60
-            if (invoice.showBankInfo && (invoice.bankAccountNumber.isNotBlank() || invoice.bankName.isNotBlank() || invoice.bankAccountHolder.isNotBlank())) estimatedHeight += 130
-            if (invoice.isPaid) estimatedHeight += 60
-            max(1414, estimatedHeight + 80)
+            // Canvas rỗng không cấp phát bitmap. Chạy cùng bố cục với lần vẽ thật
+            // để đo cả địa chỉ, ghi chú, VAT, ngân hàng và con dấu.
+            val contentBottom = drawQuotationA4Template(Canvas(), invoice)
+            max(1414, ceil(contentBottom + 80f).toInt())
         }
     }
 
@@ -61,7 +56,7 @@ object InvoiceCanvasDrawer {
     }
 
     private enum class QuotationColType {
-        STT, PRODUCT_NAME, UNIT, QUANTITY, UNIT_PRICE, LINE_TOTAL
+        STT, PRODUCT_NAME, UNIT, QUANTITY, UNIT_PRICE, NOTE, LINE_TOTAL
     }
 
     private data class QuotationColDef(
@@ -69,6 +64,35 @@ object InvoiceCanvasDrawer {
         val title: String,
         var width: Float
     )
+
+    private fun createQuotationColumns(invoice: InvoiceDocument, tableWidth: Float): List<QuotationColDef> {
+        val columns = mutableListOf<QuotationColDef>()
+        columns.add(QuotationColDef(QuotationColType.STT, "STT", 55f))
+        val productColumn = QuotationColDef(QuotationColType.PRODUCT_NAME, "NỘI DUNG DỊCH VỤ", 0f)
+        columns.add(productColumn)
+        if (invoice.showUnitCol) columns.add(QuotationColDef(QuotationColType.UNIT, "ĐVT", 95f))
+        if (invoice.showQuantityCol) columns.add(QuotationColDef(QuotationColType.QUANTITY, "SỐ LƯỢNG", 115f))
+        if (invoice.showUnitPriceCol) columns.add(QuotationColDef(QuotationColType.UNIT_PRICE, "ĐƠN GIÁ", 140f))
+        columns.add(QuotationColDef(QuotationColType.NOTE, "GHI CHÚ", QUOTATION_NOTE_WIDTH))
+        columns.add(QuotationColDef(QuotationColType.LINE_TOTAL, "THÀNH TIỀN", 140f))
+        val fixedWidth = columns.filter { it.type != QuotationColType.PRODUCT_NAME }
+            .sumOf { it.width.toDouble() }.toFloat()
+        productColumn.width = tableWidth - fixedWidth
+        return columns
+    }
+
+    private fun getDeliveryRowHeight(item: InvoiceItem, paint: Paint): Float {
+        val noteLines = getWrappedLines(item.note, DELIVERY_NOTE_WIDTH - 16f, paint)
+        return max(48f, noteLines.size * (14f * 1.4f) + 16f)
+    }
+
+    private fun getQuotationRowHeight(item: InvoiceItem, columns: List<QuotationColDef>, paint: Paint): Float {
+        val productWidth = columns.first { it.type == QuotationColType.PRODUCT_NAME }.width
+        val productLines = getWrappedLines(item.productName, productWidth - 20f, paint)
+        val noteLines = getWrappedLines(item.note, QUOTATION_NOTE_WIDTH - 20f, paint)
+        val lineCount = maxOf(1, productLines.size, noteLines.size)
+        return max(120f, lineCount * (17f * 1.4f) + 50f)
+    }
 
     private fun drawDeliveryDebtTemplate(canvas: Canvas, invoice: InvoiceDocument) {
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -96,11 +120,11 @@ object InvoiceCanvasDrawer {
         currentY += 35f
 
         // 2. Định nghĩa các cột
-        // Cột: STT(45), Ngày(90), Sản phẩm(200), SL(60), Đơn giá(100), Địa chỉ(165), Người nhận(100), SĐT(110), Đã Thu(110), Thành Tiền(140)
-        val colWidths = floatArrayOf(45f, 90f, 210f, 65f, 105f, 165f, 105f, 115f, 105f, 115f)
+        // Giữ chiều rộng các cột cũ và dành thêm 200px cho Ghi chú trước các cột tiền.
+        val colWidths = floatArrayOf(45f, 90f, 210f, 65f, 105f, 165f, 105f, 115f, DELIVERY_NOTE_WIDTH, 105f, 115f)
         val colHeaders = arrayOf(
             "STT", "Ngày", "Sản phẩm", "Số lượng", "Đơn giá",
-            "Địa chỉ", "Người nhận", "Số điện thoại", "Đã Thu", "Thành Tiền"
+            "Địa chỉ", "Người nhận", "Số điện thoại", "Ghi chú", "Đã Thu", "Thành Tiền"
         )
 
         val headerHeight = 44f
@@ -123,13 +147,13 @@ object InvoiceCanvasDrawer {
         currentY += headerHeight
 
         // Vẽ các dòng dữ liệu (Item Rows)
-        val rowHeight = 48f
         paint.textSize = 14f
         paint.typeface = Typeface.create(Typeface.SERIF, Typeface.NORMAL)
 
         val items = invoice.items
         for (i in items.indices) {
             val item = items[i]
+            val rowHeight = getDeliveryRowHeight(item, paint)
             val rowTop = currentY
             val rowBottom = rowTop + rowHeight
             colX = marginLeft
@@ -182,16 +206,29 @@ object InvoiceCanvasDrawer {
             canvas.drawText(item.phone, colX + colWidths[7] / 2f, rowTop + rowHeight / 2f + 5f, paint)
             colX += colWidths[7]
 
-            // Cột 8: Đã Thu (Right)
+            // Cột 8: Ghi chú (tự xuống dòng, không cắt nội dung)
             canvas.drawRect(colX, rowTop, colX + colWidths[8], rowBottom, strokePaint)
-            paint.textAlign = Paint.Align.RIGHT
-            canvas.drawText(FormatHelper.formatMoney(item.paidAmount), colX + colWidths[8] - 8f, rowTop + rowHeight / 2f + 5f, paint)
+            drawVerticallyCenteredWrappedText(
+                canvas = canvas,
+                lines = getWrappedLines(item.note, colWidths[8] - 16f, paint),
+                centerX = colX + colWidths[8] / 2f,
+                rowTop = rowTop,
+                rowHeight = rowHeight,
+                textSize = 14f,
+                paint = paint
+            )
             colX += colWidths[8]
 
-            // Cột 9: Thành Tiền (Right)
+            // Cột 9: Đã Thu (Right)
             canvas.drawRect(colX, rowTop, colX + colWidths[9], rowBottom, strokePaint)
             paint.textAlign = Paint.Align.RIGHT
-            canvas.drawText(FormatHelper.formatMoney(item.lineTotalM1), colX + colWidths[9] - 8f, rowTop + rowHeight / 2f + 5f, paint)
+            canvas.drawText(FormatHelper.formatMoney(item.paidAmount), colX + colWidths[9] - 8f, rowTop + rowHeight / 2f + 5f, paint)
+            colX += colWidths[9]
+
+            // Cột 10: Thành Tiền (Right)
+            canvas.drawRect(colX, rowTop, colX + colWidths[10], rowBottom, strokePaint)
+            paint.textAlign = Paint.Align.RIGHT
+            canvas.drawText(FormatHelper.formatMoney(item.lineTotalM1), colX + colWidths[10] - 8f, rowTop + rowHeight / 2f + 5f, paint)
 
             currentY += rowHeight
         }
@@ -199,7 +236,7 @@ object InvoiceCanvasDrawer {
         // Footer 1: Nợ cũ
         val footer1Top = currentY
         val footer1Bottom = footer1Top + 38f
-        val mergedColsWidth = tableWidth - colWidths[9]
+        val mergedColsWidth = tableWidth - colWidths[10]
 
         canvas.drawRect(marginLeft, footer1Top, marginLeft + mergedColsWidth, footer1Bottom, strokePaint)
         canvas.drawRect(marginLeft + mergedColsWidth, footer1Top, marginRight, footer1Bottom, strokePaint)
@@ -285,7 +322,7 @@ object InvoiceCanvasDrawer {
         }
     }
 
-    private fun drawQuotationA4Template(canvas: Canvas, invoice: InvoiceDocument) {
+    private fun drawQuotationA4Template(canvas: Canvas, invoice: InvoiceDocument): Float {
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
         val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
         val strokePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -420,26 +457,9 @@ object InvoiceCanvasDrawer {
         }
 
         // 3. BẢNG DỊCH VỤ / SẢN PHẨM (Tự động thích ứng các cột hiển thị)
-        val colDefs = mutableListOf<QuotationColDef>()
-        colDefs.add(QuotationColDef(QuotationColType.STT, "STT", 55f))
-        val prodColDef = QuotationColDef(QuotationColType.PRODUCT_NAME, "NỘI DUNG DỊCH VỤ", 0f)
-        colDefs.add(prodColDef)
-
-        if (invoice.showUnitCol) {
-            colDefs.add(QuotationColDef(QuotationColType.UNIT, "ĐVT", 95f))
-        }
-        if (invoice.showQuantityCol) {
-            colDefs.add(QuotationColDef(QuotationColType.QUANTITY, "SỐ LƯỢNG", 115f))
-        }
-        if (invoice.showUnitPriceCol) {
-            colDefs.add(QuotationColDef(QuotationColType.UNIT_PRICE, "ĐƠN GIÁ", 140f))
-        }
-        val lineTotalColWidth = 140f
-        colDefs.add(QuotationColDef(QuotationColType.LINE_TOTAL, "THÀNH TIỀN", lineTotalColWidth))
-
-        // Dãn rộng cột Nội dung dịch vụ để vừa khít tổng chiều rộng bảng 900f
-        val otherColsTotalWidth = colDefs.filter { it.type != QuotationColType.PRODUCT_NAME }.sumOf { it.width.toDouble() }.toFloat()
-        prodColDef.width = tableWidth - otherColsTotalWidth
+        val colDefs = createQuotationColumns(invoice, tableWidth)
+        val prodColDef = colDefs.first { it.type == QuotationColType.PRODUCT_NAME }
+        val lineTotalColWidth = colDefs.first { it.type == QuotationColType.LINE_TOTAL }.width
 
         val headerHeight = 55f
         val tableTop = currentY
@@ -465,11 +485,11 @@ object InvoiceCanvasDrawer {
         val items = invoice.items
         for (i in items.indices) {
             val item = items[i]
-            // Tính toán chiều cao dòng linh hoạt nếu nội dung dịch vụ nhiều dòng
+            // Dùng cùng phép đo với chiều cao trang để ghi chú dài không bị cắt ở đáy ảnh/PDF.
             val prodColWidth = prodColDef.width
             val wrappedLines = getWrappedLines(item.productName, prodColWidth - 20f, paint)
-            val neededHeight = (maxOf(1, wrappedLines.size) * (17f * 1.4f)) + 50f
-            val rowHeight = max(120f, neededHeight)
+            val noteLines = getWrappedLines(item.note, QUOTATION_NOTE_WIDTH - 20f, paint)
+            val rowHeight = getQuotationRowHeight(item, colDefs, paint)
 
             val rowTop = currentY
             val rowBottom = rowTop + rowHeight
@@ -506,6 +526,17 @@ object InvoiceCanvasDrawer {
                     QuotationColType.UNIT_PRICE -> {
                         paint.textAlign = Paint.Align.RIGHT
                         canvas.drawText(FormatHelper.formatMoney(item.unitPrice), colX + w - 12f, rowTop + rowHeight / 2f + 6f, paint)
+                    }
+                    QuotationColType.NOTE -> {
+                        drawVerticallyCenteredWrappedText(
+                            canvas = canvas,
+                            lines = noteLines,
+                            centerX = colX + w / 2f,
+                            rowTop = rowTop,
+                            rowHeight = rowHeight,
+                            textSize = 17f,
+                            paint = paint
+                        )
                     }
                     QuotationColType.LINE_TOTAL -> {
                         paint.textAlign = Paint.Align.RIGHT
@@ -617,8 +648,12 @@ object InvoiceCanvasDrawer {
             paint.textSize = 19f
             paint.typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
             paint.textAlign = Paint.Align.CENTER
-            canvas.drawText(invoice.paymentTerms, canvasWidth / 2f, currentY, paint)
-            currentY += 45f
+            val paymentLines = getWrappedLines(invoice.paymentTerms, tableWidth, paint)
+            val paymentLineHeight = 19f * 1.5f
+            for (i in paymentLines.indices) {
+                canvas.drawText(paymentLines[i], canvasWidth / 2f, currentY + i * paymentLineHeight, paint)
+            }
+            currentY += (paymentLines.size - 1).coerceAtLeast(0) * paymentLineHeight + 45f
         }
 
         // 6. Thông tin Tài Khoản Ngân Hàng
@@ -666,6 +701,8 @@ object InvoiceCanvasDrawer {
             val dateLabel = if (invoice.paidDate.isNotBlank()) "NGÀY: ${invoice.paidDate}" else "NGÀY: ${FormatHelper.formatDate(invoice.updatedAt)}"
             drawPaidStamp(canvas, marginRight - 160f, currentY + 45f, dateLabel, -10f)
         }
+        // Bao gồm phần nhô xuống của con dấu đã xoay, trước lề cuối trang.
+        return currentY + if (invoice.isPaid) 110f else 0f
     }
 
     private fun drawPaidStamp(
@@ -743,22 +780,11 @@ object InvoiceCanvasDrawer {
         textSize: Float,
         paint: Paint
     ): Float {
-        val words = text.split(" ")
-        var line = ""
+        val lines = getWrappedLines(text, maxWidth, paint)
+        if (lines.isEmpty()) return startY
         var y = startY
         val lineHeight = textSize * 1.5f
-
-        for (word in words) {
-            val testLine = if (line.isEmpty()) word else "$line $word"
-            if (paint.measureText(testLine) > maxWidth) {
-                canvas.drawText(line, x, y, paint)
-                line = word
-                y += lineHeight
-            } else {
-                line = testLine
-            }
-        }
-        if (line.isNotEmpty()) {
+        for (line in lines) {
             canvas.drawText(line, x, y, paint)
             y += lineHeight
         }
@@ -767,20 +793,25 @@ object InvoiceCanvasDrawer {
 
     private fun getWrappedLines(text: String, maxWidth: Float, paint: Paint): List<String> {
         if (text.isBlank()) return emptyList()
-        val words = text.split(" ")
         val lines = mutableListOf<String>()
-        var currentLine = ""
-        for (word in words) {
-            val testLine = if (currentLine.isEmpty()) word else "$currentLine $word"
-            if (paint.measureText(testLine) > maxWidth && currentLine.isNotEmpty()) {
-                lines.add(currentLine)
-                currentLine = word
-            } else {
-                currentLine = testLine
+        for (paragraph in text.replace("\r\n", "\n").replace('\r', '\n').split('\n')) {
+            var remaining = paragraph.trim()
+            if (remaining.isEmpty()) {
+                lines.add("")
+                continue
             }
-        }
-        if (currentLine.isNotEmpty()) {
-            lines.add(currentLine)
+            while (remaining.isNotEmpty()) {
+                val count = paint.breakText(remaining, true, maxWidth.coerceAtLeast(1f), null)
+                    .coerceAtLeast(1)
+                if (count >= remaining.length) {
+                    lines.add(remaining)
+                    break
+                }
+                val wordBoundary = remaining.lastIndexOf(' ', count)
+                val splitAt = if (wordBoundary > 0) wordBoundary else count
+                lines.add(remaining.substring(0, splitAt).trimEnd())
+                remaining = remaining.substring(splitAt).trimStart()
+            }
         }
         return lines
     }
@@ -833,23 +864,12 @@ object InvoiceCanvasDrawer {
         canvas.drawText(label, labelX, startY, labelPaint)
         canvas.drawText(":", colonX, startY, labelPaint)
 
-        val words = value.split(" ")
-        var line = ""
+        val lines = getWrappedLines(value, maxWidth, valuePaint)
         var y = startY
-
-        for (word in words) {
-            val testLine = if (line.isEmpty()) word else "$line $word"
-            if (valuePaint.measureText(testLine) > maxWidth) {
-                canvas.drawText(line, valueX, y, valuePaint)
-                line = word
-                y += lineHeight
-            } else {
-                line = testLine
-            }
+        for (i in lines.indices) {
+            canvas.drawText(lines[i], valueX, startY + i * lineHeight, valuePaint)
         }
-        if (line.isNotEmpty()) {
-            canvas.drawText(line, valueX, y, valuePaint)
-        }
+        y += (lines.size - 1).coerceAtLeast(0) * lineHeight
         return y + lineHeight + 6f
     }
 }

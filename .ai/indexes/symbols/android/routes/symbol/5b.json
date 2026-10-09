@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-5b",
+  "platform": "android_native",
+  "bucket": "5b",
+  "symbols": [
+    {
+      "symbol_id": "android-e06b3dbce5da993f6b039599",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment.date",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "shard_ref": "android:14e2a4e969d82077:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/debt-payment/state/14e2a4e969d82077-01.json"
+    }
+  ]
+}

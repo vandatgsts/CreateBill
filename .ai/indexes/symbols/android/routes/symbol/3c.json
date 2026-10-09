@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-3c",
+  "platform": "android_native",
+  "bucket": "3c",
+  "symbols": [
+    {
+      "symbol_id": "android-96f75606ff60dd631b510d9f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.calculateSha256",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    }
+  ]
+}

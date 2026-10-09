@@ -1,0 +1,69 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:589ffd5d05cf9590:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.generator",
+      "module": "app",
+      "feature": "generator",
+      "layer": "generator/export",
+      "purpose": "Share/open FileProvider exports and save PNG through MediaStore or legacy Pictures storage.",
+      "imports": [
+        "android.content.ClipData",
+        "android.content.ContentValues",
+        "android.content.Context",
+        "android.content.Intent",
+        "android.content.pm.PackageManager",
+        "android.net.Uri",
+        "android.os.Build",
+        "android.os.Environment",
+        "android.provider.MediaStore",
+        "android.widget.Toast",
+        "androidx.core.content.FileProvider",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileInputStream",
+        "java.io.FileOutputStream"
+      ],
+      "classes": [],
+      "objects": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager"
+      ],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt"
+      ],
+      "keywords": [
+        "invoice",
+        "canvas",
+        "pdf",
+        "png",
+        "export"
+      ],
+      "risks": [],
+      "todos": [],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.getUriForFile"
+      ]
+    }
+  ]
+}

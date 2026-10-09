@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-51",
+  "platform": "android_native",
+  "bucket": "51",
+  "symbols": [
+    {
+      "symbol_id": "android-03113deefef7681363edd62a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountNumber",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    },
+    {
+      "symbol_id": "android-22ec6647f6da0fdcf1e859c9",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "shard_ref": "android:8378a21371d1fd70:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/lifecycle-ui/8378a21371d1fd70-01.json"
+    },
+    {
+      "symbol_id": "android-8e7187ea6ef3530f5095c71b",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Preview",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-c4213847040291cb93537489",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+    }
+  ]
+}

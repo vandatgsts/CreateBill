@@ -1,0 +1,89 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "com-vandatgsts-thuyetnguyen-generator-formathelper",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+  "symbols": [
+    {
+      "name": "formatter",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatter",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "signature": "private val formatter = DecimalFormat(\"#,###\", DecimalFormatSymbols(Locale.US).apply {",
+      "start_line": 10,
+      "end_line": 13,
+      "visibility": "private",
+      "return_type": "DecimalFormat",
+      "parameters": [],
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "state"
+      ],
+      "risks": [],
+      "is_async": false,
+      "is_suspend": false,
+      "thread_context": "Caller thread",
+      "concern": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-d8c58ba5d023bd3a9dd4d0ba",
+      "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01"
+    },
+    {
+      "name": "formatQuantity",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "signature": "fun formatQuantity(quantity: Double): String",
+      "start_line": 19,
+      "end_line": 25,
+      "parameters": [
+        {
+          "name": "quantity",
+          "type": "Double"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "FormatHelper",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-403d304868eb3032a6a3ff11",
+      "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01"
+    }
+  ]
+}

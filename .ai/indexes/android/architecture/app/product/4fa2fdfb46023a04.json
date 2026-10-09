@@ -1,0 +1,91 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:4fa2fdfb46023a04:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "product",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "product",
+      "layer": "data/repository",
+      "purpose": "SharedPreferences-backed product catalog; one-time versioned replacement with 30 products from the supplied Dong A/Binh Minh price lists; StateFlow CRUD and backup merge/replace.",
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.CURRENT_CATALOG_VERSION",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_CATALOG_VERSION",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.products"
+      ],
+      "related_files": [
+        ".ai/img_4.png",
+        ".ai/img_5.png",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt"
+      ],
+      "keywords": [
+        "30-products",
+        "StateFlow",
+        "binh-minh",
+        "catalog-migration",
+        "dong-a",
+        "persistence",
+        "price-list",
+        "product"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.products",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.loadProducts",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveToPrefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveProduct",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.deleteProduct",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.createDefaultProducts",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_PRODUCTS",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.KEY_CATALOG_VERSION",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.CURRENT_CATALOG_VERSION"
+      ]
+    }
+  ]
+}

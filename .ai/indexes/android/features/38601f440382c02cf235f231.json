@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:38601f440382c02cf235f231",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "invoice_document",
+      "name": "invoice document",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt"
+      ]
+    }
+  ]
+}

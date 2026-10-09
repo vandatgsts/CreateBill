@@ -1,0 +1,44 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-ca",
+  "platform": "android_native",
+  "bucket": "ca",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "source_hash": "1a7f5328eaf32e0f6835715bd838b8eae3b3aa0ebb0b0c50ddb6b8a1aa4ca126",
+      "architecture_shard": {
+        "id": "android:cace1d04570bab7e:architecture",
+        "path": ".ai/indexes/android/architecture/app/components/cace1d04570bab7e.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:cace1d04570bab7e:detection:01",
+          "path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+        },
+        {
+          "id": "android:cace1d04570bab7e:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/components/lifecycle-ui/cace1d04570bab7e-01.json"
+        },
+        {
+          "id": "android:cace1d04570bab7e:state:01",
+          "path": ".ai/indexes/symbols/android/shards/app/components/state/cace1d04570bab7e-01.json"
+        },
+        {
+          "id": "android:cace1d04570bab7e:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/components/storage-data/cace1d04570bab7e-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-a6c3a98a70b776630f209cb3",
+        "android-b9d18fc02b2c70aa478f346f",
+        "android-f07eb6dc76b7e90d92510cf4",
+        "android-df8e76a32fccdf1e71dca3f0",
+        "android-4a8105fbcf4b0945c79649bf",
+        "android-121769ff07f59d5afd4f341e",
+        "android-4c798eefbd8dab3355e6beb5",
+        "android-5779203cd416d9d8fcd1555e"
+      ]
+    }
+  ]
+}

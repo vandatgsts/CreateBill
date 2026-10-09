@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Add
 
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DragIndicator
 import androidx.compose.material.icons.filled.Preview
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material3.Button
@@ -54,6 +55,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.layout.boundsInWindow
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -97,10 +101,15 @@ fun InvoiceEditorScreen(
     onNavigateToStores: () -> Unit
 ) {
     val invoice by viewModel.invoiceState.collectAsState()
+    val isSaving by viewModel.isSaving.collectAsState()
     val availableProducts by viewModel.availableProducts.collectAsState()
     val availableStores by viewModel.availableStores.collectAsState()
     val context = LocalContext.current
+    val onSaveError: (Exception) -> Unit = {
+        Toast.makeText(context, "Không thể lưu hóa đơn. Vui lòng kiểm tra dung lượng và thử lại.", Toast.LENGTH_LONG).show()
+    }
     val scrollState = rememberScrollState()
+    var viewportBounds by remember { mutableStateOf(Rect.Zero) }
 
     var activeItemIndexForProductSelection by remember { mutableStateOf<Int?>(null) }
     var showStorePicker by remember { mutableStateOf(false) }
@@ -125,8 +134,8 @@ fun InvoiceEditorScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = {
-                        viewModel.saveInvoice { saved ->
+                    IconButton(enabled = !isSaving, onClick = {
+                        viewModel.saveInvoice(onError = onSaveError) { saved ->
                             onNavigateToPreview(saved.id)
                         }
                     }) {
@@ -162,8 +171,9 @@ fun InvoiceEditorScreen(
                     Spacer(modifier = Modifier.height(10.dp))
                     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         OutlinedButton(
+                            enabled = !isSaving,
                             onClick = {
-                                viewModel.saveInvoice {
+                                viewModel.saveInvoice(onError = onSaveError) {
                                     Toast.makeText(context, "Đã lưu hóa đơn thành công!", Toast.LENGTH_SHORT).show()
                                 }
                             },
@@ -176,8 +186,9 @@ fun InvoiceEditorScreen(
                         }
 
                         Button(
+                            enabled = !isSaving,
                             onClick = {
-                                viewModel.saveInvoice { saved ->
+                                viewModel.saveInvoice(onError = onSaveError) { saved ->
                                     onNavigateToPreview(saved.id)
                                 }
                             },
@@ -194,14 +205,19 @@ fun InvoiceEditorScreen(
             }
         }
     ) { padding ->
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .background(BackgroundLight)
                 .padding(padding)
-                .verticalScroll(scrollState)
-                .padding(16.dp)
+                .onGloballyPositioned { viewportBounds = it.boundsInWindow() }
         ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(scrollState)
+                    .padding(16.dp)
+            ) {
             // 1. Chuyển đổi Loại Mẫu (Template Selector)
             Card(
                 shape = RoundedCornerShape(12.dp),
@@ -481,7 +497,18 @@ fun InvoiceEditorScreen(
                         }
                     }
 
-                    invoice.items.forEachIndexed { index, item ->
+                    Text(
+                        "Nhấn giữ nút kéo ở mỗi dòng để đổi thứ tự.",
+                        fontSize = 12.sp,
+                        color = TextSecondary,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    ReorderableInvoiceItems(
+                        items = invoice.items,
+                        scrollState = scrollState,
+                        viewportBounds = viewportBounds,
+                        onMove = viewModel::moveItem
+                    ) { index, item, dragHandleModifier ->
                         ItemCard(
                             type = invoice.type,
                             index = index,
@@ -490,14 +517,12 @@ fun InvoiceEditorScreen(
                             showQuantityCol = invoice.showQuantityCol,
                             showUnitPriceCol = invoice.showUnitPriceCol,
                             availableProducts = availableProducts,
+                            dragHandleModifier = dragHandleModifier,
                             onUpdate = { updated -> viewModel.updateItem(index, updated) },
                             onDelete = { viewModel.removeItem(index) },
                             onDuplicate = { viewModel.duplicateItem(index) },
                             onOpenProductPicker = { activeItemIndexForProductSelection = index }
                         )
-                        if (index < invoice.items.size - 1) {
-                            Spacer(modifier = Modifier.height(10.dp))
-                        }
                     }
 
                     Spacer(modifier = Modifier.height(12.dp))
@@ -945,6 +970,7 @@ fun InvoiceEditorScreen(
             }
 
             Spacer(modifier = Modifier.height(64.dp))
+            }
         }
     }
 
@@ -1130,6 +1156,7 @@ private fun ItemCard(
     showQuantityCol: Boolean = true,
     showUnitPriceCol: Boolean = true,
     availableProducts: List<ProductTemplate>,
+    dragHandleModifier: Modifier,
     onUpdate: (InvoiceItem) -> Unit,
     onDelete: () -> Unit,
     onDuplicate: () -> Unit,
@@ -1148,12 +1175,24 @@ private fun ItemCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = "#${index + 1}",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp,
-                    color = PrimaryBlue
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        modifier = dragHandleModifier.size(48.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            Icons.Default.DragIndicator,
+                            contentDescription = "Nhấn giữ và kéo để đổi vị trí dòng ${index + 1}",
+                            tint = PrimaryBlue
+                        )
+                    }
+                    Text(
+                        text = "#${index + 1}",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        color = PrimaryBlue
+                    )
+                }
                 Row(verticalAlignment = Alignment.CenterVertically) {
 
                     TextButton(onClick = onOpenProductPicker) {
@@ -1325,6 +1364,16 @@ private fun ItemCard(
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(8.dp))
+            AppTextField(
+                value = item.note,
+                onValueChange = { onUpdate(item.copy(note = it)) },
+                label = "Ghi chú dòng",
+                placeholder = "Nhập ghi chú cho dòng này",
+                singleLine = false,
+                maxLines = 3
+            )
         }
     }
 }

@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-18",
+  "platform": "android_native",
+  "bucket": "18",
+  "symbols": [
+    {
+      "symbol_id": "android-820cd6729723f8df909b9f7d",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/storage-data/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-d61c4f46ebf63cce8f18ce5b",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ImportMode.REPLACE_ALL",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:com-vandatgsts-thuyetnguyen-data-model-importmode:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/com-vandatgsts-thuyetnguyen-data-model-importmode/a07c2eccb9e3f3df-01.json"
+    },
+    {
+      "symbol_id": "android-d8c58ba5d023bd3a9dd4d0ba",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatter",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator-formathelper:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-formathelper/8378a21371d1fd70-01.json"
+    }
+  ]
+}

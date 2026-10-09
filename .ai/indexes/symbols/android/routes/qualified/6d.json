@@ -1,0 +1,63 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-6d",
+  "platform": "android_native",
+  "bucket": "6d",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isFullyPaid",
+      "targets": [
+        {
+          "symbol_id": "android-d07d134a18ce18740efe4e51",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:03",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-03.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.width",
+      "targets": [
+        {
+          "symbol_id": "android-2ff9c6919effad42b93a0718",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoldef:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoldef/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductItemCard",
+      "targets": [
+        {
+          "symbol_id": "android-43c6247b31b56e970472459c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+          "shard_ref": "android:c2cdd5f7dc2cb648:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/products/lifecycle-ui/c2cdd5f7dc2cb648-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+      "targets": [
+        {
+          "symbol_id": "android-e25e87ef07b83bbdfd5c2d12",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+          "shard_ref": "android:83972a9cf8e2fb80:duplicate-review:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/settings/duplicate-review/83972a9cf8e2fb80-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.Typography",
+      "targets": [
+        {
+          "symbol_id": "android-ac6e5ae6da4f941f28623924",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+          "shard_ref": "android:ef493e6e8eb1238e:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/ef493e6e8eb1238e-01.json"
+        }
+      ]
+    }
+  ]
+}

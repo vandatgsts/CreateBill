@@ -1,0 +1,54 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:0e64ac2612a757ae:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "product-template",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "product-template",
+      "layer": "data/model",
+      "purpose": "Typed ProductTemplate domain model and derived invoice/debt values",
+      "imports": [
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.id",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.name",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.unit",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.defaultPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.note",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.createdAt"
+      ],
+      "related_files": [],
+      "keywords": [
+        "product_template",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.id",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.name",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.unit",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.defaultPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.note",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.createdAt"
+      ]
+    }
+  ]
+}

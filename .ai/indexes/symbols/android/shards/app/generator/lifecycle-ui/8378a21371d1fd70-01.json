@@ -1,0 +1,117 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8378a21371d1fd70:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+  "symbols": [
+    {
+      "name": "formatMoney",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "signature": "fun formatMoney(amount: Double): String",
+      "start_line": 15,
+      "end_line": 17,
+      "parameters": [
+        {
+          "name": "amount",
+          "type": "Double"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "java.text.DecimalFormat.format"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText",
+        "com.vandatgsts.thuyetnguyen.ui.home.DashboardOverviewBanner",
+        "com.vandatgsts.thuyetnguyen.ui.home.InvoiceItemCard",
+        "com.vandatgsts.thuyetnguyen.ui.home.StoreQuickCard",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatter"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "FormatHelper",
+        "export"
+      ],
+      "risks": [
+        "Shared DecimalFormat is not thread safe"
+      ],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-22ec6647f6da0fdcf1e859c9",
+      "shard_ref": "android:8378a21371d1fd70:lifecycle-ui:01"
+    },
+    {
+      "name": "formatDate",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "signature": "fun formatDate(timestamp: Long): String",
+      "start_line": 27,
+      "end_line": 30,
+      "parameters": [
+        {
+          "name": "timestamp",
+          "type": "Long"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "java.text.SimpleDateFormat.format"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.togglePaidStatus",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.dashboardStats",
+        "com.vandatgsts.thuyetnguyen.ui.home.InvoiceItemCard",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "FormatHelper",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-6529750a6ccc62148c591633",
+      "shard_ref": "android:8378a21371d1fd70:lifecycle-ui:01"
+    }
+  ]
+}

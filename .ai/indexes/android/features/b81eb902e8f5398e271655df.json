@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:b81eb902e8f5398e271655df",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "invoice_item",
+      "name": "invoice item",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "description": " Per-row InvoiceItem.note is editable, persisted and wrapped in both PDF/image templates."
+    }
+  ]
+}

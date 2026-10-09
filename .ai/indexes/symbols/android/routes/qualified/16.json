@@ -1,0 +1,30 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-16",
+  "platform": "android_native",
+  "bucket": "16",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "targets": [
+        {
+          "symbol_id": "android-b1f3cb3e2e718022edc4da1a",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions",
+      "targets": [
+        {
+          "symbol_id": "android-853ee7424c32fbf4b7934293",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+          "shard_ref": "android:589ffd5d05cf9590:permission:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/permission/589ffd5d05cf9590-01.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-0a",
+  "platform": "android_native",
+  "bucket": "0a",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash",
+      "targets": [
+        {
+          "symbol_id": "android-c4bbe72b4a0d3b97a0e11a8a",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    }
+  ]
+}

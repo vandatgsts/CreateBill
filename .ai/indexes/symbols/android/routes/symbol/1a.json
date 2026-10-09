@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-1a",
+  "platform": "android_native",
+  "bucket": "1a",
+  "symbols": [
+    {
+      "symbol_id": "android-2984276417f86af8a381223e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+    },
+    {
+      "symbol_id": "android-64563ad291662616049d66af",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    },
+    {
+      "symbol_id": "android-92c6c59192dc989ad9ab9810",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.activeItemIndexForProductSelection",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "shard_ref": "android:012b2bd755845e7d:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/state/012b2bd755845e7d-01.json"
+    }
+  ]
+}

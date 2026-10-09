@@ -1,0 +1,35 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-98",
+  "platform": "android_native",
+  "bucket": "98",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "source_hash": "b444144dc963c4c7fc4eb29372b10355b52094a8d013d7bc92b9fce877960cd2",
+      "architecture_shard": {
+        "id": "android:98115644100c7e48:architecture",
+        "path": ".ai/indexes/android/architecture/app/preview/98115644100c7e48.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:98115644100c7e48:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/98115644100c7e48-01.json"
+        },
+        {
+          "id": "android:98115644100c7e48:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/preview/storage-data/98115644100c7e48-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-ab8f3fbbad0ae2ff12f4579e",
+        "android-6630fd5abd4d0f9f514ee68e",
+        "android-b8177355f5242bab0302aaff",
+        "android-9441d86ab62f29da4d91eb05",
+        "android-daa1daec8130c730300a60be",
+        "android-4d7ce5ca89cfe48960a215b5",
+        "android-e4bbaab2ebf1356669fdcdd2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,832 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:4400ca68717395c3:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "backup",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+  "symbols": [
+    {
+      "name": "BackupRepository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository",
+      "signature": "class BackupRepository",
+      "start_line": 22,
+      "end_line": 181,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-cb69d70bb0c476a98dbfea93",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "BackupRepository(private val context: Context)",
+      "start_line": 22,
+      "end_line": 22,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo"
+      ],
+      "side_effects": [
+        "Obtain application-backed persistence and initialize repository state on caller thread"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-a0b334e2634cc05a34442ad3",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "context",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val context: Context",
+      "start_line": 22,
+      "end_line": 22,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Context",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-5ee89776e2c110eeeef4230a",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "prefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.prefs",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val prefs: SharedPreferences = context.getSharedPreferences(\"app_backup_meta_prefs\", Context.MODE_PRIVATE)",
+      "start_line": 24,
+      "end_line": 24,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "SharedPreferences",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-9414b31da9b42e0343523114",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "gson",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val gson: Gson = GsonBuilder().setPrettyPrinting().create()",
+      "start_line": 25,
+      "end_line": 25,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Gson",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-382911aac1e22cc7ba5d3677",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "invoiceRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val invoiceRepo = InvoiceRepository.getInstance(context)",
+      "start_line": 27,
+      "end_line": 27,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "InvoiceRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-045051a610c7b33580595f00",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "productRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val productRepo = ProductRepository.getInstance(context)",
+      "start_line": 28,
+      "end_line": 28,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "ProductRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-780c9ac0bdeb5846f89f1b60",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "storePartnerRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val storePartnerRepo = StorePartnerRepository.getInstance(context)",
+      "start_line": 29,
+      "end_line": 29,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StorePartnerRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-4960e408a1797e79214a5510",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "customerRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val customerRepo = CustomerRepository.getInstance(context)",
+      "start_line": 30,
+      "end_line": 30,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CustomerRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt"
+      ],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-9582ebcf12439cf8fb061ad3",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "companyProfileRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "private val companyProfileRepo = CompanyProfileRepository.getInstance(context)",
+      "start_line": 31,
+      "end_line": 31,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CompanyProfileRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-4ddd3dc8dc60a0c1ef887b77",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "calculateSha256",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.calculateSha256",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "fun calculateSha256(text: String): String",
+      "start_line": 55,
+      "end_line": 59,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        }
+      ],
+      "return_type": "String",
+      "calls": [
+        "java.security.MessageDigest.digest",
+        "java.security.MessageDigest.getInstance"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "description": "SHA-256 over UTF-8 bytes; hexadecimal lowercase identifier",
+      "symbol_id": "android-96f75606ff60dd631b510d9f",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "createBackupData",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "suspend fun createBackupData(): Pair<AppBackupData, File>",
+      "start_line": 61,
+      "end_line": 91,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [],
+      "return_type": "Pair<AppBackupData, File>",
+      "calls": [
+        "com.google.gson.Gson.toJson",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.calculateSha256",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "java.lang.System.currentTimeMillis",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.storePartnerRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Create JSON backup under application cacheDir/backups"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Snapshot current profile/lists into AppBackupData, derive salted timestamp hash and write pretty JSON to timestamped cache file",
+      "symbol_id": "android-7690af2087f5e166f818725e",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "parseBackupFromUri",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "suspend fun parseBackupFromUri(uri: Uri): Result<AppBackupData>",
+      "start_line": 108,
+      "end_line": 133,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "uri",
+          "type": "Uri"
+        }
+      ],
+      "return_type": "Result<AppBackupData>",
+      "calls": [
+        "android.content.ContentResolver.openInputStream",
+        "com.google.gson.Gson.fromJson",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.calculateSha256",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.gson"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Read external content URI; close input stream via use"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [
+        "Supplied fileHash is trusted; no cryptographic content verification or backupVersion/schema validation"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Parse UTF-8 Gson JSON from URI; preserve supplied nonblank fileHash or calculate content hash; return Result failure on empty/malformed/read error",
+      "symbol_id": "android-f144264e1fa8b4a065586568",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "Companion",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion",
+      "type": "companion_object",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+      "signature": "companion object",
+      "start_line": 169,
+      "end_line": 180,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-f101d91cedb349a04037d640",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "KEY_IMPORTED_HASHES",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.KEY_IMPORTED_HASHES",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion",
+      "signature": "private const val KEY_IMPORTED_HASHES = \"key_imported_backup_hashes_set\"",
+      "start_line": 170,
+      "end_line": 170,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-f6209ae988521b61d759bf4b",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "instance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.instance",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion",
+      "signature": "private var instance: BackupRepository? = null",
+      "start_line": 173,
+      "end_line": 173,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "BackupRepository?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "backup",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "mutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-4b4a911072e97bfe217765ac",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    },
+    {
+      "name": "getInstance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion",
+      "signature": "fun getInstance(context: Context): BackupRepository",
+      "start_line": 175,
+      "end_line": 179,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "backup",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "BackupRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.context"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.instance"
+      ],
+      "side_effects": [
+        "Initialize singleton with applicationContext under synchronized double-checked locking"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "backup"
+      ],
+      "risks": [
+        "Construction can perform synchronous disk read on calling thread"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-64563ad291662616049d66af",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01"
+    }
+  ]
+}

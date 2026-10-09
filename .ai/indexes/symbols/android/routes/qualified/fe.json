@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-fe",
+  "platform": "android_native",
+  "bucket": "fe",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore",
+      "targets": [
+        {
+          "symbol_id": "android-ffaced9fccd4c7e08c99b4bd",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+          "shard_ref": "android:339a54a301375cca:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/339a54a301375cca-01.json"
+        }
+      ]
+    }
+  ]
+}

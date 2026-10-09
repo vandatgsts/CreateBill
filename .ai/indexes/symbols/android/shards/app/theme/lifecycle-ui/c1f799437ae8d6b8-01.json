@@ -1,0 +1,62 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:c1f799437ae8d6b8:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+  "symbols": [
+    {
+      "name": "TaoHoaDonTheme",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.TaoHoaDonTheme",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "signature": "fun TaoHoaDonTheme(\n    content: @Composable () -> Unit\n)",
+      "start_line": 22,
+      "end_line": 30,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "theme",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "content: @Composable () -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.material3.MaterialTheme",
+        "androidx.compose.runtime.Composable"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.LightColorScheme"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.theme.LightColorScheme"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt"
+      ],
+      "tags": [
+        "theme",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-789fb226bba28cc95d3d443a",
+      "shard_ref": "android:c1f799437ae8d6b8:lifecycle-ui:01"
+    }
+  ]
+}

@@ -1,0 +1,950 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:f7194a71b8aa2c6b:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+  "symbols": [
+    {
+      "name": "CustomerRepository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository",
+      "signature": "class CustomerRepository",
+      "start_line": 15,
+      "end_line": 140,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-24cf38a7a13880580f175362",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "CustomerRepository(context: Context)",
+      "start_line": 15,
+      "end_line": 15,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.getInstance"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs"
+      ],
+      "side_effects": [
+        "Obtain application-backed persistence and initialize repository state on caller thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-cfc59e0bdd65a360b7663186",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "prefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private val prefs: SharedPreferences = context.getSharedPreferences(\"customer_profiles_prefs\", Context.MODE_PRIVATE)",
+      "start_line": 16,
+      "end_line": 16,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "SharedPreferences",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-df2da6fbb29977fcf79bf8ed",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "gson",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private val gson = Gson()",
+      "start_line": 17,
+      "end_line": 17,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Gson",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-1a73f695c3fa6353e64bea2c",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "_customers",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private val _customers = MutableStateFlow<List<CustomerProfile>>(emptyList())",
+      "start_line": 19,
+      "end_line": 19,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "MutableStateFlow<List<CustomerProfile>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "MutableStateFlow",
+        "mutable": true,
+        "exposure": "private backing state"
+      },
+      "symbol_id": "android-05a0f912fa0d64ae525da421",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "customers",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.customers",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "val customers: StateFlow<List<CustomerProfile>> = _customers.asStateFlow()",
+      "start_line": 20,
+      "end_line": 20,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<List<CustomerProfile>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "StateFlow",
+        "mutable": false,
+        "exposure": "public read-only observable list"
+      },
+      "symbol_id": "android-f8b6480ec301c904a03cff5b",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "<init-block>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init-block>",
+      "type": "initializer",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "init",
+      "start_line": 22,
+      "end_line": 24,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init>"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Initialize observable data by synchronously loading persistent data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": "repository initialization",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-f8916ad03a37d9766e08e6df",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "loadCustomers",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private fun loadCustomers()",
+      "start_line": 26,
+      "end_line": 43,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.getString",
+        "com.google.gson.Gson.fromJson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.createDefaultCustomers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init>"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.KEY_CUSTOMERS",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "side_effects": [
+        "Read JSON from SharedPreferences",
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Stored empty list is reseeded after repository recreation"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "description": "Decode SharedPreferences JSON; publish nonempty list sorted by name; otherwise seed defaults and persist",
+      "symbol_id": "android-3697fe03839dc000fe604adf",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "saveToPrefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private fun saveToPrefs(list: List<CustomerProfile>)",
+      "start_line": 45,
+      "end_line": 48,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "list",
+          "type": "List<CustomerProfile>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.Editor.apply",
+        "android.content.SharedPreferences.Editor.putString",
+        "android.content.SharedPreferences.edit",
+        "com.google.gson.Gson.toJson"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.deleteCustomer",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveCustomer"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.KEY_CUSTOMERS",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist serialized JSON with asynchronous SharedPreferences.apply"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-38be3038cb464dd3fb1c8abf",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "getCustomerById",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.getCustomerById",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "fun getCustomerById(id: String): CustomerProfile?",
+      "start_line": 50,
+      "end_line": 52,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "CustomerProfile?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-0454807720daeb6f898c948e",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "saveCustomer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveCustomer",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "suspend fun saveCustomer(customer: CustomerProfile)",
+      "start_line": 54,
+      "end_line": 72,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "customer",
+          "type": "CustomerProfile"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Upsert by id or normalized name+phone; trim name/phone and preserve existing nonblank contact details",
+      "symbol_id": "android-bd2917d1d1160f16f9802ad2",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "deleteCustomer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.deleteCustomer",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "suspend fun deleteCustomer(id: String)",
+      "start_line": 74,
+      "end_line": 78,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-a8b3249301def65d7fbfcdd2",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "replaceAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.replaceAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "suspend fun replaceAll(newList: List<CustomerProfile>)",
+      "start_line": 80,
+      "end_line": 84,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "newList",
+          "type": "List<CustomerProfile>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-0d12ed3e80f81e472a150a4c",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "mergeAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.mergeAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "suspend fun mergeAll(incomingList: List<CustomerProfile>)",
+      "start_line": 86,
+      "end_line": 99,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "incomingList",
+          "type": "List<CustomerProfile>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveToPrefs",
+        "kotlinx.coroutines.withContext"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository._customers"
+      ],
+      "side_effects": [
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO via withContext",
+      "coroutine_context": "withContext(Dispatchers.IO)",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Merge by id or case-insensitive trimmed name plus phone; incoming overwrites match; sort by name",
+      "symbol_id": "android-e1f9bf7427926add3d829cf7",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "createDefaultCustomers",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.createDefaultCustomers",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "private fun createDefaultCustomers(): List<CustomerProfile>",
+      "start_line": 101,
+      "end_line": 126,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "List<CustomerProfile>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerProfile.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.loadCustomers"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt"
+      ],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-42f42679cae89f66cd5a169a",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "Companion",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+      "type": "companion_object",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository",
+      "signature": "companion object",
+      "start_line": 128,
+      "end_line": 139,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-917119b38f7aa1a28c059020",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "KEY_CUSTOMERS",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.KEY_CUSTOMERS",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+      "signature": "private const val KEY_CUSTOMERS = \"key_customers_list\"",
+      "start_line": 129,
+      "end_line": 129,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-09ff7a1f1e97ceeadb23a18a",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "instance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+      "signature": "private var instance: CustomerRepository? = null",
+      "start_line": 132,
+      "end_line": 132,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CustomerRepository?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "customer",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "mutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-ec9e2ba8b259ec45a91f7a5a",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    },
+    {
+      "name": "getInstance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.getInstance",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+      "signature": "fun getInstance(context: Context): CustomerRepository",
+      "start_line": 134,
+      "end_line": 138,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "customer",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "CustomerRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance"
+      ],
+      "side_effects": [
+        "Initialize singleton with applicationContext under synchronized double-checked locking"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "customer"
+      ],
+      "risks": [
+        "Construction can perform synchronous disk read on calling thread"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-cd234d0ee03d1ecb4f64c074",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01"
+    }
+  ]
+}

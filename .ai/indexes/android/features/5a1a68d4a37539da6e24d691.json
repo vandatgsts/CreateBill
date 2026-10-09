@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:5a1a68d4a37539da6e24d691",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "product_template",
+      "name": "product template",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt"
+      ]
+    }
+  ]
+}

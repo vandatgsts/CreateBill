@@ -1,0 +1,58 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:87a33e2d93a0ea57:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "store-partner",
+      "layer": "data/model",
+      "purpose": "Typed StorePartner domain model and derived invoice/debt values",
+      "imports": [
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.id",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.name",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.address",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.contactPerson",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.defaultType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.note",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.createdAt"
+      ],
+      "related_files": [],
+      "keywords": [
+        "store_partner",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.id",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.name",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.address",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.contactPerson",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.defaultType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.note",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.createdAt"
+      ]
+    }
+  ]
+}

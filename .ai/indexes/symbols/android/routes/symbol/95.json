@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-95",
+  "platform": "android_native",
+  "bucket": "95",
+  "symbols": [
+    {
+      "symbol_id": "android-556d714b364255b65c764f16",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "shard_ref": "android:0e64ac2612a757ae:com-vandatgsts-thuyetnguyen-data-model:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/com-vandatgsts-thuyetnguyen-data-model/0e64ac2612a757ae-01.json"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-88",
+  "platform": "android_native",
+  "bucket": "88",
+  "symbols": [
+    {
+      "symbol_id": "android-c1516f3708ce5cdbadcd73c7",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paymentTerms",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    },
+    {
+      "symbol_id": "android-c39145b912ab9dcbc1a58486",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountHolder",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+    }
+  ]
+}

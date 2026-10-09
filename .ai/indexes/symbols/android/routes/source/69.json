@@ -1,0 +1,52 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-69",
+  "platform": "android_native",
+  "bucket": "69",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "source_hash": "9ce22438ab78edd0100d271768b6fa6993d76922c493951c95e4ba2fa5ed4c23",
+      "architecture_shard": {
+        "id": "android:69ef8aedb2c31830:architecture",
+        "path": ".ai/indexes/android/architecture/app/invoice/69ef8aedb2c31830.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:69ef8aedb2c31830:duplicate-review:01",
+          "path": ".ai/indexes/symbols/android/shards/app/invoice/duplicate-review/69ef8aedb2c31830-01.json"
+        },
+        {
+          "id": "android:69ef8aedb2c31830:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-0d2149386bdc0b3a83139690",
+        "android-909d0e8ffc1cbbf0828c81bd",
+        "android-d50c5981e6332ea55d683c7c",
+        "android-b1f3cb3e2e718022edc4da1a",
+        "android-2984276417f86af8a381223e",
+        "android-ea7d5d9ebb09edf97b7b6812",
+        "android-d1186fe8fdd430ef3b6c6f62",
+        "android-2d817a3e198dc81192730b3d",
+        "android-c4213847040291cb93537489",
+        "android-2c51303ec1bbbf8edaaa222a",
+        "android-ec63b9fbee7b028a56937091",
+        "android-9f7e6e52eb06e7be06cb36d9",
+        "android-fa28ced9effb68b8a0e4c4b6",
+        "android-ca3fb5cc2bf2be0835056974",
+        "android-1821a8964e4fbf6406117ef8",
+        "android-5893fc455f08db845a190899",
+        "android-17eaa0449cfb979fd9c305d4",
+        "android-5b4f2dde7e8d4a34d28cd1af",
+        "android-6a3659cd7ab5decdd9439f6a",
+        "android-b5434add67c7a974f45f0476",
+        "android-34851bf9be47de5f351f95b7",
+        "android-b7036b45bf8d3db915803e17",
+        "android-fc0d809a991822f994ef19e0",
+        "android-44e448d560d2076a08508426"
+      ]
+    }
+  ]
+}

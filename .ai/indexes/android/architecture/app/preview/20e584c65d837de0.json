@@ -1,0 +1,77 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:20e584c65d837de0:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "preview",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.ui.preview",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "layer": "presentation/state",
+      "purpose": "Load persisted invoice, render bitmap preview and delegate PDF/image sharing, viewing and gallery export.",
+      "imports": [
+        "android.app.Application",
+        "android.graphics.Bitmap",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt"
+      ],
+      "keywords": [
+        "preview",
+        "invoice",
+        "StateFlow"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.isLoading"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.loadInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.sharePdf",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.shareImage",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.viewPdf",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.saveImage",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel._isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.isLoading"
+      ]
+    }
+  ]
+}

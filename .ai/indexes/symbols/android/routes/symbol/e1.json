@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-e1",
+  "platform": "android_native",
+  "bucket": "e1",
+  "symbols": [
+    {
+      "symbol_id": "android-042bd1ef215213aab7def9d9",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.togglePaidStatus",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+    },
+    {
+      "symbol_id": "android-61efe4969c24ffe1bfba2847",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.isLoading",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "shard_ref": "android:20e584c65d837de0:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/20e584c65d837de0-01.json"
+    },
+    {
+      "symbol_id": "android-b37fcbdc86f725aca175ef41",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType.QUOTATION_A4",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "shard_ref": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model-invoicetype:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model-invoicetype/da5f8e171d393754-01.json"
+    },
+    {
+      "symbol_id": "android-e79a1c446cf4121ea8b778ba",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.filteredPickerStores",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "shard_ref": "android:012b2bd755845e7d:com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen/012b2bd755845e7d-01.json"
+    }
+  ]
+}

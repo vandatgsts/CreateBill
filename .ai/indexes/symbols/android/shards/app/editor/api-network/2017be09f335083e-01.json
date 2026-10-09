@@ -1,0 +1,56 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:2017be09f335083e:api-network:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "api-network",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+  "symbols": [
+    {
+      "name": "_isSaving",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "type": "state",
+      "signature": "private val _isSaving = MutableStateFlow(false)",
+      "start_line": 37,
+      "end_line": 37,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "MutableStateFlow<Boolean>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.isSaving",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt"
+      ],
+      "tags": [
+        "editor",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Synchronous guard against repeated save requests.",
+      "thread_context": "Main",
+      "coroutine_context": "Main",
+      "lifecycle": "ViewModel or composition",
+      "symbol_id": "android-c971d8454c2b85451217283d",
+      "shard_ref": "android:2017be09f335083e:api-network:01"
+    }
+  ]
+}

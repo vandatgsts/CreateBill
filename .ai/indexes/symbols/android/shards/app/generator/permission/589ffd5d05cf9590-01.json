@@ -1,0 +1,252 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:589ffd5d05cf9590:permission:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "permission",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+  "symbols": [
+    {
+      "name": "sharePdf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "suspend fun sharePdf(context: Context, invoice: InvoiceDocument)",
+      "start_line": 23,
+      "end_line": 50,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.content.Context.startActivity",
+        "android.content.Intent.createChooser",
+        "android.widget.Toast.makeText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.getUriForFile",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.sharePdf"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.title"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Renders cache file",
+        "Grants read URI permission",
+        "Starts Android chooser",
+        "Shows error Toast on Main"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-2c619a9586cde9890270e4ee",
+      "shard_ref": "android:589ffd5d05cf9590:permission:01"
+    },
+    {
+      "name": "shareImage",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "suspend fun shareImage(context: Context, invoice: InvoiceDocument)",
+      "start_line": 52,
+      "end_line": 79,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.content.Context.startActivity",
+        "android.content.Intent.createChooser",
+        "android.widget.Toast.makeText",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.getUriForFile",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.shareImage"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.title"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Renders cache file",
+        "Grants read URI permission",
+        "Starts Android chooser",
+        "Shows error Toast on Main"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-f195533d720029f3b73a15da",
+      "shard_ref": "android:589ffd5d05cf9590:permission:01"
+    },
+    {
+      "name": "viewPdf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "suspend fun viewPdf(context: Context, invoice: InvoiceDocument)",
+      "start_line": 81,
+      "end_line": 106,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.content.Context.startActivity",
+        "android.content.Intent.createChooser",
+        "android.widget.Toast.makeText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.getUriForFile",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.viewPdf"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Renders cache file",
+        "Grants read URI permission",
+        "Starts Android chooser",
+        "Shows error Toast on Main"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-5aa208a1377c77193a7a17cc",
+      "shard_ref": "android:589ffd5d05cf9590:permission:01"
+    },
+    {
+      "name": "grantUriPermissions",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.grantUriPermissions",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "signature": "private fun grantUriPermissions(context: Context, intent: Intent, uri: Uri)",
+      "start_line": 150,
+      "end_line": 171,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "intent",
+          "type": "Intent"
+        },
+        {
+          "name": "uri",
+          "type": "Uri"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "android.content.Context.grantUriPermission",
+        "android.content.pm.PackageManager.queryIntentActivities"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Queries intent handlers and grants URI read permission"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceExportManager",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-853ee7424c32fbf4b7934293",
+      "shard_ref": "android:589ffd5d05cf9590:permission:01"
+    }
+  ]
+}

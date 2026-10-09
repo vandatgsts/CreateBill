@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:87a33e2d93a0ea57:com-vandatgsts-thuyetnguyen-data-model:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+  "symbols": [
+    {
+      "name": "StorePartner",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+      "type": "data_class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "data class StorePartner",
+      "start_line": 5,
+      "end_line": 14,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "store_partner",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "store_partner"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-2f3925d3aec577f6317417c8",
+      "shard_ref": "android:87a33e2d93a0ea57:com-vandatgsts-thuyetnguyen-data-model:01"
+    }
+  ]
+}

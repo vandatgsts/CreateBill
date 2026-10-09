@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:cde0fb0dec1400c54a0f7e7e",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "settings",
+      "name": "settings",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ]
+    }
+  ]
+}

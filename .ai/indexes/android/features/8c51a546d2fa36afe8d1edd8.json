@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:8c51a546d2fa36afe8d1edd8",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "customer_profile",
+      "name": "customer profile",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerProfile.kt"
+      ]
+    }
+  ]
+}

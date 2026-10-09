@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-a1",
+  "platform": "android_native",
+  "bucket": "a1",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+      "targets": [
+        {
+          "symbol_id": "android-1911e2a3431951859d23c9ef",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+          "shard_ref": "android:8378a21371d1fd70:com-vandatgsts-thuyetnguyen-generator:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator/8378a21371d1fd70-01.json"
+        }
+      ]
+    }
+  ]
+}

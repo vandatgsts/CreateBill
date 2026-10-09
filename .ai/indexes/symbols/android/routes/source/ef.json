@@ -1,0 +1,25 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-ef",
+  "platform": "android_native",
+  "bucket": "ef",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+      "source_hash": "923565240431390669456cb312779319d002a4f4977a1840f7bbc1794478687f",
+      "architecture_shard": {
+        "id": "android:ef493e6e8eb1238e:architecture",
+        "path": ".ai/indexes/android/architecture/app/theme/ef493e6e8eb1238e.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:ef493e6e8eb1238e:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/ef493e6e8eb1238e-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-ac6e5ae6da4f941f28623924"
+      ]
+    }
+  ]
+}

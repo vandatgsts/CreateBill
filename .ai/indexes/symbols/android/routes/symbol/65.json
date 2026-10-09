@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-65",
+  "platform": "android_native",
+  "bucket": "65",
+  "symbols": [
+    {
+      "symbol_id": "android-24bebaa9330475208fd7293c",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "shard_ref": "android:d996e7e3236c961a:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/storage-data/d996e7e3236c961a-01.json"
+    },
+    {
+      "symbol_id": "android-39c74c83c8c3fc4c7d2c8ba2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.setFilterType",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-8537845c951f0b822278b690",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType.UNIT_PRICE",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoltype/7c82187787db3c56-01.json"
+    }
+  ]
+}

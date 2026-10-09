@@ -1,0 +1,195 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:a01c9aee95d297fe:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "products",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+  "symbols": [
+    {
+      "name": "ProductListViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.<init>",
+      "type": "constructor",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "ProductListViewModel(application: Application)",
+      "start_line": 15,
+      "end_line": 15,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "products",
+        "constructor",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain ProductListViewModel for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-7a30eade80b3593916cafaf6",
+      "shard_ref": "android:a01c9aee95d297fe:lifecycle-ui:01"
+    },
+    {
+      "name": "_searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "private val _searchQuery = MutableStateFlow(\"\")",
+      "start_line": 18,
+      "end_line": 18,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain _searchQuery for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-5e3884a52f763b54d75bd782",
+      "shard_ref": "android:a01c9aee95d297fe:lifecycle-ui:01"
+    },
+    {
+      "name": "searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "val searchQuery: StateFlow<String> = _searchQuery",
+      "start_line": 19,
+      "end_line": 19,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<String>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain searchQuery for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-6551dffb0aeab9d424cab524",
+      "shard_ref": "android:a01c9aee95d297fe:lifecycle-ui:01"
+    },
+    {
+      "name": "updateSearchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.updateSearchQuery",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "fun updateSearchQuery(query: String)",
+      "start_line": 36,
+      "end_line": 38,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "query",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "products",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Publish query to filter reactive list.",
+      "thread_context": "caller context",
+      "symbol_id": "android-bd67176ba6fea845a3788667",
+      "shard_ref": "android:a01c9aee95d297fe:lifecycle-ui:01"
+    }
+  ]
+}

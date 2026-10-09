@@ -1,0 +1,49 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-c2",
+  "platform": "android_native",
+  "bucket": "c2",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "source_hash": "5deeed815cf15894611e2bdbed295f1e93f99be392c80211e281c5be60859a01",
+      "architecture_shard": {
+        "id": "android:c2cdd5f7dc2cb648:architecture",
+        "path": ".ai/indexes/android/architecture/app/products/c2cdd5f7dc2cb648.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:c2cdd5f7dc2cb648:com-vandatgsts-thuyetnguyen-ui-products-productlistscreen:01",
+          "path": ".ai/indexes/symbols/android/shards/app/products/com-vandatgsts-thuyetnguyen-ui-products-productlistscreen/c2cdd5f7dc2cb648-01.json"
+        },
+        {
+          "id": "android:c2cdd5f7dc2cb648:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/products/lifecycle-ui/c2cdd5f7dc2cb648-01.json"
+        },
+        {
+          "id": "android:c2cdd5f7dc2cb648:state:01",
+          "path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+        },
+        {
+          "id": "android:c2cdd5f7dc2cb648:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/products/storage-data/c2cdd5f7dc2cb648-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-820cd6729723f8df909b9f7d",
+        "android-43c6247b31b56e970472459c",
+        "android-1b4c438bb53626ee81f18f68",
+        "android-15a97dab912f67ada1d21606",
+        "android-ea427cf978dcc786d44a2364",
+        "android-920571562f3955d935501a5a",
+        "android-06ae76feee2d03868ef90cc7",
+        "android-de5bf6eef02a2574ec171c5e",
+        "android-a2b942d7bbd0c47eca5b36a2",
+        "android-904e48575985d8214ff7f0e1",
+        "android-0e7fac3f2fe51e4fd598c66f",
+        "android-9a576063b6897a5325a07347",
+        "android-930560453f37923f7ac094fa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:3a8557555f4fbecf:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+  "symbols": [
+    {
+      "name": "invoiceRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val invoiceRepo = InvoiceRepository.getInstance(application)",
+      "start_line": 43,
+      "end_line": 43,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "home",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-cab6cd9cf520a5f64a3ee73c",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "storeRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val storeRepo = StorePartnerRepository.getInstance(application)",
+      "start_line": 44,
+      "end_line": 44,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "home",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-749c40f2130e8fe2ed696bcd",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "productRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.productRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "private val productRepo = ProductRepository.getInstance(application)",
+      "start_line": 45,
+      "end_line": 45,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "home",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-a4a68ceed7c2a937b3c8c153",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "storeSummaries",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeSummaries",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val storeSummaries: StateFlow<List<StorePartnerSummary>> = combine(",
+      "start_line": 59,
+      "end_line": 87,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<List<StorePartnerSummary>>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "kotlinx.coroutines.flow.SharingStarted.WhileSubscribed",
+        "kotlinx.coroutines.flow.combine"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt"
+      ],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "flow_metadata": {
+        "sharing": "SharingStarted.WhileSubscribed(5000)",
+        "scope": "viewModelScope",
+        "operation": "combine repository and filter state"
+      },
+      "symbol_id": "android-d6ef9f2ccb24fe3539d49ebb",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "dashboardStats",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.dashboardStats",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val dashboardStats: StateFlow<HomeDashboardStats> = combine(",
+      "start_line": 89,
+      "end_line": 129,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<HomeDashboardStats>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+        "java.util.Calendar.getInstance",
+        "kotlinx.coroutines.flow.SharingStarted.WhileSubscribed",
+        "kotlinx.coroutines.flow.combine"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalRevenue",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalStores",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalRevenue",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalStores"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalOutstandingDebt",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalPaid",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalRevenue",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalStores",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.productRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "flow_metadata": {
+        "sharing": "SharingStarted.WhileSubscribed(5000)",
+        "scope": "viewModelScope",
+        "operation": "combine repository and filter state"
+      },
+      "symbol_id": "android-bf8041f3826316a31cb00f04",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "filteredInvoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.filteredInvoices",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "val filteredInvoices: StateFlow<List<InvoiceDocument>> = combine(",
+      "start_line": 131,
+      "end_line": 149,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<List<InvoiceDocument>>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+        "kotlinx.coroutines.flow.SharingStarted.WhileSubscribed",
+        "kotlinx.coroutines.flow.combine"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._customDateRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._datePeriod",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._filterType",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.getPeriodTimestampRange",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt"
+      ],
+      "tags": [
+        "home",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "flow_metadata": {
+        "sharing": "SharingStarted.WhileSubscribed(5000)",
+        "scope": "viewModelScope",
+        "operation": "combine repository and filter state"
+      },
+      "symbol_id": "android-a5f44fe0e89d254afd0382cc",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    },
+    {
+      "name": "deleteInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.deleteInvoice",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel",
+      "signature": "fun deleteInvoice(id: String)",
+      "start_line": 171,
+      "end_line": 181,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [
+        "id: String"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+        "android.widget.Toast.makeText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine",
+        "Mutates persisted repository data through called repository operation",
+        "Show failure Toast on Main instead of uncaught storage exception; CancellationException is rethrown"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "home",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "purpose": "deleteInvoice; handle propagated invoice storage failures without crashing",
+      "symbol_id": "android-fce5f40b11d8c7471b7a144c",
+      "shard_ref": "android:3a8557555f4fbecf:storage-data:01"
+    }
+  ]
+}

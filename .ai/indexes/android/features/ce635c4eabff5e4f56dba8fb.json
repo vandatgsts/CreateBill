@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:ce635c4eabff5e4f56dba8fb",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "shell",
+      "name": "shell",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-b3",
+  "platform": "android_native",
+  "bucket": "b3",
+  "symbols": [
+    {
+      "symbol_id": "android-1ccaa77d91459a6462a36a52",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+    },
+    {
+      "symbol_id": "android-276af476c1c1c778d97f9f27",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.deleteStore",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "shard_ref": "android:339a54a301375cca:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/storage-data/339a54a301375cca-01.json"
+    },
+    {
+      "symbol_id": "android-2ff9c6919effad42b93a0718",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.width",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoldef:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer-quotationcoldef/7c82187787db3c56-01.json"
+    },
+    {
+      "symbol_id": "android-4c798eefbd8dab3355e6beb5",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/state/cace1d04570bab7e-01.json"
+    },
+    {
+      "symbol_id": "android-5b2d3358d24489b8e31a76fd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+    }
+  ]
+}

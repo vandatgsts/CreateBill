@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-9a",
+  "platform": "android_native",
+  "bucket": "9a",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "targets": [
+        {
+          "symbol_id": "android-c66f547c525bbddb62cbf6e5",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+          "shard_ref": "android:8240678ac3dafa80:detection:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/detection/8240678ac3dafa80-01.json"
+        }
+      ]
+    }
+  ]
+}

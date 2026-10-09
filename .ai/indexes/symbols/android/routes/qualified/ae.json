@@ -1,0 +1,63 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-ae",
+  "platform": "android_native",
+  "bucket": "ae",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.screenKey",
+      "targets": [
+        {
+          "symbol_id": "android-8d98306a2397e382fd109f8e",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+          "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultPaymentTerms",
+      "targets": [
+        {
+          "symbol_id": "android-24be84a300c71589567165a1",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+          "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile",
+      "targets": [
+        {
+          "symbol_id": "android-2d817a3e198dc81192730b3d",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.selectedItemIndex",
+      "targets": [
+        {
+          "symbol_id": "android-7abf1a7f7d5c27bae3ef09a0",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+          "shard_ref": "android:012b2bd755845e7d:com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen/012b2bd755845e7d-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.startDateMillis",
+      "targets": [
+        {
+          "symbol_id": "android-16080fb47e6474c4584babfe",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+          "shard_ref": "android:57091435d6ed7e06:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/state/57091435d6ed7e06-01.json"
+        }
+      ]
+    }
+  ]
+}

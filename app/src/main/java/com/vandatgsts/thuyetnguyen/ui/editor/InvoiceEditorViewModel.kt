@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
 import java.util.UUID
 
 class InvoiceEditorViewModel(application: Application) : AndroidViewModel(application) {
@@ -33,6 +34,8 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
 
     private val _invoiceState = MutableStateFlow(InvoiceDocument())
     val invoiceState: StateFlow<InvoiceDocument> = _invoiceState.asStateFlow()
+    private val _isSaving = MutableStateFlow(false)
+    val isSaving: StateFlow<Boolean> = _isSaving.asStateFlow()
 
     fun initInvoice(invoiceId: String?, initialType: InvoiceType = InvoiceType.QUOTATION_A4) {
         if (invoiceId != null) {
@@ -189,6 +192,18 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
         }
     }
 
+    fun moveItem(itemId: String, toIndex: Int) {
+        val current = _invoiceState.value
+        val fromIndex = current.items.indexOfFirst { it.id == itemId }
+        if (fromIndex == -1 || toIndex !in current.items.indices || fromIndex == toIndex) return
+
+        val list = current.items.toMutableList()
+        val item = list.removeAt(fromIndex)
+        list.add(toIndex, item)
+        val reIndexed = list.mapIndexed { i, invoiceItem -> invoiceItem.copy(stt = i + 1) }
+        _invoiceState.value = current.copy(items = reIndexed)
+    }
+
     fun updateItem(index: Int, updatedItem: InvoiceItem) {
         val current = _invoiceState.value
         if (index in current.items.indices) {
@@ -255,47 +270,60 @@ class InvoiceEditorViewModel(application: Application) : AndroidViewModel(applic
 
 
 
-    fun saveInvoice(onSuccess: (InvoiceDocument) -> Unit) {
+    fun saveInvoice(
+        onError: (Exception) -> Unit = {},
+        onSuccess: (InvoiceDocument) -> Unit
+    ) {
+        if (_isSaving.value) return
+        _isSaving.value = true
         viewModelScope.launch {
-            val invoice = _invoiceState.value
-            invoiceRepo.saveInvoice(invoice)
+            try {
+                val invoice = _invoiceState.value
+                invoiceRepo.saveInvoice(invoice)
 
-            // Tự động lưu/cập nhật Cửa Hàng / Đại Lý vào danh mục mà bảo toàn ID hiện tại
-            if (invoice.storeOrCompanyName.isNotBlank()) {
-                val existingStore = storePartnerRepo.getStoreByName(invoice.storeOrCompanyName)
-                val storeToSave = existingStore?.copy(
-                    phone = if (invoice.companyPhone.isNotBlank()) invoice.companyPhone else existingStore.phone,
-                    address = if (invoice.companyAddress.isNotBlank()) invoice.companyAddress else existingStore.address,
-                    defaultType = invoice.type
-                ) ?: StorePartner(
-                    name = invoice.storeOrCompanyName,
-                    phone = invoice.companyPhone,
-                    address = invoice.companyAddress,
-                    defaultType = invoice.type
-                )
-                storePartnerRepo.saveStore(storeToSave)
-            }
-
-            // Tự động lưu/cập nhật Khách Hàng nếu có thông tin
-            if (invoice.customer.name.isNotBlank()) {
-                val existingCust = customerRepo.customers.value.find { 
-                    it.name.equals(invoice.customer.name.trim(), ignoreCase = true) && 
-                    (it.phone.isBlank() || invoice.customer.phone.isBlank() || it.phone == invoice.customer.phone.trim())
+                // Tự động lưu/cập nhật Cửa Hàng / Đại Lý vào danh mục mà bảo toàn ID hiện tại
+                if (invoice.storeOrCompanyName.isNotBlank()) {
+                    val existingStore = storePartnerRepo.getStoreByName(invoice.storeOrCompanyName)
+                    val storeToSave = existingStore?.copy(
+                        phone = if (invoice.companyPhone.isNotBlank()) invoice.companyPhone else existingStore.phone,
+                        address = if (invoice.companyAddress.isNotBlank()) invoice.companyAddress else existingStore.address,
+                        defaultType = invoice.type
+                    ) ?: StorePartner(
+                        name = invoice.storeOrCompanyName,
+                        phone = invoice.companyPhone,
+                        address = invoice.companyAddress,
+                        defaultType = invoice.type
+                    )
+                    storePartnerRepo.saveStore(storeToSave)
                 }
-                val custToSave = existingCust?.copy(
-                    phone = if (invoice.customer.phone.isNotBlank()) invoice.customer.phone.trim() else existingCust.phone,
-                    address = if (invoice.customer.address.isNotBlank()) invoice.customer.address.trim() else existingCust.address,
-                    taxCode = if (invoice.customer.taxCode.isNotBlank()) invoice.customer.taxCode.trim() else existingCust.taxCode
-                ) ?: com.vandatgsts.thuyetnguyen.data.model.CustomerProfile(
-                    name = invoice.customer.name.trim(),
-                    phone = invoice.customer.phone.trim(),
-                    address = invoice.customer.address.trim(),
-                    taxCode = invoice.customer.taxCode.trim()
-                )
-                customerRepo.saveCustomer(custToSave)
-            }
 
-            onSuccess(invoice)
+                // Tự động lưu/cập nhật Khách Hàng nếu có thông tin
+                if (invoice.customer.name.isNotBlank()) {
+                    val existingCust = customerRepo.customers.value.find {
+                        it.name.equals(invoice.customer.name.trim(), ignoreCase = true) &&
+                        (it.phone.isBlank() || invoice.customer.phone.isBlank() || it.phone == invoice.customer.phone.trim())
+                    }
+                    val custToSave = existingCust?.copy(
+                        phone = if (invoice.customer.phone.isNotBlank()) invoice.customer.phone.trim() else existingCust.phone,
+                        address = if (invoice.customer.address.isNotBlank()) invoice.customer.address.trim() else existingCust.address,
+                        taxCode = if (invoice.customer.taxCode.isNotBlank()) invoice.customer.taxCode.trim() else existingCust.taxCode
+                    ) ?: com.vandatgsts.thuyetnguyen.data.model.CustomerProfile(
+                        name = invoice.customer.name.trim(),
+                        phone = invoice.customer.phone.trim(),
+                        address = invoice.customer.address.trim(),
+                        taxCode = invoice.customer.taxCode.trim()
+                    )
+                    customerRepo.saveCustomer(custToSave)
+                }
+
+                onSuccess(invoice)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                onError(e)
+            } finally {
+                _isSaving.value = false
+            }
         }
     }
 }

@@ -1,0 +1,99 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-20",
+  "platform": "android_native",
+  "bucket": "20",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "source_hash": "5667e62ada5819cdd59c7a5e4e59343553634fcb68ee314e3132370dd1a16160",
+      "architecture_shard": {
+        "id": "android:2017be09f335083e:architecture",
+        "path": ".ai/indexes/android/architecture/app/editor/2017be09f335083e.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:2017be09f335083e:api-network:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/api-network/2017be09f335083e-01.json"
+        },
+        {
+          "id": "android:2017be09f335083e:duplicate-review:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/duplicate-review/2017be09f335083e-01.json"
+        },
+        {
+          "id": "android:2017be09f335083e:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+        },
+        {
+          "id": "android:2017be09f335083e:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/editor/storage-data/2017be09f335083e-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-82fea448720550aee33f8ef0",
+        "android-a29bd04e8e03dca8a2e09de6",
+        "android-1ccaa77d91459a6462a36a52",
+        "android-c737b7606bbe1b835e6733b0",
+        "android-f9c4c38f6160b3bdc2b53ecf",
+        "android-d89c40f20ad9b865aa08f8c0",
+        "android-567b661f5a7cff77fabf4ee5",
+        "android-80242735b9381bee3248f279",
+        "android-bc9084724eda766e174ec31a",
+        "android-2fa377306a04d07c3153c0c3",
+        "android-e3a3030f03c723b36512e3de",
+        "android-a88ec46ef0ba83e756b98e92",
+        "android-e8127bd78bc8e01abf554369",
+        "android-aabf525a0cf06eb643cce3b5",
+        "android-996bd0875b2581ed81e9a604",
+        "android-042bd1ef215213aab7def9d9",
+        "android-2317c0840fac816c6cd53f21",
+        "android-fc0c2cffed44da10bc6c4f23",
+        "android-a11554b59cad55addeff3980",
+        "android-1f901b4eb174bcf63b691e2f",
+        "android-df927580ddf170652d010155",
+        "android-67eca8120fc42e157c618b6e",
+        "android-2710a8b4746f3b502d07ee13",
+        "android-4dc816f4730df98dd6c85f14",
+        "android-1e2e11216535dec890ff44ed",
+        "android-8e79f2370b5ab2ec7d580df6",
+        "android-5c28bebfcb1e9bf0a15625e8",
+        "android-c971d8454c2b85451217283d",
+        "android-89c9369af6c2e2ad0734415b"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+      "source_hash": "69a053f0ba27d1ae49bc9cf523b6e1016a7c3a92d4b9e9d8839aa88b66b1b344",
+      "architecture_shard": {
+        "id": "android:20e584c65d837de0:architecture",
+        "path": ".ai/indexes/android/architecture/app/preview/20e584c65d837de0.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:20e584c65d837de0:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/20e584c65d837de0-01.json"
+        },
+        {
+          "id": "android:20e584c65d837de0:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/preview/storage-data/20e584c65d837de0-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-ca79cc8ac1049da998ec8059",
+        "android-f201d1f897ef2b67bb81df42",
+        "android-cda120488c4c333257ce49b9",
+        "android-5f63d9f894d6c8cec1a0365d",
+        "android-22c7e76e4703a73116e2ce76",
+        "android-4106feca61d17ea5cd2becfa",
+        "android-5c5abfe77288afe3de5fc610",
+        "android-d2b7353f670cb181ba677c34",
+        "android-982dfc8e3343ed7b340b8c93",
+        "android-1ec6dc58d70d8d7b588d7dc8",
+        "android-ba5df91c1638d2a542fe4002",
+        "android-9e1f3b29caca04fe8a44ceed",
+        "android-f1014c670de8dc8387091cde",
+        "android-61efe4969c24ffe1bfba2847"
+      ]
+    }
+  ]
+}

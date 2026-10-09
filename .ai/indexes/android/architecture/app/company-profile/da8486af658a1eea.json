@@ -1,0 +1,63 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:da8486af658a1eea:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "company-profile",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "company-profile",
+      "layer": "data/repository",
+      "purpose": "Read/save company and banking profile in SharedPreferences JSON",
+      "imports": [
+        "android.content.Context",
+        "android.content.SharedPreferences",
+        "com.google.gson.Gson",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.KEY_PROFILE",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "keywords": [
+        "company_profile",
+        "persistence"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.saveProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.KEY_PROFILE",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion"
+      ]
+    }
+  ]
+}

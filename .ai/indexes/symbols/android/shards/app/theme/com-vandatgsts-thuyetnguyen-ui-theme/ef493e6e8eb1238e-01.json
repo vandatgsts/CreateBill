@@ -1,0 +1,48 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:ef493e6e8eb1238e:com-vandatgsts-thuyetnguyen-ui-theme:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "theme",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-theme",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+  "symbols": [
+    {
+      "name": "Typography",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.Typography",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.theme",
+      "signature": "val Typography = Typography(",
+      "start_line": 9,
+      "end_line": 39,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "theme",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.ui.text.TextStyle"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "theme",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "callback_contracts": [],
+      "symbol_id": "android-ac6e5ae6da4f941f28623924",
+      "shard_ref": "android:ef493e6e8eb1238e:com-vandatgsts-thuyetnguyen-ui-theme:01"
+    }
+  ]
+}

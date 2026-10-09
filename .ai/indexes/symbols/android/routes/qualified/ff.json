@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-ff",
+  "platform": "android_native",
+  "bucket": "ff",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankName",
+      "targets": [
+        {
+          "symbol_id": "android-d8c0403471473643f7f6b49a",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+          "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType.description",
+      "targets": [
+        {
+          "symbol_id": "android-0fa9abb75cb4f99b9ea4576c",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+          "shard_ref": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model-invoicetype:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model-invoicetype/da5f8e171d393754-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.storeSummaries",
+      "targets": [
+        {
+          "symbol_id": "android-55133cbc853e31032afea227",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+          "shard_ref": "android:57091435d6ed7e06:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/57091435d6ed7e06-01.json"
+        }
+      ]
+    }
+  ]
+}

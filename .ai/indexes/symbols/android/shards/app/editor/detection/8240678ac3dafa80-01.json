@@ -1,0 +1,117 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:8240678ac3dafa80:detection:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "detection",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+  "symbols": [
+    {
+      "name": "ReorderableInvoiceItems",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor",
+      "signature": "internal fun ReorderableInvoiceItems( items: List<InvoiceItem>, scrollState: ScrollState, viewportBounds: Rect, onMove: (String, Int) -> Unit, content: @Composable (Int, InvoiceItem, Modifier) -> Unit )",
+      "start_line": 42,
+      "end_line": 198,
+      "visibility": "internal",
+      "parameters": [
+        {
+          "name": "items",
+          "type": "List<InvoiceItem>"
+        },
+        {
+          "name": "scrollState",
+          "type": "ScrollState"
+        },
+        {
+          "name": "viewportBounds",
+          "type": "Rect"
+        },
+        {
+          "name": "onMove",
+          "type": "(String, Int) -> Unit"
+        },
+        {
+          "name": "content",
+          "type": "@Composable (Int, InvoiceItem, Modifier) -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropIndex",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.finishDrag",
+        "androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress",
+        "androidx.compose.foundation.gestures.scrollBy",
+        "androidx.compose.runtime.withFrameNanos"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentOnMove",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.currentViewport",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.itemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialItemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialScroll",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialPointerY",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.listCoordinates",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.edgeSize",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.maxScrollSpeed",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.insertionBeforeId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.insertionAtEnd",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.handleCoordinates"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.itemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.draggedItemId",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialItemBounds",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialScroll",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialPointerY",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.listCoordinates",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.handleCoordinates"
+      ],
+      "side_effects": [
+        "Render rows keyed by item ID",
+        "Track drag geometry without transforming measurement anchors",
+        "Automatically scroll the finite viewport edge at frame rate",
+        "On drop/accessibility invoke onMove; cancellation leaves item order unchanged"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "editor",
+        "reorder",
+        "composable"
+      ],
+      "risks": [
+        "Pointer behavior and visual placement still require device validation"
+      ],
+      "thread_context": "Main; Compose UI and pointer input",
+      "lifecycle": "Compose composition",
+      "purpose": "Long-press drag handles, pointer-based insertion targets for variable-height rows and accessible move-up/down actions.",
+      "callback_contracts": {
+        "onMove": "Stable item ID and final zero-based target index; bound to InvoiceEditorViewModel.moveItem by InvoiceEditorScreen",
+        "content": "Renders each keyed row and receives the drag handle modifier"
+      },
+      "coroutine_context": "Main; composition-bound LaunchedEffect and pointerInput; frame clock for auto-scroll",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-c66f547c525bbddb62cbf6e5",
+      "shard_ref": "android:8240678ac3dafa80:detection:01"
+    }
+  ]
+}

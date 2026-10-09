@@ -1,0 +1,55 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:fac310bd032b7bec:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.generator",
+      "module": "app",
+      "feature": "generator",
+      "layer": "generator/export",
+      "purpose": "Render invoice bitmap on Default and persist PNG in cache exports on IO.",
+      "imports": [
+        "android.content.Context",
+        "android.graphics.Bitmap",
+        "android.graphics.Canvas",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.withContext",
+        "java.io.File",
+        "java.io.FileOutputStream"
+      ],
+      "classes": [],
+      "objects": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer"
+      ],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+      ],
+      "keywords": [
+        "invoice",
+        "canvas",
+        "pdf",
+        "png",
+        "export"
+      ],
+      "risks": [],
+      "todos": [],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng"
+      ]
+    }
+  ]
+}

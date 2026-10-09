@@ -1,0 +1,1091 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+  "symbols": [
+    {
+      "name": "DELIVERY_NOTE_WIDTH",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH",
+      "type": "constant",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private const val DELIVERY_NOTE_WIDTH = 200f",
+      "start_line": 22,
+      "end_line": 22,
+      "visibility": "private",
+      "return_type": "Float",
+      "parameters": [],
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "notes",
+        "column-width"
+      ],
+      "risks": [],
+      "is_async": false,
+      "is_suspend": false,
+      "thread_context": "Caller thread",
+      "concern": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-7f1e445fb9c64f372cb55ede",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "QUOTATION_NOTE_WIDTH",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH",
+      "type": "constant",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private const val QUOTATION_NOTE_WIDTH = 160f",
+      "start_line": 23,
+      "end_line": 23,
+      "visibility": "private",
+      "return_type": "Float",
+      "parameters": [],
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "notes",
+        "column-width"
+      ],
+      "risks": [],
+      "is_async": false,
+      "is_suspend": false,
+      "thread_context": "Caller thread",
+      "concern": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-a0c0754be07566f374ddfec6",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "getCanvasWidth",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "fun getCanvasWidth(type: InvoiceType): Int",
+      "start_line": 25,
+      "end_line": 28,
+      "parameters": [
+        {
+          "name": "type",
+          "type": "InvoiceType"
+        }
+      ],
+      "return_type": "Int",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Canvas width 1400px for delivery/debt with a new note column; 1000px for quotation A4.",
+      "symbol_id": "android-623e4b3aef314b5ed2a4b5cc",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "getCanvasHeight",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "fun getCanvasHeight(type: InvoiceType, invoice: InvoiceDocument): Int",
+      "start_line": 30,
+      "end_line": 48,
+      "parameters": [
+        {
+          "name": "type",
+          "type": "InvoiceType"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Int",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountHolder",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountNumber",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.customer",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.items",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.notes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showBankInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showNotes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showPaymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showWarranty",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.warranty"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Allocate local Paint and an empty raster Canvas for A4 measurement; no bitmap allocation or persistence."
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [
+        "Quotation header/footer sizing still uses the existing estimates; product/note row sizes share exact measurement with drawing"
+      ],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Measure delivery rows and debt footer; compute A4 height with the exact drawing layout on an empty Canvas, including wrapped header/footer and rotated paid stamp, with minimum page height and bottom margin.",
+      "description": "Size output using actual variable-height product/note rows; include delivery debt-table height and the existing quotation header/footer budget.",
+      "symbol_id": "android-0dc7f370c16b92f1fc9260c2",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "fun drawInvoice(canvas: Canvas, invoice: InvoiceDocument)",
+      "start_line": 50,
+      "end_line": 56,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.type"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-132339040918852da59085a9",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "QuotationColType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColType",
+      "type": "enum",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private enum class QuotationColType",
+      "start_line": 58,
+      "end_line": 60,
+      "parameters": [],
+      "return_type": "QuotationColType",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-e3d2544ac0f3132df813af07",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "QuotationColDef",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef",
+      "type": "data_class",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private data class QuotationColDef( val type: QuotationColType, val title: String, var width: Float )",
+      "start_line": 62,
+      "end_line": 66,
+      "parameters": [
+        {
+          "name": "type",
+          "type": "QuotationColType"
+        },
+        {
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "name": "width",
+          "type": "Float"
+        }
+      ],
+      "return_type": "QuotationColDef",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-ef6691bf19c7d1ab4b000662",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "createQuotationColumns",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.createQuotationColumns",
+      "type": "function",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun createQuotationColumns(invoice: InvoiceDocument, tableWidth: Float): List<QuotationColDef>",
+      "start_line": 68,
+      "end_line": 82,
+      "parameters": [
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        },
+        {
+          "name": "tableWidth",
+          "type": "Float"
+        }
+      ],
+      "return_type": "List<QuotationColDef>",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showQuantityCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitPriceCol",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showQuantityCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitPriceCol",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "tags": [
+        "generator",
+        "notes",
+        "layout-measurement"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Create shared A4 column definitions with optional data columns and a mandatory 160px note column; allocate remaining width to product content.",
+      "description": "Create shared A4 column definitions with optional data columns and a mandatory 160px note column; allocate remaining width to product content.",
+      "symbol_id": "android-f057e8c3ce2c0866fa8f1eb5",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "getDeliveryRowHeight",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+      "type": "function",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun getDeliveryRowHeight(item: InvoiceItem, paint: Paint): Float",
+      "start_line": 84,
+      "end_line": 87,
+      "parameters": [
+        {
+          "name": "item",
+          "type": "InvoiceItem"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "Float",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "tags": [
+        "generator",
+        "notes",
+        "layout-measurement"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Measure wrapped notes at 14px and choose at least 48px row height; used by both drawing and output height.",
+      "description": "Measure wrapped notes at 14px and choose at least 48px row height; used by both drawing and output height.",
+      "symbol_id": "android-98fb1b9ca2aa3fc4f90a3a44",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "getQuotationRowHeight",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+      "type": "function",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun getQuotationRowHeight(item: InvoiceItem, columns: List<QuotationColDef>, paint: Paint): Float",
+      "start_line": 89,
+      "end_line": 95,
+      "parameters": [
+        {
+          "name": "item",
+          "type": "InvoiceItem"
+        },
+        {
+          "name": "columns",
+          "type": "List<QuotationColDef>"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "Float",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.productName",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.productName",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "tags": [
+        "generator",
+        "notes",
+        "layout-measurement"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Measure product and note text at 17px, use the larger line count and at least 120px row height for drawing/output sizing.",
+      "description": "Measure product and note text at 17px, use the larger line count and at least 120px row height for drawing/output sizing.",
+      "symbol_id": "android-c04168e1a21d30538cd84a60",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawDeliveryDebtTemplate",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawDeliveryDebtTemplate(canvas: Canvas, invoice: InvoiceDocument)",
+      "start_line": 97,
+      "end_line": 323,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawPaidStamp",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.truncateText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.debtPayments",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.effectiveOldDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.initialOldDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isFullyPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.items",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.oldDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paidDate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.storeOrCompanyName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.DELIVERY_NOTE_WIDTH"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Draw 11 delivery/debt columns including wrapped item notes before paid amount and total; dynamically grow each row and keep footer aligned to the final total column.",
+      "symbol_id": "android-d0b491fa1f2300cc611d3353",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawQuotationA4Template",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawQuotationA4Template(canvas: Canvas, invoice: InvoiceDocument): Float",
+      "start_line": 325,
+      "end_line": 706,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Float",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.createQuotationColumns",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInfoRow",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawPaidStamp",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountHolder",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountNumber",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.customer",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isVatIncluded",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.items",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.notes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paidDate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showBankInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showNotes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showPaymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showQuantityCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitPriceCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showWarranty",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.storeOrCompanyName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.title",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.vatAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.vatRate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.warranty",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QUOTATION_NOTE_WIDTH"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Draw the full A4 layout and return its content bottom; wrap row notes, header addresses, shared notes, warranty and payment terms, reserving rotated paid-stamp extent. Also used with an empty Canvas to measure the exact page height.",
+      "symbol_id": "android-49f6ebf60d2bc6e68eddb943",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawPaidStamp",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawPaidStamp",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawPaidStamp( canvas: Canvas, centerX: Float, centerY: Float, dateText: String, rotationDegrees: Float = -8f )",
+      "start_line": 708,
+      "end_line": 762,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "centerX",
+          "type": "Float"
+        },
+        {
+          "name": "centerY",
+          "type": "Float"
+        },
+        {
+          "name": "dateText",
+          "type": "String"
+        },
+        {
+          "name": "rotationDegrees",
+          "type": "Float"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-01ca96d9d858ea75eb90c5fe",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "truncateText",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.truncateText",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun truncateText(text: String, maxWidth: Float, paint: Paint): String",
+      "start_line": 765,
+      "end_line": 772,
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "maxWidth",
+          "type": "Float"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-2be4ee22973cab0bea21db8f",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawWrappedText",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawWrappedText( canvas: Canvas, text: String, x: Float, startY: Float, maxWidth: Float, textSize: Float, paint: Paint ): Float",
+      "start_line": 774,
+      "end_line": 792,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "x",
+          "type": "Float"
+        },
+        {
+          "name": "startY",
+          "type": "Float"
+        },
+        {
+          "name": "maxWidth",
+          "type": "Float"
+        },
+        {
+          "name": "textSize",
+          "type": "Float"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "Float",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Draw wrapped text using getWrappedLines to preserve manual line breaks and split oversized unbroken text; return the next baseline position.",
+      "symbol_id": "android-77adbb9440e28d948b14c128",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "getWrappedLines",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun getWrappedLines(text: String, maxWidth: Float, paint: Paint): List<String>",
+      "start_line": 794,
+      "end_line": 817,
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "maxWidth",
+          "type": "Float"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "List<String>",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "android.graphics.Paint.breakText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getDeliveryRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getQuotationRowHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInfoRow"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Measure lines by available width, preserve explicit newlines and split oversized words to fit note/product cells.",
+      "description": "Measure lines by available width, preserve explicit newlines and split oversized words to fit note/product cells.",
+      "symbol_id": "android-acb6059b6961607616c78160",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawVerticallyCenteredWrappedText",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawVerticallyCenteredWrappedText",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawVerticallyCenteredWrappedText( canvas: Canvas, lines: List<String>, centerX: Float, rowTop: Float, rowHeight: Float, textSize: Float, paint: Paint )",
+      "start_line": 819,
+      "end_line": 840,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "lines",
+          "type": "List<String>"
+        },
+        {
+          "name": "centerX",
+          "type": "Float"
+        },
+        {
+          "name": "rowTop",
+          "type": "Float"
+        },
+        {
+          "name": "rowHeight",
+          "type": "Float"
+        },
+        {
+          "name": "textSize",
+          "type": "Float"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "return_type": "Unit",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawDeliveryDebtTemplate",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-d11485b89f5726a8be38ab1f",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    },
+    {
+      "name": "drawInfoRow",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInfoRow",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "signature": "private fun drawInfoRow( canvas: Canvas, label: String, value: String, labelX: Float, colonX: Float, valueX: Float, startY: Float, maxWidth: Float, paint: Paint, isBoldValue: Boolean = false, lineHeight: Float = 28f ): Float",
+      "start_line": 842,
+      "end_line": 874,
+      "parameters": [
+        {
+          "name": "canvas",
+          "type": "Canvas"
+        },
+        {
+          "name": "label",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "labelX",
+          "type": "Float"
+        },
+        {
+          "name": "colonX",
+          "type": "Float"
+        },
+        {
+          "name": "valueX",
+          "type": "Float"
+        },
+        {
+          "name": "startY",
+          "type": "Float"
+        },
+        {
+          "name": "maxWidth",
+          "type": "Float"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        },
+        {
+          "name": "isBoldValue",
+          "type": "Boolean"
+        },
+        {
+          "name": "lineHeight",
+          "type": "Float"
+        }
+      ],
+      "return_type": "Float",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getWrappedLines"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Mutates supplied Canvas/Paint"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "purpose": "Draw wrapped text using getWrappedLines to preserve manual line breaks and split oversized unbroken text; return the next baseline position.",
+      "symbol_id": "android-3f0a96d322be2b106ab69b9c",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:0e64ac2612a757ae:com-vandatgsts-thuyetnguyen-data-model:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "product-template",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+  "symbols": [
+    {
+      "name": "ProductTemplate",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "type": "data_class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "data class ProductTemplate",
+      "start_line": 5,
+      "end_line": 12,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product_template",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "product_template"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-556d714b364255b65c764f16",
+      "shard_ref": "android:0e64ac2612a757ae:com-vandatgsts-thuyetnguyen-data-model:01"
+    }
+  ]
+}

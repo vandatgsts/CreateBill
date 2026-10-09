@@ -1,0 +1,19 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-ab",
+  "platform": "android_native",
+  "bucket": "ab",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ItemCard",
+      "targets": [
+        {
+          "symbol_id": "android-3399cac9259d9a8601115ce8",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+          "shard_ref": "android:012b2bd755845e7d:duplicate-review:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/duplicate-review/012b2bd755845e7d-01.json"
+        }
+      ]
+    }
+  ]
+}

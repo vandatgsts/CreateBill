@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-3e",
+  "platform": "android_native",
+  "bucket": "3e",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+      "targets": [
+        {
+          "symbol_id": "android-4ca7267e49f2fb4f1c2c8273",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-70699739d9fd23932972f486",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+          "shard_ref": "android:3241716fac561814:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-info/storage-data/3241716fac561814-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.name",
+      "targets": [
+        {
+          "symbol_id": "android-052306fa47b7fdcb8508fb92",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+          "shard_ref": "android:0e64ac2612a757ae:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/state/0e64ac2612a757ae-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.updateSearchQuery",
+      "targets": [
+        {
+          "symbol_id": "android-76501d617e40b74d109cf2cf",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+          "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+        }
+      ]
+    }
+  ]
+}

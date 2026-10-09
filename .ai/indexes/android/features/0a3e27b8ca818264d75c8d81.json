@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:0a3e27b8ca818264d75c8d81",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "products",
+      "name": "products",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt"
+      ]
+    }
+  ]
+}

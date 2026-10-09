@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-3d",
+  "platform": "android_native",
+  "bucket": "3d",
+  "symbols": [
+    {
+      "symbol_id": "android-f07eb6dc76b7e90d92510cf4",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+    }
+  ]
+}

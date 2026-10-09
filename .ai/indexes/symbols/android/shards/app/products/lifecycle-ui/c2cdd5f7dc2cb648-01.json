@@ -1,0 +1,209 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:c2cdd5f7dc2cb648:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "products",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+  "symbols": [
+    {
+      "name": "products",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.products",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+      "signature": "val products by viewModel.filteredProducts.collectAsState()",
+      "start_line": 80,
+      "end_line": 80,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts"
+      ],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain products for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-1b4c438bb53626ee81f18f68",
+      "shard_ref": "android:c2cdd5f7dc2cb648:lifecycle-ui:01"
+    },
+    {
+      "name": "searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+      "signature": "val searchQuery by viewModel.searchQuery.collectAsState()",
+      "start_line": 81,
+      "end_line": 81,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain searchQuery for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-15a97dab912f67ada1d21606",
+      "shard_ref": "android:c2cdd5f7dc2cb648:lifecycle-ui:01"
+    },
+    {
+      "name": "showDialog",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.showDialog",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen",
+      "signature": "var showDialog by remember { mutableStateOf(false) }",
+      "start_line": 85,
+      "end_line": 85,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain showDialog for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-06ae76feee2d03868ef90cc7",
+      "shard_ref": "android:c2cdd5f7dc2cb648:lifecycle-ui:01"
+    },
+    {
+      "name": "ProductItemCard",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductItemCard",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products",
+      "signature": "private fun ProductItemCard( product: ProductTemplate, onCardClick: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit )",
+      "start_line": 313,
+      "end_line": 381,
+      "visibility": "private",
+      "parameters": [
+        {
+          "name": "product",
+          "type": "ProductTemplate"
+        },
+        {
+          "name": "onCardClick",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onEdit",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onDelete",
+          "type": "() -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "ui",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "products",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onCardClick",
+        "onEdit",
+        "onDelete"
+      ],
+      "purpose": "Render reusable Compose item/card and dispatch supplied callbacks.",
+      "compose_metadata": {
+        "state_collection": null,
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-43c6247b31b56e970472459c",
+      "shard_ref": "android:c2cdd5f7dc2cb648:lifecycle-ui:01"
+    }
+  ]
+}

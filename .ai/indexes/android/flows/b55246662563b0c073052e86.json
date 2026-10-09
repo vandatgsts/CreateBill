@@ -1,0 +1,27 @@
+{
+  "schema": "code-flow-shard-v4",
+  "id": "android:flow:b55246662563b0c073052e86",
+  "platform": "android_native",
+  "flows": [
+    {
+      "id": "backup-restore",
+      "name": "Backup and merge/replace restore",
+      "description": "Settings Activity Result URI -> IO JSON parse -> merge/replace repositories -> record imported hash; outbound backup uses FileProvider sharing.",
+      "symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getShareIntent",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ]
+    }
+  ]
+}

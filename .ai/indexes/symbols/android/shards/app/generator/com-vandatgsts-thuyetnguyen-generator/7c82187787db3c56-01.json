@@ -1,0 +1,46 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "com-vandatgsts-thuyetnguyen-generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+  "symbols": [
+    {
+      "name": "InvoiceCanvasDrawer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer",
+      "type": "object",
+      "owner": "com.vandatgsts.thuyetnguyen.generator",
+      "signature": "object InvoiceCanvasDrawer",
+      "start_line": 20,
+      "end_line": 875,
+      "parameters": [],
+      "return_type": "InvoiceCanvasDrawer",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "InvoiceCanvasDrawer",
+        "canvas"
+      ],
+      "risks": [],
+      "thread_context": "Caller thread; synchronous",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "rendering",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-fbd4ccc7dfb7ba91bf6f1762",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator:01"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-98",
+  "platform": "android_native",
+  "bucket": "98",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CustomerSummary.customer",
+      "targets": [
+        {
+          "symbol_id": "android-501ee5692e1fd0396bf7f7c2",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerSummary.kt",
+          "shard_ref": "android:66fbe5de8ec338ab:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/customer-summary/storage-data/66fbe5de8ec338ab-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.customerRepo",
+      "targets": [
+        {
+          "symbol_id": "android-9582ebcf12439cf8fb061ad3",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+          "shard_ref": "android:4400ca68717395c3:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+      "targets": [
+        {
+          "symbol_id": "android-f144264e1fa8b4a065586568",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+          "shard_ref": "android:4400ca68717395c3:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.scrollState",
+      "targets": [
+        {
+          "symbol_id": "android-ce2ad4a56a1cc943eace4da5",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+          "shard_ref": "android:012b2bd755845e7d:com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-invoiceeditorscreen/012b2bd755845e7d-01.json"
+        }
+      ]
+    }
+  ]
+}

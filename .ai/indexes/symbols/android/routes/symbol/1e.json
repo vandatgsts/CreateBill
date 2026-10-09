@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-1e",
+  "platform": "android_native",
+  "bucket": "1e",
+  "symbols": [
+    {
+      "symbol_id": "android-2eff581501b18b4c9a32c806",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dragDistance",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/state/8240678ac3dafa80-01.json"
+    }
+  ]
+}

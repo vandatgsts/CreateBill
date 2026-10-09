@@ -1,0 +1,93 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:0e64ac2612a757ae:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "product-template",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "signature": "ProductTemplate(val id: String = UUID.randomUUID().toString(), val name: String = \"\", val unit: String = \"\", val defaultPrice: Double = 0.0, val note: String = \"\", val createdAt: Long = System.currentTimeMillis())",
+      "start_line": 5,
+      "end_line": 12,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "product_template",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String",
+          "default": "UUID.randomUUID().toString()"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "defaultPrice",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "createdAt",
+          "type": "Long",
+          "default": "System.currentTimeMillis()"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+      "calls": [
+        "java.lang.System.currentTimeMillis",
+        "java.util.UUID.randomUUID"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.createDefaultProducts"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.createdAt",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.defaultPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.id",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.name",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.note",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.unit"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "product_template"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-91023b43d883ac9f16a48056",
+      "shard_ref": "android:0e64ac2612a757ae:storage-data:01"
+    }
+  ]
+}

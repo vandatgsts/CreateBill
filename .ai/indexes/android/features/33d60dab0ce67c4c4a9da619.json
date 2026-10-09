@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:33d60dab0ce67c4c4a9da619",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "app_backup_data",
+      "name": "app backup data",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt"
+      ]
+    }
+  ]
+}

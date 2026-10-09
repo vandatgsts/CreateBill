@@ -1,0 +1,109 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:1aa370538b6687c8:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+  "symbols": [
+    {
+      "name": "PdfInvoiceRenderer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer",
+      "type": "object",
+      "owner": "com.vandatgsts.thuyetnguyen.generator",
+      "signature": "object PdfInvoiceRenderer",
+      "start_line": 11,
+      "end_line": 35,
+      "parameters": [],
+      "return_type": "PdfInvoiceRenderer",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "PdfInvoiceRenderer",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Dispatchers.IO; error toast switches to Dispatchers.Main when applicable",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-2c0bcea5df5ec78af221d133",
+      "shard_ref": "android:1aa370538b6687c8:storage-data:01"
+    },
+    {
+      "name": "renderPdf",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer.renderPdf",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.PdfInvoiceRenderer",
+      "signature": "suspend fun renderPdf(context: Context, invoice: InvoiceDocument): File",
+      "start_line": 13,
+      "end_line": 34,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "File",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.graphics.pdf.PdfDocument.close",
+        "android.graphics.pdf.PdfDocument.finishPage",
+        "android.graphics.pdf.PdfDocument.startPage",
+        "android.graphics.pdf.PdfDocument.writeTo",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.sharePdf",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.viewPdf"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.type"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Creates exports directory and writes cache file"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+      ],
+      "tags": [
+        "generator",
+        "PdfInvoiceRenderer",
+        "export"
+      ],
+      "risks": [
+        "Single-page export; document cleanup not in finally"
+      ],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-d994c2521a7e1248f48b7494",
+      "shard_ref": "android:1aa370538b6687c8:storage-data:01"
+    }
+  ]
+}

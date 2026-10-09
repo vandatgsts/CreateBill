@@ -1,0 +1,16 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:4e7cf3cf5960fe137805b6f1",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "stores",
+      "name": "stores",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ]
+    }
+  ]
+}

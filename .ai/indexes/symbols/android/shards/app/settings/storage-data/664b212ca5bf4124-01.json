@@ -1,0 +1,665 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:664b212ca5bf4124:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "settings",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+  "symbols": [
+    {
+      "name": "CompanyProfileViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings",
+      "signature": "class CompanyProfileViewModel(application: Application) : AndroidViewModel(application)",
+      "start_line": 18,
+      "end_line": 100,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "application: Application"
+      ],
+      "return_type": "CompanyProfileViewModel",
+      "calls": [
+        "androidx.lifecycle.AndroidViewModel"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.<init>"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "settings",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-9104fe15a8568211574619f4",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "constructor(application: Application)",
+      "start_line": 18,
+      "end_line": 18,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "application: Application"
+      ],
+      "return_type": "CompanyProfileViewModel",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "settings",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-5001b092d39fea68071d37a1",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "repository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "private val repository = CompanyProfileRepository.getInstance(application)",
+      "start_line": 19,
+      "end_line": 19,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-0f34caa4e67383d04b2d80f5",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "backupRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "private val backupRepo = BackupRepository.getInstance(application)",
+      "start_line": 20,
+      "end_line": 20,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.Companion.getInstance"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "property"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-d0f26fdde8218f9df0d70789",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "_profile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "private val _profile = MutableStateFlow(repository.getProfile())",
+      "start_line": 22,
+      "end_line": 22,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-a66de3f2a8b5a9e9c568315e",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "profile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.profile",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "val profile: StateFlow<CompanyProfile> = _profile.asStateFlow()",
+      "start_line": 23,
+      "end_line": 23,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<CompanyProfile>",
+      "calls": [
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-64c9b938b65ba36591456c18",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "_isExporting",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "private val _isExporting = MutableStateFlow(false)",
+      "start_line": 25,
+      "end_line": 25,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-55dcf5a274febbb2cab835e4",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "isExporting",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isExporting",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "val isExporting: StateFlow<Boolean> = _isExporting.asStateFlow()",
+      "start_line": 26,
+      "end_line": 26,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<Boolean>",
+      "calls": [
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-3a80b4ab774e61582b1d12e1",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "_isImporting",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "private val _isImporting = MutableStateFlow(false)",
+      "start_line": 28,
+      "end_line": 28,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "kotlinx.coroutines.flow.MutableStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-354a17c60ed746906831c4fa",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "isImporting",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isImporting",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "val isImporting: StateFlow<Boolean> = _isImporting.asStateFlow()",
+      "start_line": 29,
+      "end_line": 29,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<Boolean>",
+      "calls": [
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "kotlinx.coroutines.flow.asStateFlow"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / viewModelScope",
+      "callback_contracts": [],
+      "symbol_id": "android-aa622b9164494769b3386fbb",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "updateProfile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.updateProfile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "fun updateProfile(updated: CompanyProfile)",
+      "start_line": 31,
+      "end_line": 33,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "updated: CompanyProfile"
+      ],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile"
+      ],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "settings",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-bbbbb67357009d5541c6d39e",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "saveProfile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.saveProfile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "fun saveProfile()",
+      "start_line": 35,
+      "end_line": 39,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.saveProfile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine",
+        "Mutates persisted repository data through called repository operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.saveProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [],
+      "symbol_id": "android-08a1b964f9cc2bb99bfab2e5",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "exportBackup",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "fun exportBackup(onReady: (AppBackupData, Intent) -> Unit, onError: (String) -> Unit)",
+      "start_line": 41,
+      "end_line": 55,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [
+        "onReady: (AppBackupData, Intent) -> Unit, onError: (String) -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getShareIntent"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting"
+      ],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine",
+        "Activity result, sharing intent or platform date picker interaction"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.getShareIntent",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [
+        "onError",
+        "onReady"
+      ],
+      "symbol_id": "android-74f1402d054a9cc67c2ed591",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    },
+    {
+      "name": "applyImport",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+      "signature": "fun applyImport(\n        backup: AppBackupData,\n        mode: ImportMode,\n        onComplete: (Boolean, String) -> Unit\n    )",
+      "start_line": 77,
+      "end_line": 99,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": false,
+      "parameters": [
+        "backup: AppBackupData,\n        mode: ImportMode,\n        onComplete: (Boolean, String) -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.lifecycle.viewModelScope.launch",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile"
+      ],
+      "side_effects": [
+        "Launches lifecycle-bound coroutine",
+        "Mutates persisted repository data through called repository operation"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "settings",
+        "method"
+      ],
+      "risks": [],
+      "thread_context": "viewModelScope.launch / Dispatchers.Main.immediate; repository owns any IO switch",
+      "lifecycle": "ViewModel scope cancelled on clearing",
+      "callback_contracts": [
+        "onComplete"
+      ],
+      "symbol_id": "android-2baa68d4d6482a4a1272da8d",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01"
+    }
+  ]
+}

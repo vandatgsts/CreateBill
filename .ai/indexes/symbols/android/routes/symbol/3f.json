@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-3f",
+  "platform": "android_native",
+  "bucket": "3f",
+  "symbols": [
+    {
+      "symbol_id": "android-783b449e50ce6c207b58a919",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-e0632c7bf7502d3f3c785ee8",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountHolder",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:552b446774cce61e58d4cf96",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "store_partner_summary",
+      "name": "store partner summary",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt"
+      ]
+    }
+  ]
+}

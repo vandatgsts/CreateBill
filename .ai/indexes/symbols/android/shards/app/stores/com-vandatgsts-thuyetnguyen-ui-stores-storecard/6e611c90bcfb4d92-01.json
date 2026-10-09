@@ -1,0 +1,51 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:6e611c90bcfb4d92:com-vandatgsts-thuyetnguyen-ui-stores-storecard:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-stores-storecard",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+  "symbols": [
+    {
+      "name": "store",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard.store",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard",
+      "signature": "val store = summary.store",
+      "start_line": 355,
+      "end_line": 355,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "ui",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [],
+      "purpose": "Expose or maintain store for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-4805d4b3a5340cb9598c7082",
+      "shard_ref": "android:6e611c90bcfb4d92:com-vandatgsts-thuyetnguyen-ui-stores-storecard:01"
+    }
+  ]
+}

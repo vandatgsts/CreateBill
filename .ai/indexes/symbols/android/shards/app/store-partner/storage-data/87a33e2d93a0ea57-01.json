@@ -1,0 +1,108 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:87a33e2d93a0ea57:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartner.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+      "signature": "StorePartner(val id: String = UUID.randomUUID().toString(), val name: String = \"\", val phone: String = \"\", val address: String = \"\", val contactPerson: String = \"\", val defaultType: InvoiceType = InvoiceType.DELIVERY_DEBT, val note: String = \"\", val createdAt: Long = System.currentTimeMillis())",
+      "start_line": 5,
+      "end_line": 14,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "store_partner",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String",
+          "default": "UUID.randomUUID().toString()"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "address",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "contactPerson",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "defaultType",
+          "type": "InvoiceType",
+          "default": "InvoiceType.DELIVERY_DEBT"
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "createdAt",
+          "type": "Long",
+          "default": "System.currentTimeMillis()"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+      "calls": [
+        "java.lang.System.currentTimeMillis",
+        "java.util.UUID.randomUUID"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.createDefaultStores",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.address",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.contactPerson",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.createdAt",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.defaultType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.id",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.name",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.note",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner.phone"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "model",
+        "store_partner"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-e9adc51d2aefb64adbbfab5c",
+      "shard_ref": "android:87a33e2d93a0ea57:storage-data:01"
+    }
+  ]
+}

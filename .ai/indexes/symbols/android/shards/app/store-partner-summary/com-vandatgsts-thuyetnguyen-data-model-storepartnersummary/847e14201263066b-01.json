@@ -1,0 +1,93 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:847e14201263066b:com-vandatgsts-thuyetnguyen-data-model-storepartnersummary:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner-summary",
+  "concern": "com-vandatgsts-thuyetnguyen-data-model-storepartnersummary",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+      "signature": "StorePartnerSummary(val store: StorePartner, val invoiceCount: Int = 0, val totalAmount: Double = 0.0, val totalPaid: Double = 0.0, val currentDebt: Double = 0.0, val latestInvoice: InvoiceDocument? = null, val invoices: List<InvoiceDocument> = emptyList())",
+      "start_line": 3,
+      "end_line": 11,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "store_partner_summary",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "store",
+          "type": "StorePartner"
+        },
+        {
+          "name": "invoiceCount",
+          "type": "Int",
+          "default": "0"
+        },
+        {
+          "name": "totalAmount",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "totalPaid",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "currentDebt",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "latestInvoice",
+          "type": "InvoiceDocument?",
+          "default": "null"
+        },
+        {
+          "name": "invoices",
+          "type": "List<InvoiceDocument>",
+          "default": "emptyList()"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.currentDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoiceCount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoices",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.latestInvoice",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.store",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalPaid"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "store_partner_summary"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-30e06b4f53a815b54c342a45",
+      "shard_ref": "android:847e14201263066b:com-vandatgsts-thuyetnguyen-data-model-storepartnersummary:01"
+    }
+  ]
+}

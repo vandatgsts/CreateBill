@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-2f",
+  "platform": "android_native",
+  "bucket": "2f",
+  "symbols": [
+    {
+      "symbol_id": "android-55133cbc853e31032afea227",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.storeSummaries",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "shard_ref": "android:57091435d6ed7e06:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/57091435d6ed7e06-01.json"
+    },
+    {
+      "symbol_id": "android-5a723e1fc6a409731b7e1497",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.BackgroundLight",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+    },
+    {
+      "symbol_id": "android-8ac86b7e674dd1c517b8763b",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.storeOrCompanyName",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    },
+    {
+      "symbol_id": "android-c08d1c6573cccfb2f24ca273",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-d8c0403471473643f7f6b49a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankName",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+    }
+  ]
+}

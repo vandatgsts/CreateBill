@@ -1,0 +1,53 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:8378a21371d1fd70:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.generator",
+      "module": "app",
+      "feature": "generator",
+      "layer": "generator/export",
+      "purpose": "Format currency, fractional quantity and localized dates.",
+      "imports": [
+        "java.text.DecimalFormat",
+        "java.text.DecimalFormatSymbols",
+        "java.text.SimpleDateFormat",
+        "java.util.Date",
+        "java.util.Locale"
+      ],
+      "classes": [],
+      "objects": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper"
+      ],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatter"
+      ],
+      "related_files": [],
+      "keywords": [
+        "invoice",
+        "canvas",
+        "pdf",
+        "png",
+        "export"
+      ],
+      "risks": [],
+      "todos": [],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatter"
+      ]
+    }
+  ]
+}

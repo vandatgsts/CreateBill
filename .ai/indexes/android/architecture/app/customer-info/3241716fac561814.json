@@ -1,0 +1,48 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:3241716fac561814:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "customer-info",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "customer-info",
+      "layer": "data/model",
+      "purpose": "Typed CustomerInfo domain model and derived invoice/debt values",
+      "imports": [],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.name",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.address",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.taxCode"
+      ],
+      "related_files": [],
+      "keywords": [
+        "customer_info",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.name",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.address",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.taxCode"
+      ]
+    }
+  ]
+}

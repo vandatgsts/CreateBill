@@ -1,0 +1,133 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:d996e7e3236c961a:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice-item",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+      "signature": "InvoiceItem(val id: String = UUID.randomUUID().toString(), val stt: Int = 1, val date: String = \"\", val productName: String = \"\", val unit: String = \"\", val quantity: Double = 1.0, val unitPrice: Double = 0.0, val address: String = \"\", val receiver: String = \"\", val phone: String = \"\", val paidAmount: Double = 0.0, val note: String = \"\")",
+      "start_line": 5,
+      "end_line": 18,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice_item",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String",
+          "default": "UUID.randomUUID().toString()"
+        },
+        {
+          "name": "stt",
+          "type": "Int",
+          "default": "1"
+        },
+        {
+          "name": "date",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "productName",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "quantity",
+          "type": "Double",
+          "default": "1.0"
+        },
+        {
+          "name": "unitPrice",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "address",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "receiver",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "paidAmount",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "default": "\"\""
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+      "calls": [
+        "java.util.UUID.randomUUID"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addItem",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.address",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.date",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.id",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.paidAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.productName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.quantity",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.receiver",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.stt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unit",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.unitPrice",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.note"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "model",
+        "invoice_item"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-24bebaa9330475208fd7293c",
+      "shard_ref": "android:d996e7e3236c961a:storage-data:01"
+    }
+  ]
+}

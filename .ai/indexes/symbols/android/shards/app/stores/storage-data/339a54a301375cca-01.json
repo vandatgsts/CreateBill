@@ -1,0 +1,290 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:339a54a301375cca:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+  "symbols": [
+    {
+      "name": "storeRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "private val storeRepo = StorePartnerRepository.getInstance(application)",
+      "start_line": 22,
+      "end_line": 22,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "stores",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain storeRepo for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-d30be72007d3b8d5a43462e6",
+      "shard_ref": "android:339a54a301375cca:storage-data:01"
+    },
+    {
+      "name": "invoiceRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "private val invoiceRepo = InvoiceRepository.getInstance(application)",
+      "start_line": 23,
+      "end_line": 23,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "stores",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain invoiceRepo for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-1f3966ea98be868cdeb4d9f7",
+      "shard_ref": "android:339a54a301375cca:storage-data:01"
+    },
+    {
+      "name": "saveStore",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.saveStore",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun saveStore(store: StorePartner)",
+      "start_line": 82,
+      "end_line": 86,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "store",
+          "type": "StorePartner"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.saveStore"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist repository records through launched coroutine"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Launch repository partner persistence.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-10d2ae23b98a83b7899700a5",
+      "shard_ref": "android:339a54a301375cca:storage-data:01"
+    },
+    {
+      "name": "deleteStore",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.deleteStore",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun deleteStore(id: String)",
+      "start_line": 88,
+      "end_line": 92,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.deleteStore"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist repository records through launched coroutine"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Launch repository partner deletion by ID.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-276af476c1c1c778d97f9f27",
+      "shard_ref": "android:339a54a301375cca:storage-data:01"
+    },
+    {
+      "name": "recordPaymentForStore",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun recordPaymentForStore(storeId: String, amount: Double, title: String = \"\")",
+      "start_line": 103,
+      "end_line": 127,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "storeId",
+          "type": "String"
+        },
+        {
+          "name": "amount",
+          "type": "Double"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "default": "\"\""
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate",
+        "android.widget.Toast.makeText"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore.summary"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state",
+        "Persist repository records through launched coroutine",
+        "Show failure Toast on Main instead of uncaught storage exception; CancellationException is rethrown"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Append payment to latest partner invoice and update paid status/date.; handle propagated invoice storage failures without crashing",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-99265017de6a1b4b2dba3b1b",
+      "shard_ref": "android:339a54a301375cca:storage-data:01"
+    }
+  ]
+}

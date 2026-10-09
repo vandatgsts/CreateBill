@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-77",
+  "platform": "android_native",
+  "bucket": "77",
+  "symbols": [
+    {
+      "symbol_id": "android-820e71d6927b1508d4ecdc39",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Editor.invoiceId",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-87dbb7da5a82edbec590ce59",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.totalProducts",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-917119b38f7aa1a28c059020",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+    },
+    {
+      "symbol_id": "android-a0df59d947276c33bc55b240",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.ProductCatalog.screenKey",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-f023e53f08adcabeb4dbe0fd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+    }
+  ]
+}

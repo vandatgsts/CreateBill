@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-17",
+  "platform": "android_native",
+  "bucket": "17",
+  "symbols": [
+    {
+      "symbol_id": "android-74869e23b2337f9a72a9919f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.LAST_MONTH",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+    }
+  ]
+}

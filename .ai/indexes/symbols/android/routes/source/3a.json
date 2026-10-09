@@ -1,0 +1,85 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-3a",
+  "platform": "android_native",
+  "bucket": "3a",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "source_hash": "828d8e4ccd6af538427e7b0395a483ef0cae2b4b024c61feae7f3bf8dc4cdd49",
+      "architecture_shard": {
+        "id": "android:3a8557555f4fbecf:architecture",
+        "path": ".ai/indexes/android/architecture/app/home/3a8557555f4fbecf.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home/3a8557555f4fbecf-01.json"
+        },
+        {
+          "id": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+        },
+        {
+          "id": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+        },
+        {
+          "id": "android:3a8557555f4fbecf:duplicate-review:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/duplicate-review/3a8557555f4fbecf-01.json"
+        },
+        {
+          "id": "android:3a8557555f4fbecf:lifecycle-ui:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+        },
+        {
+          "id": "android:3a8557555f4fbecf:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/home/storage-data/3a8557555f4fbecf-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-aca795e73dfebde991f9b68c",
+        "android-cba3620dca874bafe661c4df",
+        "android-492f26655ecca5e7bcbdf45b",
+        "android-ed68755ce7b780af47ec78df",
+        "android-cf3667b5c9b64a7cf4c5211f",
+        "android-a03fef5fff0b4f04201e40d7",
+        "android-d83a1b8f41baa5b4a0f7b0ef",
+        "android-74869e23b2337f9a72a9919f",
+        "android-279ecae420abc99d182b09ee",
+        "android-abee155adcb37a062153496b",
+        "android-54802cc2bfe208f9c5008c26",
+        "android-65e688eba01b39e2600ca741",
+        "android-87dbb7da5a82edbec590ce59",
+        "android-c22889320a186419e5d14a9c",
+        "android-1a03067567c40b70daed482d",
+        "android-45fed6dbaa7216d67ae66626",
+        "android-1f7ced3975f1a2e47db7ff6a",
+        "android-a32f44e1a6bddb624fd4751b",
+        "android-c08d1c6573cccfb2f24ca273",
+        "android-a9910ee74f8aa940130e24ba",
+        "android-fdc65ec4bb055c260afd3b6c",
+        "android-8ee7e76b218621a2cd260f5e",
+        "android-5f54e45acdaaab5c10ac97f0",
+        "android-4a22c0273f6a5511f6cb35e0",
+        "android-d1d066eb32305d2ce6c2ecfb",
+        "android-f7b71aaf71d4f8d44261571d",
+        "android-2d54f271606106856adf5a04",
+        "android-8ca9e549c140cd98284c029b",
+        "android-4401e8e28b930bc4b3dd0605",
+        "android-76501d617e40b74d109cf2cf",
+        "android-39c74c83c8c3fc4c7d2c8ba2",
+        "android-b72a5f2e88b81e31db503296",
+        "android-0bb6d6203504dd7e01c5c21b",
+        "android-bb61ee2cc89e9b5622e16877",
+        "android-cab6cd9cf520a5f64a3ee73c",
+        "android-749c40f2130e8fe2ed696bcd",
+        "android-a4a68ceed7c2a937b3c8c153",
+        "android-d6ef9f2ccb24fe3539d49ebb",
+        "android-bf8041f3826316a31cb00f04",
+        "android-a5f44fe0e89d254afd0382cc",
+        "android-fce5f40b11d8c7471b7a144c"
+      ]
+    }
+  ]
+}

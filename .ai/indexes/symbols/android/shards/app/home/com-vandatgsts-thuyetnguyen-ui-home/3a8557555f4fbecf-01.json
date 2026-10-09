@@ -1,0 +1,55 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "home",
+  "concern": "com-vandatgsts-thuyetnguyen-ui-home",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+  "symbols": [
+    {
+      "name": "DateFilterPeriod",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.home",
+      "signature": "enum class DateFilterPeriod(val label: String)",
+      "start_line": 23,
+      "end_line": 30,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "home",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "val label: String"
+      ],
+      "return_type": "DateFilterPeriod",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.<init>"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.label"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.label"
+      ],
+      "related_files": [],
+      "tags": [
+        "home",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-aca795e73dfebde991f9b68c",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home:01"
+    }
+  ]
+}

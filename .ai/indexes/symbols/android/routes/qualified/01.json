@@ -1,0 +1,30 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-01",
+  "platform": "android_native",
+  "bucket": "01",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef",
+      "targets": [
+        {
+          "symbol_id": "android-ef6691bf19c7d1ab4b000662",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+          "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery",
+      "targets": [
+        {
+          "symbol_id": "android-29bb35be574a5a09b7bf6852",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+          "shard_ref": "android:589ffd5d05cf9590:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/589ffd5d05cf9590-01.json"
+        }
+      ]
+    }
+  ]
+}

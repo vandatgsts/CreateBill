@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-79",
+  "platform": "android_native",
+  "bucket": "79",
+  "symbols": [
+    {
+      "symbol_id": "android-2f3925d3aec577f6317417c8",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt",
+      "shard_ref": "android:87a33e2d93a0ea57:com-vandatgsts-thuyetnguyen-data-model:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner/com-vandatgsts-thuyetnguyen-data-model/87a33e2d93a0ea57-01.json"
+    },
+    {
+      "symbol_id": "android-35ce8ad6a37be87f1600a921",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.InvoicePeriodCard",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+      "shard_ref": "android:2b4ed7c105b69076:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/2b4ed7c105b69076-01.json"
+    },
+    {
+      "symbol_id": "android-5bfc1fe9cee3cec7f01d1940",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitPriceCol",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+    },
+    {
+      "symbol_id": "android-9807baf396c1d8d595651cba",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+    },
+    {
+      "symbol_id": "android-f144264e1fa8b4a065586568",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.parseBackupFromUri",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    }
+  ]
+}

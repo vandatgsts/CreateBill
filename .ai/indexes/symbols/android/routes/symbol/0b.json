@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-0b",
+  "platform": "android_native",
+  "bucket": "0b",
+  "symbols": [
+    {
+      "symbol_id": "android-2a23396e8de9c4369587cc0a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Settings.screenKey",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    },
+    {
+      "symbol_id": "android-96895cd6fd7b71462bbc4532",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.editingStore",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "shard_ref": "android:6e611c90bcfb4d92:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/state/6e611c90bcfb4d92-01.json"
+    },
+    {
+      "symbol_id": "android-a8b3249301def65d7fbfcdd2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.deleteCustomer",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+    }
+  ]
+}

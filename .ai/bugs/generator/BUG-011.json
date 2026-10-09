@@ -1,0 +1,47 @@
+{
+  "id": "BUG-011",
+  "title": "Nội dung dài ở đầu/cuối báo giá A4 có thể bị cắt trong PDF/ảnh",
+  "feature": "generator",
+  "severity": "medium",
+  "affected_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+  ],
+  "affected_symbols": [
+    "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+    "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawQuotationA4Template",
+    "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInfoRow",
+    "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawWrappedText"
+  ],
+  "symptoms": [
+    "Canvas height cộng cố định cho địa chỉ/notes/warranty trong khi hàm vẽ tăng Y theo số dòng.",
+    "drawWrappedText/drawInfoRow không xử lý newline hoặc từ dài liền nhau; paymentTerms chỉ vẽ một dòng."
+  ],
+  "reproduction_steps": [
+    "Tạo mẫu A4 có nhiều dòng hàng, địa chỉ/ghi chú chung dài; bật VAT, bảo hành, ngân hàng và dấu đã thanh toán.",
+    "Xuất ảnh/PDF và đối chiếu phần cuối với nội dung nhập."
+  ],
+  "root_cause": "Hai cách tính bố cục tách biệt: getCanvasHeight ước lượng header/footer cố định, drawQuotationA4Template đo nội dung thực. Các wrapper trước đây chỉ split khoảng trắng.",
+  "fix": "getCanvasHeight chạy cùng drawQuotationA4Template trên Canvas rỗng nhận contentBottom, cộng margin80 và stamp extent110. Header/footer/payment terms dùng getWrappedLines hỗ trợ newline và từ dài.",
+  "verification_steps": [
+    "Review template không phụ thuộc canvas.width/height/clip và có một return Float cuối.",
+    "Review font/size/width giống nhau khi đo và render.",
+    "Kiểm tra bounds stamp260x76 xoay10deg: đáy currentY+106.74, reserve110.",
+    "Validate V4 và git diff --check.",
+    "Cần xuất PDF/ảnh trên thiết bị với text dài và các tùy chọn bật/tắt."
+  ],
+  "verification_result": "Rà soát tĩnh độc lập đạt; chưa build hoặc kiểm tra bản xuất trên thiết bị.",
+  "regression_risk": "Đo full layout thêm một lượt vẽ trên Canvas rỗng, không cấp phát bitmap. Bitmap tài liệu rất dài và trường ngân hàng một dòng vẫn là giới hạn.",
+  "status": "FIXED",
+  "global_pattern": null,
+  "logs": [],
+  "fixed_files": [
+    "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+  ],
+  "related_bugs": [],
+  "notes": [
+    {
+      "date": "2026-10-09",
+      "text": "Phát hiện trong rà soát tĩnh tối ưu sau tính năng ghi chú/kéo thả. FIXED theo review nguồn; chưa VERIFIED trên thiết bị."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-d9",
+  "platform": "android_native",
+  "bucket": "d9",
+  "symbols": [
+    {
+      "symbol_id": "android-b9d18fc02b2c70aa478f346f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:detection:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/detection/cace1d04570bab7e-01.json"
+    }
+  ]
+}

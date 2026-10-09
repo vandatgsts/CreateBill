@@ -1,0 +1,257 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:83972a9cf8e2fb80:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "settings",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+  "symbols": [
+    {
+      "name": "CompanyProfileScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings",
+      "signature": "fun CompanyProfileScreen(\n    viewModel: CompanyProfileViewModel,\n    onBack: () -> Unit\n)",
+      "start_line": 78,
+      "end_line": 536,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "viewModel: CompanyProfileViewModel,\n    onBack: () -> Unit"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.Intent.createChooser",
+        "android.widget.Toast.makeText",
+        "androidx.activity.compose.rememberLauncherForActivityResult",
+        "androidx.activity.result.ActivityResultLauncher.launch",
+        "androidx.activity.result.contract.ActivityResultContracts.GetContent",
+        "androidx.compose.foundation.layout.Arrangement.spacedBy",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.Row",
+        "androidx.compose.foundation.layout.Spacer",
+        "androidx.compose.foundation.rememberScrollState",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material3.AlertDialog",
+        "androidx.compose.material3.Button",
+        "androidx.compose.material3.ButtonDefaults.buttonColors",
+        "androidx.compose.material3.Card",
+        "androidx.compose.material3.CardDefaults.cardColors",
+        "androidx.compose.material3.CardDefaults.cardElevation",
+        "androidx.compose.material3.CircularProgressIndicator",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedButton",
+        "androidx.compose.material3.RadioButton",
+        "androidx.compose.material3.RadioButtonDefaults.colors",
+        "androidx.compose.material3.Scaffold",
+        "androidx.compose.material3.Surface",
+        "androidx.compose.material3.Text",
+        "androidx.compose.material3.TextButton",
+        "androidx.compose.material3.TopAppBar",
+        "androidx.compose.material3.TopAppBarDefaults.topAppBarColors",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.ui.Modifier.fillMaxWidth",
+        "androidx.compose.ui.Modifier.height",
+        "androidx.compose.ui.Modifier.padding",
+        "androidx.compose.ui.Modifier.size",
+        "androidx.compose.ui.Modifier.width",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.graphics.Color.copy",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.saveProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.updateProfile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.exportResultData",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.exportResultData",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog"
+      ],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread",
+        "Mutates persisted repository data through called repository operation",
+        "Activity result, sharing intent or platform date picker interaction"
+      ],
+      "related_symbols": [
+        "androidx.activity.result.ActivityResultLauncher.launch",
+        "androidx.compose.ui.graphics.Color.copy",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.exportResultData",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.scrollState",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.saveProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.updateProfile"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "settings",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "flow_metadata": {
+        "consumption": "StateFlow.collectAsState; collected while composition exists"
+      },
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "generated_call_contracts": [
+        "CompanyProfile.copy is a Kotlin-generated data-class copy; produces updated immutable profile passed to CompanyProfileViewModel.updateProfile"
+      ],
+      "symbol_id": "android-e25e87ef07b83bbdfd5c2d12",
+      "shard_ref": "android:83972a9cf8e2fb80:duplicate-review:01"
+    },
+    {
+      "name": "isPendingDuplicateHash",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+      "signature": "var isPendingDuplicateHash by remember { mutableStateOf(false) }",
+      "start_line": 90,
+      "end_line": 90,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-1c4e6af62feb5fa4b532ee3c",
+      "shard_ref": "android:83972a9cf8e2fb80:duplicate-review:01"
+    },
+    {
+      "name": "filePickerLauncher",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.filePickerLauncher",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileScreen.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen",
+      "signature": "val filePickerLauncher = rememberLauncherForActivityResult(",
+      "start_line": 94,
+      "end_line": 108,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "settings",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.activity.compose.rememberLauncherForActivityResult",
+        "androidx.activity.result.contract.ActivityResultContracts.GetContent",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog"
+      ],
+      "side_effects": [
+        "Activity result, sharing intent or platform date picker interaction"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.isPendingDuplicateHash",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.pendingImportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.selectedImportMode",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen.showImportErrorDialog",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "settings",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-d9cb8382299846da1be9a820",
+      "shard_ref": "android:83972a9cf8e2fb80:duplicate-review:01"
+    }
+  ]
+}

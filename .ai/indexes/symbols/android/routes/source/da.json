@@ -1,0 +1,60 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-da",
+  "platform": "android_native",
+  "bucket": "da",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "source_hash": "081ab6d3d409ebab23a2e08e5d9f9da97d3d44cce12cdfe8b845918613ab4bff",
+      "architecture_shard": {
+        "id": "android:da5f8e171d393754:architecture",
+        "path": ".ai/indexes/android/architecture/app/invoice-type/da5f8e171d393754.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model:01",
+          "path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model/da5f8e171d393754-01.json"
+        },
+        {
+          "id": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model-invoicetype:01",
+          "path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model-invoicetype/da5f8e171d393754-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-b86bd4099db91ae2092ac63c",
+        "android-d12555e6186f6d6fc638db47",
+        "android-5712c2ac46ef268206a6e27d",
+        "android-b37fcbdc86f725aca175ef41",
+        "android-20ee8792c3be728ab60db4b0",
+        "android-0fa9abb75cb4f99b9ea4576c"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "source_hash": "5c05cf340bb7f717013a6bf50ce93e4287b33ecff236bcb8d1a09a6154c1e575",
+      "architecture_shard": {
+        "id": "android:da8486af658a1eea:architecture",
+        "path": ".ai/indexes/android/architecture/app/company-profile/da8486af658a1eea.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:da8486af658a1eea:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-f023e53f08adcabeb4dbe0fd",
+        "android-5b2d3358d24489b8e31a76fd",
+        "android-74fbdc767614195f18730f7c",
+        "android-5bf74255dec8726b32d22042",
+        "android-bca3e351a5850cb730ec471e",
+        "android-fa7952e94e45a7e4fb383ca3",
+        "android-0f57e4cbdc6026471120c974",
+        "android-633ed700e5133c560c81f78a",
+        "android-7de50ae7039902a726408e85",
+        "android-9807baf396c1d8d595651cba"
+      ]
+    }
+  ]
+}

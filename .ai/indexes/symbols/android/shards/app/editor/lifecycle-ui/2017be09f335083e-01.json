@@ -1,0 +1,927 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:2017be09f335083e:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+  "symbols": [
+    {
+      "name": "InvoiceEditorViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.<init>",
+      "type": "constructor",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "InvoiceEditorViewModel(application: Application)",
+      "start_line": 24,
+      "end_line": 24,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "constructor",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain InvoiceEditorViewModel for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-a29bd04e8e03dca8a2e09de6",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "availableProducts",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableProducts",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "val availableProducts: StateFlow<List<ProductTemplate>> = productRepo.products",
+      "start_line": 32,
+      "end_line": 32,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<ProductTemplate>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain availableProducts for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-1ccaa77d91459a6462a36a52",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "availableStores",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.availableStores",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "val availableStores: StateFlow<List<StorePartner>> = storePartnerRepo.stores",
+      "start_line": 33,
+      "end_line": 33,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<StorePartner>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain availableStores for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-c737b7606bbe1b835e6733b0",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "_invoiceState",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val _invoiceState = MutableStateFlow(InvoiceDocument())",
+      "start_line": 35,
+      "end_line": 35,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain _invoiceState for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-f9c4c38f6160b3bdc2b53ecf",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "invoiceState",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "val invoiceState: StateFlow<InvoiceDocument> = _invoiceState.asStateFlow()",
+      "start_line": 36,
+      "end_line": 36,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<InvoiceDocument>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain invoiceState for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-d89c40f20ad9b865aa08f8c0",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "isSaving",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.isSaving",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "type": "state",
+      "signature": "val isSaving: StateFlow<Boolean> = _isSaving.asStateFlow()",
+      "start_line": 38,
+      "end_line": 38,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<Boolean>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.isSaving",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt"
+      ],
+      "tags": [
+        "editor",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Expose save progress to disable UI actions.",
+      "thread_context": "Main",
+      "coroutine_context": "Main",
+      "lifecycle": "ViewModel or composition",
+      "symbol_id": "android-89c9369af6c2e2ad0734415b",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "applyStorePartner",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyStorePartner",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun applyStorePartner(store: StorePartner)",
+      "start_line": 122,
+      "end_line": 145,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "store",
+          "type": "StorePartner"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Apply partner contact data and debt from most recent name-matched invoice.",
+      "thread_context": "caller context",
+      "symbol_id": "android-567b661f5a7cff77fabf4ee5",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "updateInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateInvoice",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun updateInvoice(modifier: (InvoiceDocument) -> InvoiceDocument)",
+      "start_line": 166,
+      "end_line": 168,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "modifier",
+          "type": "(InvoiceDocument) -> InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "modifier"
+      ],
+      "purpose": "Apply caller document transformation to editable StateFlow.",
+      "thread_context": "caller context",
+      "symbol_id": "android-80242735b9381bee3248f279",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "addItem",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addItem",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun addItem()",
+      "start_line": 170,
+      "end_line": 183,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Append new dated invoice row with sequential number.",
+      "thread_context": "caller context",
+      "symbol_id": "android-bc9084724eda766e174ec31a",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "removeItem",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeItem",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun removeItem(index: Int)",
+      "start_line": 185,
+      "end_line": 193,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Int"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Remove valid indexed item and renumber rows.",
+      "thread_context": "caller context",
+      "symbol_id": "android-2fa377306a04d07c3153c0c3",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "moveItem",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.moveItem",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun moveItem(itemId: String, toIndex: Int)",
+      "start_line": 195,
+      "end_line": 205,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "itemId",
+          "type": "String"
+        },
+        {
+          "name": "toIndex",
+          "type": "Int"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "kotlin.collections.MutableList.removeAt",
+        "kotlin.collections.MutableList.add",
+        "kotlin.collections.mapIndexed"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems",
+        "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.finishDrag"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Synchronously publish reordered items to invoiceState via _invoiceState; renumber stt only"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android",
+        "reorder",
+        "stable-id"
+      ],
+      "risks": [],
+      "coroutine_context": "Main; synchronous caller context from Compose UI",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Move item by stable ID to a valid final index and renumber stt while preserving all invoice financial fields and item contents.",
+      "thread_context": "Main; synchronous caller context from Compose UI",
+      "generated_call_contracts": [
+        "InvoiceItem.copy changes only stt",
+        "InvoiceDocument.copy replaces only items"
+      ],
+      "symbol_id": "android-e3a3030f03c723b36512e3de",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "updateItem",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.updateItem",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun updateItem(index: Int, updatedItem: InvoiceItem)",
+      "start_line": 207,
+      "end_line": 214,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Int"
+        },
+        {
+          "name": "updatedItem",
+          "type": "InvoiceItem"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Replace valid indexed item.",
+      "thread_context": "caller context",
+      "symbol_id": "android-a88ec46ef0ba83e756b98e92",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "applyProductTemplate",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.applyProductTemplate",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun applyProductTemplate(itemIndex: Int, product: ProductTemplate)",
+      "start_line": 227,
+      "end_line": 240,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "itemIndex",
+          "type": "Int"
+        },
+        {
+          "name": "product",
+          "type": "ProductTemplate"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Apply product name/unit/positive default price to selected item.",
+      "thread_context": "caller context",
+      "symbol_id": "android-e8127bd78bc8e01abf554369",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "addDebtPayment",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.addDebtPayment",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun addDebtPayment(title: String, amount: Double, date: String = \"\")",
+      "start_line": 242,
+      "end_line": 250,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "name": "amount",
+          "type": "Double"
+        },
+        {
+          "name": "date",
+          "type": "String",
+          "default": "\"\""
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Append named payment with amount/date.",
+      "thread_context": "caller context",
+      "symbol_id": "android-aabf525a0cf06eb643cce3b5",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "removeDebtPayment",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.removeDebtPayment",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun removeDebtPayment(paymentId: String)",
+      "start_line": 252,
+      "end_line": 255,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "paymentId",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Remove payment by ID.",
+      "thread_context": "caller context",
+      "symbol_id": "android-996bd0875b2581ed81e9a604",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "togglePaidStatus",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.togglePaidStatus",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun togglePaidStatus(isPaid: Boolean)",
+      "start_line": 257,
+      "end_line": 263,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "isPaid",
+          "type": "Boolean"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Set paid flag and today/empty paid date.",
+      "thread_context": "caller context",
+      "symbol_id": "android-042bd1ef215213aab7def9d9",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    },
+    {
+      "name": "setPaidDate",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setPaidDate",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun setPaidDate(date: String)",
+      "start_line": 265,
+      "end_line": 268,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Set payment date explicitly.",
+      "thread_context": "caller context",
+      "symbol_id": "android-2317c0840fac816c6cd53f21",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01"
+    }
+  ]
+}

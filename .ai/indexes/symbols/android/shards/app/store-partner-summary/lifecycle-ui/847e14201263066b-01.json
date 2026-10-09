@@ -1,0 +1,52 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:847e14201263066b:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner-summary",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+  "symbols": [
+    {
+      "name": "StorePartnerSummary",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+      "type": "data_class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model",
+      "signature": "data class StorePartnerSummary",
+      "start_line": 3,
+      "end_line": 11,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "store_partner_summary",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.storeSummaries"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "model",
+        "store_partner_summary"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-682580ae5ab4b049a68ec68f",
+      "shard_ref": "android:847e14201263066b:lifecycle-ui:01"
+    }
+  ]
+}

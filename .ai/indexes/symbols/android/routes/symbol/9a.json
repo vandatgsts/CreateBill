@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-9a",
+  "platform": "android_native",
+  "bucket": "9a",
+  "symbols": [
+    {
+      "symbol_id": "android-93bf7330d667418df2c85808",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeScreen.listState",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeScreen.kt",
+      "shard_ref": "android:57091435d6ed7e06:com-vandatgsts-thuyetnguyen-ui-home-homescreen:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homescreen/57091435d6ed7e06-01.json"
+    },
+    {
+      "symbol_id": "android-a8371743dd3012139c8e2e86",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultNotes",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+    },
+    {
+      "symbol_id": "android-c36d5a15b2aa149b8dfdeb5b",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.saveableStateHolder",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-02.json"
+    }
+  ]
+}

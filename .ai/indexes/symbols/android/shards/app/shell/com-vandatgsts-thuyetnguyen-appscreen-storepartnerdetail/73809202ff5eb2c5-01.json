@@ -1,0 +1,100 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "shell",
+  "concern": "com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail",
+      "signature": "constructor(val storeId: String)",
+      "start_line": 66,
+      "end_line": 66,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "val storeId: String"
+      ],
+      "return_type": "StorePartnerDetail",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail",
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt"
+      ],
+      "tags": [
+        "shell",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-783b449e50ce6c207b58a919",
+      "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01"
+    },
+    {
+      "name": "storeId",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail",
+      "signature": "val storeId: String",
+      "start_line": 66,
+      "end_line": 66,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "shell",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "String",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.AppScreen.StorePartnerDetail.storeId"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartner.kt"
+      ],
+      "tags": [
+        "shell",
+        "class"
+      ],
+      "risks": [],
+      "thread_context": "Caller context",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-bde66a1afad3644415bc1adb",
+      "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen-storepartnerdetail:01"
+    }
+  ]
+}

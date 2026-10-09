@@ -1,0 +1,15 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-4b",
+  "platform": "android_native",
+  "bucket": "4b",
+  "symbols": [
+    {
+      "symbol_id": "android-e0a18ebc1baae6be5f6006c5",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Settings",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:com-vandatgsts-thuyetnguyen-appscreen:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/com-vandatgsts-thuyetnguyen-appscreen/73809202ff5eb2c5-01.json"
+    }
+  ]
+}

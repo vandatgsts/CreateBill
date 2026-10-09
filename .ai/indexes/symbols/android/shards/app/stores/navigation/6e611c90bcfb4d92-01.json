@@ -1,0 +1,136 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:6e611c90bcfb4d92:navigation:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "navigation",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+  "symbols": [
+    {
+      "name": "StorePartnerListScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores",
+      "signature": "fun StorePartnerListScreen( viewModel: StorePartnerViewModel, onBack: () -> Unit, onNavigateToDetail: (String) -> Unit, onSelectStore: ((StorePartner) -> Unit)? = null )",
+      "start_line": 79,
+      "end_line": 346,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "viewModel",
+          "type": "StorePartnerViewModel"
+        },
+        {
+          "name": "onBack",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onNavigateToDetail",
+          "type": "(String) -> Unit"
+        },
+        {
+          "name": "onSelectStore",
+          "type": "((StorePartner) -> Unit)?",
+          "default": "null"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerListScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "ui",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StoreCard",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.deleteStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.saveStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.updateSearchQuery"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.editingStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.storeToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.summaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempAddress",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempContact",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempPhone",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempType",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.editingStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.storeToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempAddress",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempContact",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempPhone",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempType"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state",
+        "Persist repository records through launched coroutine",
+        "Display Android Toast"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.editingStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.listState",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.showDialog",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.storeToDelete",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.summaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempAddress",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempContact",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempName",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempNote",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempPhone",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen.tempType",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ],
+      "tags": [
+        "stores",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onBack",
+        "onNavigateToDetail",
+        "onSelectStore"
+      ],
+      "purpose": "Compose searchable partner summaries with edit/create/delete dialogs and partner selection/navigation callbacks.",
+      "compose_metadata": {
+        "state_collection": "collectAsState",
+        "effects": [],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-3dca69d216317a449bfc99f9",
+      "shard_ref": "android:6e611c90bcfb4d92:navigation:01"
+    }
+  ]
+}

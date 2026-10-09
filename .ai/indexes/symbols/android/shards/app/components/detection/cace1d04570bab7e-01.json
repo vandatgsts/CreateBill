@@ -1,0 +1,259 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:cace1d04570bab7e:detection:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "components",
+  "concern": "detection",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+  "symbols": [
+    {
+      "name": "AppTextField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components",
+      "signature": "fun AppTextField(\n    value: String,\n    onValueChange: (String) -> Unit,\n    label: String,\n    modifier: Modifier = Modifier,\n    placeholder: String = \"\",\n    singleLine: Boolean = true,\n    maxLines: Int = 1,\n    keyboardType: KeyboardType = KeyboardType.Text,\n    prefix: @Composable (() -> Unit)? = null,\n    suffix: @Composable (() -> Unit)? = null\n)",
+      "start_line": 52,
+      "end_line": 85,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "value: String,\n    onValueChange: (String) -> Unit,\n    label: String,\n    modifier: Modifier = Modifier,\n    placeholder: String = \"\",\n    singleLine: Boolean = true,\n    maxLines: Int = 1,\n    keyboardType: KeyboardType = KeyboardType.Text,\n    prefix: @Composable (() -> Unit)? = null,\n    suffix: @Composable (() -> Unit)? = null"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults.colors",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileScreen"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "components",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [],
+      "symbol_id": "android-b9d18fc02b2c70aa478f346f",
+      "shard_ref": "android:cace1d04570bab7e:detection:01"
+    },
+    {
+      "name": "CurrencyField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components",
+      "signature": "fun CurrencyField(\n    value: Double,\n    onValueChange: (Double) -> Unit,\n    label: String,\n    modifier: Modifier = Modifier,\n    allowNegative: Boolean = false\n)",
+      "start_line": 88,
+      "end_line": 131,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "value: Double,\n    onValueChange: (Double) -> Unit",
+        "label: String",
+        "modifier: Modifier = Modifier",
+        "allowNegative: Boolean = false"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults.colors",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText"
+      ],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "components",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [
+        "onValueChange"
+      ],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-f07eb6dc76b7e90d92510cf4",
+      "shard_ref": "android:cace1d04570bab7e:detection:01"
+    },
+    {
+      "name": "NumberField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components",
+      "signature": "fun NumberField(\n    value: Double,\n    onValueChange: (Double) -> Unit,\n    label: String,\n    modifier: Modifier = Modifier\n)",
+      "start_line": 134,
+      "end_line": 163,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "value: Double,\n    onValueChange: (Double) -> Unit",
+        "label: String",
+        "modifier: Modifier = Modifier"
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults.colors",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText"
+      ],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "components",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [
+        "onValueChange"
+      ],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-df8e76a32fccdf1e71dca3f0",
+      "shard_ref": "android:cace1d04570bab7e:detection:01"
+    },
+    {
+      "name": "DatePickerField",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+      "type": "composable",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components",
+      "signature": "fun DatePickerField(\n    value: String,\n    onValueChange: (String) -> Unit,\n    label: String,\n    modifier: Modifier = Modifier,\n    placeholder: String = \"dd/MM/yyyy\"\n)",
+      "start_line": 166,
+      "end_line": 226,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        "value: String,\n    onValueChange: (String) -> Unit",
+        "label: String",
+        "modifier: Modifier = Modifier",
+        "placeholder: String = \"dd/MM/yyyy\""
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.app.DatePickerDialog",
+        "android.app.DatePickerDialog.show",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults.colors",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.ui.Modifier.size",
+        "java.util.Calendar.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog"
+      ],
+      "side_effects": [
+        "Emits Compose UI; invokes supplied UI callbacks on main thread",
+        "Activity result, sharing intent or platform date picker interaction"
+      ],
+      "related_symbols": [
+        "android.app.DatePickerDialog.show",
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog"
+      ],
+      "related_files": [],
+      "tags": [
+        "components",
+        "composable"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose UI",
+      "lifecycle": null,
+      "callback_contracts": [
+        "onValueChange"
+      ],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-4a8105fbcf4b0945c79649bf",
+      "shard_ref": "android:cace1d04570bab7e:detection:01"
+    }
+  ]
+}

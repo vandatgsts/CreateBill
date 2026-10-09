@@ -1,0 +1,155 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:fac310bd032b7bec:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "generator",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+  "symbols": [
+    {
+      "name": "ImageInvoiceRenderer",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+      "type": "object",
+      "owner": "com.vandatgsts.thuyetnguyen.generator",
+      "signature": "object ImageInvoiceRenderer",
+      "start_line": 12,
+      "end_line": 35,
+      "parameters": [],
+      "return_type": "ImageInvoiceRenderer",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "ImageInvoiceRenderer",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Dispatchers.IO; error toast switches to Dispatchers.Main when applicable",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-19f0e567c512e5cf7f9ef27d",
+      "shard_ref": "android:fac310bd032b7bec:storage-data:01"
+    },
+    {
+      "name": "renderBitmap",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+      "signature": "suspend fun renderBitmap(invoice: InvoiceDocument): Bitmap",
+      "start_line": 14,
+      "end_line": 22,
+      "parameters": [
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Bitmap",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.graphics.Bitmap.createBitmap",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.drawInvoice",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasWidth"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.loadInvoice"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.type"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Allocates bitmap and draws invoice pixels"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt"
+      ],
+      "tags": [
+        "generator",
+        "ImageInvoiceRenderer",
+        "export"
+      ],
+      "risks": [],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-bbf9420a48b24a5f41685290",
+      "shard_ref": "android:fac310bd032b7bec:storage-data:01"
+    },
+    {
+      "name": "renderPng",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderPng",
+      "type": "fun",
+      "owner": "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer",
+      "signature": "suspend fun renderPng(context: Context, invoice: InvoiceDocument): File",
+      "start_line": 24,
+      "end_line": 34,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        },
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "File",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "calls": [
+        "android.graphics.Bitmap.compress",
+        "com.vandatgsts.thuyetnguyen.generator.ImageInvoiceRenderer.renderBitmap",
+        "java.io.FileOutputStream.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.saveImageToGallery",
+        "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager.shareImage"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Creates exports directory and writes cache file"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "generator",
+        "ImageInvoiceRenderer",
+        "export"
+      ],
+      "risks": [
+        "Bitmap is not explicitly recycled"
+      ],
+      "thread_context": "Caller coroutine; renderer switches dispatcher; error toast on Main",
+      "lifecycle": "Not lifecycle-bound; caller owns coroutine cancellation",
+      "concern": "storage-data",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "symbol_id": "android-8eb72605243ea467ab4853f3",
+      "shard_ref": "android:fac310bd032b7bec:storage-data:01"
+    }
+  ]
+}

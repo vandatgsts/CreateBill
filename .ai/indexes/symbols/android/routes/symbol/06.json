@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-06",
+  "platform": "android_native",
+  "bucket": "06",
+  "symbols": [
+    {
+      "symbol_id": "android-008425c4446ee67632970989",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.paidAmount",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "shard_ref": "android:d996e7e3236c961a:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+    },
+    {
+      "symbol_id": "android-0213444e61aa2dd687e9a9b8",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.dropPosition",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/com-vandatgsts-thuyetnguyen-ui-editor-reorderableinvoiceitems/8240678ac3dafa80-01.json"
+    },
+    {
+      "symbol_id": "android-4d54f067ddfdc2823122f675",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.deleteProduct",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product/storage-data/4fa2fdfb46023a04-01.json"
+    }
+  ]
+}

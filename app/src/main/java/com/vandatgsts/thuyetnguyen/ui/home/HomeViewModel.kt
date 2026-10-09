@@ -1,6 +1,7 @@
 package com.vandatgsts.thuyetnguyen.ui.home
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument
@@ -16,6 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
 import java.util.Calendar
 
 enum class DateFilterPeriod(val label: String) {
@@ -168,13 +170,25 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     fun deleteInvoice(id: String) {
         viewModelScope.launch {
-            invoiceRepo.deleteInvoice(id)
+            try {
+                invoiceRepo.deleteInvoice(id)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Toast.makeText(getApplication<Application>(), "Không thể xóa hóa đơn. Vui lòng thử lại.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
     fun duplicateInvoice(id: String) {
         viewModelScope.launch {
-            invoiceRepo.duplicateInvoice(id)
+            try {
+                invoiceRepo.duplicateInvoice(id)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Toast.makeText(getApplication<Application>(), "Không thể nhân bản hóa đơn. Vui lòng kiểm tra dung lượng và thử lại.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 

@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-cf",
+  "platform": "android_native",
+  "bucket": "cf",
+  "symbols": [
+    {
+      "symbol_id": "android-052306fa47b7fdcb8508fb92",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate.name",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/ProductTemplate.kt",
+      "shard_ref": "android:0e64ac2612a757ae:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product-template/state/0e64ac2612a757ae-01.json"
+    },
+    {
+      "symbol_id": "android-1f7ced3975f1a2e47db7ff6a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeDashboardStats.periodLabel",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-homedashboardstats/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-2dcec805af6e7c34051a8a45",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository._products",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product/storage-data/4fa2fdfb46023a04-01.json"
+    },
+    {
+      "symbol_id": "android-492f26655ecca5e7bcbdf45b",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.DateFilterPeriod.label",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/com-vandatgsts-thuyetnguyen-ui-home-datefilterperiod/3a8557555f4fbecf-01.json"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:73e2f00bc06f675b:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "company-profile",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "company-profile",
+      "layer": "data/model",
+      "purpose": "Typed CompanyProfile domain model and derived invoice/debt values",
+      "imports": [],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.storeName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.companyName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.address",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.taxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountNumber",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountHolder",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultPaymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultNotes"
+      ],
+      "related_files": [],
+      "keywords": [
+        "company_profile",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.storeName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.companyName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.address",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.taxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.phone",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountNumber",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankName",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountHolder",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultPaymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.defaultNotes"
+      ]
+    }
+  ]
+}

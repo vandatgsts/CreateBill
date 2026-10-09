@@ -1,0 +1,19 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:9123dcbb0b42652b0e105956",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "generator",
+      "name": "generator",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/PdfInvoiceRenderer.kt"
+      ],
+      "description": " Per-row InvoiceItem.note is editable, persisted and wrapped in both PDF/image templates. Full A4 canvas height measured with the same drawing layout; multiline headers/footers and paid-stamp extent."
+    }
+  ]
+}

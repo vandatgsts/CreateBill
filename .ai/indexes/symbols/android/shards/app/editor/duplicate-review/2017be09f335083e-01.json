@@ -1,0 +1,66 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:2017be09f335083e:duplicate-review:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "duplicate-review",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+  "symbols": [
+    {
+      "name": "duplicateItem",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.duplicateItem",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun duplicateItem(index: Int)",
+      "start_line": 216,
+      "end_line": 225,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Int"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Clone indexed item with new ID and renumber rows.",
+      "thread_context": "caller context",
+      "symbol_id": "android-82fea448720550aee33f8ef0",
+      "shard_ref": "android:2017be09f335083e:duplicate-review:01"
+    }
+  ]
+}

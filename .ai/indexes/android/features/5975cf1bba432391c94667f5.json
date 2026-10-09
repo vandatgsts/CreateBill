@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:5975cf1bba432391c94667f5",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "preview",
+      "name": "preview",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt"
+      ]
+    }
+  ]
+}

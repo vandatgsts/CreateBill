@@ -1,0 +1,16 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:3cb8201e7ff1e7777446032e",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "theme",
+      "name": "theme",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Theme.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Type.kt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:52d6e3de4fa0dcc29946695f",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "invoice",
+      "name": "invoice",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "description": "Invoice JSON persistence with AtomicFile rollback, Mutex serialized mutations and publish-after-commit StateFlow; saved empty catalogs are preserved."
+    }
+  ]
+}

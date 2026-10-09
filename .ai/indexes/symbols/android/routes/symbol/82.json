@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-82",
+  "platform": "android_native",
+  "bucket": "82",
+  "symbols": [
+    {
+      "symbol_id": "android-8ee7e76b218621a2cd260f5e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel._searchQuery",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+      "shard_ref": "android:3a8557555f4fbecf:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/home/lifecycle-ui/3a8557555f4fbecf-01.json"
+    },
+    {
+      "symbol_id": "android-9f30f096b130b04251e71ecc",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.phone",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+      "shard_ref": "android:d996e7e3236c961a:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-item/state/d996e7e3236c961a-01.json"
+    },
+    {
+      "symbol_id": "android-a874f31bd6671d31b1fd173a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlueDark",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+    },
+    {
+      "symbol_id": "android-b95861b5c3bcea322879f321",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.recordImportedHash",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:duplicate-review:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/duplicate-review/4400ca68717395c3-01.json"
+    },
+    {
+      "symbol_id": "android-ed9c252dbe610c5dde33db84",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.profileViewModel",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/storage-data/73809202ff5eb2c5-01.json"
+    }
+  ]
+}

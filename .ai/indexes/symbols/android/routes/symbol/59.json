@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-59",
+  "platform": "android_native",
+  "bucket": "59",
+  "symbols": [
+    {
+      "symbol_id": "android-b8671b2e16c939251fd8909d",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoices",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "shard_ref": "android:847e14201263066b:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner-summary/state/847e14201263066b-01.json"
+    },
+    {
+      "symbol_id": "android-d89c40f20ad9b865aa08f8c0",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceState",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "shard_ref": "android:2017be09f335083e:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/2017be09f335083e-01.json"
+    }
+  ]
+}

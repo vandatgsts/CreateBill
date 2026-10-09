@@ -1,0 +1,27 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-fa",
+  "platform": "android_native",
+  "bucket": "fa",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/ImageInvoiceRenderer.kt",
+      "source_hash": "a4e34d8cfb0f5b7c6f5cbba394279e0dfd451315922de6d1b3d2c7d269144cd0",
+      "architecture_shard": {
+        "id": "android:fac310bd032b7bec:architecture",
+        "path": ".ai/indexes/android/architecture/app/generator/fac310bd032b7bec.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:fac310bd032b7bec:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/fac310bd032b7bec-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-19f0e567c512e5cf7f9ef27d",
+        "android-bbf9420a48b24a5f41685290",
+        "android-8eb72605243ea467ab4853f3"
+      ]
+    }
+  ]
+}

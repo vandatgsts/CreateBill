@@ -1,0 +1,66 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:a01c9aee95d297fe:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "products",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.ui.products",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "layer": "presentation/state",
+      "purpose": "Combine product repository and search query into filtered StateFlow; launch product save/delete.",
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.ProductTemplate",
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.SharingStarted",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.combine",
+        "kotlinx.coroutines.flow.stateIn",
+        "kotlinx.coroutines.launch"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "keywords": [
+        "products",
+        "invoice",
+        "StateFlow"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.updateSearchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.saveProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.deleteProduct",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:cace1d04570bab7e:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "components",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+  "files": [
+    {
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.ui.components",
+      "module": "app",
+      "feature": "components",
+      "layer": "presentation/compose",
+      "purpose": "Các thành phần nhập văn bản, tiền, số và ngày tái sử dụng.",
+      "imports": [
+        "android.app.DatePickerDialog",
+        "androidx.compose.foundation.clickable",
+        "androidx.compose.foundation.layout.Column",
+        "androidx.compose.foundation.layout.fillMaxWidth",
+        "androidx.compose.foundation.layout.padding",
+        "androidx.compose.foundation.layout.size",
+        "androidx.compose.foundation.shape.RoundedCornerShape",
+        "androidx.compose.foundation.text.KeyboardOptions",
+        "androidx.compose.material.icons.Icons",
+        "androidx.compose.material.icons.filled.CalendarToday",
+        "androidx.compose.material3.Icon",
+        "androidx.compose.material3.IconButton",
+        "androidx.compose.material3.OutlinedTextField",
+        "androidx.compose.material3.OutlinedTextFieldDefaults",
+        "androidx.compose.material3.Text",
+        "androidx.compose.runtime.Composable",
+        "androidx.compose.runtime.getValue",
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "androidx.compose.runtime.setValue",
+        "androidx.compose.ui.Modifier",
+        "androidx.compose.ui.graphics.Color",
+        "androidx.compose.ui.platform.LocalContext",
+        "androidx.compose.ui.text.font.FontWeight",
+        "androidx.compose.ui.text.input.KeyboardType",
+        "androidx.compose.ui.unit.dp",
+        "androidx.compose.ui.unit.sp",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper",
+        "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+        "com.vandatgsts.thuyetnguyen.ui.theme.PrimaryBlue",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextPrimary",
+        "com.vandatgsts.thuyetnguyen.ui.theme.TextSecondary",
+        "java.util.Calendar"
+      ],
+      "classes": [],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "keywords": [
+        "components",
+        "Compose",
+        "Android",
+        "UI"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.components.FormSectionHeader",
+        "com.vandatgsts.thuyetnguyen.ui.components.AppTextField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField",
+        "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText",
+        "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText",
+        "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:339a54a301375cca:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+  "files": [
+    {
+      "package": "com.vandatgsts.thuyetnguyen.ui.stores",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "layer": "presentation/state",
+      "purpose": "Aggregate invoice history by partner name into debt summaries; filter, save/delete partners and record payments on latest invoice.",
+      "imports": [
+        "android.app.Application",
+        "android.widget.Toast",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.SharingStarted",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.combine",
+        "kotlinx.coroutines.flow.stateIn",
+        "kotlinx.coroutines.launch",
+        "kotlinx.coroutines.CancellationException"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "keywords": [
+        "stores",
+        "invoice",
+        "StateFlow"
+      ],
+      "risks": [
+        "Partner/invoice association uses case-insensitive substring name/title matching, not partner ID",
+        "Current debt uses latest invoice remainingDebt rather than sum across periods"
+      ],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.stores",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.stores",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.updateSearchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getStoreSummary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.saveStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.deleteStore",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore"
+      ]
+    }
+  ]
+}

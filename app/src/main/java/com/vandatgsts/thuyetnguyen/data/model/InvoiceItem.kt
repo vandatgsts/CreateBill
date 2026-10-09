@@ -13,7 +13,8 @@ data class InvoiceItem(
     val address: String = "",
     val receiver: String = "",
     val phone: String = "",
-    val paidAmount: Double = 0.0
+    val paidAmount: Double = 0.0,
+    val note: String = ""
 ) {
     /**
      * Thành tiền cho Mẫu 1 (Giao hàng & Công nợ): (Số lượng * Đơn giá) - Đã thu

@@ -1,0 +1,1024 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:69ef8aedb2c31830:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+  "symbols": [
+    {
+      "name": "InvoiceRepository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository",
+      "signature": "class InvoiceRepository",
+      "start_line": 21,
+      "end_line": 423,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-b1f3cb3e2e718022edc4da1a",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "InvoiceRepository(private val context: Context)",
+      "start_line": 21,
+      "end_line": 21,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile"
+      ],
+      "side_effects": [
+        "Obtain application-backed persistence and initialize repository state on caller thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-2984276417f86af8a381223e",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "context",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private val context: Context",
+      "start_line": 21,
+      "end_line": 21,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Context",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-ea7d5d9ebb09edf97b7b6812",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "gson",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private val gson = Gson()",
+      "start_line": 22,
+      "end_line": 22,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Gson",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-d1186fe8fdd430ef3b6c6f62",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "storageFile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private val storageFile: File by lazy {",
+      "start_line": 23,
+      "end_line": 25,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "File",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-2d817a3e198dc81192730b3d",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "atomicStorage",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.atomicStorage",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "type": "property",
+      "signature": "private val atomicStorage by lazy { AtomicFile(storageFile) }",
+      "start_line": 26,
+      "end_line": 26,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "AtomicFile",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage-data",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile"
+      ],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Recover and atomically replace the invoice JSON file.",
+      "thread_context": "IO under writeMutex",
+      "coroutine_context": "IO under writeMutex",
+      "lifecycle": "repository instance",
+      "symbol_id": "android-34851bf9be47de5f351f95b7",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "_invoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private val _invoices = MutableStateFlow<List<InvoiceDocument>>(emptyList())",
+      "start_line": 31,
+      "end_line": 31,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "MutableStateFlow<List<InvoiceDocument>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "MutableStateFlow",
+        "mutable": true,
+        "exposure": "private backing state"
+      },
+      "symbol_id": "android-c4213847040291cb93537489",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "invoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.invoices",
+      "type": "state_flow",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "val invoices: StateFlow<List<InvoiceDocument>> = _invoices.asStateFlow()",
+      "start_line": 32,
+      "end_line": 32,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "StateFlow<List<InvoiceDocument>>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "flow": {
+        "kind": "StateFlow",
+        "mutable": false,
+        "exposure": "public read-only observable list"
+      },
+      "symbol_id": "android-2c51303ec1bbbf8edaaa222a",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "<init-block>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init-block>",
+      "type": "initializer",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "init",
+      "start_line": 34,
+      "end_line": 36,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [
+        "Initialize observable data by synchronously loading persistent data"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": "repository initialization",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-ec63b9fbee7b028a56937091",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "loadInvoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private fun loadInvoices()",
+      "start_line": 38,
+      "end_line": 59,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile",
+        "android.util.AtomicFile.openRead"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Read invoice JSON from app-private file; hydrate or seed samples",
+        "Publish new list through MutableStateFlow.value"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "description": "Read invoices_store_v5.json; seed examples when missing/empty; on parse error publish sample invoices without overwriting failing file",
+      "purpose": "Recover atomic storage and load saved invoices including []; seed only absent storage, tolerate seed write failure.",
+      "symbol_id": "android-9f7e6e52eb06e7be06cb36d9",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "saveToFile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private fun saveToFile(list: List<InvoiceDocument>)",
+      "start_line": 61,
+      "end_line": 72,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "list",
+          "type": "List<InvoiceDocument>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.util.AtomicFile.startWrite",
+        "java.io.FileDescriptor.sync",
+        "android.util.AtomicFile.finishWrite",
+        "android.util.AtomicFile.failWrite"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.atomicStorage",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Write UTF-8 JSON atomically; rollback and propagate any write failure"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "purpose": "Atomic invoice file replacement; errors are not swallowed.",
+      "symbol_id": "android-fa28ced9effb68b8a0e4c4b6",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "commitInvoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "type": "method",
+      "signature": "private fun commitInvoices(list: List<InvoiceDocument>)",
+      "start_line": 74,
+      "end_line": 78,
+      "visibility": "private",
+      "parameters": [
+        {
+          "name": "list",
+          "type": "List<InvoiceDocument>"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage-data",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoiceLocked",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.mergeAll"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Atomic storage commit; publish StateFlow only after successful write"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoiceLocked",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.mergeAll"
+      ],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "safe-save"
+      ],
+      "risks": [],
+      "purpose": "Persist sorted invoices before publishing StateFlow.",
+      "thread_context": "IO under writeMutex",
+      "coroutine_context": "IO under writeMutex",
+      "lifecycle": "repository instance",
+      "symbol_id": "android-fc0d809a991822f994ef19e0",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "saveInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "suspend fun saveInvoice(invoice: InvoiceDocument)",
+      "start_line": 92,
+      "end_line": 94,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "invoice",
+          "type": "InvoiceDocument"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoiceLocked"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Atomic file commit precedes StateFlow publication; storage failure propagates to caller"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "coroutine_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Upsert invoice by id, set updatedAt now, publish sorted list then persist",
+      "symbol_id": "android-0d2149386bdc0b3a83139690",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "deleteInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "suspend fun deleteInvoice(id: String)",
+      "start_line": 96,
+      "end_line": 100,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.deleteInvoice"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Atomic file commit precedes StateFlow publication; storage failure propagates to caller"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "coroutine_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-ca3fb5cc2bf2be0835056974",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "replaceAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.replaceAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "suspend fun replaceAll(newList: List<InvoiceDocument>)",
+      "start_line": 121,
+      "end_line": 123,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "newList",
+          "type": "List<InvoiceDocument>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Atomic file commit precedes StateFlow publication; storage failure propagates to caller"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "coroutine_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "symbol_id": "android-1821a8964e4fbf6406117ef8",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "mergeAll",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.mergeAll",
+      "type": "suspend_function",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "suspend fun mergeAll(incomingList: List<InvoiceDocument>)",
+      "start_line": 125,
+      "end_line": 136,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": true,
+      "is_suspend": true,
+      "parameters": [
+        {
+          "name": "incomingList",
+          "type": "List<InvoiceDocument>"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices"
+      ],
+      "side_effects": [
+        "Atomic file commit precedes StateFlow publication; storage failure propagates to caller"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [
+        "Read-modify-write list update has no mutex; concurrent callers can lose updates"
+      ],
+      "thread_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "coroutine_context": "Dispatchers.IO; writeMutex.withLock serializes read-modify-write",
+      "lifecycle": null,
+      "async": true,
+      "suspend": true,
+      "description": "Merge by id; incoming wins when updatedAt >= existing.updatedAt; sort descending updatedAt",
+      "symbol_id": "android-5893fc455f08db845a190899",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "createSampleInvoices",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "private fun createSampleInvoices(): List<InvoiceDocument>",
+      "start_line": 138,
+      "end_line": 410,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "List<InvoiceDocument>",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices"
+      ],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-17eaa0449cfb979fd9c305d4",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "Companion",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion",
+      "type": "companion_object",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+      "signature": "companion object",
+      "start_line": 413,
+      "end_line": 422,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-5b4f2dde7e8d4a34d28cd1af",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "instance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.instance",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion",
+      "signature": "private var instance: InvoiceRepository? = null",
+      "start_line": 415,
+      "end_line": 415,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "InvoiceRepository?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "invoice",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "mutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-6a3659cd7ab5decdd9439f6a",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    },
+    {
+      "name": "getInstance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion",
+      "signature": "fun getInstance(context: Context): InvoiceRepository",
+      "start_line": 417,
+      "end_line": 421,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "InvoiceRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.home.HomeViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.instance"
+      ],
+      "side_effects": [
+        "Initialize singleton with applicationContext under synchronized double-checked locking"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/home/HomeViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "invoice"
+      ],
+      "risks": [
+        "Construction can perform synchronous disk read on calling thread"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-b5434add67c7a974f45f0476",
+      "shard_ref": "android:69ef8aedb2c31830:storage-data:01"
+    }
+  ]
+}

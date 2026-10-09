@@ -1,0 +1,15 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:b63e8cbf8e6420de05ac114a",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "company_profile",
+      "name": "company profile",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ]
+    }
+  ]
+}

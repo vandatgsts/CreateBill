@@ -1,0 +1,82 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:664b212ca5bf4124:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "settings",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+  "files": [
+    {
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.ui.settings",
+      "module": "app",
+      "feature": "settings",
+      "layer": "presentation/viewmodel",
+      "purpose": "Quản lý hồ sơ công ty và thao tác xuất, kiểm tra, nhập bản sao lưu qua StateFlow.",
+      "imports": [
+        "android.app.Application",
+        "androidx.lifecycle.AndroidViewModel",
+        "androidx.lifecycle.viewModelScope",
+        "android.content.Intent",
+        "android.net.Uri",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile",
+        "com.vandatgsts.thuyetnguyen.data.model.ImportMode",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.launch"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "keywords": [
+        "settings",
+        "Compose",
+        "Android",
+        "StateFlow"
+      ],
+      "risks": [],
+      "todos": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isImporting"
+      ],
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.<init>",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.updateProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.saveProfile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.exportBackup",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.inspectBackupFile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.backupRepo",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isExporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._isImporting",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.isImporting"
+      ]
+    }
+  ]
+}

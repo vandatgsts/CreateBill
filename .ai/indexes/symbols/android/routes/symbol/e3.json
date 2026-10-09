@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-e3",
+  "platform": "android_native",
+  "bucket": "e3",
+  "symbols": [
+    {
+      "symbol_id": "android-0f57e4cbdc6026471120c974",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/da8486af658a1eea-01.json"
+    },
+    {
+      "symbol_id": "android-34a269160afc7e5654af54c6",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/storage-data/a01c9aee95d297fe-01.json"
+    },
+    {
+      "symbol_id": "android-ac0c5bb709c145370e61c034",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.MainActivity.onCreate.backStack",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-02.json"
+    }
+  ]
+}

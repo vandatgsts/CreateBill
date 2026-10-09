@@ -1,0 +1,41 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-6f",
+  "platform": "android_native",
+  "bucket": "6f",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.customers",
+      "targets": [
+        {
+          "symbol_id": "android-e640d0f40d2758aa288892bf",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+          "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+      "targets": [
+        {
+          "symbol_id": "android-17eaa0449cfb979fd9c305d4",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+          "shard_ref": "android:69ef8aedb2c31830:storage-data:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice/storage-data/69ef8aedb2c31830-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney",
+      "targets": [
+        {
+          "symbol_id": "android-22ec6647f6da0fdcf1e859c9",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt",
+          "shard_ref": "android:8378a21371d1fd70:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/generator/lifecycle-ui/8378a21371d1fd70-01.json"
+        }
+      ]
+    }
+  ]
+}

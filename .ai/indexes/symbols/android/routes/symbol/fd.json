@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-fd",
+  "platform": "android_native",
+  "bucket": "fd",
+  "symbols": [
+    {
+      "symbol_id": "android-1ba731494ddce164462f079a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.theme.BorderColor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "shard_ref": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+    },
+    {
+      "symbol_id": "android-4c9a7e2fcd849d0bc7746d45",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.warranty",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    },
+    {
+      "symbol_id": "android-ad99d6abaf0e37cfca426d6c",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.bankAccountNumber",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+      "shard_ref": "android:73e2f00bc06f675b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/company-profile/storage-data/73e2f00bc06f675b-01.json"
+    }
+  ]
+}

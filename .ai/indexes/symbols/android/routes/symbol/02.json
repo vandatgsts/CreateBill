@@ -1,0 +1,22 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-02",
+  "platform": "android_native",
+  "bucket": "02",
+  "symbols": [
+    {
+      "symbol_id": "android-5779203cd416d9d8fcd1555e",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.DatePickerField.datePickerDialog",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "shard_ref": "android:cace1d04570bab7e:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/components/lifecycle-ui/cace1d04570bab7e-01.json"
+    },
+    {
+      "symbol_id": "android-d24932c472f8b2c65d0a4fa5",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen.availableStores",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+      "shard_ref": "android:012b2bd755845e7d:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/012b2bd755845e7d-01.json"
+    }
+  ]
+}

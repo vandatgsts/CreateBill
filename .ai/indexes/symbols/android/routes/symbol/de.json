@@ -1,0 +1,29 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-de",
+  "platform": "android_native",
+  "bucket": "de",
+  "symbols": [
+    {
+      "symbol_id": "android-62bdb1b4f5839586ff974cb4",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen.paymentTitle",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+      "shard_ref": "android:2b4ed7c105b69076:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/state/2b4ed7c105b69076-01.json"
+    },
+    {
+      "symbol_id": "android-7f68fc699607be4ec9faa3e4",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/stores/lifecycle-ui/339a54a301375cca-01.json"
+    },
+    {
+      "symbol_id": "android-f3d2d18364bafad9fd363ddd",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyAddress",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:98115644100c7e48:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "preview",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+  "symbols": [
+    {
+      "name": "InvoicePreviewScreen",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen",
+      "type": "composable",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.preview",
+      "signature": "fun InvoicePreviewScreen( invoiceId: String, viewModel: InvoicePreviewViewModel, onBack: () -> Unit, onEdit: (String) -> Unit )",
+      "start_line": 70,
+      "end_line": 297,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "invoiceId",
+          "type": "String"
+        },
+        {
+          "name": "viewModel",
+          "type": "InvoicePreviewViewModel"
+        },
+        {
+          "name": "onBack",
+          "type": "() -> Unit"
+        },
+        {
+          "name": "onEdit",
+          "type": "(String) -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "preview",
+      "concern": "ui",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.loadInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.saveImage",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.shareImage",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.sharePdf",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.viewPdf"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.offset",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.scale",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.previewBitmap"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.offset",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.scale"
+      ],
+      "side_effects": [
+        "Compose UI composition and event callback dispatch",
+        "Update reactive/editor or remembered UI state",
+        "Persist repository records through launched coroutine",
+        "Display Android Toast"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.context",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.offset",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.previewBitmap",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.scale",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.invoice",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.isLoading",
+        "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewViewModel.previewBitmap"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewViewModel.kt"
+      ],
+      "tags": [
+        "preview",
+        "composable",
+        "Compose"
+      ],
+      "risks": [],
+      "coroutine_context": "Compose composition/UI event context",
+      "lifecycle": "Compose composition; remembered state lifetime",
+      "callbacks": [
+        "onBack",
+        "onEdit"
+      ],
+      "purpose": "Compose invoice preview with loading/missing states, pan/zoom gestures and export actions.",
+      "compose_metadata": {
+        "state_collection": "collectAsState",
+        "effects": [
+          "LaunchedEffect(invoiceId)"
+        ],
+        "state_owner": "ViewModel and remember"
+      },
+      "thread_context": "Compose composition/UI event context",
+      "symbol_id": "android-ab8f3fbbad0ae2ff12f4579e",
+      "shard_ref": "android:98115644100c7e48:storage-data:01"
+    }
+  ]
+}

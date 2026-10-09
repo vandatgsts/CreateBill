@@ -1,0 +1,25 @@
+{
+  "schema": "code-flow-shard-v4",
+  "id": "android:flow:0be48257c730e08dff766340",
+  "platform": "android_native",
+  "flows": [
+    {
+      "id": "store-rolling-debt",
+      "name": "Store partner periods and debt payment",
+      "description": "Combine stores and invoices by name/title; latest invoice carries balance; new period inherits debt and payment updates latest invoice.",
+      "symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.remainingDebt"
+      ],
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt"
+      ]
+    }
+  ]
+}

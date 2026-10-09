@@ -1,0 +1,50 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-b7",
+  "platform": "android_native",
+  "bucket": "b7",
+  "symbols": [
+    {
+      "symbol_id": "android-0dc7f370c16b92f1fc9260c2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.getCanvasHeight",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    },
+    {
+      "symbol_id": "android-118a1f8f54415cf1196f1ad4",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.latestInvoice",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "shard_ref": "android:847e14201263066b:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner-summary/state/847e14201263066b-01.json"
+    },
+    {
+      "symbol_id": "android-1a73f695c3fa6353e64bea2c",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.gson",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+    },
+    {
+      "symbol_id": "android-2baa68d4d6482a4a1272da8d",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt",
+      "shard_ref": "android:664b212ca5bf4124:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/settings/storage-data/664b212ca5bf4124-01.json"
+    },
+    {
+      "symbol_id": "android-56e9b65cc2e34acb11c1e349",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+    },
+    {
+      "symbol_id": "android-c4bbe72b4a0d3b97a0e11a8a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/app-backup-data/storage-data/a07c2eccb9e3f3df-01.json"
+    }
+  ]
+}

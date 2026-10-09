@@ -1,0 +1,265 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:a01c9aee95d297fe:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "products",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+  "symbols": [
+    {
+      "name": "ProductListViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "type": "class",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products",
+      "signature": "class ProductListViewModel(application: Application) : AndroidViewModel(application)",
+      "start_line": 15,
+      "end_line": 51,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "products",
+        "class",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Combine product repository and search query into filtered StateFlow; launch product save/delete.",
+      "thread_context": "caller context",
+      "symbol_id": "android-34a269160afc7e5654af54c6",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01"
+    },
+    {
+      "name": "repository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "private val repository = ProductRepository.getInstance(application)",
+      "start_line": 16,
+      "end_line": 16,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "products",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain repository for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-38fcc0f0cbd642c433ca4ebb",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01"
+    },
+    {
+      "name": "filteredProducts",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.filteredProducts",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "val filteredProducts: StateFlow<List<ProductTemplate>> = combine( repository.products, _searchQuery ) { list, query -> if (query.isBlank()) { list } e ...",
+      "start_line": 21,
+      "end_line": 34,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<ProductTemplate>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "related_files": [],
+      "tags": [
+        "products",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "flow_metadata": {
+        "sharing": "WhileSubscribed(5000)",
+        "initial": "emptyList()",
+        "scope": "viewModelScope"
+      },
+      "purpose": "Expose or maintain filteredProducts for products.",
+      "thread_context": "caller context",
+      "symbol_id": "android-c7d8b9d9c0a60be8b20244a1",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01"
+    },
+    {
+      "name": "saveProduct",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.saveProduct",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "fun saveProduct(product: ProductTemplate)",
+      "start_line": 40,
+      "end_line": 44,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "product",
+          "type": "ProductTemplate"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.saveProduct"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist repository records through launched coroutine"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "products",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Launch repository product persistence.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-81233b8da928b3cb87b3ed10",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01"
+    },
+    {
+      "name": "deleteProduct",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.deleteProduct",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel",
+      "signature": "fun deleteProduct(id: String)",
+      "start_line": 46,
+      "end_line": 50,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "products",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.deleteProduct"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist repository records through launched coroutine"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.products.ProductListViewModel.repository"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "products",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Launch repository product deletion by ID.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-d113f15dbcce43baa76e3d18",
+      "shard_ref": "android:a01c9aee95d297fe:storage-data:01"
+    }
+  ]
+}

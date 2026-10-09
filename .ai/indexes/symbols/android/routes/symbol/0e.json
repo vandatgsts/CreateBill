@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-0e",
+  "platform": "android_native",
+  "bucket": "0e",
+  "symbols": [
+    {
+      "symbol_id": "android-0e7fac3f2fe51e4fd598c66f",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempUnit",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-1e9d43262ab2cddb43122ef7",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.finishDrag",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/lifecycle-ui/8240678ac3dafa80-01.json"
+    },
+    {
+      "symbol_id": "android-a0b334e2634cc05a34442ad3",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    },
+    {
+      "symbol_id": "android-e37a28e9a9082b9bf4eb9afe",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Editor.screenKey",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+      "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+    }
+  ]
+}

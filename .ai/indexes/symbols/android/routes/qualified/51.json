@@ -1,0 +1,52 @@
+{
+  "schema": "code-qualified-route-shard-v4",
+  "id": "qualified-routes-51",
+  "platform": "android_native",
+  "bucket": "51",
+  "qualified_names": [
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.AppScreen.Preview.<init>",
+      "targets": [
+        {
+          "symbol_id": "android-f5cdb3ab2dfe843ad32d3f3d",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/MainActivity.kt",
+          "shard_ref": "android:73809202ff5eb2c5:lifecycle-ui:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/shell/lifecycle-ui/73809202ff5eb2c5-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyTaxCode",
+      "targets": [
+        {
+          "symbol_id": "android-f4f5e17810190fd9085860a1",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+          "shard_ref": "android:d4680c10cbc3d4ec:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.currentDebt",
+      "targets": [
+        {
+          "symbol_id": "android-a0c34aaff66405299a934c1f",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+          "shard_ref": "android:847e14201263066b:state:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner-summary/state/847e14201263066b-01.json"
+        }
+      ]
+    },
+    {
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerDetailScreen",
+      "targets": [
+        {
+          "symbol_id": "android-3b6530ad5c362919b2ed16e3",
+          "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerDetailScreen.kt",
+          "shard_ref": "android:2b4ed7c105b69076:navigation:01",
+          "shard_path": ".ai/indexes/symbols/android/shards/app/stores/navigation/2b4ed7c105b69076-01.json"
+        }
+      ]
+    }
+  ]
+}

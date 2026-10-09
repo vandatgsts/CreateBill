@@ -1,0 +1,35 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-22",
+  "platform": "android_native",
+  "bucket": "22",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/theme/Color.kt",
+      "source_hash": "7c2f602138643ddfefce41c107f4e97b02fa175e3f9d8bc04e7f22ae52b088e5",
+      "architecture_shard": {
+        "id": "android:2228e39847fa6c7f:architecture",
+        "path": ".ai/indexes/android/architecture/app/theme/2228e39847fa6c7f.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:2228e39847fa6c7f:com-vandatgsts-thuyetnguyen-ui-theme:01",
+          "path": ".ai/indexes/symbols/android/shards/app/theme/com-vandatgsts-thuyetnguyen-ui-theme/2228e39847fa6c7f-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-1cff841a2d86de7ab8a11fea",
+        "android-a874f31bd6671d31b1fd173a",
+        "android-6d2a855a0798b4a3243f00d4",
+        "android-2f5b354fa2108a1790d110aa",
+        "android-5a723e1fc6a409731b7e1497",
+        "android-f2bdf85da13bef8d974eae98",
+        "android-e2c114a0f9e6b6c9e0c14d0e",
+        "android-4a6915e5d8cebce2c468a01a",
+        "android-1ba731494ddce164462f079a",
+        "android-15037afbce8a95097ade221d",
+        "android-74af3fb03edfbe0f5f3bf6eb"
+      ]
+    }
+  ]
+}

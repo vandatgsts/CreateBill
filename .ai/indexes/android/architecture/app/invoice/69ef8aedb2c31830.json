@@ -1,0 +1,98 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:69ef8aedb2c31830:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.repository",
+      "module": "app",
+      "feature": "invoice",
+      "layer": "data/repository",
+      "purpose": "Own invoice StateFlow; persist app-private JSON, seed example invoices, save/delete/duplicate and merge by updatedAt; AtomicFile rollback and writeMutex serialize mutations; saved empty lists remain empty",
+      "imports": [
+        "android.content.Context",
+        "android.util.AtomicFile",
+        "com.google.gson.Gson",
+        "com.google.gson.reflect.TypeToken",
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceItem",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceType",
+        "kotlinx.coroutines.Dispatchers",
+        "kotlinx.coroutines.flow.MutableStateFlow",
+        "kotlinx.coroutines.flow.StateFlow",
+        "kotlinx.coroutines.flow.asStateFlow",
+        "kotlinx.coroutines.withContext",
+        "kotlinx.coroutines.sync.Mutex",
+        "kotlinx.coroutines.sync.withLock",
+        "java.io.File",
+        "java.util.UUID"
+      ],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion"
+      ],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.atomicStorage",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt"
+      ],
+      "keywords": [
+        "invoice",
+        "persistence",
+        "StateFlow"
+      ],
+      "risks": [
+        "Repository initialization and non-suspend getters run on caller context"
+      ],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.getInvoiceById",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.duplicateInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.context",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.storageFile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository._invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.invoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.<init-block>",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.loadInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveToFile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.deleteInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.replaceAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.mergeAll",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.instance",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.atomicStorage",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.writeMutex",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.commitInvoices",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoiceLocked"
+      ]
+    }
+  ]
+}

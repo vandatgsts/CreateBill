@@ -1,0 +1,21 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:a8792157cb4f27fb949c035f",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "product",
+      "name": "product",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "description": "One-time catalog-v1 replacement: 14 Dong A tanks + 16 Dong A/Binh Minh solar heaters; all values from supplied price images.",
+      "catalog_version": 1,
+      "product_count": 30,
+      "reference_images": [
+        ".ai/img_4.png",
+        ".ai/img_5.png"
+      ]
+    }
+  ]
+}

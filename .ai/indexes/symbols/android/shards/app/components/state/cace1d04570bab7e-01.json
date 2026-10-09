@@ -1,0 +1,103 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:cace1d04570bab7e:state:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "components",
+  "concern": "state",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+  "symbols": [
+    {
+      "name": "rawText",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField.rawText",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components.CurrencyField",
+      "signature": "var rawText by remember(value) {",
+      "start_line": 95,
+      "end_line": 101,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatMoney"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "components",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-121769ff07f59d5afd4f341e",
+      "shard_ref": "android:cace1d04570bab7e:state:01"
+    },
+    {
+      "name": "rawText",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.components.NumberField.rawText",
+      "type": "state",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/components/CommonComponents.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.components.NumberField",
+      "signature": "var rawText by remember(value) {",
+      "start_line": 140,
+      "end_line": 142,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "components",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [
+        "androidx.compose.runtime.mutableStateOf",
+        "androidx.compose.runtime.remember",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatQuantity"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "components",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Main / Compose",
+      "callback_contracts": [],
+      "compose_metadata": {
+        "state_lifetime": "remember within current composition; keyed arguments preserved in signature/body"
+      },
+      "symbol_id": "android-4c798eefbd8dab3355e6beb5",
+      "shard_ref": "android:cace1d04570bab7e:state:01"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "code-feature-shard-v4",
+  "id": "android:feature:1553cc62ff246044c683a61e",
+  "platform": "android_native",
+  "features": [
+    {
+      "id": "editor",
+      "name": "editor",
+      "files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorScreen.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt"
+      ],
+      "description": "Editable invoice rows with stable-ID long-press drag/drop, auto-scroll, STT renumbering and accessibility moves. Per-row InvoiceItem.note is editable, persisted and wrapped in both PDF/image templates. Save progress and failure callback prevent overlapping requests and false success navigation."
+    }
+  ]
+}

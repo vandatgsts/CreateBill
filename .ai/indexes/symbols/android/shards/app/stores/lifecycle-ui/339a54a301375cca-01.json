@@ -1,0 +1,572 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:339a54a301375cca:lifecycle-ui:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "stores",
+  "concern": "lifecycle-ui",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+  "symbols": [
+    {
+      "name": "StorePartnerViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "type": "class",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores",
+      "signature": "class StorePartnerViewModel(application: Application) : AndroidViewModel(application)",
+      "start_line": 21,
+      "end_line": 128,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "class",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Aggregate invoice history by partner name into debt summaries; filter, save/delete partners and record payments on latest invoice.",
+      "thread_context": "caller context",
+      "symbol_id": "android-b11d4ce2d790d42f4c79a12f",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "StorePartnerViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.<init>",
+      "type": "constructor",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "StorePartnerViewModel(application: Application)",
+      "start_line": 21,
+      "end_line": 21,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "constructor",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain StorePartnerViewModel for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-aebb37e27c837b62901e8870",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "stores",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.stores",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "val stores: StateFlow<List<StorePartner>> = storeRepo.stores",
+      "start_line": 25,
+      "end_line": 25,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<StorePartner>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain stores for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-7235db3071fc73a9fd9bf420",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "_searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "private val _searchQuery = MutableStateFlow(\"\")",
+      "start_line": 27,
+      "end_line": 27,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain _searchQuery for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-7f68fc699607be4ec9faa3e4",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "searchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.searchQuery",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "val searchQuery: StateFlow<String> = _searchQuery",
+      "start_line": 28,
+      "end_line": 28,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<String>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain searchQuery for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-07382654c41203b2f4c8896e",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "storeSummaries",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "val storeSummaries: StateFlow<List<StorePartnerSummary>> = combine( storeRepo.stores, invoiceRepo.invoices ) { storeList, invoiceList -> storeList.map ...",
+      "start_line": 30,
+      "end_line": 60,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<StorePartnerSummary>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.stores"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeRepo",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.stores"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "flow_metadata": {
+        "sharing": "WhileSubscribed(5000)",
+        "initial": "emptyList()",
+        "scope": "viewModelScope"
+      },
+      "purpose": "Expose or maintain storeSummaries for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-8618432b68b12174e7693aa4",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "filteredSummaries",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.filteredSummaries",
+      "type": "state",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "val filteredSummaries: StateFlow<List<StorePartnerSummary>> = combine( storeSummaries, _searchQuery ) { list, query -> if (query.isBlank()) { list } e ...",
+      "start_line": 62,
+      "end_line": 76,
+      "visibility": "public",
+      "parameters": [],
+      "return_type": "StateFlow<List<StorePartnerSummary>>",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "state",
+        "StateFlow"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "flow_metadata": {
+        "sharing": "WhileSubscribed(5000)",
+        "initial": "emptyList()",
+        "scope": "viewModelScope"
+      },
+      "purpose": "Expose or maintain filteredSummaries for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-25a948b20a41d79c07f4006b",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "updateSearchQuery",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.updateSearchQuery",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun updateSearchQuery(query: String)",
+      "start_line": 78,
+      "end_line": 80,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "query",
+          "type": "String"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerListScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel._searchQuery"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Publish query to filter reactive list.",
+      "thread_context": "caller context",
+      "symbol_id": "android-74efc6204eb806532d481bf7",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "getStoreSummary",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getStoreSummary",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun getStoreSummary(storeId: String): StorePartnerSummary?",
+      "start_line": 94,
+      "end_line": 96,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "storeId",
+          "type": "String"
+        }
+      ],
+      "return_type": "StorePartnerSummary?",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Find current summary by exact partner ID.",
+      "thread_context": "caller context",
+      "symbol_id": "android-b4ce276ac5ecbd6681d92ff7",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "getRollingDebtForStore",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel",
+      "signature": "fun getRollingDebtForStore(storeName: String): Double",
+      "start_line": 98,
+      "end_line": 101,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "storeName",
+          "type": "String"
+        }
+      ],
+      "return_type": "Double",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary",
+        "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.storeSummaries"
+      ],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Read latest remaining debt for exact case-insensitive trimmed store name.",
+      "thread_context": "caller context",
+      "symbol_id": "android-ffaced9fccd4c7e08c99b4bd",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "summary",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore.summary",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.getRollingDebtForStore",
+      "signature": "val summary = storeSummaries.value.find { it.store.name.equals(storeName.trim(), ignoreCase = true) }",
+      "start_line": 99,
+      "end_line": 99,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain summary for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-6a06d82c98bb5b3b03d0cda9",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    },
+    {
+      "name": "summary",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore.summary",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.stores.StorePartnerViewModel.recordPaymentForStore",
+      "signature": "val summary = storeSummaries.value.find { it.store.id == storeId } ?: return@launch",
+      "start_line": 105,
+      "end_line": 105,
+      "visibility": "local",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/stores/StorePartnerViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "stores",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "stores",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain summary for stores.",
+      "thread_context": "caller context",
+      "symbol_id": "android-53c63ede3dab2c81338cecbc",
+      "shard_ref": "android:339a54a301375cca:lifecycle-ui:01"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-c0",
+  "platform": "android_native",
+  "bucket": "c0",
+  "symbols": [
+    {
+      "symbol_id": "android-6d1b7ee0a87c164ff1359955",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyAddress",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "shard_ref": "android:d4680c10cbc3d4ec:state:02",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-document/state/d4680c10cbc3d4ec-02.json"
+    },
+    {
+      "symbol_id": "android-780c9ac0bdeb5846f89f1b60",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.productRepo",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/BackupRepository.kt",
+      "shard_ref": "android:4400ca68717395c3:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/backup/storage-data/4400ca68717395c3-01.json"
+    },
+    {
+      "symbol_id": "android-9441d86ab62f29da4d91eb05",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.preview.InvoicePreviewScreen.isLoading",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/preview/InvoicePreviewScreen.kt",
+      "shard_ref": "android:98115644100c7e48:lifecycle-ui:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/preview/lifecycle-ui/98115644100c7e48-01.json"
+    },
+    {
+      "symbol_id": "android-d12555e6186f6d6fc638db47",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceType.<init>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceType.kt",
+      "shard_ref": "android:da5f8e171d393754:com-vandatgsts-thuyetnguyen-data-model-invoicetype:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/invoice-type/com-vandatgsts-thuyetnguyen-data-model-invoicetype/da5f8e171d393754-01.json"
+    }
+  ]
+}

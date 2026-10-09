@@ -1,0 +1,36 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-ca",
+  "platform": "android_native",
+  "bucket": "ca",
+  "symbols": [
+    {
+      "symbol_id": "android-02c7a63212b1cb78a582a468",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalPaid",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "shard_ref": "android:847e14201263066b:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/store-partner-summary/state/847e14201263066b-01.json"
+    },
+    {
+      "symbol_id": "android-9a576063b6897a5325a07347",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.tempPrice",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/state/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-abaae46ed9f620ea55fb7b87",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.DebtPayment.title",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/DebtPayment.kt",
+      "shard_ref": "android:14e2a4e969d82077:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/debt-payment/state/14e2a4e969d82077-01.json"
+    },
+    {
+      "symbol_id": "android-ec9e2ba8b259ec45a91f7a5a",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.Companion.instance",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+      "shard_ref": "android:f7194a71b8aa2c6b:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/customer/storage-data/f7194a71b8aa2c6b-01.json"
+    }
+  ]
+}

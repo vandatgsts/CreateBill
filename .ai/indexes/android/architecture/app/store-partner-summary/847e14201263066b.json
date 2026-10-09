@@ -1,0 +1,56 @@
+{
+  "schema": "code-architecture-shard-v4",
+  "id": "android:847e14201263066b:architecture",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "store-partner-summary",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+  "files": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/StorePartnerSummary.kt",
+      "language": "kotlin",
+      "package": "com.vandatgsts.thuyetnguyen.data.model",
+      "module": "app",
+      "feature": "store-partner-summary",
+      "layer": "data/model",
+      "purpose": "Typed StorePartnerSummary domain model and derived invoice/debt values",
+      "imports": [],
+      "classes": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary"
+      ],
+      "objects": [],
+      "interfaces": [],
+      "companion_objects": [],
+      "important_properties": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.store",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoiceCount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.currentDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.latestInvoice",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoices"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceItem.kt"
+      ],
+      "keywords": [
+        "store_partner_summary",
+        "domain"
+      ],
+      "risks": [],
+      "todos": [],
+      "platform": "android_native",
+      "main_symbols": [
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.<init>",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.store",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoiceCount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalAmount",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.totalPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.currentDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.latestInvoice",
+        "com.vandatgsts.thuyetnguyen.data.model.StorePartnerSummary.invoices"
+      ]
+    }
+  ]
+}

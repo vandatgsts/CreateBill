@@ -1,0 +1,43 @@
+{
+  "schema": "code-symbol-route-shard-v4",
+  "id": "symbol-routes-9b",
+  "platform": "android_native",
+  "bucket": "9b",
+  "symbols": [
+    {
+      "symbol_id": "android-30279dcade49ff8c408f2c5c",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceExportManager",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "shard_ref": "android:589ffd5d05cf9590:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/589ffd5d05cf9590-01.json"
+    },
+    {
+      "symbol_id": "android-9bc7ad8602cdbc95eb69e56d",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.<init-block>",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt",
+      "shard_ref": "android:4fa2fdfb46023a04:storage-data:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/product/storage-data/4fa2fdfb46023a04-01.json"
+    },
+    {
+      "symbol_id": "android-a2b942d7bbd0c47eca5b36a2",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.products.ProductListScreen.listState",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/products/ProductListScreen.kt",
+      "shard_ref": "android:c2cdd5f7dc2cb648:com-vandatgsts-thuyetnguyen-ui-products-productlistscreen:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/products/com-vandatgsts-thuyetnguyen-ui-products-productlistscreen/c2cdd5f7dc2cb648-01.json"
+    },
+    {
+      "symbol_id": "android-b569fb5b28d46f2100758185",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.ReorderableInvoiceItems.initialScroll",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/ReorderableInvoiceItems.kt",
+      "shard_ref": "android:8240678ac3dafa80:state:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/editor/state/8240678ac3dafa80-01.json"
+    },
+    {
+      "symbol_id": "android-ef6691bf19c7d1ab4b000662",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.generator.InvoiceCanvasDrawer.QuotationColDef",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceCanvasDrawer.kt",
+      "shard_ref": "android:7c82187787db3c56:com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer:01",
+      "shard_path": ".ai/indexes/symbols/android/shards/app/generator/com-vandatgsts-thuyetnguyen-generator-invoicecanvasdrawer/7c82187787db3c56-01.json"
+    }
+  ]
+}

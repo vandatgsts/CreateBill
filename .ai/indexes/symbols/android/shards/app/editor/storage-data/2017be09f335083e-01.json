@@ -1,0 +1,553 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:2017be09f335083e:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "editor",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+  "symbols": [
+    {
+      "name": "InvoiceEditorViewModel",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "type": "class",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor",
+      "signature": "class InvoiceEditorViewModel(application: Application) : AndroidViewModel(application)",
+      "start_line": 24,
+      "end_line": 329,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "application",
+          "type": "Application"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "class",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Own editable invoice StateFlow; initialize from profiles/stores, mutate items and payments, and persist invoice plus associated store/customer records.",
+      "thread_context": "caller context",
+      "symbol_id": "android-fc0c2cffed44da10bc6c4f23",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "invoiceRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val invoiceRepo = InvoiceRepository.getInstance(application)",
+      "start_line": 26,
+      "end_line": 26,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain invoiceRepo for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-a11554b59cad55addeff3980",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "profileRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val profileRepo = CompanyProfileRepository.getInstance(application)",
+      "start_line": 27,
+      "end_line": 27,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain profileRepo for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-1f901b4eb174bcf63b691e2f",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "productRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.productRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val productRepo = ProductRepository.getInstance(application)",
+      "start_line": 28,
+      "end_line": 28,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.ProductRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/ProductRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain productRepo for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-df927580ddf170652d010155",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "storePartnerRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val storePartnerRepo = StorePartnerRepository.getInstance(application)",
+      "start_line": 29,
+      "end_line": 29,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.Companion.getInstance"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain storePartnerRepo for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-67eca8120fc42e157c618b6e",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "customerRepo",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo",
+      "type": "property",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "private val customerRepo = com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.getInstance(application)",
+      "start_line": 30,
+      "end_line": 30,
+      "visibility": "private",
+      "parameters": [],
+      "return_type": "inferred",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "editor",
+        "property",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Expose or maintain customerRepo for editor.",
+      "thread_context": "caller context",
+      "symbol_id": "android-2710a8b4746f3b502d07ee13",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "initInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun initInvoice(invoiceId: String?, initialType: InvoiceType = InvoiceType.QUOTATION_A4)",
+      "start_line": 40,
+      "end_line": 83,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "invoiceId",
+          "type": "String?"
+        },
+        {
+          "name": "initialType",
+          "type": "InvoiceType",
+          "default": "InvoiceType.QUOTATION_A4"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.getInvoiceById",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Load existing invoice by ID or create document with company-profile defaults.",
+      "thread_context": "caller context",
+      "symbol_id": "android-4dc816f4730df98dd6c85f14",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "initInvoiceForStorePartner",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun initInvoiceForStorePartner(store: StorePartner, rollingDebt: Double = 0.0)",
+      "start_line": 85,
+      "end_line": 120,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "store",
+          "type": "StorePartner"
+        },
+        {
+          "name": "rollingDebt",
+          "type": "Double",
+          "default": "0.0"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+        "com.vandatgsts.thuyetnguyen.generator.FormatHelper.formatDate"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.MainActivity.onCreate"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/FormatHelper.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Create partner-specific invoice with supplied rolling debt and profile defaults.",
+      "thread_context": "caller context",
+      "symbol_id": "android-1e2e11216535dec890ff44ed",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "setInvoiceType",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setInvoiceType",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun setInvoiceType(newType: InvoiceType)",
+      "start_line": 147,
+      "end_line": 164,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "newType",
+          "type": "InvoiceType"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": false,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState"
+      ],
+      "side_effects": [
+        "Update reactive/editor or remembered UI state"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "caller context",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [],
+      "purpose": "Switch document type and choose profile title/default text.",
+      "thread_context": "caller context",
+      "symbol_id": "android-8e79f2370b5ab2ec7d580df6",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    },
+    {
+      "name": "saveInvoice",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.saveInvoice",
+      "type": "method",
+      "owner": "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel",
+      "signature": "fun saveInvoice(onError: (Exception) -> Unit = {}, onSuccess: (InvoiceDocument) -> Unit)",
+      "start_line": 273,
+      "end_line": 328,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "onError",
+          "type": "(Exception) -> Unit",
+          "default": "{}"
+        },
+        {
+          "name": "onSuccess",
+          "type": "(InvoiceDocument) -> Unit"
+        }
+      ],
+      "return_type": "Unit",
+      "is_suspend": false,
+      "is_async": true,
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "editor",
+      "concern": "state",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CustomerRepository.saveCustomer",
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.saveInvoice",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.getStoreByName",
+        "com.vandatgsts.thuyetnguyen.data.repository.StorePartnerRepository.saveStore"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorScreen"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._isSaving"
+      ],
+      "side_effects": [
+        "Persist repository records through launched coroutine",
+        "onError for storage failure; onSuccess only on completed save; save guard reset in finally"
+      ],
+      "related_symbols": [
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel._invoiceState",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.customerRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.invoiceRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.storePartnerRepo"
+      ],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CustomerRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/InvoiceRepository.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/StorePartnerRepository.kt"
+      ],
+      "tags": [
+        "editor",
+        "method",
+        "android"
+      ],
+      "risks": [],
+      "coroutine_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "lifecycle": "ViewModel-owned reactive state",
+      "callbacks": [
+        "onError",
+        "onSuccess"
+      ],
+      "purpose": "Guard repeated saves, persist invoice and linked profiles; deliver failure callback, rethrow cancellation, reset saving in finally.",
+      "thread_context": "viewModelScope; Main dispatcher inherited; repository/export suspend work may switch internally",
+      "symbol_id": "android-5c28bebfcb1e9bf0a15625e8",
+      "shard_ref": "android:2017be09f335083e:storage-data:01"
+    }
+  ]
+}

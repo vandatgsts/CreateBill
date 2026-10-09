@@ -1,0 +1,279 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:d4680c10cbc3d4ec:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "invoice-document",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/InvoiceDocument.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+      "signature": "InvoiceDocument(val id: String = UUID.randomUUID().toString(), val title: String = \"\", val type: InvoiceType = InvoiceType.QUOTATION_A4, val storeOrCompanyName: String = \"\", val companyAddress: String = \"\", val companyTaxCode: String = \"\", val companyPhone: String = \"\", val customer: CustomerInfo = CustomerInfo(), val items: List<InvoiceItem> = emptyList(), val oldDebt: Double = 0.0, val initialOldDebt: Double = 0.0, val debtPayments: List<DebtPayment> = emptyList(), val isPaid: Boolean = false, val paidDate: String = \"\", val notes: String = \"\", val warranty: String = \"\", val isVatIncluded: Boolean = true, val vatRate: Double = 0.0, val paymentTerms: String = \"\", val bankAccountNumber: String = \"\", val bankName: String = \"\", val bankAccountHolder: String = \"\", val showCompanyInfo: Boolean = true, val showCompanyAddress: Boolean = true, val showCompanyTaxCode: Boolean = true, val showCustomerInfo: Boolean = true, val showCustomerAddress: Boolean = true, val showUnitCol: Boolean = true, val showQuantityCol: Boolean = true, val showUnitPriceCol: Boolean = true, val showNotes: Boolean = true, val showWarranty: Boolean = true, val showPaymentTerms: Boolean = true, val showBankInfo: Boolean = true, val createdAt: Long = System.currentTimeMillis(), val updatedAt: Long = System.currentTimeMillis())",
+      "start_line": 5,
+      "end_line": 42,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "invoice_document",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String",
+          "default": "UUID.randomUUID().toString()"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "type": "InvoiceType",
+          "default": "InvoiceType.QUOTATION_A4"
+        },
+        {
+          "name": "storeOrCompanyName",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "companyAddress",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "companyTaxCode",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "companyPhone",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "customer",
+          "type": "CustomerInfo",
+          "default": "CustomerInfo()"
+        },
+        {
+          "name": "items",
+          "type": "List<InvoiceItem>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "oldDebt",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "initialOldDebt",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "debtPayments",
+          "type": "List<DebtPayment>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "isPaid",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "paidDate",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "warranty",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "isVatIncluded",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "vatRate",
+          "type": "Double",
+          "default": "0.0"
+        },
+        {
+          "name": "paymentTerms",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "bankAccountNumber",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "bankName",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "bankAccountHolder",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "showCompanyInfo",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showCompanyAddress",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showCompanyTaxCode",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showCustomerInfo",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showCustomerAddress",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showUnitCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showQuantityCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showUnitPriceCol",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showNotes",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showWarranty",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showPaymentTerms",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "showBankInfo",
+          "type": "Boolean",
+          "default": "true"
+        },
+        {
+          "name": "createdAt",
+          "type": "Long",
+          "default": "System.currentTimeMillis()"
+        },
+        {
+          "name": "updatedAt",
+          "type": "Long",
+          "default": "System.currentTimeMillis()"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CustomerInfo.<init>",
+        "java.lang.System.currentTimeMillis",
+        "java.util.UUID.randomUUID"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.InvoiceRepository.createSampleInvoices",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountHolder",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankAccountNumber",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.bankName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyPhone",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.companyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.createdAt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.customer",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.debtPayments",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.id",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.initialOldDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isPaid",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.isVatIncluded",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.items",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.notes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.oldDebt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paidDate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.paymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showBankInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCompanyTaxCode",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerAddress",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showCustomerInfo",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showNotes",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showPaymentTerms",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showQuantityCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showUnitPriceCol",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.showWarranty",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.storeOrCompanyName",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.title",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.type",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.updatedAt",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.vatRate",
+        "com.vandatgsts.thuyetnguyen.data.model.InvoiceDocument.warranty"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CustomerInfo.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt"
+      ],
+      "tags": [
+        "model",
+        "invoice_document"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-597948dbd5992be283c4df2b",
+      "shard_ref": "android:d4680c10cbc3d4ec:storage-data:01"
+    }
+  ]
+}

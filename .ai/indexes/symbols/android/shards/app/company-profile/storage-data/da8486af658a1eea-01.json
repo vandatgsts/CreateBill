@@ -1,0 +1,487 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:da8486af658a1eea:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "company-profile",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+  "symbols": [
+    {
+      "name": "CompanyProfileRepository",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "type": "class",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository",
+      "signature": "class CompanyProfileRepository",
+      "start_line": 8,
+      "end_line": 42,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-f023e53f08adcabeb4dbe0fd",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "CompanyProfileRepository(context: Context)",
+      "start_line": 8,
+      "end_line": 8,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "calls": [],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs"
+      ],
+      "side_effects": [
+        "Obtain application-backed persistence and initialize repository state on caller thread"
+      ],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-5b2d3358d24489b8e31a76fd",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "prefs",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "private val prefs: SharedPreferences = context.getSharedPreferences(\"company_profile_prefs\", Context.MODE_PRIVATE)",
+      "start_line": 9,
+      "end_line": 9,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "SharedPreferences",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "company_profile",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-fa7952e94e45a7e4fb383ca3",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "gson",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "private val gson = Gson()",
+      "start_line": 10,
+      "end_line": 10,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Gson",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "company_profile",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-0f57e4cbdc6026471120c974",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "getProfile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.getProfile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "fun getProfile(): CompanyProfile",
+      "start_line": 12,
+      "end_line": 23,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CompanyProfile",
+      "calls": [
+        "android.content.SharedPreferences.getString",
+        "com.google.gson.Gson.fromJson",
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoice",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.initInvoiceForStorePartner",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.setInvoiceType",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel._profile",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.applyImport"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.KEY_PROFILE",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Read JSON from SharedPreferences"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-74fbdc767614195f18730f7c",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "saveProfile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.saveProfile",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "fun saveProfile(profile: CompanyProfile)",
+      "start_line": 25,
+      "end_line": 28,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "CompanyProfile"
+        }
+      ],
+      "return_type": "Unit",
+      "calls": [
+        "android.content.SharedPreferences.Editor.apply",
+        "android.content.SharedPreferences.Editor.putString",
+        "android.content.SharedPreferences.edit",
+        "com.google.gson.Gson.toJson"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.applyBackupData",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.saveProfile"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.KEY_PROFILE",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.gson",
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.prefs"
+      ],
+      "writes_state": [],
+      "side_effects": [
+        "Persist serialized JSON with asynchronous SharedPreferences.apply"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-5bf74255dec8726b32d22042",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "Companion",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "type": "companion_object",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository",
+      "signature": "companion object",
+      "start_line": 30,
+      "end_line": 41,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "Unit",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-9807baf396c1d8d595651cba",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "KEY_PROFILE",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.KEY_PROFILE",
+      "type": "constant",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "signature": "private const val KEY_PROFILE = \"key_company_profile\"",
+      "start_line": 31,
+      "end_line": 31,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "inferred",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "company_profile",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-633ed700e5133c560c81f78a",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "instance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "signature": "private var instance: CompanyProfileRepository? = null",
+      "start_line": 34,
+      "end_line": 34,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "private",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CompanyProfileRepository?",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "company_profile",
+        "storage",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "mutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-7de50ae7039902a726408e85",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    },
+    {
+      "name": "getInstance",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.getInstance",
+      "type": "method",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/repository/CompanyProfileRepository.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion",
+      "signature": "fun getInstance(context: Context): CompanyProfileRepository",
+      "start_line": 36,
+      "end_line": 40,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "company_profile",
+      "concern": "storage/data",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Context"
+        }
+      ],
+      "return_type": "CompanyProfileRepository",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.<init>"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.<init>",
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.companyProfileRepo",
+        "com.vandatgsts.thuyetnguyen.ui.editor.InvoiceEditorViewModel.profileRepo",
+        "com.vandatgsts.thuyetnguyen.ui.settings.CompanyProfileViewModel.repository"
+      ],
+      "reads_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance"
+      ],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.repository.CompanyProfileRepository.Companion.instance"
+      ],
+      "side_effects": [
+        "Initialize singleton with applicationContext under synchronized double-checked locking"
+      ],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/editor/InvoiceEditorViewModel.kt",
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/ui/settings/CompanyProfileViewModel.kt"
+      ],
+      "tags": [
+        "repository",
+        "company_profile"
+      ],
+      "risks": [
+        "Construction can perform synchronous disk read on calling thread"
+      ],
+      "thread_context": "Caller context; synchronous",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-bca3e351a5850cb730ec471e",
+      "shard_ref": "android:da8486af658a1eea:storage-data:01"
+    }
+  ]
+}

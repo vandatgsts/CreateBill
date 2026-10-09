@@ -1,0 +1,240 @@
+{
+  "schema": "code-symbol-shard-v4",
+  "id": "android:a07c2eccb9e3f3df:storage-data:01",
+  "platform": "android_native",
+  "module": "app",
+  "feature": "app-backup-data",
+  "concern": "storage-data",
+  "source": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+  "symbols": [
+    {
+      "name": "<init>",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.<init>",
+      "type": "constructor",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "signature": "AppBackupData(val backupVersion: Int = 1, val exportedAt: Long = System.currentTimeMillis(), val exportedDate: String = \"\", val companyProfile: CompanyProfile = CompanyProfile(), val invoices: List<InvoiceDocument> = emptyList(), val products: List<ProductTemplate> = emptyList(), val storePartners: List<StorePartner> = emptyList(), val customers: List<CustomerProfile> = emptyList(), val fileHash: String = \"\")",
+      "start_line": 3,
+      "end_line": 13,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "app_backup_data",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [
+        {
+          "name": "backupVersion",
+          "type": "Int",
+          "default": "1"
+        },
+        {
+          "name": "exportedAt",
+          "type": "Long",
+          "default": "System.currentTimeMillis()"
+        },
+        {
+          "name": "exportedDate",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
+          "name": "companyProfile",
+          "type": "CompanyProfile",
+          "default": "CompanyProfile()"
+        },
+        {
+          "name": "invoices",
+          "type": "List<InvoiceDocument>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "products",
+          "type": "List<ProductTemplate>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "storePartners",
+          "type": "List<StorePartner>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "customers",
+          "type": "List<CustomerProfile>",
+          "default": "emptyList()"
+        },
+        {
+          "name": "fileHash",
+          "type": "String",
+          "default": "\"\""
+        }
+      ],
+      "return_type": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.<init>",
+        "java.lang.System.currentTimeMillis"
+      ],
+      "called_by": [
+        "com.vandatgsts.thuyetnguyen.data.repository.BackupRepository.createBackupData"
+      ],
+      "reads_state": [],
+      "writes_state": [
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.backupVersion",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.customers",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedAt",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.exportedDate",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.invoices",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.products",
+        "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.storePartners"
+      ],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "model",
+        "app_backup_data"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-56e9b65cc2e34acb11c1e349",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01"
+    },
+    {
+      "name": "companyProfile",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.companyProfile",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "signature": "val companyProfile: CompanyProfile = CompanyProfile()",
+      "start_line": 7,
+      "end_line": 7,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "app_backup_data",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "CompanyProfile",
+      "calls": [
+        "com.vandatgsts.thuyetnguyen.data.model.CompanyProfile.<init>"
+      ],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [
+        "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/CompanyProfile.kt"
+      ],
+      "tags": [
+        "app_backup_data",
+        "model",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-4ca7267e49f2fb4f1c2c8273",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01"
+    },
+    {
+      "name": "customers",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.customers",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "signature": "val customers: List<CustomerProfile> = emptyList()",
+      "start_line": 11,
+      "end_line": 11,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "app_backup_data",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "List<CustomerProfile>",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "app_backup_data",
+        "model",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-e640d0f40d2758aa288892bf",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01"
+    },
+    {
+      "name": "fileHash",
+      "qualified_name": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData.fileHash",
+      "type": "property",
+      "file": "app/src/main/java/com/vandatgsts/thuyetnguyen/data/model/AppBackupData.kt",
+      "owner": "com.vandatgsts.thuyetnguyen.data.model.AppBackupData",
+      "signature": "val fileHash: String = \"\"",
+      "start_line": 12,
+      "end_line": 12,
+      "platform": "android_native",
+      "language": "kotlin",
+      "module": "app",
+      "feature": "app_backup_data",
+      "concern": "data-model",
+      "visibility": "public",
+      "is_async": false,
+      "is_suspend": false,
+      "parameters": [],
+      "return_type": "String",
+      "calls": [],
+      "called_by": [],
+      "reads_state": [],
+      "writes_state": [],
+      "side_effects": [],
+      "related_symbols": [],
+      "related_files": [],
+      "tags": [
+        "app_backup_data",
+        "model",
+        "state"
+      ],
+      "risks": [],
+      "thread_context": "Caller context; no dispatcher switch",
+      "coroutine_context": null,
+      "lifecycle": null,
+      "mutability": "immutable",
+      "async": false,
+      "suspend": false,
+      "symbol_id": "android-c4bbe72b4a0d3b97a0e11a8a",
+      "shard_ref": "android:a07c2eccb9e3f3df:storage-data:01"
+    }
+  ]
+}

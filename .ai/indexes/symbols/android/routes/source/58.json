@@ -1,0 +1,35 @@
+{
+  "schema": "code-source-route-shard-v4",
+  "id": "source-routes-58",
+  "platform": "android_native",
+  "bucket": "58",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/vandatgsts/thuyetnguyen/generator/InvoiceExportManager.kt",
+      "source_hash": "0a60176b76158dc3962ef714ec5c55d8a498da2eaa4411fea873a3673e292bfa",
+      "architecture_shard": {
+        "id": "android:589ffd5d05cf9590:architecture",
+        "path": ".ai/indexes/android/architecture/app/generator/589ffd5d05cf9590.json"
+      },
+      "symbol_shards": [
+        {
+          "id": "android:589ffd5d05cf9590:permission:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/permission/589ffd5d05cf9590-01.json"
+        },
+        {
+          "id": "android:589ffd5d05cf9590:storage-data:01",
+          "path": ".ai/indexes/symbols/android/shards/app/generator/storage-data/589ffd5d05cf9590-01.json"
+        }
+      ],
+      "symbol_ids": [
+        "android-30279dcade49ff8c408f2c5c",
+        "android-2c619a9586cde9890270e4ee",
+        "android-f195533d720029f3b73a15da",
+        "android-5aa208a1377c77193a7a17cc",
+        "android-29bb35be574a5a09b7bf6852",
+        "android-853ee7424c32fbf4b7934293",
+        "android-d830ce533218b3fa052e7b20"
+      ]
+    }
+  ]
+}
